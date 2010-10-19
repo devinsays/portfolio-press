@@ -1,0 +1,100 @@
+/*
+Theme Name: Portfolio Press
+
+Built in RTL support.  Would love to get some RTL language translations to include.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.screen-reader-text {
+	position: absolute;
+	left:0;
+	right:-9000em;
+}
+
+/* Navigation */
+
+#navigation {
+	float:left;}
+
+.menu ul {
+	margin-left:0;
+	margin-right:10px;
+}
+.menu ul li {
+	float:right;
+	margin-left:0;
+	margin-right:10px;
+}
+.menu ul li ul {
+	left:0;
+	right: -999em;
+	border-width:1px 0 1px;
+	margin-right:0;
+}
+.menu ul li ul li {
+	margin-right:0px;
+}
+.menu ul li ul ul {
+	margin: -30px 180px 0 0px;
+}
+.menu ul li:hover ul, .menu ul li.sfhover ul, .menu ul li li:hover ul, .menu ul li li.sfhover ul, .menu ul li li li:hover ul, .menu ul li li li.sfhover ul, .menu ul li li li li:hover ul, .menu ul li li li li.sfhover ul {
+	right:auto;
+}
+
+/* Branding */
+
+#logo {
+	float:right;
+}
+
+/* Content */
+#content {
+	float:right;
+}
+/* Sidebar */
+#sidebar {
+	float:left;
+}
+
+/* Portfolio Posts */
+
+#portfolio {
+	float:right;
+}
+
+#portfolio .portfolio-item {
+	float:right;
+	margin:0 0 15px 15px;
+}
+
+#portfolio .last {
+	margin-left:0px;
+}
+
+/* Content Nav */
+
+#content nav .nav-previous, #portfolio nav .nav-previous {
+	float: right;
+}
+#content nav .nav-next, #portfolio nav .nav-next {
+	float: left;
+	text-align: left;
+}
+
+/* Reverse order on single-portfolio pages */
+
+.single-portfolio  #content nav .nav-previous {
+	float: left;
+	text-align: left;
+}
+.single-portfolio  #content nav .nav-next {
+	float: right;
+	text-align: right;
+}

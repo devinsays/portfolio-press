@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf320
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Calibri;}
+{\colortbl;\red255\green255\blue255;\red25\green54\blue109;}
+\margl1440\margr1440\vieww14840\viewh9500\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 Portfolio Theme 0.5.3\
+\
+- Fixed pagination issue when portfolio template was set to home page\
+\
+Portfolio Theme 0.5.2\
+\
+- Added Spanish translations and the domain for backend localizations, props http://www.labitacoradeltigre.com\
+- For complete instructions in Spanish, read: http://bit.ly/dyFGYr\
+- Added complete RTL stylesheet support\
+- Updated to version 0.9.3 of the simple-custom-post-type-archives drop in plugin\
+- Deleted title filter for custom post types in functions.php\
+- Added password protection ability to portfolio post type templates\
+- Added add_image_size( 'portfolio-large', 630, 9999, false ); because large images were being browser resized\
+\
+Portfolio Theme 0.5.1\
+\
+- Updated the text domain for translations\
+- Made the name change to "Portfolio Press" to comply with repo guidelines\
+\
+Portfolio Theme 0.5\
+\
+- Added templates for full-width portfolio, and taxonomy portfolio-tags\
+- Updated style.css for new templates and for full-width page template\
+- Added additional thumbnail size for the full width portfolio templates\
+\
+Portfolio Theme 0.44\
+\
+- Updated style.css and reset.css to have styling for sub & sup html tags + code, pre, dl, dt, dd, abbr, cite\
+\
+Portfolio Theme 0.43\
+\
+- Updated style.css to have a clear on the .entry-utility\
+- Updated the screenshot.png\
+- Updated the theme description\
+\
+Portfolio Theme 0.42\
+\
+- Updated style.css to properly align center images with captions\
+- Updated style.css to better display very long post titles\
+- Updated screenshot to reflect initial install (as per repository specs)\
+\
+Portfolio Theme 0.41\
+\
+- Updated style.css to properly clear images when they are floated at the bottom of a post\
+- Updated styles.css to apply a max-width of 640px to images in #content\
+\
+Portfolio Theme 0.4\
+\
+- Changed title filter priority in simple-custom-post-type-archives.php\
+- Added better handling for the Simple Custom Post Type Archives plugin\
+- Updated the menu_postion for the portfolio post type\
+- Combined the portfolio post type and custom taxonomy into the same init hook\
+- Added better labels to the portfolio post type\
+- Updated the hover states on the menu to use stop(true)\
+- Added thumbnails and taxonomy tags to the column view for portfolio post type\
+- Added an icon to the portfolio post type
+\f1\fs30 \cf2 \
+}
