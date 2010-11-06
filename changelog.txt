@@ -7,6 +7,9 @@
 \f0\fs24 \cf0 Portfolio Theme 0.5.3\
 \
 - Fixed pagination issue when portfolio template was set to home page\
+- Added portfolio icon designed by Ben Dunkle, core WordPress designer, Field 2 design, field2.com\
+- Added french translations from Wolforg at http://www.wptrads.fr/portfolio-press/\
+- Updated description to link to demonstration video and french translation note\
 \
 Portfolio Theme 0.5.2\
 \

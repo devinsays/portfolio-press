@@ -25,7 +25,7 @@ function wpt_portfolio_posttype() {
 			'supports' => array( 'title', 'editor', 'thumbnail', 'comments' ),
 			'capability_type' => 'post',
 			'rewrite' => array("slug" => "portfolio"), // Permalinks format
-			'menu_icon' => get_bloginfo('template_directory') . '/images/portfolio-icon.png',  // Icon Path
+			
 			'menu_position' => 5
 		)
 	);
@@ -117,5 +117,22 @@ function wpt_portfolio_custom_posts_per_page( &$q ) {
 }
 
 add_filter('parse_query', 'wpt_portfolio_custom_posts_per_page');
+
+// Styling for the custom post type icon
+
+add_action( 'admin_head', 'wpt_portfolio_icons' );
+
+function wpt_portfolio_icons() {
+    ?>
+    <style type="text/css" media="screen">
+        #menu-posts-portfolio .wp-menu-image {
+            background: url(<?php bloginfo('template_url') ?>/images/portfolio-icon.png) no-repeat 6px 6px;
+        }
+		#menu-posts-portfolio:hover .wp-menu-image, #menu-posts-portfolio.wp-has-current-submenu .wp-menu-image {
+            background-position:6px -16px !important;
+        }
+		#icon-edit.icon32-posts-portfolio {background: url(<?php bloginfo('template_url') ?>/images/portfolio-32x32.png) no-repeat;}
+    </style>
+<?php }
 
 ?>
