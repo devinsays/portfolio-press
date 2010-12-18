@@ -25,8 +25,8 @@ function wpt_portfolio_posttype() {
 			'supports' => array( 'title', 'editor', 'thumbnail', 'comments' ),
 			'capability_type' => 'post',
 			'rewrite' => array("slug" => "portfolio"), // Permalinks format
-			
-			'menu_position' => 5
+			'menu_position' => 5,
+			'has_archive' => true
 		)
 	);
 	
@@ -126,7 +126,7 @@ function wpt_portfolio_icons() {
     ?>
     <style type="text/css" media="screen">
         #menu-posts-portfolio .wp-menu-image {
-            background: url(<?php bloginfo('template_url') ?>/images/portfolio-icon.png) no-repeat 6px 6px;
+            background: url(<?php bloginfo('template_url') ?>/images/portfolio-icon.png) no-repeat 6px 6px !important;
         }
 		#menu-posts-portfolio:hover .wp-menu-image, #menu-posts-portfolio.wp-has-current-submenu .wp-menu-image {
             background-position:6px -16px !important;

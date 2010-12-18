@@ -114,9 +114,9 @@ function scpta_template_redirect()
 	
 		$post_type = is_scpta_post_type( get_query_var('post_type') );
 	
-		$template = array( "type-".$post_type->name.".php" );
+		$template = array( "archive-".$post_type->name.".php" );
 		if ( isset( $post_type->rewrite['slug'] ) ) $template[] = "type-".$post_type->rewrite['slug'].".php";
-		array_push( $template, 'type.php', 'index.php' );
+		array_push( $template, 'archive.php', 'index.php' );
 	
 		locate_template( $template, true );
 		

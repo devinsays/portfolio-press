@@ -4,10 +4,12 @@
  * @subpackage Portfolio Press
  */
  
-/**
- * Loads the Simple Custom Post Type Archives Plug-in:
+ /**
+ * If 3.1 isn't installed, loads the Simple Custom Post Type Archives Plug-in:
  * http://www.cmurrayconsulting.com/software/wordpress-custom-post-type-archives/
  */
+
+if ( get_bloginfo('version') <= 3.1 ) {
  
 // prevents errors when installing the plugin after theme installation
 if ( is_admin() && $pagenow == 'plugins.php' && isset($_GET['action']) && $_GET['action'] == 'activate' && isset($_GET['plugin']) && strstr( $_GET['plugin'], 'simple-custom-post-type-archives.php' ) )
@@ -16,6 +18,8 @@ if ( is_admin() && $pagenow == 'plugins.php' && isset($_GET['action']) && $_GET[
 // load in the plugin if its not installed
 if( !isset( $activating_scpta ) && !function_exists( 'is_scpta_post_type' ) )
 	require_once(TEMPLATEPATH . '/extensions/simple-custom-post-type-archives.php');
+	
+}
 
 /**
  * Enables the Portfolio custom post type
