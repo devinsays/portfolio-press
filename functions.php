@@ -4,6 +4,38 @@
  * @subpackage Portfolio Press
  */
  
+ 
+/**
+ * Enables the Portfolio custom post type
+ */
+
+require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
+
+/**
+ * Sets up the options panel
+ * http://wptheming.com/2010/12/options-framework/
+ */
+
+/* Sets file path based on whether this is in a parent theme or child theme */
+
+if ( STYLESHEETPATH == TEMPLATEPATH ) {
+	define('OF_FILEPATH', TEMPLATEPATH);
+	define('OF_DIRECTORY', get_bloginfo('template_directory'));
+} else {
+	define('OF_FILEPATH', STYLESHEETPATH);
+	define('OF_DIRECTORY', get_bloginfo('stylesheet_directory'));
+}
+
+/* These files build out the options interface.  Likely won't need to edit these. */
+
+require_once (OF_FILEPATH . '/admin/admin-functions.php');		// Custom functions and plugins
+require_once (OF_FILEPATH . '/admin/admin-interface.php');		// Admin Interfaces (options,framework, seo)
+
+/* These files build out the theme specific options and associated functions. */
+
+require_once (OF_FILEPATH . '/admin/theme-options.php'); 		// Options panel settings and custom settings
+require_once (OF_FILEPATH . '/admin/theme-functions.php'); 	// Theme actions based on options settings
+ 
  /**
  * If 3.1 isn't installed, loads the Simple Custom Post Type Archives Plug-in:
  * http://www.cmurrayconsulting.com/software/wordpress-custom-post-type-archives/
@@ -20,13 +52,6 @@ if( !isset( $activating_scpta ) && !function_exists( 'is_scpta_post_type' ) )
 	require_once(TEMPLATEPATH . '/extensions/simple-custom-post-type-archives.php');
 	
 }
-
-/**
- * Enables the Portfolio custom post type
- */
-
-require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
-
 
 /**
  * Make theme available for translation
@@ -157,7 +182,7 @@ function portfolio_widgets_init() {
 		'after_title' => '</h3>',
 	));
 	
-	register_sidebar(array('name' => __('Footer 1', 'portfoliopress'),'id' => 'footer-1', 'description' => __("Widetized footer", 'portfoliopress'), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>'));
+register_sidebar(array('name' => __('Footer 1', 'portfoliopress'),'id' => 'footer-1', 'description' => __("Widetized footer", 'portfoliopress'), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>'));
 	register_sidebar(array('name' => __('Footer 2', 'portfoliopress'),'id' => 'footer-2', 'description' => __("Widetized footer", 'portfoliopress'), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>'));
 	register_sidebar(array('name' => __('Footer 3', 'portfoliopress'),'id' => 'footer-3', 'description' => __("Widetized footer", 'portfoliopress'), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>'));
 	register_sidebar(array('name' => __('Footer 4', 'portfoliopress'),'id' => 'footer-4', 'description' => __("Widetized footer", 'portfoliopress'), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>'));		
