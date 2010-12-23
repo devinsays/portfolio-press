@@ -34,6 +34,7 @@ if ( is_dir($alt_stylesheet_path) ) {
 $uploads_arr = wp_upload_dir();
 $all_uploads_path = $uploads_arr['path'];
 $all_uploads = get_option('of_uploads');
+$url =  OF_DIRECTORY . '/admin/images/';
 
 // Set the Options Array
 $options = array();
@@ -47,16 +48,15 @@ $options[] = array( "name" => "Custom Logo",
 					"id" => $shortname."_logo",
 					"std" => "",
 					"type" => "upload");
-					
-$url =  OF_DIRECTORY . '/admin/images/';
+
 $options[] = array( "name" => "Main Layout",
 					"desc" => "Select main content and sidebar alignment.",
 					"id" => $shortname."_layout",
-					"std" => "2c-r-fixed",
+					"std" => "2c-right",
 					"type" => "images",
 					"options" => array(
-						'2c-r-fixed' => $url . '2cr.png',
-						'2c-l-fixed' => $url . '2cl.png')
+						'2c-right' => $url . '2cr.png',
+						'2c-left' => $url . '2cl.png')
 					);
 					
 $options[] = array( "name" => "Menu Position",
