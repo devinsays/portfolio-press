@@ -2,6 +2,8 @@
 
 // OptionsFramework Admin Interface
 
+// This code is borrowed from Canvas by WooThemes: http://www.woothemes.com/2010/02/canvas/
+
 /*-----------------------------------------------------------------------------------*/
 /* Options Framework Admin Interface - optionsframework_add_admin */
 /*-----------------------------------------------------------------------------------*/
@@ -989,9 +991,6 @@ function optionsframework_machine($options) {
 /*-----------------------------------------------------------------------------------*/
 
 function optionsframework_uploader_function($id,$std,$mod){
-
-    //$uploader .= '<input type="file" id="attachement_'.$id.'" name="attachement_'.$id.'" class="upload_input"></input>';
-    //$uploader .= '<span class="submit"><input name="save" type="submit" value="Upload" class="button upload_save" /></span>';
     
 	$uploader = '';
     $upload = get_option($id);

@@ -5,6 +5,14 @@
  */
 ?>
 
+<?php
+
+/* Loads the portfolio on the home if that option is selected : */
+
+if (is_home() && (get_option('ppo_portfolio_home') == 'true') ) {
+	get_template_part('full-width-portfolio');
+} else { ?>
+
 <?php get_header(); ?>
 
 			<div id="content">
@@ -15,3 +23,5 @@
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
+<?php } ?>

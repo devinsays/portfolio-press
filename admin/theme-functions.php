@@ -25,8 +25,8 @@ if (!function_exists('ppo_wp_head')) {
 	               echo '<link href="'. OF_DIRECTORY .'/styles/'. $GLOBALS['stylesheet'] .'" rel="stylesheet" type="text/css" />'."\n";         
 	          else
 	               echo '<link href="'. OF_DIRECTORY .'/styles/default.css" rel="stylesheet" type="text/css" />'."\n";         		  
-	     }       
-			
+	     }
+		 	
 		// This prints out the custom css and specific styling options
 		ppo_head_css();
 	}

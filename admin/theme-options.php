@@ -10,7 +10,7 @@ $themename = get_theme_data(STYLESHEETPATH . '/style.css');
 $themename = $themename['Name'];
 $shortname = "ppo";  // Unique shortname, Portfolio Press Options
 
-// Populate OptionsFramework option in array for use in theme
+// Populate options in array for use in theme
 global $of_options;
 $of_options = get_option('of_options');
 
@@ -97,17 +97,11 @@ $options[] = array( "name" => "Custom CSS",
 $options[] = array( "name" => "Footer Settings",
 					"type" => "heading");  
 
-$options[] = array( "name" => "Custom Footer Text (Left)",
+$options[] = array( "name" => "Custom Footer Text",
 					"desc" => "Custom HTML/Text that will appear in the footer of your theme.",
-					"id" => $shortname."_footer_left_text",
+					"id" => $shortname."_footer_text",
 					"std" => "",
 					"type" => "text");    
-
-$options[] = array( "name" => "Custom Footer Text (Right)",
-					"desc" => "Custom HTML/Text that will appear in the footer of your theme.",
-					"id" => $shortname."_footer_right_text",
-					"std" => "",
-					"type" => "text");
 					
 $options[] = array( "name" => "Tracking Code",
 					"desc" => "Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.",

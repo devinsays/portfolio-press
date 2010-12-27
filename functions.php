@@ -4,8 +4,6 @@
  * @subpackage Portfolio Press
  */
  
-remove_action('init','wp_admin_bar_init');
- 
 /**
  * Enables the Portfolio custom post type
  */
