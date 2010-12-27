@@ -72,6 +72,12 @@ $options[] = array( "name" => "Use Portfolio as Home Page",
 					"std" => "false",
 					"type" => "checkbox");
 					
+$options[] = array( "name" => "Disable Portfolio Menu",
+					"desc" => "Check this if you aren't planning to use the portfolio post type. Refresh browser after selecting.",
+					"id" => $shortname."_disable_portfolio",
+					"std" => "false",
+					"type" => "checkbox");
+					
 $options[] = array( "name" => "Custom Favicon",
 					"desc" => "Upload a 16px x 16px Png/Gif image that will represent your website's favicon.",
 					"id" => $shortname."_custom_favicon",

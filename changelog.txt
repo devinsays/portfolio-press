@@ -8,6 +8,7 @@
 \
 - Made further updates for WordPress 3.1 compatibility\
 - Added options panel (props WooThemes)\
+- Includes new options to upload logo, set menu position, update footer text, and more.\
 \
 Portfolio Theme 0.5.3\
 \

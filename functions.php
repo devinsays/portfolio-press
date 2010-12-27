@@ -7,8 +7,9 @@
 /**
  * Enables the Portfolio custom post type
  */
-
-require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
+if (get_option('ppo_disable_portfolio') != 'true') {
+	require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
+}
 
 /**
  * Sets up the options panel
