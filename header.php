@@ -23,9 +23,19 @@
 <div id="wrapper">
 	<header id="branding">
     	<div class="col-width">
+        <?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 			<hgroup id="logo">
-				<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <?php if ($logo = get_option('ppo_logo') ) {
+					echo '<img src="' . $logo . '" alt="Blog Name"/>';
+				} else {
+					bloginfo( 'name' );
+				}?>
+                </a>
+                </<?php echo $heading_tag; ?>>
+				<?php if (!$logo) { ?>
+                <span id="site-description"><?php bloginfo( 'description' ); ?></span>
+                <?php } ?>
 			</hgroup>
       
       <nav id="navigation">

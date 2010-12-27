@@ -171,8 +171,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	margin:0;
 	padding:0;
 	list-style:none;
-	line-height:1;
-	margin-left:10px;
 }
 .menu ul a {
 	position:relative;
@@ -292,6 +290,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	text-decoration:underline;
 }
 #logo #site-description {
+	display:block;
 	color:#ddd;
 	font:italic 14px Georgia, serif;
 	margin-top:5px;
@@ -306,11 +305,18 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	width:640px;
 }
 /* Sidebar */
+
 #sidebar {
 	overflow:hidden;
 	float:right;
 	width:240px;
 }
+
+/* Layouts */
+
+.layout-2cl #content {float:right;}
+
+.layout-2cl #sidebar {float:left;}
 
 /* Footer */
 
@@ -353,7 +359,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 .entry-meta {
 	padding-top:10px;
-	margin: 0px 0 25px 0;
+	margin: 0 0 25px 0;
 	font:11px/11px "Trebuchet MS", Arial, Helvetica, sans-serif;
 	text-transform:uppercase;
 	display:block;
@@ -382,7 +388,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	padding-bottom:10px;
 }
 #content p {
-	margin: 0 0 20px 0;
+	margin:0 0 20px 0;
 }
 #content blockquote {
 	background:url(images/blockquote.png) no-repeat 0 12px;

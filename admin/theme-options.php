@@ -8,7 +8,7 @@ function of_options(){
 // VARIABLES
 $themename = get_theme_data(STYLESHEETPATH . '/style.css');
 $themename = $themename['Name'];
-$shortname = "of";
+$shortname = "ppo";  // Unique shortname, Portfolio Press Options
 
 // Populate OptionsFramework option in array for use in theme
 global $of_options;
@@ -52,19 +52,19 @@ $options[] = array( "name" => "Custom Logo",
 $options[] = array( "name" => "Main Layout",
 					"desc" => "Select main content and sidebar alignment.",
 					"id" => $shortname."_layout",
-					"std" => "2c-right",
+					"std" => "layout-2cr",
 					"type" => "images",
 					"options" => array(
-						'2c-right' => $url . '2cr.png',
-						'2c-left' => $url . '2cl.png')
+						'layout-2cr' => $url . '2cr.png',
+						'layout-2cl' => $url . '2cl.png')
 					);
 					
 $options[] = array( "name" => "Menu Position",
 					"desc" => "Select where the main menu should go in the header.",
-					"id" => $shortname."_example_radio",
-					"std" => "one",
+					"id" => $shortname."_menu_pos",
+					"std" => "right",
 					"type" => "radio",
-					"options" => array("right" => "To the right of logo or header text","clear" => "Underneath logo or header text"));
+					"options" => array("right" => "Right of logo.","clear" => "Underneath logo."));
 					
 $options[] = array( "name" => "Use Portfolio as Home Page",
 					"desc" => "If checked, your portfolio will show up on the home page.",

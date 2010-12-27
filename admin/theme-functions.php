@@ -8,8 +8,8 @@
 
 // This sets up the layouts and styles selected from the options panel
 
-if (!function_exists('of_wp_head')) {
-	function optionsframework_wp_head() {
+if (!function_exists('ppo_wp_head')) {
+	function ppo_wp_head() {
 	    
 		//Styles
 		 if(!isset($_REQUEST['style']))
@@ -28,21 +28,21 @@ if (!function_exists('of_wp_head')) {
 	     }       
 			
 		// This prints out the custom css and specific styling options
-		of_head_css();
+		ppo_head_css();
 	}
 }
 
-add_action('wp_head', 'of_wp_head');
+add_action('wp_head', 'ppo_wp_head');
 
 // Adds a body class to indicate sidebar position
 
-add_filter('body_class','of_body_class');
+add_filter('body_class','ppo_body_class');
  
-function of_body_class($classes) {
+function ppo_body_class($classes) {
 	$shortname =  get_option('of_shortname');
 	$layout = get_option($shortname .'_layout');
 	if ($layout == '') {
-		$layout = '2c-right';
+		$layout = 'layout-2cr';
 	}
 	$classes[] = $layout;
 	return $classes;
@@ -52,12 +52,16 @@ function of_body_class($classes) {
 /* Output CSS from standarized options */
 /*-----------------------------------------------------------------------------------*/
 
-function of_head_css() {
-
+function ppo_head_css() {
 		$shortname =  get_option('of_shortname'); 
-		$custom_css = get_option('of_custom_css');
+		$custom_css = get_option('ppo_custom_css');
 				
 		$output = '';
+		
+		if (get_option('ppo_menu_pos') == "clear") {
+			$output = "#navigation {clear:both; float:none;}\n";
+			$output .= ".menu ul li {margin-left:0; margin-right:10px;}\n";
+		}
 		
 		if ($custom_css <> '') {
 			$output .= $custom_css . "\n";
@@ -75,21 +79,21 @@ function of_head_css() {
 /* Add Favicon
 /*-----------------------------------------------------------------------------------*/
 
-function of_favicon() {
+function ppo_favicon() {
 		$shortname =  get_option('of_shortname'); 
 		if (get_option($shortname . '_custom_favicon') != '') {
 	        echo '<link rel="shortcut icon" href="'.  get_option('of_custom_favicon')  .'"/>'."\n";
 	    }
 }
 
-add_action('wp_head', 'of_favicon');
+add_action('wp_head', 'ppo_favicon');
 
 /*-----------------------------------------------------------------------------------*/
 /* Show analytics code in footer */
 /*-----------------------------------------------------------------------------------*/
 
-function of_analytics(){
-	$shortname =  get_option('of_shortname');
+function ppo_analytics(){
+	$shortname =  get_option('ppo_shortname');
 	$output = get_option($shortname . '_google_analytics');
 	if ( $output <> "" ) 
 		echo stripslashes($output) . "\n";

@@ -4,6 +4,7 @@
  * @subpackage Portfolio Press
  */
  
+remove_action('init','wp_admin_bar_init');
  
 /**
  * Enables the Portfolio custom post type
@@ -16,15 +17,10 @@ require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
  * http://wptheming.com/2010/12/options-framework/
  */
 
-/* Sets file path based on whether this is in a parent theme or child theme */
+/* Sets file path for parent template */
 
-if ( STYLESHEETPATH == TEMPLATEPATH ) {
-	define('OF_FILEPATH', TEMPLATEPATH);
-	define('OF_DIRECTORY', get_bloginfo('template_directory'));
-} else {
-	define('OF_FILEPATH', STYLESHEETPATH);
-	define('OF_DIRECTORY', get_bloginfo('stylesheet_directory'));
-}
+define('OF_FILEPATH', TEMPLATEPATH);
+define('OF_DIRECTORY', get_bloginfo('template_directory'));
 
 /* These files build out the options interface.  Likely won't need to edit these. */
 
@@ -33,7 +29,7 @@ require_once (OF_FILEPATH . '/admin/admin-interface.php');		// Admin Interfaces 
 
 /* These files build out the theme specific options and associated functions. */
 
-require_once (OF_FILEPATH . '/admin/theme-options.php'); 		// Options panel settings and custom settings
+require_once (OF_FILEPATH . '/admin/theme-options.php'); 	// Options panel settings and custom settings
 require_once (OF_FILEPATH . '/admin/theme-functions.php'); 	// Theme actions based on options settings
  
  /**
