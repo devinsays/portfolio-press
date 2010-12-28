@@ -34,20 +34,6 @@ if (!function_exists('ppo_wp_head')) {
 
 add_action('wp_head', 'ppo_wp_head');
 
-// Adds a body class to indicate sidebar position
-
-add_filter('body_class','ppo_body_class');
- 
-function ppo_body_class($classes) {
-	$shortname =  get_option('of_shortname');
-	$layout = get_option($shortname .'_layout');
-	if ($layout == '') {
-		$layout = 'layout-2cr';
-	}
-	$classes[] = $layout;
-	return $classes;
-}
-
 /*-----------------------------------------------------------------------------------*/
 /* Output CSS from standarized options */
 /*-----------------------------------------------------------------------------------*/
@@ -76,13 +62,29 @@ function ppo_head_css() {
 }
 
 /*-----------------------------------------------------------------------------------*/
+/* Adds a body class to indicate sidebar position
+/*-----------------------------------------------------------------------------------*/
+ 
+function ppo_body_class($classes) {
+	$shortname =  get_option('of_shortname');
+	$layout = get_option($shortname .'_layout');
+	if ($layout == '') {
+		$layout = 'layout-2cr';
+	}
+	$classes[] = $layout;
+	return $classes;
+}
+
+add_filter('body_class','ppo_body_class');
+
+/*-----------------------------------------------------------------------------------*/
 /* Add Favicon
 /*-----------------------------------------------------------------------------------*/
 
 function ppo_favicon() {
 		$shortname =  get_option('of_shortname'); 
 		if (get_option($shortname . '_custom_favicon') != '') {
-	        echo '<link rel="shortcut icon" href="'.  get_option('of_custom_favicon')  .'"/>'."\n";
+	        echo '<link rel="shortcut icon" href="'.  get_option($shortname .'_custom_favicon')  .'"/>'."\n";
 	    }
 }
 
@@ -98,6 +100,7 @@ function ppo_analytics(){
 	if ( $output <> "" ) 
 		echo stripslashes($output) . "\n";
 }
-add_action('wp_footer','of_analytics');
+
+add_action('wp_footer','ppo_analytics');
 
 ?>
