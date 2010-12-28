@@ -39,18 +39,45 @@ $url =  OF_DIRECTORY . '/admin/images/';
 // Set the Options Array
 $options = array();
 
-$options[] = array( "name" => "General Settings",
+$options[] = array( "name" => __('General Settings','portfoliopress'),
                     "type" => "heading");
 					
+$options[] = array( "name" => __('Use Portfolio as Home Page','portfoliopress'),
+					"desc" => __('General Settings','portfoliopress'),
+					"id" => $shortname."_portfolio_home",
+					"std" => "false",
+					"type" => "checkbox");
+					
+$options[] = array( "name" => __('Display Portfolio Images Automatically','portfoliopress'),
+					"desc" => __('Uncheck this if you wish to manually display portfolio images on single posts.','portfoliopress'),
+					"id" => $shortname."_portfolio_images",
+					"std" => "true",
+					"type" => "checkbox");
 
-$options[] = array( "name" => "Custom Logo",
-					"desc" => "Upload a logo for your theme, or specify the image address of your online logo. (http://yoursite.com/logo.png)",
+$options[] = array( "name" => __('Custom Logo','portfoliopress'),
+					"desc" => __('Upload a logo for your theme, or specify the image address of your online logo. (http://yoursite.com/logo.png)','portfoliopress'),
 					"id" => $shortname."_logo",
 					"std" => "",
 					"type" => "upload");
-
-$options[] = array( "name" => "Main Layout",
-					"desc" => "Select main content and sidebar alignment.",
+					
+$options[] = array( "name" => __('Custom Favicon','portfoliopress'),
+					"desc" => __('Upload a 16px x 16px Png/Gif image to represent your website.','portfoliopress'),
+					"id" => $shortname."_custom_favicon",
+					"std" => "",
+					"type" => "upload"); 
+					
+					
+$options[] = array( "name" => __('Disable Portfolio Menu','portfoliopress'),
+					"desc" => __('Check this if you are not planning to use the portfolio post type. Refresh browser after selecting.','portfoliopress'),
+					"id" => $shortname."_disable_portfolio",
+					"std" => "false",
+					"type" => "checkbox");                                                 
+    
+$options[] = array( "name" => __('Style and Layout','portfoliopress'),
+					"type" => "heading");
+					
+$options[] = array( "name" => __('Main Layout','portfoliopress'),
+					"desc" => __('Select main content and sidebar alignment.','portfoliopress'),
 					"id" => $shortname."_layout",
 					"std" => "layout-2cr",
 					"type" => "images",
@@ -59,58 +86,37 @@ $options[] = array( "name" => "Main Layout",
 						'layout-2cl' => $url . '2cl.png')
 					);
 					
-$options[] = array( "name" => "Menu Position",
-					"desc" => "Select where the main menu should go in the header.",
+$options[] = array( "name" => __('Menu Position','portfoliopress'),
+					"desc" => __('Select where the main menu should go in the header.','portfoliopress'),
 					"id" => $shortname."_menu_pos",
 					"std" => "right",
 					"type" => "radio",
 					"options" => array("right" => "Right of logo.","clear" => "Underneath logo."));
 					
-$options[] = array( "name" => "Use Portfolio as Home Page",
-					"desc" => "If checked, your portfolio will show up on the home page.",
-					"id" => $shortname."_portfolio_home",
-					"std" => "false",
-					"type" => "checkbox");
-					
-$options[] = array( "name" => "Disable Portfolio Menu",
-					"desc" => "Check this if you aren't planning to use the portfolio post type. Refresh browser after selecting.",
-					"id" => $shortname."_disable_portfolio",
-					"std" => "false",
-					"type" => "checkbox");
-					
-$options[] = array( "name" => "Custom Favicon",
-					"desc" => "Upload a 16px x 16px Png/Gif image that will represent your website's favicon.",
-					"id" => $shortname."_custom_favicon",
-					"std" => "",
-					"type" => "upload");                                                  
-    
-$options[] = array( "name" => "Styling Options",
-					"type" => "heading");
-					
-$options[] = array( "name" => "Theme Stylesheet",
-					"desc" => "Select your themes alternative color scheme.",
+$options[] = array( "name" => __('Theme Stylesheet','portfoliopress'),
+					"desc" => __('There are no additional stylesheets right now.  Let\'s go with the default.','portfoliopress'),
 					"id" => $shortname."_alt_stylesheet",
 					"std" => "default.css",
 					"type" => "select",
 					"options" => $alt_stylesheets);
 					
-$options[] = array( "name" => "Custom CSS",
-                    "desc" => "Quickly add some CSS to your theme by adding it to this block.",
+$options[] = array( "name" => __('Custom CSS','portfoliopress'),
+					"desc" => __('Quickly add some CSS to your theme by adding it to this block.','portfoliopress'),
                     "id" => $shortname."_custom_css",
                     "std" => "",
                     "type" => "textarea");
 					
-$options[] = array( "name" => "Footer Settings",
+$options[] = array( "name" => __('Footer Settings','portfoliopress'),
 					"type" => "heading");  
 
-$options[] = array( "name" => "Custom Footer Text",
-					"desc" => "Custom HTML/Text that will appear in the footer of your theme.",
+$options[] = array( "name" => __('Custom Footer Text','portfoliopress'),
+					"desc" => __('Custom HTML/Text that will appear in the footer of your theme.','portfoliopress'),
 					"id" => $shortname."_footer_text",
 					"std" => "",
 					"type" => "text");    
 					
-$options[] = array( "name" => "Tracking Code",
-					"desc" => "Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.",
+$options[] = array( "name" => __('Tracking Code','portfoliopress'),
+					"desc" => __('Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.','portfoliopress'),
 					"id" => $shortname."_google_analytics",
 					"std" => "",
 					"type" => "textarea");

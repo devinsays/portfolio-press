@@ -93,7 +93,7 @@ add_action('wp_head', 'ppo_favicon');
 /*-----------------------------------------------------------------------------------*/
 
 function ppo_analytics(){
-	$shortname =  get_option('ppo_shortname');
+	$shortname =  get_option('of_shortname');
 	$output = get_option($shortname . '_google_analytics');
 	if ( $output <> "" ) 
 		echo stripslashes($output) . "\n";
