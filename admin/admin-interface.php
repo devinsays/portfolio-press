@@ -134,7 +134,7 @@ function optionsframework_options_page(){
       <div class="clear"></div>
     </div>
     <div class="save_bar_top">
-    <img style="display:none" src="<?php echo bloginfo('stylesheet_directory'); ?>/admin/images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
+    <img style="display:none" src="<?php echo OF_DIRECTORY; ?>/admin/images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
     <input type="submit" value="Save All Changes" class="button-primary" />
   </form>
   <form action="<?php echo esc_attr( $_SERVER['REQUEST_URI'] ) ?>" method="post" style="display:inline" id="ofform-reset">
