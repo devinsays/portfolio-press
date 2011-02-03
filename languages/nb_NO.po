@@ -1,0 +1,367 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tema Portfolio en español\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-25 22:51-0600\n"
+"PO-Revision-Date: 2011-01-29 11:45+0100\n"
+"Last-Translator: Erling Hamso <erling@hamso.com>\n"
+"Language-Team: PNTE <blogs@educacion.navarra.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: Spain\n"
+"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:14
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Dette er litt flaut, ikke sant?"
+
+#: 404.php:18
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Det ser ikke ut som om vi klarer å finne det du ser etter. Kanskje du finner det du trenger ved å bruke menylenkene i headeren eller søkefunksjonen i footeren?"
+
+#: 404.php:25
+msgid "Most Used Categories"
+msgstr "Mest brukte kategorier"
+
+#: archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Daglig arkiv <span>%s</span>"
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Månedlig arkiv <span>%s</span>"
+
+#: archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Årlig arkiv <span>%s</span>"
+
+#: archive.php:22
+msgid "Blog Archives"
+msgstr "Bloggarkiv"
+
+#: author.php:14
+#, php-format
+msgid "Author Archives: <span class=\"vcard\">%s</span>"
+msgstr "Forfatterarkiv <span class=\"vcard\">%s</span>"
+
+#: category.php:13
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Kategoriarkiv '%s"
+
+#: comments.php:10
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Dette innlegget er passordbeskyttet. Skriv inn passordet for å lese kommentarene."
+
+#: comments.php:21
+#, php-format
+msgid "One Response to %2$s"
+msgstr "Ett svar til %2$s"
+
+#: comments.php:28
+#: comments.php:40
+msgid "Comment navigation"
+msgstr "Kommentarnavigasjon"
+
+#: comments.php:29
+#: comments.php:41
+msgid "&larr; Older Comments"
+msgstr "&larr; Eldre kommentarer"
+
+#: comments.php:30
+#: comments.php:42
+msgid "Newer Comments &rarr;"
+msgstr "Nyere kommentarer &rarr;"
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr "Kommentarer er lukket"
+
+#: footer.php:38
+msgid "Powered by"
+msgstr "Drevet av"
+
+#: footer.php:38
+msgid "A Semantic Personal Publishing Platform"
+msgstr "En semantisk personlig publiseringsplattform"
+
+#: footer.php:38
+msgid "WordPress"
+msgstr "WordPress"
+
+#: footer.php:38
+msgid "Portfolio"
+msgstr "Portefølje"
+
+#: full-width-page.php:24
+#: image.php:82
+#: loop.php:36
+#: page.php:21
+msgid "Pages:"
+msgstr "Sider:"
+
+#: full-width-page.php:25
+#: image.php:31
+#: image.php:96
+#: loop.php:45
+#: page.php:22
+msgid "Edit"
+msgstr "Rediger"
+
+#: full-width-portfolio.php:45
+#: loop.php:63
+msgid "Post navigation"
+msgstr "Innleggsnavigasjon"
+
+#: full-width-portfolio.php:46
+#: loop.php:64
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Eldre innlegg"
+
+#: full-width-portfolio.php:47
+#: loop.php:65
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyere innlegg <span class=\"meta-nav\">&rarr;</span>"
+
+#: full-width-portfolio.php:55
+msgid "Sorry, no posts matched your criteria."
+msgstr "Beklager, ingen innlegg oppfyllte dine kriterier"
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr "Hovedmeny"
+
+#: functions.php:92
+#, php-format
+msgid "Search results for %s"
+msgstr "Søkeresultat for %s"
+
+#: functions.php:95
+#: functions.php:120
+#, php-format
+msgid "Page %s"
+msgstr "Side %s"
+
+#: functions.php:156
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: header.php:32
+msgid "Main menu"
+msgstr "Hovedmeny"
+
+#: header.php:33
+msgid "Skip to content"
+msgstr "Hopp til innhold"
+
+#: image.php:21
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>  at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">Publisert </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>,  <a href=\"%3$s\" title=\"Klikk for å se full størrelse\">%4$s &times; %5$s</a> i <a href=\"%6$s\" title=\"Tilbake til %7$s\" rel=\"gallery\">%7$s</a>"
+
+#: image.php:35
+msgid "&larr; Previous"
+msgstr "&larr; Forrige"
+
+#: image.php:36
+msgid "Next &rarr;"
+msgstr "Neste &rarr;"
+
+#: image.php:88
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Skriv en kommentar\">Skriv en kommentar</a> eller lag tilbaketråkk: <a class=\"trackback-link\" href=\"%s\" title=\"Tilbaketråkk-URL for innlegget ditt\" rel=\"trackback\">URL til tilbaketråkk</a>."
+
+#: image.php:90
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Kommentarer er stengt, men du kan legge igjen et tilbaketråkk: <a class=\"trackback-link\" href=\"%s\" title=\"Tilbaketråkk-URL\" rel=\"trackback\">Tilbaketråkk-URL</a>."
+
+#: image.php:92
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Tilbaketråkk er stengt, men du kan <a class=\"comment-link\" href=\"#respond\" title=\"Skriv kommentar\">skrive en kommentar</a>."
+
+#: image.php:94
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Både kommentarer og tilbaketråkk er stengt."
+
+#: loop.php:17
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-author\">Posted on </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+msgstr "<span class=\"meta-prep meta-prep-author\">Skrevet </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> av </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+
+#: loop.php:31
+#: loop.php:35
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Fortsett og les <span class=\"meta-nav\">&rarr;</span>"
+
+#: loop.php:41
+msgid "Posted in "
+msgstr "Postet i "
+
+#: loop.php:43
+msgid "Tagged "
+msgstr "Tagget"
+
+#: loop.php:44
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+#: loop.php:44
+msgid "1 Comment"
+msgstr "1 kommentar"
+
+#: loop.php:44
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: search.php:14
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søkeresultat for %s"
+
+#: search.php:21
+msgid "Nothing Found"
+msgstr "Ingenting funnet"
+
+#: search.php:25
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Ingenting ble funnet. Prøv igjen med andre søkeord."
+
+#: sidebar.php:16
+msgid "Archives"
+msgstr "Arkiv"
+
+#: sidebar.php:23
+msgid "Meta"
+msgstr "Meta"
+
+#: single-portfolio.php:48
+#, php-format
+msgid "TAGS: %1$s. Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Tagger: %1$s. Bokmerk <a href=\"%2$s\" title=\"Permalenke til %3$s\" rel=\"bookmark\">permalenken</a>."
+
+#: single-portfolio.php:50
+#, php-format
+msgid "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Bokmerk <a href=\"%2$s\" title=\"Enlace permanente a %3$s\" rel=\"bookmark\">permalenken</a>."
+
+#: single.php:41
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Arkivert i  %1$s, og tagget med %2$s. Bokmerk <a href=\"%3$s\" title=\"Enlace permanente a %4$s\" rel=\"bookmark\">permalenken</a>."
+
+#: single.php:43
+#, php-format
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Arkivert i %1$s. Bokmerk <a href=\"%3$s\" title=\"Enlace permanente a %4$s\" rel=\"bookmark\">permalenken</a>."
+
+#: tag.php:17
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Tagarkiv: %s"
+
+#: extensions/portfolio-post-type.php:14
+msgid "Portfolio Item"
+msgstr "Porteføljeelement"
+
+#: extensions/portfolio-post-type.php:15
+msgid "Add New Item"
+msgstr "Legg til nytt element"
+
+#: extensions/portfolio-post-type.php:16
+#: extensions/portfolio-post-type.php:18
+msgid "Add New Portfolio Item"
+msgstr "Legg til nytt porteføljeelement"
+
+#: extensions/portfolio-post-type.php:17
+msgid "Edit Portfolio Item"
+msgstr "Rediger porteføljeelement"
+
+#: extensions/portfolio-post-type.php:19
+msgid "View Item"
+msgstr "Se element"
+
+#: extensions/portfolio-post-type.php:20
+msgid "Search Portfolio"
+msgstr "Søk porteføljen"
+
+#: extensions/portfolio-post-type.php:21
+msgid "No portfolio items found"
+msgstr "Ingen porteføljeelementer funnet"
+
+#: extensions/portfolio-post-type.php:22
+msgid "No portfolio items found in trash"
+msgstr "Ingen porteføljeelementer funnet i søppelkurven"
+
+#: extensions/portfolio-post-type.php:36
+#: extensions/portfolio-post-type.php:38
+msgid "Portfolio Tags"
+msgstr "Porteføljetagger"
+
+#: extensions/portfolio-post-type.php:39
+msgid "Portfolio Tag"
+msgstr "Porteføljetag"
+
+#: extensions/portfolio-post-type.php:66
+msgid "Thumbnail"
+msgstr "Miniatyrbilde"
+
+#: extensions/portfolio-post-type.php:67
+msgid "Tags"
+msgstr "Tagger"
+
+#: extensions/portfolio-post-type.php:68
+msgid "Author"
+msgstr "Forfatter"
+
+#: extensions/portfolio-post-type.php:69
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: extensions/portfolio-post-type.php:70
+msgid "Date"
+msgstr "Dato"
+
+#: extensions/portfolio-post-type.php:97
+#: extensions/portfolio-post-type.php:104
+msgid "None"
+msgstr "Ingen"
+
+#~ msgid "F Y"
+#~ msgstr "F \\d\\e Y"
+
+#~ msgid "Permanent Link to"
+#~ msgstr "Enlace permanente a"
+
+#~ msgid "Footer 1"
+#~ msgstr "Pie de página 1"
+
+#~ msgid "Widetized footer"
+#~ msgstr "Zona del pie de página para widgets"
+
+#~ msgid "Footer 2"
+#~ msgstr "Pie de página 2"
+
+#~ msgid "Footer 3"
+#~ msgstr "Pie de página 3"
+
+#~ msgid "Footer 4"
+#~ msgstr "Pie de página 4"
+
+#~ msgid "Portfolio theme"
+#~ msgstr "tema Portfolio"
+
+#~ msgid "translated by"
+#~ msgstr ""
+#~ "traducido por el <a href=\"http://pnte.educacion.navarra.es/portal/\" "
+#~ "target=\"_blank\" title=\"Programa de Nuevas Tecnologías y Educación"
+#~ "\">PNTE</a>"
