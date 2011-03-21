@@ -5,33 +5,20 @@
  */
  
 /**
+ * Sets up the options panel and default functions
+ */
+ 
+require_once(TEMPLATEPATH . '/extensions/options-functions.php');
+ 
+/**
  * Enables the Portfolio custom post type
  */
-if (get_option('ppo_disable_portfolio') != 'true') {
+ 
+if ( of_get_option('disable_portfolio') != 'true') {
 	require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
 }
-
-/**
- * Sets up the options panel
- * http://wptheming.com/2010/12/options-framework/
- */
-
-/* Sets file path for parent template */
-
-define('OF_FILEPATH', TEMPLATEPATH);
-define('OF_DIRECTORY', get_bloginfo('template_directory'));
-
-/* These files build out the options interface.  Likely won't need to edit these. */
-
-require_once (OF_FILEPATH . '/admin/admin-functions.php');		// Custom functions and plugins
-require_once (OF_FILEPATH . '/admin/admin-interface.php');		// Admin Interfaces (options,framework, seo)
-
-/* These files build out the theme specific options and associated functions. */
-
-require_once (OF_FILEPATH . '/admin/theme-options.php'); 	// Options panel settings and custom settings
-require_once (OF_FILEPATH . '/admin/theme-functions.php'); 	// Theme actions based on options settings
  
- /**
+/**
  * If 3.1 isn't installed, loads the Simple Custom Post Type Archives Plug-in:
  * http://www.cmurrayconsulting.com/software/wordpress-custom-post-type-archives/
  */
@@ -151,16 +138,17 @@ function portfolio_page_menu_args($args) {
 }
 add_filter( 'wp_page_menu_args', 'portfolio_page_menu_args' );
 
-// Class name for wp_nav_menu
-
-function wpt_wp_nav_menu_args($args)
+/**
+ * Class name for wp_nav_menu
+ */
+function portfolio_wp_nav_menu_args($args)
 {
 	$args['container_class'] = 'menu';
 	$args['menu_class'] = '';
 	return $args;
 }
 
-add_filter( 'wp_nav_menu_args', 'wpt_wp_nav_menu_args' );
+add_filter( 'wp_nav_menu_args', 'portfolio_wp_nav_menu_args' );
 
 
 /**

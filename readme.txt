@@ -1,4 +1,4 @@
-Portfolio Theme Readme
+Portfolio Theme Read Me
 ---------------------------------
 
 You can use this Portfolio Theme for your own websites and projects.  No attribution is needed, but always appreciated.

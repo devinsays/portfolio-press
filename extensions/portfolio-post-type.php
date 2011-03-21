@@ -1,45 +1,48 @@
 <?php
 /**
  * Enable Custom Post Types for Portfolio Items
- * Props Justin Tadlock: http://justintadlock.com/archives/2010/04/29/custom-post-types-in-wordpress
+ * http://codex.wordpress.org/Function_Reference/register_post_type
  */
  
 // Registers the new post type and taxonomy
 
 function wpt_portfolio_posttype() {
-	register_post_type( 'portfolio',
-		array(
-			'labels' => array(
-				'name' => __( 'Portfolio', 'portfoliopress' ),
-				'singular_name' => __( 'Portfolio Item', 'portfoliopress' ),
-				'add_new' => __( 'Add New Item', 'portfoliopress' ),
-				'add_new_item' => __( 'Add New Portfolio Item', 'portfoliopress' ),
-				'edit_item' => __( 'Edit Portfolio Item', 'portfoliopress' ),
-				'new_item' => __( 'Add New Portfolio Item', 'portfoliopress' ),
-				'view_item' => __( 'View Item', 'portfoliopress' ),
-				'search_items' => __( 'Search Portfolio', 'portfoliopress' ),
-				'not_found' => __( 'No portfolio items found', 'portfoliopress' ),
-				'not_found_in_trash' => __( 'No portfolio items found in trash', 'portfoliopress' )
-			),
-			'public' => true,
-			'supports' => array( 'title', 'editor', 'thumbnail', 'comments' ),
-			'capability_type' => 'post',
-			'rewrite' => array("slug" => "portfolio"), // Permalinks format
-			'menu_position' => 5,
-			'has_archive' => true
+
+	$labels = array(
+		'name' => __( 'Portfolio', 'portfoliopress' ),
+		'singular_name' => __( 'Portfolio Item', 'portfoliopress' ),
+		'add_new' => __( 'Add New Item', 'portfoliopress' ),
+		'add_new_item' => __( 'Add New Portfolio Item', 'portfoliopress' ),
+		'edit_item' => __( 'Edit Portfolio Item', 'portfoliopress' ),
+		'new_item' => __( 'Add New Portfolio Item', 'portfoliopress' ),
+		'view_item' => __( 'View Item', 'portfoliopress' ),
+		'search_items' => __( 'Search Portfolio', 'portfoliopress' ),
+		'not_found' => __( 'No portfolio items found', 'portfoliopress' ),
+		'not_found_in_trash' => __( 'No portfolio items found in trash', 'portfoliopress' )
+	);
+
+	$args = array(
+    	'labels' => $labels,
+    	'public' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail', 'comments' ),
+		'capability_type' => 'post',
+		'rewrite' => array("slug" => "portfolio"), // Permalinks format
+		'menu_position' => 5,
+		'has_archive' => true
+	); 
+
+	register_post_type( 'portfolio', $args);
+	
+	$taxonomy_args = array(
+		'hierarchical' => false,
+		'label' => __( 'Portfolio Tags', 'portfoliopress' ), 
+		'labels' => array(
+			'name' => __( 'Portfolio Tags', 'portfoliopress' ),
+			'singular_name' => __( 'Portfolio Tag', 'portfoliopress' )
 		)
 	);
 	
-	register_taxonomy( 'portfolio-tags', 'portfolio', 
-		array( 
-			'hierarchical' => false,
-			'label' => __( 'Portfolio Tags', 'portfoliopress' ), 
-			'labels' => array(
-				'name' => __( 'Portfolio Tags', 'portfoliopress' ),
-				'singular_name' => __( 'Portfolio Tag', 'portfoliopress' )
-			)
-		) 
-	);
+	register_taxonomy( 'portfolio-tags', 'portfolio', $taxonomy_args);
 }
 
 add_action( 'init', 'wpt_portfolio_posttype' );

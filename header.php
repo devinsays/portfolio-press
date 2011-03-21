@@ -26,15 +26,15 @@
         <?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 			<hgroup id="logo">
 				<<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <?php if ($logo = get_option('ppo_logo') ) {
-					echo '<img src="' . $logo . '" alt="Blog Name"/>';
-				} else {
+                <?php if ( of_get_option('logo') != 'false' ) { ?>
+					<img src="<?php echo of_get_option('logo'); ?>" alt="<?php echo bloginfo( 'name' ) ?>" />
+				<?php } else {
 					bloginfo( 'name' );
 				}?>
                 </a>
                 </<?php echo $heading_tag; ?>>
-				<?php if (!$logo) { ?>
-                <span id="site-description"><?php bloginfo( 'description' ); ?></span>
+				<?php if ( of_get_option('logo') == 'false' ) { ?>
+                	<span id="site-description"><?php bloginfo( 'description' ); ?></span>
                 <?php } ?>
 			</hgroup>
       
