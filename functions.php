@@ -51,6 +51,12 @@ if ( is_readable( $locale_file ) )
  */
 if ( ! isset( $content_width ) )
 	$content_width = 640;
+	
+/**
+ * This theme styles the visual editor with editor-style.css to match the theme style.
+ */
+	
+add_editor_style();
 
 /**
  * This theme uses wp_nav_menu() in one location.
@@ -69,8 +75,8 @@ add_theme_support( 'automatic-feed-links' );
  */
 
 if ( !is_admin() ) {
-	wp_enqueue_script( 'superfish', get_bloginfo('template_directory').'/js/superfish.js', array( 'jquery' ) );
-	wp_enqueue_script( 'fader', get_bloginfo('template_directory').'/js/jquery.fader.js', array( 'jquery' ) );
+	wp_enqueue_script( 'superfish', get_template_directory_uri() .'/js/superfish.js', array( 'jquery' ) );
+	wp_enqueue_script( 'fader', get_template_directory_uri() . '/js/jquery.fader.js', array( 'jquery' ) );
 }
 
 /**

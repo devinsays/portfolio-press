@@ -27,7 +27,7 @@ if ( !function_exists( 'of_get_option' ) ) {
 
 if ( !function_exists( 'optionsframework_add_page' ) && current_user_can('edit_theme_options') ) {
 	function portfolio_options_default() {
-		add_submenu_page('themes.php', 'Theme Options', 'Theme Options', 'edit_theme_options', 'options-framework','optionsframework_page_notice');
+		add_theme_page(__('Theme Options','portfoliopress'), __('Theme Options','portfoliopress'), 'edit_theme_options', 'options-framework','optionsframework_page_notice');
 	}
 	add_action('admin_menu', 'portfolio_options_default');
 }
@@ -41,19 +41,19 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
 	
 		<div class="wrap">
 		<?php screen_icon( 'themes' ); ?>
-		<h2><?php _e('Theme Options'); ?></h2>
-        <p><b>If you would like to use the Portfolio Press theme options, please install the <a href="https://github.com/devinsays/options-framework-plugin">Options Framework</a> plugin.</b></p>
-        <p>Once the plugin is activated you will have option to:</p>
+		<h2><?php _e('Theme Options','portfoliopress'); ?></h2>
+        <p><b><?php _e('If you would like to use the Portfolio Press theme options, please install the <a href="https://github.com/devinsays/options-framework-plugin">Options Framework</a> plugin.','portfoliopress'); ?></b></p>
+        <p><?php _e('Once the plugin is activated you will have option to:','portfoliopress'); ?></p>
         <ul class="ul-disc">
-        <li>Upload a logo image</li>
-        <li>Change the sidebar position</li>
-        <li>Change the menu position</li>
-        <li>Display the portfolio on the home page</li>
-        <li>Hide the portfolio image on the single post</li>
-        <li>Update the footer text</li>
+        <li><?php _e('Upload a logo image','portfoliopress'); ?></li>
+        <li><?php _e('Change the sidebar position','portfoliopress'); ?></li>
+        <li><?php _e('Change the menu position','portfoliopress'); ?></li>
+        <li><?php _e('Display the portfolio on the home page','portfoliopress'); ?></li>
+        <li><?php _e('Hide the portfolio image on the single post','portfoliopress'); ?></li>
+        <li><?php _e('Update the footer text','portfoliopress'); ?></li>
         </ul>
         
-        <p>If you don't need these options, the plugin is not required and the theme will use default settings.</p>
+        <p><?php _e('If you don\'t need these options, the plugin is not required default settings will be used.','portfoliopress'); ?></p>
 		</div>
 	<?php
 	}
