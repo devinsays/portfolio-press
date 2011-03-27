@@ -1,7 +1,8 @@
 Portfolio Theme 0.7
 
-- Major updates to the Options Panel
+- Major updates to the options panel
 - Minor updates to how Portfolio post type is set up
+- Update to screenshot image
 
 Portfolio Theme 0.6.1
 

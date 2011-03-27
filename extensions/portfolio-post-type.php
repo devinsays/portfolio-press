@@ -78,35 +78,36 @@ function portfolio_edit_columns($portfolio_columns){
 }
  
 function portfolio_columns_display($portfolio_columns, $post_id){
+
 	switch ($portfolio_columns)
+	
 	{
 		// Code from: http://wpengineer.com/display-post-thumbnail-post-page-overview
 		
 		case "thumbnail":
 			$width = (int) 35;
 			$height = (int) 35;
-				$thumbnail_id = get_post_meta( $post_id, '_thumbnail_id', true );
-				// image from gallery
-				$attachments = get_children( array('post_parent' => $post_id, 'post_type' => 'attachment', 'post_mime_type' => 'image') );
-				if ($thumbnail_id)
-					$thumb = wp_get_attachment_image( $thumbnail_id, array($width, $height), true );
-				elseif ($attachments) {
-					foreach ( $attachments as $attachment_id => $attachment ) {
-						$thumb = wp_get_attachment_image( $attachment_id, array($width, $height), true );
-					}
-				}
-					if ( isset($thumb) && $thumb ) {
-						echo $thumb;
-					} else {
-						echo __('None', 'portfoliopress');
-					}
+			$thumbnail_id = get_post_meta( $post_id, '_thumbnail_id', true );
+			
+			// Display the featured image in the column view if possible
+			if ($thumbnail_id) {
+				$thumb = wp_get_attachment_image( $thumbnail_id, array($width, $height), true );
+			}
+			if ( isset($thumb) ) {
+				echo $thumb;
+			} else {
+				echo __('None', 'portfoliopress');
+			}
 			break;	
-		case "portfolio-tags":
-			if ($tag_list = get_the_term_list( $post->ID, 'portfolio-tags', '', ', ', '' ) ) {
+			
+			// Display the portfolio tags in the column view
+			case "portfolio-tags":
+			
+			if ( $tag_list = get_the_term_list( $post_id, 'portfolio-tags', '', ', ', '' ) ) {
 				echo $tag_list;
 			} else {
-					echo __('None', 'portfoliopress');
-				}
+				echo __('None', 'portfoliopress');
+			}
 			break;			
 	}
 }
