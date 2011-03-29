@@ -22,7 +22,7 @@ function optionsframework_option_name() {
 function optionsframework_options() {
 		
 	// If using image radio buttons, define a directory path
-	$imagepath =  get_template_directory_uri . '/images/';
+	$imagepath =  get_bloginfo('template_url') . '/images/';
 	
 	// Options array	
 	$options = array();

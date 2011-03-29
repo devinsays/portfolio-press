@@ -1,21 +1,26 @@
-Portfolio Theme 0.7
+Portfolio Press 0.7.1
+
+- Changed image path in options.php back to get_bloginfo('template_url')
+- Deleted styles folder
+
+Portfolio Press 0.7
 
 - Major updates to the options panel
 - Minor updates to how Portfolio post type is set up
 - Update to screenshot image
 
-Portfolio Theme 0.6.1
+Portfolio Press 0.6.1
 
 - Added Norwegian translations from Erling Hamso - http://www.erlinghamso.no/\
 - Minor update to the 404 page from Michael Fields - http://wordpress.mfields.org\
 
-Portfolio Theme 0.6
+Portfolio Press 0.6
 
 - Made further updates for WordPress 3.1 compatibility\
 - Added options panel (props WooThemes)\
 - Includes new options to upload logo, set menu position, update footer text, and more.\
 
-Portfolio Theme 0.5.3
+Portfolio Press 0.5.3
 
 - Fixed pagination issue when portfolio template was set to home page\
 - Added portfolio icon designed by Ben Dunkle, core WordPress designer, Field 2 design, field2.com\
@@ -23,7 +28,7 @@ Portfolio Theme 0.5.3
 - Updated description to link to demonstration video and french translation note\
 - Changed from type-portfolio.php to archive-portfolio.php in preparation for 3.1\
 
-Portfolio Theme 0.5.2
+Portfolio Press 0.5.2
 
 - Added Spanish translations and the domain for backend localizations, props http://www.labitacoradeltigre.com\
 - For complete instructions in Spanish, read: http://bit.ly/dyFGYr\
@@ -33,39 +38,39 @@ Portfolio Theme 0.5.2
 - Added password protection ability to portfolio post type templates\
 - Added add_image_size( 'portfolio-large', 630, 9999, false ); because large images were being browser resized\
 
-Portfolio Theme 0.5.1
+Portfolio Press 0.5.1
 
 - Updated the text domain for translations
 - Made the name change to "Portfolio Press" to comply with repo guidelines
 
-Portfolio Theme 0.5
+Portfolio Press 0.5
 
 - Added templates for full-width portfolio, and taxonomy portfolio-tags
 - Updated style.css for new templates and for full-width page template
 - Added additional thumbnail size for the full width portfolio templates
 
-Portfolio Theme 0.44
+Portfolio Press 0.44
 
 - Updated style.css and reset.css to have styling for sub & sup html tags + code, pre, dl, dt, dd, abbr, cite\
 
-Portfolio Theme 0.43
+Portfolio Press 0.43
 
 - Updated style.css to have a clear on the .entry-utility
 - Updated the screenshot.png
 - Updated the theme description
 
-Portfolio Theme 0.42
+Portfolio Press 0.42
 
 - Updated style.css to properly align center images with captions\
 - Updated style.css to better display very long post titles\
 - Updated screenshot to reflect initial install (as per repository specs)\
 
-Portfolio Theme 0.41
+Portfolio Press 0.41
 
 - Updated style.css to properly clear images when they are floated at the bottom of a post\
 - Updated styles.css to apply a max-width of 640px to images in #content\
 
-Portfolio Theme 0.4
+Portfolio Press 0.4
 
 - Changed title filter priority in simple-custom-post-type-archives.php\
 - Added better handling for the Simple Custom Post Type Archives plugin\
