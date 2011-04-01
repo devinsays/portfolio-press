@@ -1,7 +1,8 @@
-Portfolio Press 0.7.1
+Portfolio Press 0.7.2
 
 - Changed image path in options.php back to get_bloginfo('template_url')
 - Deleted styles folder
+- Removed option to set portfolio as home.  Better done through core..
 
 Portfolio Press 0.7
 
