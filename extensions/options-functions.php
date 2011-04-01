@@ -48,7 +48,6 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
         <li><?php _e('Upload a logo image','portfoliopress'); ?></li>
         <li><?php _e('Change the sidebar position','portfoliopress'); ?></li>
         <li><?php _e('Change the menu position','portfoliopress'); ?></li>
-        <li><?php _e('Display the portfolio on the home page','portfoliopress'); ?></li>
         <li><?php _e('Hide the portfolio image on the single post','portfoliopress'); ?></li>
         <li><?php _e('Update the footer text','portfoliopress'); ?></li>
         </ul>
