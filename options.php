@@ -30,12 +30,6 @@ function optionsframework_options() {
 	$options[] = array( "name" => __('General Settings','portfoliopress'),
                     	"type" => "heading");
 						
-	$options[] = array( "name" => __('Display the Portfolio as the Home Page','portfoliopress'),
-						"desc" => __('Check this if you would like the portfolio to load on the home page.','portfoliopress'),
-						"id" => "portfolio_home",
-						"std" => "false",
-						"type" => "checkbox");
-						
 	$options[] = array( "name" => __('Display Images on Portfolio Posts','portfoliopress'),
 						"desc" => __('Uncheck this if you wish to manually display portfolio images on single posts.','portfoliopress'),
 						"id" => "portfolio_images",
