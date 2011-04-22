@@ -166,7 +166,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	display:block;
 	float:right;
 	font:14px/14px Helvetica, Arial, sans-serif;
-	padding:20px 0;
+	padding:20px 0 10px;
 }
 .menu ul {
 	z-index:99;
@@ -190,6 +190,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	float:left;
 	width: auto;
 	margin-left:10px;
+	margin-bottom:10px;
 }
 .menu ul li a.sf-with-ul {
 	padding-right:25px;
@@ -210,6 +211,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	border-top:1px solid #ccc;
 	border-bottom:1px solid #ddd;
 	margin-left:0px;
+	margin-bottom:0px;
 }
 .menu ul li ul li a {
 	width:160px;

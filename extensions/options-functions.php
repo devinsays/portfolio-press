@@ -6,7 +6,7 @@
  */
  
 if ( !function_exists( 'of_get_option' ) ) {
-	function of_get_option($name, $default = 'false') {
+	function of_get_option($name, $default = false) {
 		
 		$optionsframework_settings = get_option('optionsframework');
 		
@@ -75,8 +75,8 @@ add_filter('body_class','portfolio_body_class');
  */
 
 function portfolio_favicon() {
-	$favicon = of_get_option('custom_favicon');
-	if ( $favicon != 'false' ) {
+	$favicon = of_get_option('custom_favicon', false);
+	if ( $favicon ) {
         echo '<link rel="shortcut icon" href="'.  $favicon  .'"/>'."\n";
     }
 }

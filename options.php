@@ -77,7 +77,7 @@ function optionsframework_options() {
 						"type" => "heading");  
 	
 	$options[] = array( "name" => __('Custom Footer Text','portfoliopress'),
-						"desc" => __('Custom HTML/Text that will appear in the footer of your theme.','portfoliopress'),
+						"desc" => __('Custom text that will appear in the footer of your theme.','portfoliopress'),
 						"id" => "footer_text",
 						"type" => "textarea");
 									

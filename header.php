@@ -13,7 +13,7 @@
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/html5.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/html5.js"></script>
 <![endif]-->
 
 <?php wp_head(); ?>
@@ -26,15 +26,15 @@
         <?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 			<hgroup id="logo">
 				<<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                <?php if ( of_get_option('logo') != 'false' ) { ?>
+                <?php if ( of_get_option('logo', false) ) { ?>
 					<img src="<?php echo of_get_option('logo'); ?>" alt="<?php echo bloginfo( 'name' ) ?>" />
 				<?php } else {
 					bloginfo( 'name' );
 				}?>
                 </a>
                 </<?php echo $heading_tag; ?>>
-				<?php if ( of_get_option('logo') == 'false' ) { ?>
-                	<span id="site-description"><?php bloginfo( 'description' ); ?></span>
+				<?php if ( of_get_option('logo', false) ) { ?>
+                	<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
                 <?php } ?>
 			</hgroup>
       

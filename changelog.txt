@@ -1,3 +1,9 @@
+Portfolio Press 0.7.3
+
+- Better syntax for options conditionals
+- Minor style updates as recommended by WordPress Theme Team
+- Chinese translations by Sunny Lau
+
 Portfolio Press 0.7.2
 
 - Changed image path in options.php back to get_bloginfo('template_url')
@@ -12,32 +18,32 @@ Portfolio Press 0.7
 
 Portfolio Press 0.6.1
 
-- Added Norwegian translations from Erling Hamso - http://www.erlinghamso.no/\
-- Minor update to the 404 page from Michael Fields - http://wordpress.mfields.org\
+- Added Norwegian translations from Erling Hamso - http://www.erlinghamso.no
+- Minor update to the 404 page from Michael Fields - http://wordpress.mfields.org
 
 Portfolio Press 0.6
 
-- Made further updates for WordPress 3.1 compatibility\
-- Added options panel (props WooThemes)\
-- Includes new options to upload logo, set menu position, update footer text, and more.\
+- Made further updates for WordPress 3.1 compatibility
+- Added options panel (props WooThemes)
+- Includes new options to upload logo, set menu position, update footer text, and more.
 
 Portfolio Press 0.5.3
 
-- Fixed pagination issue when portfolio template was set to home page\
-- Added portfolio icon designed by Ben Dunkle, core WordPress designer, Field 2 design, field2.com\
-- Added french translations from Wolforg at http://www.wptrads.fr/portfolio-press/\
-- Updated description to link to demonstration video and french translation note\
-- Changed from type-portfolio.php to archive-portfolio.php in preparation for 3.1\
+- Fixed pagination issue when portfolio template was set to home page
+- Added portfolio icon designed by Ben Dunkle, core WordPress designer, Field 2 design, field2.com
+- Added french translations from Wolforg at http://www.wptrads.fr/portfolio-press/
+- Updated description to link to demonstration video and french translation note
+- Changed from type-portfolio.php to archive-portfolio.php in preparation for 3.1
 
 Portfolio Press 0.5.2
 
-- Added Spanish translations and the domain for backend localizations, props http://www.labitacoradeltigre.com\
-- For complete instructions in Spanish, read: http://bit.ly/dyFGYr\
-- Added complete RTL stylesheet support\
-- Updated to version 0.9.3 of the simple-custom-post-type-archives drop in plugin\
-- Deleted title filter for custom post types in functions.php\
-- Added password protection ability to portfolio post type templates\
-- Added add_image_size( 'portfolio-large', 630, 9999, false ); because large images were being browser resized\
+- Added Spanish translations and the domain for backend localizations, props http://www.labitacoradeltigre.com
+- For complete instructions in Spanish, read: http://bit.ly/dyFGYr
+- Added complete RTL stylesheet support
+- Updated to version 0.9.3 of the simple-custom-post-type-archives drop in plugin
+- Deleted title filter for custom post types in functions.php
+- Added password protection ability to portfolio post type templates
+- Added add_image_size( 'portfolio-large', 630, 9999, false ); because large images were being browser resized
 
 Portfolio Press 0.5.1
 
@@ -52,7 +58,7 @@ Portfolio Press 0.5
 
 Portfolio Press 0.44
 
-- Updated style.css and reset.css to have styling for sub & sup html tags + code, pre, dl, dt, dd, abbr, cite\
+- Updated style.css and reset.css to have styling for sub & sup html tags + code, pre, dl, dt, dd, abbr, cite
 
 Portfolio Press 0.43
 
@@ -62,22 +68,22 @@ Portfolio Press 0.43
 
 Portfolio Press 0.42
 
-- Updated style.css to properly align center images with captions\
-- Updated style.css to better display very long post titles\
-- Updated screenshot to reflect initial install (as per repository specs)\
+- Updated style.css to properly align center images with captions
+- Updated style.css to better display very long post titles
+- Updated screenshot to reflect initial install (as per repository specs)
 
 Portfolio Press 0.41
 
-- Updated style.css to properly clear images when they are floated at the bottom of a post\
-- Updated styles.css to apply a max-width of 640px to images in #content\
+- Updated style.css to properly clear images when they are floated at the bottom of a post
+- Updated styles.css to apply a max-width of 640px to images in #content
 
 Portfolio Press 0.4
 
-- Changed title filter priority in simple-custom-post-type-archives.php\
-- Added better handling for the Simple Custom Post Type Archives plugin\
-- Updated the menu_postion for the portfolio post type\
-- Combined the portfolio post type and custom taxonomy into the same init hook\
-- Added better labels to the portfolio post type\
-- Updated the hover states on the menu to use stop(true)\
-- Added thumbnails and taxonomy tags to the column view for portfolio post type\
+- Changed title filter priority in simple-custom-post-type-archives.php
+- Added better handling for the Simple Custom Post Type Archives plugin
+- Updated the menu_postion for the portfolio post type
+- Combined the portfolio post type and custom taxonomy into the same init hook
+- Added better labels to the portfolio post type
+- Updated the hover states on the menu to use stop(true)
+- Added thumbnails and taxonomy tags to the column view for portfolio post type
 - Added an icon to the portfolio post type
