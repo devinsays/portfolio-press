@@ -3,6 +3,7 @@ Portfolio Press 0.7.3
 - Better syntax for options conditionals
 - Minor style updates as recommended by WordPress Theme Team
 - Chinese translations by Sunny Lau
+- Updated Spanish Translations from Eduardo Larequi
 
 Portfolio Press 0.7.2
 

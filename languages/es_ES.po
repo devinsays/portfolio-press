@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tema Portfolio en español\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-25 22:51-0600\n"
-"PO-Revision-Date: 2010-09-25 22:54-0600\n"
+"POT-Creation-Date: 2011-04-25 18:38+0100\n"
+"PO-Revision-Date: 2011-04-25 19:32+0100\n"
 "Last-Translator: Eduardo Larequi <elarequi@gmail.com>\n"
 "Language-Team: PNTE <blogs@educacion.navarra.es>\n"
 "MIME-Version: 1.0\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: Spain\n"
-"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n\n"
+"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n:1,2;_x\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -28,15 +28,49 @@ msgstr "Parece que no has podido encontrar lo que estabas buscando. Te aconsejam
 msgid "Most Used Categories"
 msgstr "Categorías más utilizadas"
 
+#: archive-portfolio.php:34
+#: archive-portfolio.php:36
+#: full-width-portfolio.php:24
+#: full-width-portfolio.php:26
+msgid "Permanent Link to"
+msgstr "Enlace permanente a"
+
+#: archive-portfolio.php:55
+#: full-width-portfolio.php:45
+#: loop.php:63
+msgid "Post navigation"
+msgstr "Navegación de entradas"
+
+#: archive-portfolio.php:56
+#: full-width-portfolio.php:46
+#: loop.php:64
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Entradas más antiguas"
+
+#: archive-portfolio.php:57
+#: full-width-portfolio.php:47
+#: loop.php:65
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Entradas más recientes <span class=\"meta-nav\">&rarr;</span>"
+
+#: archive-portfolio.php:65
+#: full-width-portfolio.php:55
+msgid "Sorry, no posts matched your criteria."
+msgstr "Lo sentimos, pero no hay entradas que coincidan con tus criterios."
+
 #: archive.php:16
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
-msgstr "Entradas de <span>%s</span>"
+msgstr "Entradas del <span>%s</span>"
 
 #: archive.php:18
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
 msgstr "Entradas de <span>%s</span>"
+
+#: archive.php:18
+msgid "F Y"
+msgstr "F \\d\\e Y"
 
 #: archive.php:20
 #, php-format
@@ -62,9 +96,11 @@ msgid "This post is password protected. Enter the password to view any comments.
 msgstr "Entrada protegida por contraseña. Escribe la contraseña para ver los comentarios."
 
 #: comments.php:21
-#, fuzzy, php-format
+#, php-format
 msgid "One Response to %2$s"
-msgstr "Un comentario a %2$s"
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] "Un comentario a %2$s"
+msgstr[1] "%1$s comentarios a %2$s"
 
 #: comments.php:28
 #: comments.php:40
@@ -85,19 +121,19 @@ msgstr "Comentarios más recientes &rarr;"
 msgid "Comments are closed."
 msgstr "Los comentarios están cerrados"
 
-#: footer.php:38
+#: footer.php:40
 msgid "Powered by"
 msgstr "Blog elaborado con"
 
-#: footer.php:38
+#: footer.php:40
 msgid "A Semantic Personal Publishing Platform"
 msgstr "Una plataforma de publicación semántica personal"
 
-#: footer.php:38
+#: footer.php:40
 msgid "WordPress"
 msgstr "WordPress"
 
-#: footer.php:38
+#: footer.php:40
 msgid "Portfolio"
 msgstr "Portfolio"
 
@@ -116,56 +152,60 @@ msgstr "Páginas:"
 msgid "Edit"
 msgstr "Editar"
 
-#: full-width-portfolio.php:45
-#: loop.php:63
-msgid "Post navigation"
-msgstr "Navegación de entradas"
-
-#: full-width-portfolio.php:46
-#: loop.php:64
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Entradas más antiguas"
-
-#: full-width-portfolio.php:47
-#: loop.php:65
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Entradas más recientes <span class=\"meta-nav\">&rarr;</span>"
-
-#: full-width-portfolio.php:55
-msgid "Sorry, no posts matched your criteria."
-msgstr "Lo sentimos, pero no hay entradas que coincidan con tus criterios."
-
-#: functions.php:48
+#: functions.php:65
 msgid "Primary Menu"
 msgstr "Menú de navegación primario"
 
-#: functions.php:92
+#: functions.php:109
 #, php-format
 msgid "Search results for %s"
 msgstr "Resultados de búsqueda correspondientes a %s"
 
-#: functions.php:95
-#: functions.php:120
+#: functions.php:112
+#: functions.php:129
 #, php-format
 msgid "Page %s"
 msgstr "Página %s"
 
-#: functions.php:156
+#: functions.php:166
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: header.php:32
+#: functions.php:174
+msgid "Footer 1"
+msgstr "Pie de página 1"
+
+#: functions.php:174
+#: functions.php:175
+#: functions.php:176
+#: functions.php:177
+msgid "Widetized footer"
+msgstr "Zona del pie de página para widgets"
+
+#: functions.php:175
+msgid "Footer 2"
+msgstr "Pie de página 2"
+
+#: functions.php:176
+msgid "Footer 3"
+msgstr "Pie de página 3"
+
+#: functions.php:177
+msgid "Footer 4"
+msgstr "Pie de página 4"
+
+#: header.php:42
 msgid "Main menu"
 msgstr "Menú principal"
 
-#: header.php:33
+#: header.php:43
 msgid "Skip to content"
 msgstr "Ir al contenido"
 
 #: image.php:21
 #, php-format
 msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>  at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
-msgstr "<span class=\"meta-prep meta-prep-entry-date\">Imagen publicada el </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>, de <a href=\"%3$s\" title=\"Enlace a la imagen a tamaño completo\">%4$s &times; %5$s</a> píxels, en <a href=\"%6$s\" title=\"Volver a %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">Imagen publicada el </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>, con un tamaño de <a href=\"%3$s\" title=\"Enlace a la imagen a tamaño completo\">%4$s &times; %5$s</a> píxels, en <a href=\"%6$s\" title=\"Volver a %7$s\" rel=\"gallery\">%7$s</a>"
 
 #: image.php:35
 msgid "&larr; Previous"
@@ -223,6 +263,82 @@ msgstr "Un comentario"
 msgid "% Comments"
 msgstr "% comentarios"
 
+#: options.php:30
+msgid "General Settings"
+msgstr "Configuración general"
+
+#: options.php:33
+msgid "Display Images on Portfolio Posts"
+msgstr "Mostrar imágenes en las entradas del portfolio"
+
+#: options.php:34
+msgid "Uncheck this if you wish to manually display portfolio images on single posts."
+msgstr "Desactiva esta casilla si quieres mostrar manualmente las imágenes del portfolio en las entradas individuales."
+
+#: options.php:39
+msgid "Custom Logo"
+msgstr "Logotipo personalizado"
+
+#: options.php:40
+msgid "Upload a logo for your theme if you would like to use one."
+msgstr "Si quieres utilizar un logotipo para tu tema, tendrás que subir una imagen."
+
+#: options.php:44
+msgid "Custom Favicon"
+msgstr "Favicono personalizado"
+
+#: options.php:45
+msgid "Upload a 16px x 16px Png/Gif image to represent your website."
+msgstr "Sube una imagen de 16x16 píxels, en formatos PNG o GIF, que represente tu sitio web."
+
+#: options.php:49
+msgid "Disable Portfolio"
+msgstr "Desactivar portfolio"
+
+#: options.php:50
+msgid "Check this if you are not planning to use the portfolio post type.  You can always re-enable it."
+msgstr "Marca esta casilla si no tienes intención de utilizar el tipo de contenido personalizado correspondiente al portfolio. Siempre podrás reactivar esta opción más adelante."
+
+#: options.php:55
+msgid "Style and Layout"
+msgstr "Estilo y disposición"
+
+#: options.php:58
+msgid "Main Layout"
+msgstr "Disposición principal"
+
+#: options.php:59
+msgid "Select main content and sidebar alignment."
+msgstr "Selecciona la alineación de las columnas de contenido y barra lateral."
+
+#: options.php:68
+msgid "Menu Position"
+msgstr "Posición del menú"
+
+#: options.php:69
+msgid "Select where the main menu should go in the header.  Long menus should go underneath."
+msgstr "Selecciona la posición en que debe mostrarse el menú en la cabecera. Los menús largos deben ir bajo el logotipo."
+
+#: options.php:73
+msgid "Right of logo."
+msgstr "A la derecha del logotipo."
+
+#: options.php:73
+msgid "Underneath logo."
+msgstr "Bajo el logotipo."
+
+#: options.php:76
+msgid "Footer Settings"
+msgstr "Configuración del pie de página"
+
+#: options.php:79
+msgid "Custom Footer Text"
+msgstr "Texto personalizado del pie de página."
+
+#: options.php:80
+msgid "Custom HTML/Text that will appear in the footer of your theme."
+msgstr "Texto o HTML personalizado que aparecerá en el pie de página del tema."
+
 #: search.php:14
 #, php-format
 msgid "Search Results for: %s"
@@ -254,6 +370,16 @@ msgstr "ETIQUETAS: %1$s. Puedes guardar el <a href=\"%2$s\" title=\"Enlace perma
 msgid "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
 msgstr "Puedes guardar el <a href=\"%2$s\" title=\"Enlace permanente a %3$s\" rel=\"bookmark\">enlace permanente</a>."
 
+#: single-portfolio.php:66
+#: single.php:61
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: single-portfolio.php:67
+#: single.php:60
+msgid "&larr;"
+msgstr "&larr;"
+
 #: single.php:41
 #, php-format
 msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
@@ -269,99 +395,110 @@ msgstr "Entrada publicada en la categoría %1$s. Puedes guardar el <a href=\"%3$
 msgid "Tag Archives: %s"
 msgstr "Entradas correspondientes a la etiqueta '%s'"
 
-#: extensions/portfolio-post-type.php:14
+#: extensions/options-functions.php:30
+#: extensions/options-functions.php:44
+msgid "Theme Options"
+msgstr "Opciones del tema"
+
+#: extensions/options-functions.php:45
+msgid "If you would like to use the Portfolio Press theme options, please install the <a href=\"https://github.com/devinsays/options-framework-plugin\">Options Framework</a> plugin."
+msgstr "Si quieres utilizar las opciones del tema Portfolio Press, por favor instala el plugin <a href=\"https://github.com/devinsays/options-framework-plugin\">Options Framework</a>."
+
+#: extensions/options-functions.php:46
+msgid "Once the plugin is activated you will have option to:"
+msgstr "Una vez que el plugin esté activado, tendrás la opción de:"
+
+#: extensions/options-functions.php:48
+msgid "Upload a logo image"
+msgstr "Subir una imagen de logotipo"
+
+#: extensions/options-functions.php:49
+msgid "Change the sidebar position"
+msgstr "Cambiar la posición de la barra lateral"
+
+#: extensions/options-functions.php:50
+msgid "Change the menu position"
+msgstr "Cambiar la posición del menú"
+
+#: extensions/options-functions.php:51
+msgid "Hide the portfolio image on the single post"
+msgstr "Ocultar la imagen del portfolio en las entradas individuales"
+
+#: extensions/options-functions.php:52
+msgid "Update the footer text"
+msgstr "Actualizar el texto del pie de página"
+
+#: extensions/options-functions.php:55
+msgid "If you don't need these options, the plugin is not required default settings will be used."
+msgstr "Si no te hacen falta estas opciones, el plugin no es necesario, porque se utilizarán las opciones por defecto."
+
+#: extensions/portfolio-post-type.php:13
 msgid "Portfolio Item"
 msgstr "Elemento del portfolio"
 
-#: extensions/portfolio-post-type.php:15
+#: extensions/portfolio-post-type.php:14
 msgid "Add New Item"
 msgstr "Añadir nuevo elemento"
 
-#: extensions/portfolio-post-type.php:16
-#: extensions/portfolio-post-type.php:18
+#: extensions/portfolio-post-type.php:15
+#: extensions/portfolio-post-type.php:17
 msgid "Add New Portfolio Item"
 msgstr "Añadir nuevo elemento de portfolio"
 
-#: extensions/portfolio-post-type.php:17
+#: extensions/portfolio-post-type.php:16
 msgid "Edit Portfolio Item"
 msgstr "Editar elemento de portfolio"
 
-#: extensions/portfolio-post-type.php:19
+#: extensions/portfolio-post-type.php:18
 msgid "View Item"
 msgstr "Ver elemento"
 
-#: extensions/portfolio-post-type.php:20
+#: extensions/portfolio-post-type.php:19
 msgid "Search Portfolio"
 msgstr "Buscar en el portfolio"
 
-#: extensions/portfolio-post-type.php:21
+#: extensions/portfolio-post-type.php:20
 msgid "No portfolio items found"
 msgstr "No se han encontrado elementos del portfolio"
 
-#: extensions/portfolio-post-type.php:22
+#: extensions/portfolio-post-type.php:21
 msgid "No portfolio items found in trash"
 msgstr "No se han encontrado elementos del portfolio en la papelera"
 
-#: extensions/portfolio-post-type.php:36
 #: extensions/portfolio-post-type.php:38
+#: extensions/portfolio-post-type.php:40
 msgid "Portfolio Tags"
 msgstr "Etiquetas del portfolio"
 
-#: extensions/portfolio-post-type.php:39
+#: extensions/portfolio-post-type.php:41
 msgid "Portfolio Tag"
 msgstr "Etiqueta del portfolio"
 
-#: extensions/portfolio-post-type.php:66
+#: extensions/portfolio-post-type.php:69
+msgid "Title"
+msgstr "Título"
+
+#: extensions/portfolio-post-type.php:70
 msgid "Thumbnail"
 msgstr "Miniatura"
 
-#: extensions/portfolio-post-type.php:67
+#: extensions/portfolio-post-type.php:71
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: extensions/portfolio-post-type.php:68
+#: extensions/portfolio-post-type.php:72
 msgid "Author"
 msgstr "Autor"
 
-#: extensions/portfolio-post-type.php:69
+#: extensions/portfolio-post-type.php:73
 msgid "Comments"
 msgstr "Comentarios"
 
-#: extensions/portfolio-post-type.php:70
+#: extensions/portfolio-post-type.php:74
 msgid "Date"
 msgstr "Fecha"
 
-#: extensions/portfolio-post-type.php:97
-#: extensions/portfolio-post-type.php:104
+#: extensions/portfolio-post-type.php:99
+#: extensions/portfolio-post-type.php:109
 msgid "None"
 msgstr "Ninguno"
-
-#~ msgid "F Y"
-#~ msgstr "F \\d\\e Y"
-
-#~ msgid "Permanent Link to"
-#~ msgstr "Enlace permanente a"
-
-#~ msgid "Footer 1"
-#~ msgstr "Pie de página 1"
-
-#~ msgid "Widetized footer"
-#~ msgstr "Zona del pie de página para widgets"
-
-#~ msgid "Footer 2"
-#~ msgstr "Pie de página 2"
-
-#~ msgid "Footer 3"
-#~ msgstr "Pie de página 3"
-
-#~ msgid "Footer 4"
-#~ msgstr "Pie de página 4"
-
-#~ msgid "Portfolio theme"
-#~ msgstr "tema Portfolio"
-
-#~ msgid "translated by"
-#~ msgstr ""
-#~ "traducido por el <a href=\"http://pnte.educacion.navarra.es/portal/\" "
-#~ "target=\"_blank\" title=\"Programa de Nuevas Tecnologías y Educación"
-#~ "\">PNTE</a>"
