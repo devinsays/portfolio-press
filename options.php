@@ -33,7 +33,7 @@ function optionsframework_options() {
 	$options[] = array( "name" => __('Display Images on Portfolio Posts','portfoliopress'),
 						"desc" => __('Uncheck this if you wish to manually display portfolio images on single posts.','portfoliopress'),
 						"id" => "portfolio_images",
-						"std" => "true",
+						"std" => "1",
 						"type" => "checkbox");
 						
 	$options[] = array( "name" => __('Custom Logo','portfoliopress'),
@@ -49,7 +49,7 @@ function optionsframework_options() {
 	$options[] = array( "name" => __('Disable Portfolio','portfoliopress'),
 						"desc" => __('Check this if you are not planning to use the portfolio post type.  You can always re-enable it.','portfoliopress'),
 						"id" => "disable_portfolio",
-						"std" => "false",
+						"std" => "0",
 						"type" => "checkbox");                                                 
     
 	$options[] = array( "name" => __('Style and Layout','portfoliopress'),

@@ -183,7 +183,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	line-height:18px;
 	text-decoration:none;
 }
-.menu ul a:hover, .menu ul li.current_page_item, .menu ul li.current_page_parent, .menu ul li.current-menu-item {
+.menu ul a:hover, .menu ul li.current_page_item, .menu ul li.current_menu_parent, .menu ul li.current-menu-item {
 	background:#666;
 }
 .menu ul li {
@@ -256,7 +256,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* CSS3 Menu Effects */
 
-.menu ul a, .menu ul li.current_page_item, .menu ul li.current_page_parent, .menu ul li:hover, .menu ul li.hover, .menu ul li.current-menu-item {
+.menu ul a, .menu ul li.current_page_item, .menu ul li.current_menu_parent, .menu ul li:hover, .menu ul li.hover, .menu ul li.current-menu-item {
 	border-radius:2px;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;

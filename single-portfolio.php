@@ -31,7 +31,7 @@ get_header(); ?>
 
 					<div class="entry-content">
                     
-                    <?php if (has_post_thumbnail() && ( of_get_option('portfolio_images') != 'false') ) {
+                    <?php if ( has_post_thumbnail() && ( of_get_option('portfolio_images') != 'false' ) && ( of_get_option('portfolio_images', "1") != "0") ) {
 						the_post_thumbnail('portfolio-large');
 						}
 					?>

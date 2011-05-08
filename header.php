@@ -33,7 +33,7 @@
 				}?>
                 </a>
                 </<?php echo $heading_tag; ?>>
-				<?php if ( of_get_option('logo', false) ) { ?>
+				<?php if ( !of_get_option('logo', false) ) { ?>
                 	<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
                 <?php } ?>
 			</hgroup>
