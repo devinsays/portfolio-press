@@ -6,23 +6,23 @@
  */
  
 if ( !function_exists( 'of_get_option' ) ) {
-	function of_get_option($name, $default = false) {
+function of_get_option($name, $default = false) {
+	
+	$optionsframework_settings = get_option('optionsframework');
+	
+	// Gets the unique option id
+	$option_name = $optionsframework_settings['id'];
+	
+	if ( get_option($option_name) ) {
+		$options = get_option($option_name);
+	}
 		
-		$optionsframework_settings = get_option('optionsframework');
-		
-		// Gets the unique option id
-		$option_name = $option_name = $optionsframework_settings['id'];
-		
-		if ( get_option($option_name) ) {
-			$options = get_option($option_name);
-		}
-			
-		if ( !empty($options[$name]) ) {
-			return $options[$name];
-		} else {
-			return $default;
-		}
-	}	
+	if ( !empty($options[$name]) ) {
+		return $options[$name];
+	} else {
+		return $default;
+	}
+}
 }
 
 if ( !function_exists( 'optionsframework_add_page' ) && current_user_can('edit_theme_options') ) {

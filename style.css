@@ -183,7 +183,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	line-height:18px;
 	text-decoration:none;
 }
-.menu ul a:hover, .menu ul li.current_page_item, .menu ul li.current_menu_parent, .menu ul li.current-menu-item {
+.menu ul a:hover, .menu ul .current-page-item, .menu ul .current-menu-parent, .menu ul .current-menu-item {
 	background:#666;
 }
 .menu ul li {
@@ -202,7 +202,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	left: -999em;
 	width: 180px;
 	border: 1px solid #666;
-	border-width:1px 1px 0;
+	border-width:1px;
 	z-index:999;
 	margin-left:0;
 }
@@ -222,7 +222,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .menu ul li ul li a.sf-with-ul {
 	padding:5px 10px;
 }
-.menu ul li ul li a:hover {
+.menu ul li ul li a:hover, .menu ul ul .current-menu-item {
 	background:#c6c6c6;
 	color:#111;
 }
@@ -256,12 +256,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* CSS3 Menu Effects */
 
-.menu ul a, .menu ul li.current_page_item, .menu ul li.current_menu_parent, .menu ul li:hover, .menu ul li.hover, .menu ul li.current-menu-item {
+.menu ul a, .menu ul .current-page-item, .menu ul .current-menu-parent, .menu ul li:hover, .menu ul li.hover, .menu ul .current-menu-item {
 	border-radius:2px;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
 }
-.menu ul li ul li a {
+.menu ul ul li, .menu ul ul li a, .menu ul ul li:hover, .menu ul ul .current-menu-item {
 	border-radius:0;
 	-moz-border-radius:0;
 	-webkit-border-radius:0;
