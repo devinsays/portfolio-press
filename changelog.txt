@@ -4,7 +4,7 @@ Portfolio Press 0.7.3
 - Minor style updates as recommended by WordPress Theme Team
 - Chinese translations by Sunny Lau
 - Updated Spanish Translations from Eduardo Larequi
-- Changed "current_page_parent" to "current_menu_parent" in css
+- Changed "current-page-parent" to "current-menu-parent" in css
 
 Portfolio Press 0.7.2
 
