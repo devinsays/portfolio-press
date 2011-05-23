@@ -14,7 +14,7 @@ require_once(TEMPLATEPATH . '/extensions/options-functions.php');
  * Enables the Portfolio custom post type
  */
  
-if ( ( of_get_option('disable_portfolio') != 'true' ) &&  ( of_get_option('disable_portfolio', "1") != "0" ) ) {
+if ( !of_get_option('disable_portfolio', "0") ) {
 	require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
 }
  
