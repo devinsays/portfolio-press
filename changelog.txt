@@ -1,3 +1,8 @@
+Portfolio Press 0.7.4
+
+- Paging bug fixes when portfolio is set as home page
+- Checkbox fixes for options
+
 Portfolio Press 0.7.3
 
 - Better syntax for options conditionals
