@@ -196,6 +196,9 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	padding-right:25px;
 }
 /* Drop-down menus */
+.menu ul ul .current-page-item, .menu ul ul .current-menu-parent, .menu ul ul .current-menu-item {
+	background:#ccc;
+}
 .menu ul li ul {
 	background: #FFF;
 	position: absolute;
@@ -261,7 +264,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
 }
-.menu ul ul li, .menu ul ul li a, .menu ul ul li:hover, .menu ul ul .current-menu-item {
+.menu ul ul li, .menu ul ul li a, .menu ul ul li:hover, .menu ul ul .current-menu-item, .menu ul ul .current-menu-parent {
 	border-radius:0;
 	-moz-border-radius:0;
 	-webkit-border-radius:0;
