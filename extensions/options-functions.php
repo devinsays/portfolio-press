@@ -96,6 +96,10 @@ function portfolio_head_css() {
 			$output .= ".menu ul li {margin-left:0; margin-right:10px;}\n";
 		}
 		
+		if ( of_get_option('header_color') != "#000") {
+			$output = "#branding {background:" . of_get_option('header_color') . "}\n";
+		}
+		
 		// Output styles
 		if ($output <> '') {
 			$output = "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . $output . "</style>\n";

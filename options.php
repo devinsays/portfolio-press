@@ -64,6 +64,11 @@ function optionsframework_options() {
 						'layout-2cr' => $imagepath . '2cr.png',
 						'layout-2cl' => $imagepath . '2cl.png')
 						);
+						
+	$options[] = array( "name" => "Header Color",
+						"id" => "header_color",
+						"std" => "#000000",
+						"type" => "color");
 					
 	$options[] = array( "name" => __('Menu Position','portfoliopress'),
 						"desc" => __('Select where the main menu should go in the header.  Long menus should go underneath.','portfoliopress'),
