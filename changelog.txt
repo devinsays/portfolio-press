@@ -1,8 +1,9 @@
 Portfolio Press 0.7.4
 
 - Paging bug fixes when portfolio is set as home page
-- Checkbox fixes for options
+- Checkbox fixes for options panel
 - Styling changes to selected menu parent in drop down
+- Option for changing header color
 
 Portfolio Press 0.7.3
 
