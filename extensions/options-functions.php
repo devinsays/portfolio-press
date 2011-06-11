@@ -92,12 +92,12 @@ function portfolio_head_css() {
 		$output = '';
 		
 		if ( of_get_option('menu_position') == "clear") {
-			$output = "#navigation {clear:both; float:none;}\n";
+			$output .= "#navigation {clear:both; float:none;}\n";
 			$output .= ".menu ul li {margin-left:0; margin-right:10px;}\n";
 		}
 		
 		if ( of_get_option('header_color') != "#000") {
-			$output = "#branding {background:" . of_get_option('header_color') . "}\n";
+			$output .= "#branding {background:" . of_get_option('header_color') . "}\n";
 		}
 		
 		// Output styles
