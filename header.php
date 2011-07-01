@@ -7,6 +7,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name ="viewport" content="width = 1020">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -15,7 +16,6 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/html5.js"></script>
 <![endif]-->
-
 <?php wp_head(); ?>
 </head>
 
