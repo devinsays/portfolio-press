@@ -168,13 +168,13 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	font:14px/14px Helvetica, Arial, sans-serif;
 	padding:20px 0 10px;
 }
-.menu ul {
+#navigation ul {
 	z-index:99;
 	margin:0;
 	padding:0;
 	list-style:none;
 }
-.menu ul a {
+#navigation ul a {
 	position:relative;
 	color:#fff;
 	display:block;
@@ -183,23 +183,23 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	line-height:18px;
 	text-decoration:none;
 }
-.menu ul a:hover, .menu ul .current-page-item, .menu ul .current-menu-parent, .menu ul .current-menu-item {
+#navigation ul a:hover, #navigation ul .current-page-item, #navigation ul .current-menu-parent, #navigation ul .current-menu-item {
 	background:#666;
 }
-.menu ul li {
+#navigation ul li {
 	float:left;
 	width: auto;
 	margin-left:10px;
 	margin-bottom:10px;
 }
-.menu ul li a.sf-with-ul {
+#navigation ul li a.sf-with-ul {
 	padding-right:25px;
 }
 /* Drop-down menus */
-.menu ul ul .current-page-item, .menu ul ul .current-menu-parent, .menu ul ul .current-menu-item {
+#navigation ul ul .current-page-item, #navigation ul ul .current-menu-parent, #navigation ul ul .current-menu-item {
 	background:#ccc;
 }
-.menu ul li ul {
+#navigation ul li ul {
 	background: #FFF;
 	position: absolute;
 	left: -999em;
@@ -209,40 +209,40 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	z-index:999;
 	margin-left:0;
 }
-.menu ul li ul li {
+#navigation ul li ul li {
 	background:#eee;
 	border-top:1px solid #ccc;
 	border-bottom:1px solid #ddd;
 	margin-left:0px;
 	margin-bottom:0px;
 }
-.menu ul li ul li a {
+#navigation ul li ul li a {
 	width:160px;
 	color:#555;
 	font-size:0.9em;
 	line-height:18px;
 }
-.menu ul li ul li a.sf-with-ul {
+#navigation ul li ul li a.sf-with-ul {
 	padding:5px 10px;
 }
-.menu ul li ul li a:hover, .menu ul ul .current-menu-item {
+#navigation ul li ul li a:hover, #navigation ul ul .current-menu-item {
 	background:#c6c6c6;
 	color:#111;
 }
-.menu ul li ul ul {
+#navigation ul li ul ul {
 	margin: -30px 0 0 180px;
 }
-.menu ul li:hover, .menu ul li.hover {
+#navigation ul li:hover, #navigation ul li.hover {
 	position:static;
 	background:#666;
 }
-.menu ul ul li:hover, .menu ul ul li.hover {
+#navigation ul ul li:hover, #navigation ul ul li.hover {
 	background:#eee;
 }
-.menu ul li:hover ul, .menu ul li.sfhover ul, .menu ul li li:hover ul, .menu ul li li.sfhover ul, .menu ul li li li:hover ul, .menu ul li li li.sfhover ul, .menu ul li li li li:hover ul, .menu ul li li li li.sfhover ul {
+#navigation ul li:hover ul, #navigation ul li.sfhover ul, #navigation ul li li:hover ul, #navigation ul li li.sfhover ul, #navigation ul li li li:hover ul, #navigation ul li li li.sfhover ul, #navigation ul li li li li:hover ul, #navigation ul li li li li.sfhover ul {
 	left:auto;
 }
-.menu ul .sf-sub-indicator {
+#navigation ul .sf-sub-indicator {
 	background:	url(images/arrow-down.png) no-repeat;
 	position:absolute;
 	display:block;
@@ -253,18 +253,18 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	text-indent:-999em;
 	overflow:hidden;
 }
-.menu li ul .sf-sub-indicator {
+#navigation li ul .sf-sub-indicator {
 	background:url(images/arrow-right.png) no-repeat;
 }
 
 /* CSS3 Menu Effects */
 
-.menu ul a, .menu ul .current-page-item, .menu ul .current-menu-parent, .menu ul li:hover, .menu ul li.hover, .menu ul .current-menu-item {
+#navigation ul a, #navigation ul .current-page-item, #navigation ul .current-menu-parent, #navigation ul li:hover, #navigation ul li.hover, #navigation ul .current-menu-item {
 	border-radius:2px;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
 }
-.menu ul ul li, .menu ul ul li a, .menu ul ul li:hover, .menu ul ul .current-menu-item, .menu ul ul .current-menu-parent {
+#navigation ul ul li, #navigation ul ul li a, #navigation ul ul li:hover, #navigation ul ul .current-menu-item, #navigation ul ul .current-menu-parent {
 	border-radius:0;
 	-moz-border-radius:0;
 	-webkit-border-radius:0;
@@ -570,14 +570,14 @@ img.wp-smiley {
 	border:1px solid #ddd;
 	border-width:1px 0 1px;
 }
-.menu ul-entries a, .wp-pagenavi a:link, .wp-pagenavi a:visited, .wp-pagenavi .current, .wp-pagenavi .on, .wp-pagenavi a:hover, .wp-pagenavi span.extend, .wp-pagenavi span.pages {
+#navigation ul-entries a, .wp-pagenavi a:link, .wp-pagenavi a:visited, .wp-pagenavi .current, .wp-pagenavi .on, .wp-pagenavi a:hover, .wp-pagenavi span.extend, .wp-pagenavi span.pages {
 	display: block;
 	font:italic 12px/16px Georgia, serif;
 	color:#777;
 	text-decoration:none;
 	padding:0;
 }
-.menu ul-entries a:hover {
+#navigation ul-entries a:hover {
 	text-decoration:underline;
 }
 .wp-pagenavi a:link, .wp-pagenavi a:visited {
