@@ -10,7 +10,7 @@ Template Name: Portfolio
 				echo get_the_password_form();
 			} else { ?>
 
-			<div id="portfolio">
+			<div id="portfolio"<?php if ( of_get_option('portfolio_sidebar') ) {?> class="full-width"<?php }?>>
 
 			<?php
 			// WP 3.0 PAGED BUG FIX
@@ -31,9 +31,17 @@ Template Name: Portfolio
             
             <div class="portfolio-item item<?php echo $count; ?> <?php if ($count % 3 == 0) { echo 'last'; } ?>">
             
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'portfoliopress'); ?> <?php the_title_attribute(); ?>" class="thumb"><?php the_post_thumbnail('portfolio-thumbnail'); ?></a>
+            	<?php if ( of_get_option('portfolio_sidebar') ) { ?>
+                
+                	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'portfoliopress'); ?> <?php the_title_attribute(); ?>" class="thumb"><?php the_post_thumbnail('portfolio-thumbnail-fullwidth'); ?></a>
+                
+                <?php } else { ?>
+                
+                	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'portfoliopress'); ?> <?php the_title_attribute(); ?>" class="thumb"><?php the_post_thumbnail('portfolio-thumbnail'); ?></a>
+                
+                <?php } ?>
             
-			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'portfoliopress'); ?> <?php the_title_attribute(); ?>" class="title-overlay"><?php the_title() ?></a>
+				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'portfoliopress'); ?> <?php the_title_attribute(); ?>" class="title-overlay"><?php the_title() ?></a>
             
             </div>
             
@@ -70,5 +78,5 @@ Template Name: Portfolio
             
             <?php } ?>
 
-<?php get_sidebar(); ?>
+<?php if ( !of_get_option('portfolio_sidebar') ) { get_sidebar(); } ?>
 <?php get_footer(); ?>

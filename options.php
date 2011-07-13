@@ -30,12 +30,6 @@ function optionsframework_options() {
 	$options[] = array( "name" => __('General Settings','portfoliopress'),
                     	"type" => "heading");
 						
-	$options[] = array( "name" => __('Display Images on Portfolio Posts','portfoliopress'),
-						"desc" => __('Uncheck this if you wish to manually display portfolio images on single posts.','portfoliopress'),
-						"id" => "portfolio_images",
-						"std" => "1",
-						"type" => "checkbox");
-						
 	$options[] = array( "name" => __('Custom Logo','portfoliopress'),
 						"desc" => __('Upload a logo for your theme if you would like to use one.','portfoliopress'),
 						"id" => "logo",
@@ -44,7 +38,20 @@ function optionsframework_options() {
 	$options[] = array( "name" => __('Custom Favicon','portfoliopress'),
 						"desc" => __('Upload a 16px x 16px Png/Gif image to represent your website.','portfoliopress'),
 						"id" => "custom_favicon",
-						"type" => "upload"); 
+						"type" => "upload");
+						
+	$options[] = array( "name" => __('Display Images on Portfolio Posts','portfoliopress'),
+						"desc" => __('Uncheck this if you wish to manually display portfolio images on single posts.','portfoliopress'),
+						"id" => "portfolio_images",
+						"std" => "1",
+						"type" => "checkbox");
+						
+	$options[] = array( "name" => __('Display Portfolio Archives Full Width','portfoliopress'),
+						"desc" => __('Check this to display all portfolio archives full width.','portfoliopress'),
+						"id" => "portfolio_sidebar",
+						"std" => "0",
+						"type" => "checkbox");
+						
 						
 	$options[] = array( "name" => __('Disable Portfolio','portfoliopress'),
 						"desc" => __('Check this if you are not planning to use the portfolio post type.  You can always re-enable it.','portfoliopress'),
