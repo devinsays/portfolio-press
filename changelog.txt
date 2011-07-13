@@ -1,6 +1,10 @@
 Portfolio Press 0.7.5
 
 - Fixes menu placement option
+- Fixes menu styling for widget areas
+- Fixes styling in iOS devices
+- Fixes left column layout in portfolio pages
+- Updates icons in options panel
 
 Portfolio Press 0.7.4
 

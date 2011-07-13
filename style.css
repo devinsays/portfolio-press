@@ -321,7 +321,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* Layouts */
 
-.layout-2cl #content {float:right;}
+.layout-2cl #content, .layout-2cl #portfolio {float:right;}
 
 .layout-2cl #sidebar {float:left;}
 
