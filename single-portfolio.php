@@ -67,7 +67,9 @@ get_header(); ?>
 					<div class="nav-next"><?php next_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Next post link', 'portfoliopress' ) . '</span> %title' ); ?></div>
 				</nav><!-- #nav-below -->
 
-				<?php comments_template( '', true ); ?>
+				<?php if ( comments_open() ) {
+					comments_template( '', true );
+                } ?>
 
 			<?php endwhile; // end of the loop. ?>
 

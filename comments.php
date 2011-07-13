@@ -43,16 +43,6 @@
 		</nav>
 		<?php endif; // check for comment navigation ?>
 
-	<?php else : // this is displayed if there are no comments so far ?>
-
-		<?php if ( comments_open() ) : // If comments are open, but there are no comments ?>
-
-		<?php else : // if comments are closed ?>
-
-			<p class="nocomments"><?php _e( 'Comments are closed.', 'portfoliopress' ); ?></p>
-
-		<?php endif; ?>
-
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

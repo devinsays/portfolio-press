@@ -5,6 +5,7 @@ Portfolio Press 0.7.5
 - Fixes styling in iOS devices
 - Fixes left column layout in portfolio pages
 - Updates icons in options panel
+- Fixes for comment display on single.php
 
 Portfolio Press 0.7.4
 
