@@ -1,3 +1,7 @@
+Portfolio Press 0.7.6
+
+- Updated Spanish translations from Eduardo Larequi
+
 Portfolio Press 0.7.5
 
 - Fixes menu placement option
@@ -7,6 +11,7 @@ Portfolio Press 0.7.5
 - Updates icons in options panel
 - Fixes for comment display on single.php
 - Added option for displaying portfolio archives full width
+- Merged css reset into main stylesheet
 
 Portfolio Press 0.7.4
 

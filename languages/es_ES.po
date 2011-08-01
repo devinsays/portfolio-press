@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tema Portfolio en español\n"
+"Project-Id-Version: Tema Portfolio Press en español\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-25 18:38+0100\n"
-"PO-Revision-Date: 2011-04-25 19:32+0100\n"
+"POT-Creation-Date: 2011-07-30 18:32+0100\n"
+"PO-Revision-Date: 2011-07-30 18:32+0100\n"
 "Last-Translator: Eduardo Larequi <elarequi@gmail.com>\n"
-"Language-Team: PNTE <blogs@educacion.navarra.es>\n"
+"Language-Team: Eduardo Larequi <elarequi@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: Spain\n"
-"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n:1,2;_x\n"
+"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n:1,2;_x;esc_attr__\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -28,33 +28,34 @@ msgstr "Parece que no has podido encontrar lo que estabas buscando. Te aconsejam
 msgid "Most Used Categories"
 msgstr "Categorías más utilizadas"
 
-#: archive-portfolio.php:34
 #: archive-portfolio.php:36
-#: full-width-portfolio.php:24
-#: full-width-portfolio.php:26
+#: archive-portfolio.php:40
+#: archive-portfolio.php:44
+#: full-width-portfolio.php:31
+#: full-width-portfolio.php:33
 msgid "Permanent Link to"
 msgstr "Enlace permanente a"
 
-#: archive-portfolio.php:55
-#: full-width-portfolio.php:45
+#: archive-portfolio.php:63
+#: full-width-portfolio.php:52
 #: loop.php:63
 msgid "Post navigation"
 msgstr "Navegación de entradas"
 
-#: archive-portfolio.php:56
-#: full-width-portfolio.php:46
+#: archive-portfolio.php:64
+#: full-width-portfolio.php:53
 #: loop.php:64
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Entradas más antiguas"
 
-#: archive-portfolio.php:57
-#: full-width-portfolio.php:47
+#: archive-portfolio.php:65
+#: full-width-portfolio.php:54
 #: loop.php:65
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Entradas más recientes <span class=\"meta-nav\">&rarr;</span>"
 
-#: archive-portfolio.php:65
-#: full-width-portfolio.php:55
+#: archive-portfolio.php:73
+#: full-width-portfolio.php:62
 msgid "Sorry, no posts matched your criteria."
 msgstr "Lo sentimos, pero no hay entradas que coincidan con tus criterios."
 
@@ -117,23 +118,19 @@ msgstr "&larr; Comentarios más antiguos"
 msgid "Newer Comments &rarr;"
 msgstr "Comentarios más recientes &rarr;"
 
-#: comments.php:52
-msgid "Comments are closed."
-msgstr "Los comentarios están cerrados"
-
-#: footer.php:40
+#: footer.php:39
 msgid "Powered by"
 msgstr "Blog elaborado con"
 
-#: footer.php:40
+#: footer.php:39
 msgid "A Semantic Personal Publishing Platform"
 msgstr "Una plataforma de publicación semántica personal"
 
-#: footer.php:40
+#: footer.php:39
 msgid "WordPress"
 msgstr "WordPress"
 
-#: footer.php:40
+#: footer.php:39
 msgid "Portfolio"
 msgstr "Portfolio"
 
@@ -233,10 +230,20 @@ msgstr "Los trackbacks están cerrados, pero puedes <a class=\"comment-link\" hr
 msgid "Both comments and trackbacks are currently closed."
 msgstr "Tanto los comentarios como los trackbacks están cerrados por el momento."
 
+#: loop.php:13
+#, php-format
+msgid "Permalink to %s"
+msgstr "Enlace permanente a %s"
+
 #: loop.php:17
 #, php-format
 msgid "<span class=\"meta-prep meta-prep-author\">Posted on </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
 msgstr "<span class=\"meta-prep meta-prep-author\">Publicado el </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a>, <span class=\"meta-sep\"> por </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+
+#: loop.php:22
+#, php-format
+msgid "View all posts by %s"
+msgstr "Ver todas las entradas de %s"
 
 #: loop.php:31
 #: loop.php:35
@@ -268,76 +275,84 @@ msgid "General Settings"
 msgstr "Configuración general"
 
 #: options.php:33
-msgid "Display Images on Portfolio Posts"
-msgstr "Mostrar imágenes en las entradas del portfolio"
-
-#: options.php:34
-msgid "Uncheck this if you wish to manually display portfolio images on single posts."
-msgstr "Desactiva esta casilla si quieres mostrar manualmente las imágenes del portfolio en las entradas individuales."
-
-#: options.php:39
 msgid "Custom Logo"
 msgstr "Logotipo personalizado"
 
-#: options.php:40
+#: options.php:34
 msgid "Upload a logo for your theme if you would like to use one."
 msgstr "Si quieres utilizar un logotipo para tu tema, tendrás que subir una imagen."
 
-#: options.php:44
+#: options.php:38
 msgid "Custom Favicon"
 msgstr "Favicono personalizado"
 
-#: options.php:45
+#: options.php:39
 msgid "Upload a 16px x 16px Png/Gif image to represent your website."
 msgstr "Sube una imagen de 16x16 píxels, en formatos PNG o GIF, que represente tu sitio web."
 
+#: options.php:43
+msgid "Display Images on Portfolio Posts"
+msgstr "Mostrar imágenes en las entradas del portfolio"
+
+#: options.php:44
+msgid "Uncheck this if you wish to manually display portfolio images on single posts."
+msgstr "Desactiva esta casilla si quieres mostrar manualmente las imágenes del portfolio en las entradas individuales."
+
 #: options.php:49
+msgid "Display Portfolio Archives Full Width"
+msgstr "Mostrar páginas de archivo de portfolio a anchura completa"
+
+#: options.php:50
+msgid "Check this to display all portfolio archives full width."
+msgstr "Marca esta casilla si quieres mostrar las páginas de archivo del portfolio a anchura completa."
+
+#: options.php:56
 msgid "Disable Portfolio"
 msgstr "Desactivar portfolio"
 
-#: options.php:50
+#: options.php:57
 msgid "Check this if you are not planning to use the portfolio post type.  You can always re-enable it."
 msgstr "Marca esta casilla si no tienes intención de utilizar el tipo de contenido personalizado correspondiente al portfolio. Siempre podrás reactivar esta opción más adelante."
 
-#: options.php:55
+#: options.php:62
 msgid "Style and Layout"
 msgstr "Estilo y disposición"
 
-#: options.php:58
+#: options.php:65
 msgid "Main Layout"
 msgstr "Disposición principal"
 
-#: options.php:59
+#: options.php:66
 msgid "Select main content and sidebar alignment."
 msgstr "Selecciona la alineación de las columnas de contenido y barra lateral."
 
-#: options.php:68
+#: options.php:80
 msgid "Menu Position"
 msgstr "Posición del menú"
 
-#: options.php:69
+#: options.php:81
 msgid "Select where the main menu should go in the header.  Long menus should go underneath."
 msgstr "Selecciona la posición en que debe mostrarse el menú en la cabecera. Los menús largos deben ir bajo el logotipo."
 
-#: options.php:73
+#: options.php:85
 msgid "Right of logo."
 msgstr "A la derecha del logotipo."
 
-#: options.php:73
+#: options.php:85
 msgid "Underneath logo."
 msgstr "Bajo el logotipo."
 
-#: options.php:76
+#: options.php:88
 msgid "Footer Settings"
 msgstr "Configuración del pie de página"
 
-#: options.php:79
+#: options.php:91
 msgid "Custom Footer Text"
 msgstr "Texto personalizado del pie de página."
 
-#: options.php:80
-msgid "Custom HTML/Text that will appear in the footer of your theme."
-msgstr "Texto o HTML personalizado que aparecerá en el pie de página del tema."
+#: options.php:92
+msgid "Custom text that will appear in the footer of your theme."
+msgstr "Texto personalizado que aparecerá en el pie de página de tu tema."
 
 #: search.php:14
 #, php-format
@@ -502,3 +517,4 @@ msgstr "Fecha"
 #: extensions/portfolio-post-type.php:109
 msgid "None"
 msgstr "Ninguno"
+

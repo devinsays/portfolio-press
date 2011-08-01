@@ -52,7 +52,7 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
         <li><?php _e('Update the footer text','portfoliopress'); ?></li>
         </ul>
         
-        <p><?php _e('If you don\'t need these options, the plugin is not required default settings will be used.','portfoliopress'); ?></p>
+        <p><?php _e('If you don\'t need these options, the plugin is not required and default settings will be used.','portfoliopress'); ?></p>
 		</div>
 	<?php
 	}
@@ -96,7 +96,7 @@ function portfolio_head_css() {
 			$output .= ".menu ul li {margin-left:0; margin-right:10px;}\n";
 		}
 		
-		if ( of_get_option('header_color') != "#000") {
+		if ( of_get_option('header_color') != "#000000") {
 			$output .= "#branding {background:" . of_get_option('header_color') . "}\n";
 		}
 		
