@@ -3,7 +3,7 @@
  * @package WordPress
  * @subpackage Portfolio Press
  */
- 
+
 /**
  * Sets up the options panel and default functions
  */
@@ -14,25 +14,23 @@ require_once(TEMPLATEPATH . '/extensions/options-functions.php');
  * Enables the Portfolio custom post type
  */
  
-if ( !of_get_option('disable_portfolio', "0") ) {
+if ( !of_get_option('disable_portfolio', "0") && !function_exists(portfolioposttype) ) {
 	require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
 }
  
 /**
- * If 3.1 isn't installed, loads the Simple Custom Post Type Archives Plug-in:
- * http://www.cmurrayconsulting.com/software/wordpress-custom-post-type-archives/
+ * If 3.1 isn't installed, display a notice that post type archives will not work
  */
-
-if ( get_bloginfo('version') <= 3.1 ) {
  
-// prevents errors when installing the plugin after theme installation
-if ( is_admin() && $pagenow == 'plugins.php' && isset($_GET['action']) && $_GET['action'] == 'activate' && isset($_GET['plugin']) && strstr( $_GET['plugin'], 'simple-custom-post-type-archives.php' ) )
-	$activating_scpta = true; 
+function portfoliopress_archive_nag(){
+    global $pagenow;
+    if ( $pagenow == 'themes.php' ) {
+         echo '<div class="updated"><p>Portfolio archive pages will only display in WordPress 3.1 or above.  Please upgrade.</p></div>';
+    }
+}
 
-// load in the plugin if its not installed
-if( !isset( $activating_scpta ) && !function_exists( 'is_scpta_post_type' ) )
-	require_once(TEMPLATEPATH . '/extensions/simple-custom-post-type-archives.php');
-	
+if ( get_bloginfo('version') < 3.1 ) {
+	add_action('admin_notices', 'portfoliopress_archive_nag');
 }
 
 /**

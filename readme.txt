@@ -38,7 +38,4 @@ http://www.woothemes.com/2010/02/canvas/
 Jquery rollovers for portfolio items was based on code by:
 http://graphpaperpress.com/themes/workspace/
 
-Uses Custom Post Type Archives plugin to enable portfolio paging and permalinks:
-http://www.cmurrayconsulting.com/software/wordpress-custom-post-type-archives/
-
 Testing and extremely helpful code reviews were done by Michael Fields (http://wordpress.mfields.org/) and Jacob M Goldman (http://www.cmurrayconsulting.com).
