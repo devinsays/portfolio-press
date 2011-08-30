@@ -14,18 +14,51 @@ require_once(TEMPLATEPATH . '/extensions/options-functions.php');
  * Enables the Portfolio custom post type
  */
  
-if ( !of_get_option('disable_portfolio', "0") && !function_exists(portfolioposttype) ) {
+if ( !of_get_option('disable_portfolio', "0") && !function_exists('portfolioposttype') ) {
 	require_once(TEMPLATEPATH . '/extensions/portfolio-post-type.php');
+}
+
+if ( !function_exists('portfolioposttype') && current_user_can( 'install_plugins' ) ) {
+
+	/* Display a notice that can be dismissed */
+ 
+	add_action('admin_notices', 'portfoliopress_install_plugin_notice');
+ 
+	function portfoliopress_install_plugin_notice() {
+		global $current_user ;
+		$user_id = $current_user->ID;
+		/* Check that the user hasn't already clicked to ignore the message */
+		if ( ! get_user_meta($user_id, 'portfoliopress_install_plugin_notice') ) {
+			add_thickbox();
+			echo '<div class="updated"><p>';
+			printf(__('The next version of Portfolio Press will require the Portfolio Post Type Plugin.  <a href="%1$s" class="thickbox onclick">Install Now</a> | <a href="%2$s">Hide Notice</a>'), admin_url() . 'plugin-install.php?tab=plugin-information&plugin=portfolio-post-type&TB_iframe=true&width=640&height=517', '?example_nag_ignore=0');
+			echo '</p></div>';
+		}
+	}
+	 
+	add_action('admin_init', 'portfoliopress_post_plugin_ignore');
+	 
+	function portfoliopress_post_plugin_ignore() {
+		global $current_user;
+		$user_id = $current_user->ID;
+		/* If user clicks to ignore the notice, add that to their user meta */
+		if ( isset($_GET['example_nag_ignore']) && '0' == $_GET['example_nag_ignore'] ) {
+			 add_user_meta($user_id, 'example_ignore_notice', 'true', true);
+		}
+	}
+	
 }
  
 /**
- * If 3.1 isn't installed, display a notice that post type archives will not work
+ * If 3.1 isn't installed display a notice that post type archives will not work
  */
  
 function portfoliopress_archive_nag(){
     global $pagenow;
     if ( $pagenow == 'themes.php' ) {
-         echo '<div class="updated"><p>Portfolio archive pages will only display in WordPress 3.1 or above.  Please upgrade.</p></div>';
+         echo '<div class="updated"><p>';
+		 _e('Portfolio archive pages will only display in WordPress 3.1 or above.  Please upgrade.', 'portfoliopress');
+		 echo '</p></div>';
     }
 }
 
