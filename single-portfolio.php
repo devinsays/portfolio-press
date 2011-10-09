@@ -43,7 +43,7 @@ get_header(); ?>
 
 					<footer class="entry-meta">
 						<?php
-							$tag_list = get_the_term_list( $post->ID, 'portfolio-tags', '', ', ', '' );
+							$tag_list = get_the_term_list( $post->ID, 'portfolio_tag', '', ', ', '' );
 							if ( '' != $tag_list ) {
 								$utility_text = __( 'TAGS: %1$s. Bookmark the <a href="%2$s" title="Permalink to %3$s" rel="bookmark">permalink</a>.', 'portfoliopress' );
 							} else {

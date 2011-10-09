@@ -606,14 +606,22 @@ img.wp-smiley {
 
 /* Increase the size of the content area for templates without sidebars */
 
-.full-width #content,
-#portfolio.full-width {
+.full-width #content, #portfolio.full-width {
 	width: 980px;
 }
-
 #portfolio.full-width .portfolio-item {
 	width:308px;
 	height:220px;
+}
+#portfolio.full-width .thumb {
+	display:block;
+	width:308px;
+	height:220px;
+}
+#portfolio.full-width a.title-overlay {
+	width:288px;
+	height:210px;
+	margin-top:-210px;
 }
 
 /* Pagination / WP-Pagenavi */
@@ -685,12 +693,12 @@ img.wp-smiley {
 
 /* Reverse order on single-portfolio pages */
 
-.single-portfolio  #content nav .nav-previous {
+.single-portfolio #content nav .nav-previous {
 	float: right;
 	text-align: right;
 	width: 50%;
 }
-.single-portfolio  #content nav .nav-next {
+.single-portfolio #content nav .nav-next {
 	float: left;
 	text-align: left;
 	width: 50%;

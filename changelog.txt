@@ -4,6 +4,7 @@ Portfolio Press 0.7.6
 - German translations by Sandro Bauer
 - Removed Simple Custom Post Type Archives Plugin
 - Added nag message if using lower than WordPress 3.1
+- Updated overlay bug for full width portfolio
 
 Portfolio Press 0.7.5
 
