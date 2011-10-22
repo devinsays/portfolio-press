@@ -1,10 +1,15 @@
-Portfolio Press 0.7.6
+Portfolio Press 0.8
 
 - Updated Spanish translations from Eduardo Larequi
 - German translations by Sandro Bauer
 - Removed Simple Custom Post Type Archives Plugin
 - Added nag message if using lower than WordPress 3.1
 - Updated overlay bug for full width portfolio
+- Simplified code for portfolio content
+- Added print stylesheet to style.css
+- Added support for Portfolio Post Type plugin
+- Updated portfolio taxonomy tags
+- Added template for portfolio categories
 
 Portfolio Press 0.7.5
 

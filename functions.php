@@ -29,7 +29,7 @@ if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugi
 		if ( ! get_user_meta( $user_id, 'portfoliopress_install_plugin_notice' ) ) {
 			add_thickbox();
 			echo '<div class="updated"><p>';
-			printf( __( 'The next version of Portfolio Press will require the Portfolio Post Type Plugin.  <a href="%1$s" class="thickbox onclick">Install Now</a> | <a href="%2$s">Hide Notice</a>' ), admin_url() . 'plugin-install.php?tab=plugin-information&plugin=portfolio-post-type&TB_iframe=true&width=640&height=517', '?example_nag_ignore=0' );
+			printf( __( 'Future versions of Portfolio Press will require the Portfolio Post Type Plugin.  <a href="%1$s" class="thickbox onclick">Install Now</a> | <a href="%2$s">Hide Notice</a>' ), admin_url() . 'plugin-install.php?tab=plugin-information&plugin=portfolio-post-type&TB_iframe=true&width=640&height=517', '?example_nag_ignore=0' );
 			echo '</p></div>';
 		}
 	}
@@ -204,16 +204,17 @@ function portfolio_widgets_init() {
 add_action( 'init', 'portfolio_widgets_init' );
 
 /**
- * Set version number in options and runs tag updater script
+ * Set version number in options, runs tag updater script, flushes rewrite rules
  */
 if ( !of_get_option( 'version', false ) ) {
+	flush_rewrite_rules();
 	register_taxonomy( 'portfolio-tags', 'portfolio', array( 'public'=> false ) );
 	$term_ids = get_terms( 'portfolio-tags', array( 'hide_empty' => false ,'fields' => 'ids' ) );
 	if ( $term_ids && ( taxonomy_exists( 'portfolio_tag' ) ) ) {
 		portfoliopress_update_portfolio_tags( $term_ids );
 	}
 	$options = get_option( 'portfoliopress' );
-	$options['version'] = '0.7.5';
+	$options['version'] = '0.8';
 	update_option( 'portfoliopress', $options );
 }
 
