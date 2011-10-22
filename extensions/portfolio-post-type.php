@@ -42,7 +42,7 @@ function wpt_portfolio_posttype() {
 		)
 	);
 	
-	register_taxonomy( 'portfolio-tags', 'portfolio', $taxonomy_args);
+	register_taxonomy( 'portfolio_tags', 'portfolio', $taxonomy_args);
 }
 
 add_action( 'init', 'wpt_portfolio_posttype' );
@@ -111,16 +111,6 @@ function portfolio_columns_display($portfolio_columns, $post_id){
 			break;			
 	}
 }
-	
-// Sets posts displayed per portfolio page to 9 -- Feel free to change
-	
-function wpt_portfolio_custom_posts_per_page( &$q ) {
-	if ( get_post_type() == 'portfolio' )
-		$q->set( 'posts_per_page', 9 );
-	return $q;
-}
-
-add_filter('parse_query', 'wpt_portfolio_custom_posts_per_page');
 
 // Styling for the custom post type icon
 
