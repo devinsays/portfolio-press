@@ -23,9 +23,12 @@ if ( post_password_required() ) {
 		'posts_per_page' => 9,
 		'paged' => $paged );
 	query_posts( $args );
+	
+	get_template_part( 'content-portfolio' );
 
 if ( !of_get_option('portfolio_sidebar') )
 	get_sidebar();
 
 get_footer();
+}
 ?>

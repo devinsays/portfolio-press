@@ -6,7 +6,7 @@
  * @subpackage Portfolio Press
  */
 ?>
-<div id="portfolio"<?php if ( of_get_option( 'portfolio_sidebar' ) ) {?> class="full-width"<?php }?>>
+<div id="portfolio"<?php if ( of_get_option( 'portfolio_sidebar' ) ) { echo ' class="full-width"'; }?>>
 
 	<?php $thumbnail = 'portfolio-thumbnail';
 	

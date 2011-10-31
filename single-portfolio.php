@@ -43,17 +43,19 @@ get_header(); ?>
 
 					<footer class="entry-meta">
 						<?php
+							$cat_list = get_the_term_list( $post->ID, 'portfolio_category', '', ', ', '' );
 							$tag_list = get_the_term_list( $post->ID, 'portfolio_tag', '', ', ', '' );
-							if ( '' != $tag_list ) {
-								$utility_text = __( 'TAGS: %1$s. Bookmark the <a href="%2$s" title="Permalink to %3$s" rel="bookmark">permalink</a>.', 'portfoliopress' );
-							} else {
-								$utility_text = __( 'Bookmark the <a href="%2$s" title="Permalink to %3$s" rel="bookmark">permalink</a>.', 'portfoliopress' );
-							}
+							$utility_text = '';
+							if ( ( $cat_list ) && ( '' ==  $tag_list ) )
+								$utility_text = __( 'This entry was posted in %1$s.', 'portfoliopress' );
+							if ( ( '' != $tag_list ) && ( '' ==  $cat_list ) )
+								$utility_text = __( 'This entry was tagged %2$s.', 'portfoliopress' );
+							if ( ( '' != $cat_list ) && ( '' !=  $tag_list ) )
+								$utility_text = __( 'This entry was posted in %1$s and tagged %2$s.', 'portfoliopress' );
 							printf(
 								$utility_text,
-								$tag_list,
-								get_permalink(),
-								the_title_attribute( 'echo=0' )
+								$cat_list,
+								$tag_list
 							);
 						?>
 

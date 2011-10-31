@@ -2,7 +2,9 @@
 /**
  * A unique identifier is defined to store the options in the database and reference them from the theme.
  * By default it uses 'portfoliopress'.  If the identifier changes, it'll appear as if the options have been reset.
- * 
+ *
+ * @package WordPress
+ * @subpackage Portfolio Press
  */
 
 function optionsframework_option_name() {

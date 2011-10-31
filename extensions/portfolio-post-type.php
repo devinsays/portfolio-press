@@ -1,5 +1,13 @@
 <?php
 /**
+ * These functions will be deprecated and removed in a later version of Portfolio Press.
+ * Users are encouraged to install the Portfolio Post Type plugin.
+ * 
+ * @package WordPress
+ * @subpackage Portfolio Press
+ */
+ 
+/**
  * Enable Custom Post Types for Portfolio Items
  * http://codex.wordpress.org/Function_Reference/register_post_type
  */
