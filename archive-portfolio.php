@@ -28,7 +28,7 @@ if ( post_password_required() ) {
 
 if ( !of_get_option('portfolio_sidebar') )
 	get_sidebar();
+}
 
 get_footer();
-}
 ?>
