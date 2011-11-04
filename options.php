@@ -54,12 +54,13 @@ function optionsframework_options() {
 						"std" => "0",
 						"type" => "checkbox");
 						
-						
+	if ( !function_exists( 'portfolioposttype' ) ) {					
 	$options[] = array( "name" => __('Disable Portfolio','portfoliopress'),
 						"desc" => __('Check this if you are not planning to use the portfolio post type.  You can always re-enable it.','portfoliopress'),
 						"id" => "disable_portfolio",
 						"std" => "0",
-						"type" => "checkbox");                                                 
+						"type" => "checkbox");
+	}                                              
     
 	$options[] = array( "name" => __('Style and Layout','portfoliopress'),
 						"type" => "heading");

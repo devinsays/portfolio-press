@@ -1,9 +1,9 @@
 Portfolio Press 0.8
 
+- WordPress 3.1 or higher is now required
 - Updated Spanish translations from Eduardo Larequi
 - German translations added by Sandro Bauer
 - Removed Simple Custom Post Type Archives Plugin
-- Added nag message if using lower than WordPress 3.1
 - Updated overlay bug for full width portfolio
 - Simplified code for portfolio content
 - Added print stylesheet to style.css

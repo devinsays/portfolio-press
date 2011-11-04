@@ -18,11 +18,11 @@ To add the portfolio image, click "Set featured image" on the right side of the 
 
 This theme uses custom post types.  If you are getting a 404 error when you try and view the portfolio posts, reset your permalinks.  You can do this by going to "Settings > Permalinks" and re-saving the permalink structure.
 
-Portfolio Items Disappear:
+Switching Themes:
 
-If you change themes, chances are your portfolio pieces will disappear from the dashboard.  Fear not!  They are still saved in the database- your new theme just wasn't programmed to list and display them.
+If you want to switch themes, you will likely have trouble finding that fully supports portfolio post types.  If you feel comfortable editing a bit of code, you can install the Portfolio Post Type plugin and make your own archive-portfolio.php and single-portfolio template: http://wordpress.org/extend/plugins/portfolio-post-type/
 
-If you are handy with code, you can just copy the two extensions "portfolio-post-type.php" and "simple-custom-post-type-archives.php" into your new theme and call them from the functions.php file.  You'll also have to build new template files to display the custom post types in your theme.  If coding isn't your thing, you could hire a WordPress developer to help you out with the project.
+Otherwise, you might want to switch your custom post types to regular posts or pages.  To do this, you can use this plugin: http://wordpress.org/extend/plugins/convert-post-types/
 
 Credits
 ---------------------------------

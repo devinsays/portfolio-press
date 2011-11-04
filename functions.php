@@ -96,23 +96,6 @@ if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugi
 }
 
 /**
- * If 3.1 isn't installed display a notice that post type archives will not work.
- * This code will be removed in a later version.
- */
-function portfoliopress_archive_nag() {
-	global $pagenow;
-	if ( $pagenow == 'themes.php' ) {
-		echo '<div class="updated"><p>';
-		_e( 'Portfolio archive pages will only display in WordPress 3.1 or above.  Please upgrade.', 'portfoliopress' );
-		echo '</p></div>';
-	}
-}
-
-if ( get_bloginfo( 'version' ) < 3.1 ) {
-	add_action( 'admin_notices', 'portfoliopress_archive_nag' );
-}
-
-/**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
 function portfolio_page_menu_args( $args ) {

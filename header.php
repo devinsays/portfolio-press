@@ -8,7 +8,27 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name ="viewport" content="width = 1020">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
+<title><?php
+	/*
+	 * Print the <title> tag based on what is being viewed.
+	 */
+	global $page, $paged;
+
+	wp_title( '|', true, 'right' );
+
+	// Add the blog name.
+	bloginfo( 'name' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		echo " | $site_description";
+
+	// Add a page number if necessary:
+	if ( $paged >= 2 || $page >= 2 )
+		echo ' | ' . sprintf( __( 'Page %s', 'portfoliopress' ), max( $paged, $page ) );
+
+	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
@@ -38,12 +58,12 @@
                 <?php } ?>
 			</hgroup>
       
-      <nav id="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Main menu', 'portfoliopress' ); ?></h1>
-		<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'portfoliopress' ); ?>"><?php _e( 'Skip to content', 'portfoliopress' ); ?></a></div>
-
-		<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
-	</nav><!-- #access -->
+		<nav id="navigation">
+			<h3 class="screen-reader-text"><?php _e( 'Main menu', 'portfoliopress' ); ?></h3>
+			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'portfoliopress' ); ?>"><?php _e( 'Skip to content', 'portfoliopress' ); ?></a></div>
+	
+			<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
+		</nav><!-- #access -->
     
     </div>
     
