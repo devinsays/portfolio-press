@@ -5,8 +5,8 @@
  */
  
 /**
- * Theme options require the "Options Framework" plugin to be installed in order to display
- * If it's not installed, default settings will be used
+ * Theme options require the "Options Framework" plugin to be installed in order to display.
+ * If it's not installed, default settings will be used.
  */
  
 if ( !function_exists( 'of_get_option' ) ) {

@@ -5,7 +5,12 @@
  * @package WordPress
  * @subpackage Portfolio Press
  */
+
+if ( post_password_required() ) {
+	echo get_the_password_form();
+} else {
 ?>
+
 <div id="portfolio"<?php if ( of_get_option( 'portfolio_sidebar' ) ) { echo ' class="full-width"'; }?>>
 
 	<?php $thumbnail = 'portfolio-thumbnail';
@@ -50,4 +55,5 @@
 
 	<?php endif; ?>
 
-</div><!-- #portfolio -->           
+</div><!-- #portfolio -->
+<?php } ?>      

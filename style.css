@@ -239,6 +239,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	padding:5px 10px;
 	line-height:18px;
 	text-decoration:none;
+	-webkit-transition: background 0.4s ease-in-out;  /* Saf3.2+, Chrome */
+    -moz-transition: background 0.4s ease-in-out;  /* FF4+ */
+    -ms-transition: background 0.4s ease-in-out;  /* IE10? */
+    -o-transition: background 0.4s ease-in-out;  /* Opera 10.5+ */
+    transition: background 0.4s ease-in-out; 
 }
 #navigation ul a:hover, #navigation ul .current-page-item, #navigation ul .current-menu-parent, #navigation ul .current-menu-item {
 	background:#666;
@@ -317,14 +322,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* CSS3 Menu Effects */
 
 #navigation ul a, #navigation ul .current-page-item, #navigation ul .current-menu-parent, #navigation ul li:hover, #navigation ul li.hover, #navigation ul .current-menu-item {
-	border-radius:2px;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
+	border-radius:2px;
 }
 #navigation ul ul li, #navigation ul ul li a, #navigation ul ul li:hover, #navigation ul ul .current-menu-item, #navigation ul ul .current-menu-parent {
-	border-radius:0;
 	-moz-border-radius:0;
 	-webkit-border-radius:0;
+	border-radius:0;
 }
 
 /* Branding */
