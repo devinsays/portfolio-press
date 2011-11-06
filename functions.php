@@ -7,6 +7,9 @@
 // Set the content width based on the theme's design and stylesheet
 if ( ! isset( $content_width ) )
 	$content_width = 640;
+	
+// Sets up the options panel and default functions
+require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 
 // Tell WordPress to run portfoliopress_setup() when the 'after_setup_theme' hook is run
 add_action( 'after_setup_theme', 'portfoliopress_setup' );
@@ -24,9 +27,6 @@ function portfoliopress_setup() {
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
-		
-	// Sets up the options panel and default functions
-	require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 	
 	// This theme styles the visual editor with editor-style.css to match the theme style
 	add_editor_style();

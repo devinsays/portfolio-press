@@ -74,7 +74,7 @@ add_action("manage_posts_custom_column",  "portfolio_columns_display", 10, 2);
 function portfolio_edit_columns($portfolio_columns){
 	$portfolio_columns = array(
 		"cb" => "<input type=\"checkbox\" />",
-		"title" => _x('Title', 'column name'),
+		"title" => _x('Title', 'column name', 'portfoliopress'),
 		"thumbnail" => __('Thumbnail', 'portfoliopress'),
 		"portfolio-tags" => __('Tags', 'portfoliopress'),
 		"author" => __('Author', 'portfoliopress'),

@@ -46,7 +46,7 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
 		<div class="wrap">
 		<?php screen_icon( 'themes' ); ?>
 		<h2><?php _e('Theme Options','portfoliopress'); ?></h2>
-        <p><b><?php _e('If you would like to use the Portfolio Press theme options, please install the <a href="https://github.com/devinsays/options-framework-plugin">Options Framework</a> plugin.','portfoliopress'); ?></b></p>
+        <p><b><?php printf( __( 'If you would like to use the Portfolio Press theme options, please install the %s plugin.', 'portfoliopress' ), '<a href="http://wordpress.org/extend/plugins/options-framework/">Options Framework</a>' ); ?></b></p>
         <p><?php _e('Once the plugin is activated you will have option to:','portfoliopress'); ?></p>
         <ul class="ul-disc">
         <li><?php _e('Upload a logo image','portfoliopress'); ?></li>
