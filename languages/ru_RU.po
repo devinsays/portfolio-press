@@ -1,0 +1,367 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tema Portfolio en español\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-25 22:51-0600\n"
+"PO-Revision-Date: 2011-11-06 01:39+0300\n"
+"Last-Translator: Alexander <admin@k-notes.ru>\n"
+"Language-Team: Wolforg <contact@wolforg.eu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:14
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Ошибка 404 - Страница не найдена"
+
+#: 404.php:18
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Кажется, мы не можем найти то, что вы ищете. Возможно, повторный поиск или одна из ссылок ниже вам поможет."
+
+#: 404.php:25
+msgid "Most Used Categories"
+msgstr "Часто используемые рубрики"
+
+#: archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Архив за день: <span>%s</span>"
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Архив за месяц: <span>%s</span>"
+
+#: archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Архив за год: <span>%s</span>"
+
+#: archive.php:22
+msgid "Blog Archives"
+msgstr "Архив блога"
+
+#: author.php:14
+#, php-format
+msgid "Author Archives: <span class=\"vcard\">%s</span>"
+msgstr "Архив автора : <span class=\"vcard\">%s</span>"
+
+#: category.php:13
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Архив рубрики : %s"
+
+#: comments.php:10
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Эта запись защищена паролем. Введите пароль, чтобы посмотреть комментарии."
+
+#: comments.php:21
+#, php-format
+msgid "One Response to %2$s"
+msgstr "Один комментарий: %2$s"
+
+#: comments.php:28
+#: comments.php:40
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: comments.php:29
+#: comments.php:41
+msgid "&larr; Older Comments"
+msgstr "&larr; Предыдущие комментарии"
+
+#: comments.php:30
+#: comments.php:42
+msgid "Newer Comments &rarr;"
+msgstr "Следующие комментарии &rarr;"
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr "Комментарии запрещены."
+
+#: footer.php:38
+msgid "Powered by"
+msgstr "Перевод темы - <a href=\"http://k-notes.ru/\">k-notes.ru</a>. Работает на"
+
+#: footer.php:38
+msgid "A Semantic Personal Publishing Platform"
+msgstr "Современная персональная платформа для публикаций"
+
+#: footer.php:38
+msgid "WordPress"
+msgstr "WordPress"
+
+#: footer.php:38
+msgid "Portfolio"
+msgstr "Портфолио"
+
+#: full-width-page.php:24
+#: image.php:82
+#: loop.php:36
+#: page.php:21
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: full-width-page.php:25
+#: image.php:31
+#: image.php:96
+#: loop.php:45
+#: page.php:22
+msgid "Edit"
+msgstr "Изменить"
+
+#: full-width-portfolio.php:45
+#: loop.php:63
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#: full-width-portfolio.php:46
+#: loop.php:64
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущие записи"
+
+#: full-width-portfolio.php:47
+#: loop.php:65
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Следующие записи <span class=\"meta-nav\">&rarr;</span>"
+
+#: full-width-portfolio.php:55
+msgid "Sorry, no posts matched your criteria."
+msgstr "Извините, по вашему запросу ничего не найдено."
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+#: functions.php:92
+#, php-format
+msgid "Search results for %s"
+msgstr "Результаты поиска: %s"
+
+#: functions.php:95
+#: functions.php:120
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: functions.php:156
+msgid "Sidebar"
+msgstr "Боковая колонка"
+
+#: header.php:32
+msgid "Main menu"
+msgstr "Главное меню"
+
+#: header.php:33
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: image.php:21
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>  at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">Опубликовано </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> <a href=\"%3$s\" title=\"Ссылка на полноразмерное изображение\">%4$s &times; %5$s</a> в <a href=\"%6$s\" title=\"Вернуться к %7$s\" rel=\"gallery\">%7$s</a>"
+
+#: image.php:35
+msgid "&larr; Previous"
+msgstr "&larr; Ранее"
+
+#: image.php:36
+msgid "Next &rarr;"
+msgstr "Далее &rarr;"
+
+#: image.php:88
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Добавить комментарий\">Добавить комментарий</a> или оставить обратную ссылку: <a class=\"trackback-link\" href=\"%s\" title=\"Обратная ссылка\" rel=\"trackback\">Адрес обратной ссылки</a>."
+
+#: image.php:90
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Комментарии запрещены, но вы можете оставить обратную ссылку: <a class=\"trackback-link\" href=\"%s\" title=\"Обратная ссылка\" rel=\"trackback\">Адрес обратной ссылки</a>."
+
+#: image.php:92
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Обратные ссылки запрещены, но вы можете <a class=\"comment-link\" href=\"#respond\" title=\"Добавить комментарий\">добавить комментарий</a>."
+
+#: image.php:94
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Комментарии и обратные ссылки запрещены."
+
+#: loop.php:17
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-author\">Posted on </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+msgstr "<span class=\"meta-prep meta-prep-author\">Опубликовано </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> автор </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+
+#: loop.php:31
+#: loop.php:35
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
+
+#: loop.php:41
+msgid "Posted in "
+msgstr "Опубликовано в "
+
+#: loop.php:43
+msgid "Tagged "
+msgstr "Метки "
+
+#: loop.php:44
+msgid "Leave a comment"
+msgstr "Добавить комментарий"
+
+#: loop.php:44
+msgid "1 Comment"
+msgstr "1 комментарий"
+
+#: loop.php:44
+msgid "% Comments"
+msgstr "Комментарии (%)"
+
+#: search.php:14
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска: %s"
+
+#: search.php:21
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: search.php:25
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Извините, по вашему запросу ничего не найдено. Попробуйте другие ключевые слова."
+
+#: sidebar.php:16
+msgid "Archives"
+msgstr "Архивы"
+
+#: sidebar.php:23
+msgid "Meta"
+msgstr "Прочее"
+
+#: single-portfolio.php:48
+#, php-format
+msgid "TAGS: %1$s. Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "МЕТКИ: %1$s. Добавьте в закладки <a href=\"%2$s\" title=\"Постоянная ссылка: %3$s\" rel=\"bookmark\">постоянную ссылку</a>."
+
+#: single-portfolio.php:50
+#, php-format
+msgid "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Добавьте в закладки <a href=\"%2$s\" title=\"Постоянная ссылка: %3$s\" rel=\"bookmark\">постоянную ссылку</a>."
+
+#: single.php:41
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Запись опубликована в рубрике %1$s с метками %2$s. Добавьте в закладки <a href=\"%3$s\" title=\"Постоянная ссылка: %4$s\" rel=\"bookmark\">постоянную ссылку</a>."
+
+#: single.php:43
+#, php-format
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Запись опубликована в рубрике %1$s. Добавьте в закладки <a href=\"%3$s\" title=\"Постоянная ссылка: %4$s\" rel=\"bookmark\">постоянную ссылку</a>."
+
+#: tag.php:17
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Архив метки: %s"
+
+#: extensions/portfolio-post-type.php:14
+msgid "Portfolio Item"
+msgstr "Элемент портфолио"
+
+#: extensions/portfolio-post-type.php:15
+msgid "Add New Item"
+msgstr "Добавить элемент"
+
+#: extensions/portfolio-post-type.php:16
+#: extensions/portfolio-post-type.php:18
+msgid "Add New Portfolio Item"
+msgstr "Добавить элемент портфолио"
+
+#: extensions/portfolio-post-type.php:17
+msgid "Edit Portfolio Item"
+msgstr "Изменить элемент портфолио"
+
+#: extensions/portfolio-post-type.php:19
+msgid "View Item"
+msgstr "Посмотреть элемент"
+
+#: extensions/portfolio-post-type.php:20
+msgid "Search Portfolio"
+msgstr "Поиск по портфолио"
+
+#: extensions/portfolio-post-type.php:21
+msgid "No portfolio items found"
+msgstr "Элементов портфолио не найдено"
+
+#: extensions/portfolio-post-type.php:22
+msgid "No portfolio items found in trash"
+msgstr "Элементов портфолио в корзине не найдено"
+
+#: extensions/portfolio-post-type.php:36
+#: extensions/portfolio-post-type.php:38
+msgid "Portfolio Tags"
+msgstr "Метки портфолио"
+
+#: extensions/portfolio-post-type.php:39
+msgid "Portfolio Tag"
+msgstr "Метка портфолио"
+
+#: extensions/portfolio-post-type.php:66
+msgid "Thumbnail"
+msgstr "Миниатюра"
+
+#: extensions/portfolio-post-type.php:67
+msgid "Tags"
+msgstr "Метки"
+
+#: extensions/portfolio-post-type.php:68
+msgid "Author"
+msgstr "Автор"
+
+#: extensions/portfolio-post-type.php:69
+msgid "Comments"
+msgstr "Комментарии"
+
+#: extensions/portfolio-post-type.php:70
+msgid "Date"
+msgstr "Дата"
+
+#: extensions/portfolio-post-type.php:97
+#: extensions/portfolio-post-type.php:104
+msgid "None"
+msgstr "Нет"
+
+#~ msgid "F Y"
+#~ msgstr "F \\d\\e Y"
+
+#~ msgid "Permanent Link to"
+#~ msgstr "Enlace permanente a"
+
+#~ msgid "Footer 1"
+#~ msgstr "Pie de página 1"
+
+#~ msgid "Widetized footer"
+#~ msgstr "Zona del pie de página para widgets"
+
+#~ msgid "Footer 2"
+#~ msgstr "Pie de página 2"
+
+#~ msgid "Footer 3"
+#~ msgstr "Pie de página 3"
+
+#~ msgid "Footer 4"
+#~ msgstr "Pie de página 4"
+
+#~ msgid "Portfolio theme"
+#~ msgstr "tema Portfolio"
+
+#~ msgid "translated by"
+#~ msgstr ""
+#~ "traducido por el <a href=\"http://pnte.educacion.navarra.es/portal/\" "
+#~ "target=\"_blank\" title=\"Programa de Nuevas Tecnologías y Educación"
+#~ "\">PNTE</a>"
