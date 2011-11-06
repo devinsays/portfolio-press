@@ -39,8 +39,8 @@ function portfoliopress_setup() {
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
 	
-	// Add support for a variety of post formats
-	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
+	// Add support for a variety of post formats ( will be added in next version )
+	// add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
 	
 	// Enqueue javascript for the menu and portfolio items
 	if ( !is_admin() ) {
@@ -92,7 +92,6 @@ if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugi
 			add_user_meta( $user_id, 'example_ignore_notice', 'true', true );
 		}
 	}
-
 }
 
 /**
@@ -142,6 +141,11 @@ add_action( 'init', 'portfolio_widgets_init' );
  * Set version number in options, runs tag updater script, flushes rewrite rules
  */
 if ( !of_get_option( 'version', false ) ) {
+	if ( function_exists( 'portfolioposttype' ) ) {
+		portfolioposttype();
+	} else {
+		wpt_portfolio_posttype();
+	}
 	flush_rewrite_rules();
 	register_taxonomy( 'portfolio-tags', 'portfolio', array( 'public'=> false ) );
 	$term_ids = get_terms( 'portfolio-tags', array( 'hide_empty' => false ,'fields' => 'ids' ) );

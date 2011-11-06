@@ -9,16 +9,36 @@
 if ( post_password_required() ) {
 	echo get_the_password_form();
 } else {
-?>
-
-<div id="portfolio"<?php if ( of_get_option( 'portfolio_sidebar' ) ) { echo ' class="full-width"'; }?>>
-
-	<?php $thumbnail = 'portfolio-thumbnail';
+	// Set the size of the thumbnails and content width
+	$fullwidth = false;
+	if ( of_get_option( 'portfolio_sidebar' ) || is_page_template('full-width-portfolio.php') )
+		$fullwidth = true;
 	
-	if ( of_get_option( 'portfolio_sidebar' ) )
+	$thumbnail = 'portfolio-thumbnail';
+	
+	if ( $fullwidth )
 		$thumbnail = 'portfolio-thumbnail-fullwidth';
-	?>
-	<?php if ( have_posts() ) : $count = 0;
+	
+	// Modify the query if a page or archive calls this template
+	if ( !is_tax() ) {
+		// WP 3.0 PAGED BUG FIX
+		if ( get_query_var( 'paged' ) )
+			$paged = get_query_var( 'paged' );
+		elseif ( get_query_var( 'page' ) )
+			$paged = get_query_var( 'page' );
+		else
+			$paged = 1;
+		
+		$args = array( 'post_type' => 'portfolio',
+			'posts_per_page' => 9,
+			'paged' => $paged );
+		query_posts( $args );
+	}
+
+?>
+<div id="portfolio"<?php if ( $fullwidth ) { echo ' class="full-width"'; }?>>
+
+	<?php  if ( have_posts() ) : $count = 0;
 		while ( have_posts() ) : the_post(); $count++; global $post; ?>
 		
 			<div class="portfolio-item item<?php echo $count; ?><?php if ( $count % 3 == 0 ) { echo ' last'; } ?>">
