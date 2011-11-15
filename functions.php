@@ -63,7 +63,7 @@ endif; // portfoliopress_setup
  * will be moving into a plugin.  They can upgrade now, or wait one more
  * version before this code is removed.
  */
-if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugins' ) && !of_get_option( 'disable_portfolio', "0" ) ) {
+if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugins' ) ) {
 
 	/* Display a notice that can be dismissed */
 
