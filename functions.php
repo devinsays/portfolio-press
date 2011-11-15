@@ -11,6 +11,11 @@ if ( ! isset( $content_width ) )
 // Sets up the options panel and default functions
 require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 
+// Enables the portfolio custom post type.
+if ( !of_get_option( 'disable_portfolio', "0" ) && !function_exists( 'portfolioposttype' ) ) {
+	require_once( TEMPLATEPATH . '/extensions/portfolio-post-type.php' );
+}
+
 // Tell WordPress to run portfoliopress_setup() when the 'after_setup_theme' hook is run
 add_action( 'after_setup_theme', 'portfoliopress_setup' );
  
@@ -49,12 +54,6 @@ function portfoliopress_setup() {
 			wp_enqueue_script( 'fader', get_template_directory_uri() . '/js/jquery.fader.js', array( 'jquery' ) );
 		}
 	}
-	
-	// Enables the portfolio custom post type.
-	if ( !of_get_option( 'disable_portfolio', "0" ) && !function_exists( 'portfolioposttype' ) ) {
-		require_once( TEMPLATEPATH . '/extensions/portfolio-post-type.php' );
-	}
-
 
 }
 endif; // portfoliopress_setup
@@ -64,7 +63,7 @@ endif; // portfoliopress_setup
  * will be moving into a plugin.  They can upgrade now, or wait one more
  * version before this code is removed.
  */
-if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugins' ) ) {
+if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugins' ) && !of_get_option( 'disable_portfolio', "0" ) ) {
 
 	/* Display a notice that can be dismissed */
 
