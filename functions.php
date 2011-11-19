@@ -19,7 +19,7 @@ if ( !of_get_option( 'disable_portfolio', "0" ) && !function_exists( 'portfoliop
 // Tell WordPress to run portfoliopress_setup() when the 'after_setup_theme' hook is run
 add_action( 'after_setup_theme', 'portfoliopress_setup' );
  
-if ( ! function_exists( 'twentyeleven_setup' ) ):
+if ( ! function_exists( 'portfoliopress_setup' ) ):
 function portfoliopress_setup() {
 
 	/**
@@ -54,6 +54,10 @@ function portfoliopress_setup() {
 			wp_enqueue_script( 'fader', get_template_directory_uri() . '/js/jquery.fader.js', array( 'jquery' ) );
 		}
 	}
+	
+	add_image_size( 'portfolio-thumbnail', 215, 175, true );
+	add_image_size( 'portfolio-thumbnail-fullwidth', 308, 220, true );
+	add_image_size( 'portfolio-large', 630, 9999, false );
 
 }
 endif; // portfoliopress_setup
@@ -139,7 +143,7 @@ add_action( 'init', 'portfolio_widgets_init' );
 /**
  * Set version number in options, runs tag updater script, flushes rewrite rules
  */
-if ( !of_get_option( 'version', false ) ) {
+if ( !of_get_option( 'version', false ) && !of_get_option( 'disable_portfolio', "0" ) ) {
 	if ( function_exists( 'portfolioposttype' ) ) {
 		portfolioposttype();
 	} else {

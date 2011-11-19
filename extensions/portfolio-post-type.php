@@ -59,10 +59,6 @@ add_action( 'init', 'wpt_portfolio_posttype' );
 
 add_theme_support( 'post-thumbnails', array( 'portfolio' ) );
 
-add_image_size( 'portfolio-thumbnail', 215, 175, true );
-add_image_size( 'portfolio-thumbnail-fullwidth', 308, 220, true );
-add_image_size( 'portfolio-large', 630, 9999, false );
-
 //  Add Columns to Portfolio Edit Screen
 //  http://wptheming.com/2010/07/column-edit-pages/
 
