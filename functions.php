@@ -185,10 +185,11 @@ function portfoliopress_update_portfolio_tags( $term_ids ) {
  * If you change this you should also update the query $args in
  * archive-portfolio.php and related taxonomy templates.
  */
-function wpt_portfolio_custom_posts_per_page( &$q ) {
-	if ( get_post_type() == 'portfolio' )
-		$q->set( 'posts_per_page', 9 );
-	return $q;
+function wpt_portfolio_custom_posts_per_page( $query ) {
+	global $wp_the_query;
+	if ( $wp_the_query === $query && !is_admin() && is_post_type_archive( 'portfolio' ) ) {
+		$query->set( 'posts_per_page', '9' );
+	}
 }
 
-add_filter( 'parse_query', 'wpt_portfolio_custom_posts_per_page' );
+add_action( 'pre_get_posts', 'wpt_portfolio_custom_posts_per_page' );

@@ -19,22 +19,22 @@ if ( post_password_required() ) {
 	if ( $fullwidth )
 		$thumbnail = 'portfolio-thumbnail-fullwidth';
 	
-	// Modify the query if a page or archive calls this template
-	if ( !is_tax() ) {
-		// WP 3.0 PAGED BUG FIX
+	// Query posts if this is being used as a page template
+	if ( is_page_template() ) {
+	
 		if ( get_query_var( 'paged' ) )
 			$paged = get_query_var( 'paged' );
 		elseif ( get_query_var( 'page' ) )
 			$paged = get_query_var( 'page' );
 		else
 			$paged = 1;
-		
-		$args = array( 'post_type' => 'portfolio',
+			
+		$args = array(
+			'post_type' => 'portfolio',
 			'posts_per_page' => 9,
 			'paged' => $paged );
 		query_posts( $args );
 	}
-
 ?>
 <div id="portfolio"<?php if ( $fullwidth ) { echo ' class="full-width"'; }?>>
 
@@ -52,7 +52,9 @@ if ( post_password_required() ) {
 
             <?php /* Display navigation to next/previous pages when applicable */ ?>
 
-			<?php if (  $wp_query->post_count > 9 || $wp_query->max_num_pages > 1 || is_paged() ) : ?>
+			<?php
+			global $wp_query;
+			if (  $wp_query->max_num_pages > 1 ) : ?>
 
 			<?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
 
