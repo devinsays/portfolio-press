@@ -467,8 +467,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	margin:0 0 20px 0;
 }
 #content blockquote {
-	background:url(images/blockquote.png) no-repeat 0 12px;
-	padding: 10px 20px 10px 50px;
 	color: #444;
 }
 #content blockquote p {

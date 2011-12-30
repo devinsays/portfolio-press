@@ -156,7 +156,7 @@ if ( !of_get_option( 'version', false ) && !of_get_option( 'disable_portfolio', 
 		portfoliopress_update_portfolio_tags( $term_ids );
 	}
 	$options = get_option( 'portfoliopress' );
-	$options['version'] = '0.8';
+	$options['version'] = '0.9';
 	update_option( 'portfoliopress', $options );
 }
 
@@ -183,7 +183,7 @@ function portfoliopress_update_portfolio_tags( $term_ids ) {
 /**
  * Sets posts displayed per portfolio page to 9.
  * If you change this you should also update the query $args in
- * archive-portfolio.php and related taxonomy templates.
+ * archive-portfolio.php if you also use the portfolio page template.
  */
 function wpt_portfolio_custom_posts_per_page( $query ) {
 	global $wp_the_query;
