@@ -15,7 +15,7 @@ get_header(); ?>
 
 				<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
 
-				<?php get_template_part( 'loop', 'category' ); ?>
+				<?php get_template_part( 'content', 'category' ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

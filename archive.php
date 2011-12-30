@@ -25,7 +25,7 @@ get_header(); ?>
 
 				<?php rewind_posts(); ?>
 
-				<?php get_template_part( 'loop', 'archive' ); ?>
+				<?php get_template_part( 'content', 'archive' ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

@@ -9,7 +9,7 @@
 
 			<div id="content">
 
-				<?php get_template_part( 'loop', 'index' ); ?>
+				<?php get_template_part( 'content', 'index' ); ?>
 
 			</div><!-- #content -->
 

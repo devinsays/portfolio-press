@@ -15,7 +15,7 @@ get_header(); ?>
 
 				<?php rewind_posts(); ?>
 
-				<?php get_template_part( 'loop', 'author' ); ?>
+				<?php get_template_part( 'content', 'author' ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

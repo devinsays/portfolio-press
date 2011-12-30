@@ -40,7 +40,7 @@ function portfoliopress_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	
 	// Add support for a variety of post formats ( will be added in next version )
-	// add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
 	
 	// Enqueue javascript for the menu and portfolio items
 	if ( !is_admin() ) {
@@ -182,3 +182,14 @@ function wpt_portfolio_custom_posts_per_page( $query ) {
 }
 
 add_action( 'pre_get_posts', 'wpt_portfolio_custom_posts_per_page' );
+
+/**
+ * Overrides the default behavior of portfolio taxonomies to use the archive-portfolio template
+ * http://www.billerickson.net/reusing-wordpress-theme-files/
+ */
+function portfoliopress_template_chooser( $template ) {
+	if ( is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) )
+		$template = get_query_template( 'archive-portfolio' );
+	return $template;
+}
+add_filter( 'template_include', 'portfoliopress_template_chooser' );
