@@ -10,13 +10,9 @@ Instructions and Common Questions
 
 How to Set Up a Portfolio Item:
 
-When you activate the Portfolio Theme, you will see a new post type called "Portfolio".  Click "Add New Item" and you will be taken to the edit page where you can add a title, description, and tags for your portfolio piece.
+Portfolio Press requires the "Portfolio Post Type" plugin in order to use the portfolio functionality.
 
 To add the portfolio image, click "Set featured image" on the right side of the screen beneath "Portfolio Tags".  This will take you to the media uploader to add your image.  When you finish, click "Use as Featured Image".
-
-404 Errors:
-
-This theme uses custom post types.  If you are getting a 404 error when you try and view the portfolio posts, reset your permalinks.  You can do this by going to "Settings > Permalinks" and re-saving the permalink structure.
 
 Switching Themes:
 

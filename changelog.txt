@@ -1,6 +1,8 @@
 Portfolio Press 0.9
 
 - Paging bug fixes for portfolio items
+- Fix for blockquote missing image
+- Removed portfolio post type code
 
 Portfolio Press 0.8
 

@@ -11,11 +11,6 @@ if ( ! isset( $content_width ) )
 // Sets up the options panel and default functions
 require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 
-// Enables the portfolio custom post type.
-if ( !of_get_option( 'disable_portfolio', "0" ) && !function_exists( 'portfolioposttype' ) ) {
-	require_once( TEMPLATEPATH . '/extensions/portfolio-post-type.php' );
-}
-
 // Tell WordPress to run portfoliopress_setup() when the 'after_setup_theme' hook is run
 add_action( 'after_setup_theme', 'portfoliopress_setup' );
  
@@ -80,7 +75,7 @@ if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugi
 		if ( ! get_user_meta( $user_id, 'portfoliopress_install_plugin_notice' ) ) {
 			add_thickbox();
 			echo '<div class="updated"><p>';
-			printf( __( 'Future versions of Portfolio Press will require the Portfolio Post Type Plugin.  <a href="%1$s" class="thickbox onclick">Install Now</a> | <a href="%2$s">Hide Notice</a>' ), admin_url() . 'plugin-install.php?tab=plugin-information&plugin=portfolio-post-type&TB_iframe=true&width=640&height=517', '?example_nag_ignore=0' );
+			printf( __( 'If you wish to use custom post types for portfolios, please install the Portfolio Post Type Plugin.  <a href="%1$s" class="thickbox onclick">Install Now</a> | <a href="%2$s">Hide Notice</a>' ), admin_url() . 'plugin-install.php?tab=plugin-information&plugin=portfolio-post-type&TB_iframe=true&width=640&height=517', '?example_nag_ignore=0' );
 			echo '</p></div>';
 		}
 	}
@@ -141,20 +136,14 @@ function portfolio_widgets_init() {
 add_action( 'init', 'portfolio_widgets_init' );
 
 /**
- * Set version number in options, runs tag updater script, flushes rewrite rules
+ * Set version number in options
  */
-if ( !of_get_option( 'version', false ) && !of_get_option( 'disable_portfolio', "0" ) ) {
-	if ( function_exists( 'portfolioposttype' ) ) {
-		portfolioposttype();
-	} else {
-		wpt_portfolio_posttype();
-	}
-	flush_rewrite_rules();
-	register_taxonomy( 'portfolio-tags', 'portfolio', array( 'public'=> false ) );
-	$term_ids = get_terms( 'portfolio-tags', array( 'hide_empty' => false ,'fields' => 'ids' ) );
-	if ( $term_ids && ( taxonomy_exists( 'portfolio_tag' ) ) ) {
-		portfoliopress_update_portfolio_tags( $term_ids );
-	}
+if ( of_get_option( 'version', '0.1' ) < 0.9 ) {
+	global $current_user;
+	$user_id = $current_user->ID;
+	// Show the nag again to use the Portfolio Post Type Plugin
+	delete_user_meta( $user_id, 'example_ignore_notice', 'true', true );
+	// Update the theme version number
 	$options = get_option( 'portfoliopress' );
 	$options['version'] = '0.9';
 	update_option( 'portfoliopress', $options );
