@@ -117,7 +117,7 @@ add_filter( 'wp_nav_menu_args', 'portfolio_wp_nav_menu_args' );
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-function portfolio_widgets_init() {
+function portfoliopress_widgets_init() {
 	register_sidebar( array (
 			'name' => __( 'Sidebar', 'portfoliopress' ),
 			'id' => 'sidebar',
@@ -133,7 +133,27 @@ function portfolio_widgets_init() {
 	register_sidebar( array( 'name' => __( 'Footer 4', 'portfoliopress' ),'id' => 'footer-4', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
 }
 
-add_action( 'init', 'portfolio_widgets_init' );
+add_action( 'init', 'portfoliopress_widgets_init' );
+
+/**
+ * Reusable navigation code for navigation
+ * Display navigation to next/previous pages when applicable
+ */
+function portfoliopress_content_nav() {
+	global $wp_query;
+	if (  $wp_query->max_num_pages > 1 ) :
+		if (function_exists('wp_pagenavi') ) {
+			wp_pagenavi();
+		} else { ?>
+        	<nav id="nav-below">
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>		
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'portfoliopress' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?></div>
+			</nav><!-- #nav-below -->
+    	<?php }
+	endif;
+}
+
 
 /**
  * Set version number in options

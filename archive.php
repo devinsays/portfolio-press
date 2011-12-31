@@ -6,29 +6,32 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content">
+	<div id="primary">
+		<div id="content" role="main">
+		
+		<?php if ( have_posts() ) : ?>
 
-				<?php the_post(); ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-				<h2 class="page-title">
-				<?php if ( is_day() ) : ?>
-					<?php printf( __( 'Daily Archives: <span>%s</span>', 'portfoliopress' ), get_the_date() ); ?>
-				<?php elseif ( is_month() ) : ?>
-					<?php printf( __( 'Monthly Archives: <span>%s</span>', 'portfoliopress' ), get_the_date(__( 'F Y', 'portfoliopress' )) ); ?>
-				<?php elseif ( is_year() ) : ?>
-					<?php printf( __( 'Yearly Archives: <span>%s</span>', 'portfoliopress' ), get_the_date( 'Y' ) ); ?>
-				<?php else : ?>
-					<?php _e( 'Blog Archives', 'portfoliopress' ); ?>
-				<?php endif; ?>
-				</h2>
+				<?php
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
+				?>
 
-				<?php rewind_posts(); ?>
+			<?php endwhile; ?>
 
-				<?php get_template_part( 'content', 'archive' ); ?>
+			<?php portfoliopress_content_nav(); ?>
+			
+		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endif; ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
