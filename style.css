@@ -139,7 +139,11 @@ ins {
 }
 blockquote {
 	font-style: italic;
-	padding: 0 3em;
+	padding: 10px 35px 0;
+	background: url('images/quote.png') no-repeat 0 0;
+}
+blockquote, blockquote p {
+	font-size:18px;
 }
 blockquote cite,
 blockquote em,
@@ -550,6 +554,14 @@ img.wp-smiley {
 	font-size: 11px;
 	margin:0 0 12px;
 }
+
+/* Post Formats */
+
+.format-quote {
+	padding-top:30px;
+	border-top: 1px solid #DDD;
+}
+
 /* Portfolio Posts */
 
 #portfolio {

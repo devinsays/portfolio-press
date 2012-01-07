@@ -19,7 +19,7 @@ get_header(); ?>
 	
 					<?php get_search_form(); ?>
 	
-					<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => null ) ); ?>
+					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 	
 					<div class="widget">
 						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'portfoliopress' ); ?></h2>
