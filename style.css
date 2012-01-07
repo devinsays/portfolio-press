@@ -554,12 +554,25 @@ img.wp-smiley {
 	font-size: 11px;
 	margin:0 0 12px;
 }
+figure {
+	margin:0 0 10px 0;
+}
 
 /* Post Formats */
 
-.format-quote {
+.format-quote, .format-image {
 	padding-top:30px;
 	border-top: 1px solid #DDD;
+}
+.single .format-quote, .single .format-image {
+	padding-top:0;
+	border-top: none;
+}
+.format-image header {
+	display:none;
+}
+.single .format-image header {
+	display:block;
 }
 
 /* Portfolio Posts */
