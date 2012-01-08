@@ -13,8 +13,14 @@ jQuery(document).ready(function($){
     // Image Post Format
     $('#content .format-image').each( function() {
     	var title = $(this).find('.entry-title').text();
-    	$(this).find('img:first').wrap('<div class="image-wrap" />');
+    	var image = $(this).find('img:first');
+    	if ( image.parent('a'.length) ) {
+    		image.parent('a').wrap('<div class="image-wrap" />');
+    	} else {
+    		image.wrap('<div class="image-wrap" />');
+    	}
     	$(this).find('.image-wrap').append('<h3>' + title + '</h3>');
+    	$(this).find('h3').width(image.width() - 20);
     });
     
     $('.format-image .image-wrap').hover( function() {

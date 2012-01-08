@@ -40,15 +40,7 @@ function portfoliopress_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	
 	// Add support for a variety of post formats ( will be added in next version )
-	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
-	
-	// Enqueue javascript for the menu and portfolio items
-	if ( !is_admin() ) {
-		wp_enqueue_script( 'superfish', get_template_directory_uri() .'/js/superfish.js', array( 'jquery' ) );
-		if ( !is_singular() ) {
-			wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ) );
-		}
-	}
+	add_theme_support( 'post-formats', array( 'gallery', 'quote', 'image' ) );
 	
 	add_image_size( 'portfolio-thumbnail', 215, 175, true );
 	add_image_size( 'portfolio-thumbnail-fullwidth', 308, 220, true );
@@ -56,6 +48,20 @@ function portfoliopress_setup() {
 
 }
 endif; // portfoliopress_setup
+
+/**
+ * Loads the required javascript for the drop down menus and jquery effects
+ * on portfolio items and post formats.
+ */
+ 
+function portfoliopress_scripts() {
+	wp_enqueue_script( 'superfish', get_template_directory_uri() .'/js/superfish.js', array( 'jquery' ), false, true );
+	if ( !is_single() ) {
+		wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
+	}
+}
+
+add_action('wp_enqueue_scripts', 'portfoliopress_scripts');
 
 /**
  * Displays a notice letting the user know that portfolio post type functionality

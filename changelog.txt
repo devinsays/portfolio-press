@@ -1,11 +1,12 @@
 Portfolio Press 0.9
 
 - Paging bug fixes for portfolio items
-- Fix for blockquote missing image
+- Fix for missing blockquote image
 - Removed portfolio post type code
 - Replaced portfolio taxonomy templates with archive-portfolio
 - Renamed loop.php to content.php
 - Added post format support for quotes, images, and galleries
+- Renamed scripts files
 
 Portfolio Press 0.8
 
