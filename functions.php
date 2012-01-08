@@ -45,8 +45,8 @@ function portfoliopress_setup() {
 	// Enqueue javascript for the menu and portfolio items
 	if ( !is_admin() ) {
 		wp_enqueue_script( 'superfish', get_template_directory_uri() .'/js/superfish.js', array( 'jquery' ) );
-		if ( !is_single() ) {
-			wp_enqueue_script( 'fader', get_template_directory_uri() . '/js/jquery.fader.js', array( 'jquery' ) );
+		if ( !is_singular() ) {
+			wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ) );
 		}
 	}
 	

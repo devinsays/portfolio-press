@@ -5,6 +5,7 @@ Portfolio Press 0.9
 - Removed portfolio post type code
 - Replaced portfolio taxonomy templates with archive-portfolio
 - Renamed loop.php to content.php
+- Added post format support for quotes, images, and galleries
 
 Portfolio Press 0.8
 
