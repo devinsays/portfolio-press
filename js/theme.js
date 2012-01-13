@@ -12,18 +12,19 @@ jQuery(document).ready(function($){
     
     // Image Post Format
     $('#content .format-image').each( function() {
-    	var title = $(this).find('.entry-title').text();
     	var image = $(this).find('img:first');
-    	if ( image.parent('a'.length) ) {
-    		image.parent('a').wrap('<div class="image-wrap" />');
-    	} else {
-    		image.wrap('<div class="image-wrap" />');
+    	if (image.width() > 200 ) {
+	    	var link = $(this).find('.entry-title').children();
+	    	var title = link.text();
+	    	image.unwrap('a');
+	    	image.wrap('<div class="image-wrap" />');
+	    	image.wrap(link.text(''));
+	    	image.parent().append('<h3/>');
+	    	$(this).find('h3').text(title).width(image.width() - 20);
     	}
-    	$(this).find('.image-wrap').append('<h3>' + title + '</h3>');
-    	$(this).find('h3').width(image.width() - 20);
     });
     
-    $('.format-image .image-wrap').hover( function() {
+    $('.format-image .image-wrap a').hover( function() {
     	$(this).children('h3').slideDown(100);
     }, function(){
     	$(this).children('h3').slideUp(200);
