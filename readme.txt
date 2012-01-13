@@ -28,10 +28,4 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 Portfolio was built on the solid foundation of Toolbox:
 http://wordpress.org/extend/themes/toolbox
 
-Styles, especially the menus and buttons, were inspired by Canvas:
-http://www.woothemes.com/2010/02/canvas/
-
-Jquery rollovers for portfolio items was based on code by:
-http://graphpaperpress.com/themes/workspace/
-
 Testing and extremely helpful code reviews were done by Michael Fields (http://wordpress.mfields.org/) and Jacob M Goldman (http://www.cmurrayconsulting.com).
