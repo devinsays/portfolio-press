@@ -196,9 +196,7 @@ function portfoliopress_update_portfolio_tags( $term_ids ) {
 }
 
 /**
- * Sets posts displayed per portfolio page to 9.
- * If you change this you should also update the query $args in
- * archive-portfolio.php if you also use the portfolio page template.
+ * Sets posts displayed per portfolio page to 9
  */
 function wpt_portfolio_custom_posts_per_page( $query ) {
 	global $wp_the_query;

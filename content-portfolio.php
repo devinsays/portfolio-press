@@ -22,6 +22,8 @@ if ( post_password_required() ) {
 	// Query posts if this is being used as a page template
 	if ( is_page_template() ) {
 	
+		global $paged;
+	
 		if ( get_query_var( 'paged' ) )
 			$paged = get_query_var( 'paged' );
 		elseif ( get_query_var( 'page' ) )
@@ -50,27 +52,8 @@ if ( post_password_required() ) {
 
 		<?php endwhile; ?>
 
-            <?php /* Display navigation to next/previous pages when applicable */ ?>
-
-			<?php
-			global $wp_query;
-			if (  $wp_query->max_num_pages > 1 ) : ?>
-
-			<?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
-
-				<?php wp_pagenavi(); ?>
-
-			<?php } else { ?>
-
-				<nav id="nav-below">
-				<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'portfoliopress' ) ); ?></div>
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?></div>
-				</nav><!-- #nav-below -->
-
-			<?php } ?>
-		<?php endif; ?>
-
+            <?php portfoliopress_content_nav(); ?>
+			
 		<?php else: ?>
 
 			<h2 class="title"><?php _e( 'Sorry, no posts matched your criteria.', 'portfoliopress' ) ?></h2>

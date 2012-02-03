@@ -6,13 +6,23 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content">
+	<div id="primary">
+		<div id="content" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'portfoliopress' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				<?php get_template_part( 'loop', 'search' ); ?>
+				<header class="page-header">
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'portfoliopress' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				</header>
+
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<?php get_template_part( 'content', 'search' ); ?>
+
+				<?php endwhile; ?>
+
+				<?php portfoliopress_content_nav(); ?>
 
 			<?php else : ?>
 
@@ -22,7 +32,7 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'portfoliopress' ); ?></p>
+						<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'toolbox' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->

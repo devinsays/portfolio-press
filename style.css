@@ -586,6 +586,9 @@ figure {
 	display: none;
 	text-decoration: none;
 }
+.image-wrap a {
+	text-decoration: none;
+}
 
 /* Portfolio Posts */
 
