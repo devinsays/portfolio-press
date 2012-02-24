@@ -129,7 +129,7 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Articles plus Anciens"
 #: full-width-portfolio.php:47
 #: loop.php:65
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Artciles plus récents <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Articles plus récents <span class=\"meta-nav\">&rarr;</span>"
 
 #: full-width-portfolio.php:55
 msgid "Sorry, no posts matched your criteria."
