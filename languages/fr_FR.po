@@ -124,12 +124,12 @@ msgstr "Navigation des articles"
 #: full-width-portfolio.php:46
 #: loop.php:64
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Articles plus Anciens"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articles plus anciens"
 
 #: full-width-portfolio.php:47
 #: loop.php:65
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Artciles plus récents <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Articles plus récents <span class=\"meta-nav\">&rarr;</span>"
 
 #: full-width-portfolio.php:55
 msgid "Sorry, no posts matched your criteria."
@@ -183,7 +183,7 @@ msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentair
 #: image.php:90
 #, php-format
 msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "Les commentazires sont clos mais vous pouvez faire un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de trackback\" rel=\"trackback\">URL de trackback</a>."
+msgstr "Les commentaires sont clos mais vous pouvez faire un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de trackback\" rel=\"trackback\">URL de trackback</a>."
 
 #: image.php:92
 msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
