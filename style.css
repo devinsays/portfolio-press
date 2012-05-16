@@ -14,11 +14,10 @@ Credits:
 Portfolio was built on the solid foundation of Toolbox:
 http://wordpress.org/extend/themes/toolbox
 
+Reset default browser CSS.
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/
+
 */
-
-/* Reset */
-
-/* http://meyerweb.com/eric/tools/css/reset/ | v1.0 | 20080212 */
 
 body, html  { height: 100%; }
 html, body, div, span, applet, object, iframe,
@@ -53,27 +52,6 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 .col-width:after {content: "."; display: block;height: 0;clear: both; visibility: hidden;}
 
 .fix {clear: both;height: 1px;margin: -1px 0 0;overflow: hidden;}
-
-html body * span.clear,
-html body * div.clear,
-html body * li.clear,
-html body * dd.clear
-{
-	background: none;
-	border: 0;
-	clear: both;
-	display: block;
-	float: none;
-	font-size: 0;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
-}/* http://sonspring.com/journal/clearing-floats */
-
 
 /* Base Styles */
 
@@ -203,13 +181,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* Structure */
 
 #main {
-	background:#fff url(images/bg-texture.png);
+	background:#f3f3f3;
 	padding:40px 0 20px 0;
 }
 
 .col-width {
-	width: 980px;
+	max-width: 980px;
 	margin: 0 auto;
+	padding:0 20px;
 }
 
 /* Navigation */
@@ -254,14 +233,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 /* Drop-down menus */
 #navigation ul ul .current-page-item, #navigation ul ul .current-menu-parent, #navigation ul ul .current-menu-item {
-	background:#ccc;
+	background:#ddd;
 }
 #navigation ul li ul {
 	background: #FFF;
 	position: absolute;
 	left: -999em;
 	width: 180px;
-	border: 1px solid #666;
+	border: 1px solid #aaa;
 	border-width:1px;
 	z-index:999;
 	margin-left:0;
@@ -304,7 +283,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	position:absolute;
 	display:block;
 	right:0.4em;
-	top:0.8em;
+	top:0.9em;
 	width:10px;
 	height:10px;
 	text-indent:-999em;
@@ -333,7 +312,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	position:relative;
 	display:block;
 	background:#000;
-	padding:30px 0 30px;
+	padding:25px 0;
 }
 #logo {
 	float:left;
@@ -344,14 +323,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 #logo #site-title a {
 	color:#fff;
-	font-size:40px;
-	line-height:40px;
+	font-size:38px;
+	line-height:38px;
 	text-transform:none;
 	font-weight:normal;
 	text-decoration:none;
-}
-#logo #site-title a:hover {
-	text-decoration:underline;
 }
 #logo #site-description {
 	display:block;
@@ -363,17 +339,17 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* Content */
 
 #content {
-	padding:0 0 40px;
+	padding:0 0 4%;
 	float:left;
 	position:relative;
-	width:640px;
+	width:65%;
 }
 /* Sidebar */
 
 #sidebar {
 	overflow:hidden;
 	float:right;
-	width:240px;
+	width:24%;
 }
 
 /* Layouts */
@@ -386,7 +362,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 #colophon {
 	display:block;
-	padding: 20px 0;
+	padding: 30px 0;
 	border-top: 1px solid #ddd;
 	background:#fff;
 }
@@ -394,15 +370,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	border-bottom:1px dotted #ddd;
 }
 #footer-widgets .block {
-	padding:20px 20px 0 0;
-	width:230px;
+	padding:20px 2% 0 0;
+	width:23%;
 	float:left;
 }
 #footer-widgets .footer-widget-4 {
 	padding:20px 0px 0 0;
-}
-#colophon #site-generator {
-	margin-top:20px;
 }
 #colophon #site-generator p {
 	color:#333;
@@ -418,12 +391,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	clear:both;
 	margin-bottom:40px;
 }
-
-#content img {
-	max-width:630px;
-	height:auto;
-}
-
 .entry-meta {
 	padding-top:10px;
 	margin: 0 0 25px 0;
@@ -432,15 +399,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	display:block;
 	clear:both;
 }
-
 .entry-utility {
 	clear:both;
 }
-
 .sticky {
 	/* Theme Review Requirement */
 }
-
 .bypostauthor {
 	/* Theme Review Requirement */
 }
@@ -454,7 +418,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	margin-bottom:20px;
 	padding-bottom: 16px;
 }
-	
 #content h1 {
 	padding-bottom: 20px;
 }
@@ -500,7 +463,16 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	list-style-type: lower-latin;
 }
 /* Images */
+img,
+img[class*="align"],
+img[class*="wp-image-"] {
+   max-width: 100%;
+   height: auto;
+}
 #content img, img.thumbnail {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 	padding: 5px;
 	border: 1px solid #ddd;
 	background:#F8F8F8;
@@ -593,49 +565,39 @@ figure {
 /* Portfolio Posts */
 
 #portfolio {
-	padding:0 0 40px;
+	padding:0 0 4%;
 	float:left;
-	position:relative;
-	width:685px;
+	width:70%;
 }
 #portfolio .portfolio-item {
-	width:215px;
-	height:175px;
+	position:relative;
+	width:32%;
 	background-color:#000;
-	border:1px solid #ccc;
 	float:left;
-	margin:0 15px 15px 0;
+	margin:0 2% 2% 0;
 }
-#portfolio .last {
-	margin-right:0px;
+#portfolio .portfolio-item:nth-of-type(3n) {
+	margin-right:0;
+}
+#portfolio .portfolio-item img {
+	display:block;
+	width:100%;
+	height:auto;
 }
 #portfolio .thumb {
 	display:block;
-	width:215px;
-	height:175px;
-}
-#portfolio .nothumb {
-	display:block;
-	width:195px;
-	height:85px;
-	padding:80px 10px 10px 10px;
-	font-weight:bold;
-	text-align:center;
-}
-#portfolio a.nothumb:hover {
-	text-decoration:none;
+	width:100%;
 }
 #portfolio a.title-overlay {
+	padding:5%;
+	top:0;
 	position:absolute;
-	padding:5px 10px;
-	height:165px;
-	margin-top:-165px;
-	width:195px;
 	z-index:1;
 	display:block;
 	font-size:18px;
 	font-weight:bold;
 	color:#fff;
+	display:none;
 }
 #portfolio a.title-overlay:hover {
 	text-decoration:none;
@@ -644,21 +606,8 @@ figure {
 /* Increase the size of the content area for templates without sidebars */
 
 .full-width #content, #portfolio.full-width {
-	width: 980px;
-}
-#portfolio.full-width .portfolio-item {
-	width:308px;
-	height:220px;
-}
-#portfolio.full-width .thumb {
-	display:block;
-	width:308px;
-	height:220px;
-}
-#portfolio.full-width a.title-overlay {
-	width:288px;
-	height:210px;
-	margin-top:-210px;
+	width:100%;
+	max-width: 980px;
 }
 
 /* Pagination / WP-Pagenavi */
@@ -1013,6 +962,57 @@ h3#pings {
 
 .clear {
 	clear:both;
+}
+
+/* =Responsive Structure
+----------------------------------------------- */
+
+@media (max-width: 980px) {
+	#navigation {
+		clear:both;
+		float:left;
+	}
+	#navigation ul li {
+		margin-left:0;
+		margin-right:10px;
+	}
+	embed, object {
+      max-width: 100%;
+   }
+}
+
+@media (max-width: 680px) {
+	#content, #portfolio {
+		width:100%;
+		padding:0;
+		margin-bottom:40px;
+	}
+	#portfolio .portfolio-item {
+		width:46%;
+		margin-right:4%;
+	}
+	#portfolio .portfolio-item:nth-of-type(3n) {
+		margin-right:4%;
+	}
+	#portfolio .portfolio-item:nth-of-type(2n) {
+		margin-right:0;
+	}
+	#sidebar {
+		clear:both;
+		float:none;
+		width:100%;
+	}
+}
+	
+@media (max-width: 480px) {
+	#portfolio .portfolio-item {
+		float:none;
+		width:auto;
+		margin:0 0 20px;
+	}
+	#portfolio .portfolio-item:nth-of-type(1n) {
+		margin-right:0;
+	}
 }
 
 /* =Print

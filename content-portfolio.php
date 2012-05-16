@@ -43,12 +43,10 @@ if ( post_password_required() ) {
 	<?php  if ( have_posts() ) : $count = 0;
 		while ( have_posts() ) : the_post(); $count++; global $post; ?>
 		
-			<div class="portfolio-item item<?php echo $count; ?><?php if ( $count % 3 == 0 ) { echo ' last'; } ?>">
+			<div class="portfolio-item item<?php echo $count; ?>">
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanent Link to', 'portfoliopress' ); ?> <?php the_title_attribute(); ?>" class="thumb"><?php the_post_thumbnail( $thumbnail ); ?></a>
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanent Link to', 'portfoliopress' ); ?> <?php the_title_attribute(); ?>" class="title-overlay"><?php the_title() ?></a>
             </div>
-
-            <?php if ( $count % 3 == 0 ) { echo '<div class="clear"></div>'; } ?>
 
 		<?php endwhile; ?>
 

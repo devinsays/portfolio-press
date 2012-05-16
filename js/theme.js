@@ -1,7 +1,6 @@
 jQuery(document).ready(function($){
 	
 	// Portfolio Archive
-    $("#portfolio .title-overlay").css('opacity', 0.0); // Sets opacity to fade down to 0% when page loads
     $("#portfolio .portfolio-item").hover(function(){
         $(this).children(".title-overlay").stop(true).fadeTo(300, 1.0); // Sets 100% on hover
 		$(this).children(".thumb").stop(true).fadeTo(300, .5); // Sets 20% on hover
