@@ -1026,10 +1026,28 @@ h3#pings {
 ----------------------------------------------- */
 
 @media print {
-	body {
+	body, #branding, #main {
 		background: none !important;
 	}
-	#navigation {
+	#branding {
+		margin:0;
+	}
+	#main {
+		padding:15px 0;
+	}
+	#logo #site-title a, #logo #site-description {
+		color: #000;
+	}
+	.entry-content a:after {
+		content: " [" attr(href) "] ";
+	}
+	.entry-content .gallery-thumb  a:after, .entry-content .image-wrap a:after {
+		content:'';
+	}
+	#navigation, #sidebar, #nav-below, #footer-widgets {
 		display:none;
+	}
+	#comments {
+		page-break-before: always;
 	}
 }
