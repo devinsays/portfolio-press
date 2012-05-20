@@ -1,3 +1,7 @@
+Portfolio Press 1.1
+
+- Responsive Design
+
 Portfolio Press 1.0
 
 - Fix for search.php template

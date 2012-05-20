@@ -96,8 +96,8 @@ function portfolio_head_css() {
 		$output = '';
 		
 		if ( of_get_option('menu_position') == "clear") {
-			$output .= "#navigation {clear:both; float:none;}\n";
-			$output .= ".menu ul li {margin-left:0; margin-right:10px;}\n";
+			$output .= "#navigation {clear:both; float:none; margin-left:-10px;}\n";
+			$output .= "#navigation ul li {margin-left:0; margin-right:10px;}\n";
 		}
 		
 		if ( of_get_option('header_color') != "#000000") {

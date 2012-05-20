@@ -41,16 +41,21 @@ if ( post_password_required() ) {
 <div id="portfolio"<?php if ( $fullwidth ) { echo ' class="full-width"'; }?>>
 
 	<?php  if ( have_posts() ) : $count = 0;
-		while ( have_posts() ) : the_post(); $count++; global $post; ?>
-		
-			<div class="portfolio-item item<?php echo $count; ?>">
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanent Link to', 'portfoliopress' ); ?> <?php the_title_attribute(); ?>" class="thumb"><?php the_post_thumbnail( $thumbnail ); ?></a>
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanent Link to', 'portfoliopress' ); ?> <?php the_title_attribute(); ?>" class="title-overlay"><?php the_title() ?></a>
-            </div>
+		while ( have_posts() ) : the_post(); $count++; global $post;
+		$classes = 'portfolio-item item' . $count;
+		if ( !has_post_thumbnail() ) {
+			$classes .= ' no-thumb';
+		} ?>
+		<div class="<?php echo $classes; ?>">
+			<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanent Link to', 'portfoliopress' ); ?><?php the_title_attribute(); ?>" class="thumb"><?php the_post_thumbnail( $thumbnail ); ?></a>
+			<?php } ?>
+			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( 'Permanent Link to', 'portfoliopress' ); ?> <?php the_title_attribute(); ?>" class="title-overlay"><?php the_title() ?></a>
+		</div>
 
 		<?php endwhile; ?>
 
-            <?php portfoliopress_content_nav(); ?>
+        <?php portfoliopress_content_nav(); ?>
 			
 		<?php else: ?>
 

@@ -10,7 +10,7 @@ Instructions and Common Questions
 
 How to Set Up a Portfolio Item:
 
-Portfolio Press requires the "Portfolio Post Type" plugin in order to use the portfolio functionality.
+Portfolio Press requires the "Portfolio Post Type" plugin in order to use the portfolio functionality: http://wordpress.org/extend/plugins/portfolio-post-type/
 
 To add the portfolio image, click "Set featured image" on the right side of the screen beneath "Portfolio Tags".  This will take you to the media uploader to add your image.  When you finish, click "Use as Featured Image".
 
