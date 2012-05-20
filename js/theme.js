@@ -1,4 +1,10 @@
 jQuery(document).ready(function($){
+
+	// Enable the drop down menus
+	jQuery('#navigation .menu ul').superfish({
+		animation: {opacity:'show',height:'show'},
+		speed: 'fast'
+	});
 	
 	// Portfolio Archive
     $("#portfolio .portfolio-item").hover(function(){

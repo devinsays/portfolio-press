@@ -210,6 +210,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	padding:5px 10px;
 	line-height:18px;
 	text-decoration:none;
+}
+#navigation .menu > ul > li > a {
 	-webkit-transition: background 0.4s ease-in-out;  /* Saf3.2+, Chrome */
     -moz-transition: background 0.4s ease-in-out;  /* FF4+ */
     -ms-transition: background 0.4s ease-in-out;  /* IE10? */
@@ -232,7 +234,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* Drop-down menus */
 
 #navigation ul ul .current-page-item, #navigation ul ul .current-menu-parent, #navigation ul ul .current-menu-item {
-	background:#ddd;
+	background:#eee;
 }
 #navigation ul li ul {
 	background: #FFF;
