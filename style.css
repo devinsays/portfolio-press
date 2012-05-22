@@ -58,7 +58,7 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 /* Base Styles */
 
 body {
-	font: 14px/20px Arial, Helvetica, Sans-serif;
+	font: 14px/20px sans-serif;
 	color: #555;
 	background: #fff;
 }
@@ -84,7 +84,7 @@ h5, h6 {
 	font-size: 14px;
 }
 p {
-	font:16px/24px Georgia, serif;
+	font:16px/24px georgia, serif;
 	margin:0;
 }
 hr {
@@ -193,7 +193,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 #navigation {
 	display:block;
 	float:right;
-	font:14px/14px Helvetica, Arial, sans-serif;
+	font:14px/14px sans-serif;
 	padding:20px 0 10px;
 }
 #navigation ul {
@@ -319,21 +319,18 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	float:left;
 }
 #logo #site-title, #logo #site-description {
-	font-family:Georgia, serif;
 	color: #fff;
 }
 #logo #site-title a {
 	color:#fff;
 	font-size:38px;
 	line-height:38px;
-	text-transform:none;
-	font-weight:normal;
 	text-decoration:none;
 }
 #logo #site-description {
-	display:block;
 	color:#ddd;
-	font:italic 14px Georgia, serif;
+	font-size:14px;
+	font-style: italic;
 	margin-top:5px;
 }
 
@@ -381,7 +378,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 #colophon #site-generator p {
 	color:#333;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: sans-serif;
 	font-weight:bold;
 	font-size:13px;
 }
@@ -396,7 +393,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .entry-meta {
 	padding-top:10px;
 	margin: 0 0 25px 0;
-	font:11px/11px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font:11px/11px "Trebuchet MS", sans-serif;
 	text-transform:uppercase;
 	display:block;
 	clear:both;
@@ -525,7 +522,7 @@ img.wp-smiley {
 #content .wp-caption-text {
 	margin:0;
 	padding:0;
-	font:11px/22px Arial, Helvetica, sans-serif;
+	font:11px/22px sans-serif;
 	text-align:center;
 }
 .gallery .gallery-caption {
@@ -716,12 +713,12 @@ figure {
 	margin: 0 0 20px 0;
 	padding:0 0 15px;
 	text-transform:uppercase;
-	font:normal bold 14px Arial, Helvetica, sans-serif;
+	font:bold 14px sans-serif;
 	color:#666;
 	border-bottom:3px solid #ddd;
 }
 .widget-container p {
-	font:12px/20px Arial, Helvetica, sans-serif;
+	font:12px/20px sans-serif;
 	margin-bottom:15px;
 }
 .widget-container ul {
@@ -871,7 +868,7 @@ figure {
 	margin: 15px 0 0 0;
 }
 #commentform input.txt, #commentform textarea {
-	font:14px/14px Arial, Helvetica, sans-serif;
+	font:14px/14px sans-serif;
 	border-color: #ccc #efefef #efefef #ccc;
 	border-width:1px;
 	border-style:solid;
