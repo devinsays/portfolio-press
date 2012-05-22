@@ -41,8 +41,11 @@ if ( post_password_required() ) {
 <div id="portfolio"<?php if ( $fullwidth ) { echo ' class="full-width"'; }?>>
 
 	<?php  if ( have_posts() ) : $count = 0;
-		while ( have_posts() ) : the_post(); $count++; global $post;
-		$classes = 'portfolio-item item' . $count;
+		while ( have_posts() ) : the_post(); $count++;
+		$classes = 'portfolio-item item-' . $count;
+		if ( $count % 3 == 0 ) {
+			$classes .= ' ie-col3';
+		}
 		if ( !has_post_thumbnail() ) {
 			$classes .= ' no-thumb';
 		} ?>

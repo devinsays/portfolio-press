@@ -319,6 +319,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	float:left;
 }
 #logo #site-title, #logo #site-description {
+	font-family: georgia, serif;
 	color: #fff;
 }
 #logo #site-title a {
@@ -583,7 +584,7 @@ figure {
 	float:left;
 	margin:0 2% 2% 0;
 }
-#portfolio .portfolio-item:nth-of-type(3n) {
+#portfolio .portfolio-item:nth-of-type(3n), #portfolio .ie-col3 {
 	margin-right:0;
 }
 #portfolio .portfolio-item img {

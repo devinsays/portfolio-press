@@ -118,3 +118,10 @@
 	});
 
 })(jQuery);
+
+jQuery(document).ready(function($){
+	$('#navigation .menu ul').superfish({
+		animation: {opacity:'show',height:'show'},
+		speed: 'fast'
+	});
+});
