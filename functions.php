@@ -64,6 +64,23 @@ function portfoliopress_scripts() {
 add_action('wp_enqueue_scripts', 'portfoliopress_scripts');
 
 /**
+ * Load webfonts from Google
+ */
+ 
+if ( !function_exists( 'portfoliopress_google_fonts' ) ) {
+	function portfoliopress_google_fonts() {
+		if ( !is_admin() ) {
+			wp_register_style( 'portfoliopress_open_sans', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600', '', '', 'screen' );
+			wp_register_style( 'portfoliopress_rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700', '', '', 'screen' );
+			wp_enqueue_style( 'portfoliopress_open_sans' );
+			wp_enqueue_style( 'portfoliopress_rokkitt' );
+		}
+	}
+}
+
+add_action( 'init', 'portfoliopress_google_fonts' );
+
+/**
  * Displays a notice letting the user know that portfolio post type functionality
  * will be moving into a plugin.  They can upgrade now, or wait one more
  * version before this code is removed.
@@ -124,6 +141,7 @@ add_filter( 'wp_nav_menu_args', 'portfolio_wp_nav_menu_args' );
  * Register widgetized area and update sidebar with default widgets
  */
 function portfoliopress_widgets_init() {
+
 	register_sidebar( array (
 			'name' => __( 'Sidebar', 'portfoliopress' ),
 			'id' => 'sidebar',
@@ -133,7 +151,15 @@ function portfoliopress_widgets_init() {
 			'after_title' => '</h3>',
 		) );
 
-	register_sidebar( array( 'name' => __( 'Footer 1', 'portfoliopress' ),'id' => 'footer-1', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
+	register_sidebar( array(
+		'name' => __( 'Footer 1', 'portfoliopress' ),
+		'id' => 'footer-1',
+		'description' => __( "Widetized footer", 'portfoliopress' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>','before_title' =>
+		'<h3>','after_title' => '</h3>' )
+	);
+	
 	register_sidebar( array( 'name' => __( 'Footer 2', 'portfoliopress' ),'id' => 'footer-2', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
 	register_sidebar( array( 'name' => __( 'Footer 3', 'portfoliopress' ),'id' => 'footer-3', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
 	register_sidebar( array( 'name' => __( 'Footer 4', 'portfoliopress' ),'id' => 'footer-4', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
@@ -158,41 +184,6 @@ function portfoliopress_content_nav() {
 			</nav><!-- #nav-below -->
     	<?php }
 	endif;
-}
-
-
-/**
- * Set version number in options
- */
-if ( of_get_option( 'version', '0.1' ) < 0.9 ) {
-	global $current_user;
-	$user_id = $current_user->ID;
-	// Show the nag again to use the Portfolio Post Type Plugin
-	delete_user_meta( $user_id, 'example_ignore_notice', 'true', true );
-	// Update the theme version number
-	$options = get_option( 'portfoliopress' );
-	$options['version'] = '0.9';
-	update_option( 'portfoliopress', $options );
-}
-
-/**
- * In previous versions of Portfolio Press, portfolio tags were registered as portfolio-tags
- * These need to be updated to the portfolio_tag taxonomy.
- */
-function portfoliopress_update_portfolio_tags( $term_ids ) {
-	register_taxonomy( 'portfolio-tags', 'portfolio', array( 'public'=> false ) );
-	$taxonomy = 'portfolio-tags';
-	$new_tax = 'portfolio_tag';
-	$tt_ids = array();
-	foreach ( $term_ids as $term_id ) {
-		$term = get_term( $term_id, $taxonomy );
-		$tt_ids[] = $term->term_taxonomy_id;
-	}
-	$tt_ids = implode( ',', array_map( 'absint', $tt_ids ) );
-	global $wpdb;
-	$wpdb->query( $wpdb->prepare( "
-		UPDATE $wpdb->term_taxonomy SET taxonomy = %s WHERE term_taxonomy_id IN ($tt_ids)
-	", $new_tax ) );
 }
 
 /**

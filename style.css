@@ -51,20 +51,26 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 
 /* Clear Floats */
 
-.col-width:after {content: "."; display: block;height: 0;clear: both; visibility: hidden;}
+.col-width:after {
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
 
 .fix {clear: both;height: 1px;margin: -1px 0 0;overflow: hidden;}
 
 /* Base Styles */
 
 body {
-	font: 14px/20px sans-serif;
+	font: 14px/21px 'Open Sans', sans-serif;
 	color: #555;
-	background: #fff;
+	background:#f3f3f3;
 }
 h1, h2, h3, h4, h5, h6 {
+	font-family: 'Rokkitt', serif;
 	margin: 0;
-	font-family:Georgia, serif;
 	color: #111;
 	font-weight:normal;
 }
@@ -72,19 +78,15 @@ h1 {
 	font-size:28px;
 }
 h2 {
-	font-size:26px;
+	font-size:24px;
 }
 h3 {
-	font-size:18px;
+	font-size:22px;
 }
-h4 {
-	font-size:16px;
-}
-h5, h6 {
-	font-size: 14px;
+h4, h5, h6 {
+	font-size:20px;
 }
 p {
-	font:16px/24px georgia, serif;
 	margin:0;
 }
 hr {
@@ -113,6 +115,13 @@ big {
 ins {
 	background: #ffc;
 	text-decoration: none;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
 }
 blockquote {
 	display:block;
@@ -182,33 +191,34 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	display:block;
 	background:#000;
 	padding:25px 0;
+	border-bottom:1px solid rgba(255,255,255,.9);
 }
 #logo {
 	float:left;
 }
-#logo #site-title, #logo #site-description {
-	font-family: georgia, serif;
+#logo #site-title {
+	font-family: 'Rokkitt', serif;
 	color: #fff;
 }
 #logo #site-title a {
 	color:#fff;
-	font-size:38px;
-	line-height:38px;
+	font-size:44px;
+	line-height:44px;
 	text-decoration:none;
 }
 #logo #site-description {
-	color:#ddd;
-	font-size:14px;
+	font-family: 'Rokkitt', serif;
 	font-style: italic;
-	margin-top:5px;
+	color:#ddd;
+	font-size:16px;
 }
 
 /* Navigation */
 
 #navigation {
 	float:right;
-	font:14px/14px sans-serif;
-	padding:20px 0 10px;
+	font-size:14px;
+	padding:20px 0 0;
 }
 #navigation ul {
 	z-index:99;
@@ -225,15 +235,20 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	line-height:18px;
 	text-decoration:none;
 }
-#navigation .menu > ul > li > a {
-	-webkit-transition: background 0.4s ease-in-out;  /* Saf3.2+, Chrome */
-    -moz-transition: background 0.4s ease-in-out;  /* FF4+ */
-    -ms-transition: background 0.4s ease-in-out;  /* IE10? */
-    -o-transition: background 0.4s ease-in-out;  /* Opera 10.5+ */
-    transition: background 0.4s ease-in-out; 
+#navigation .menu > ul > li {
+	-webkit-transition: all 0.2s ease-in-out;  /* Saf3.2+, Chrome */
+    -moz-transition: all 0.2s ease-in-out;  /* FF4+ */
+    -ms-transition: all 0.2s ease-in-out;  /* IE10? */
+    -o-transition: all 0.2s ease-in-out;  /* Opera 10.5+ */
+    transition: all 0.2s ease-in-out; 
 }
-#navigation ul a:hover, #navigation ul .current-page-item, #navigation ul .current-menu-parent, #navigation ul .current-menu-item {
-	background:#666;
+#navigation .menu > ul > li:hover, #navigation .menu > ul > .current-page-item, #navigation .menu > ul > .current-menu-parent, #navigation .menu > ul > .current-menu-item {
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	background:#333;
+	background:rgba(255,255,255,.25);
+	box-shadow:0 1px 0px rgba(255, 255, 255, 0.3);
 }
 #navigation ul li {
 	float:left;
@@ -283,10 +298,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 #navigation ul li ul ul {
 	margin: -30px 0 0 180px;
 }
-#navigation ul li:hover, #navigation ul li.hover {
-	position:static;
-	background:#666;
-}
 #navigation ul ul li:hover, #navigation ul ul li.hover {
 	background:#eee;
 }
@@ -308,26 +319,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	background:url(images/arrow-right.png) no-repeat;
 }
 
-/* CSS3 Menu Effects */
-
-#navigation ul a, #navigation ul .current-page-item, #navigation ul .current-menu-parent, #navigation ul li:hover, #navigation ul li.hover, #navigation ul .current-menu-item {
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
-	border-radius:2px;
-}
-#navigation ul ul li, #navigation ul ul li a, #navigation ul ul li:hover, #navigation ul ul .current-menu-item, #navigation ul ul .current-menu-parent {
-	-moz-border-radius:0;
-	-webkit-border-radius:0;
-	border-radius:0;
-}
-
 /* Structure */
 
 #main {
-	background:#f3f3f3;
 	padding:40px 0 20px 0;
 }
-
 .col-width {
 	max-width: 980px;
 	margin: 0 auto;
@@ -342,6 +338,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	position:relative;
 	width:65%;
 }
+
 /* Sidebar */
 
 #sidebar {
@@ -378,7 +375,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 #colophon #site-generator p {
 	color:#333;
-	font-family: sans-serif;
 	font-weight:bold;
 	font-size:13px;
 }
@@ -391,10 +387,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	margin-bottom:40px;
 }
 .entry-meta {
-	padding-top:10px;
-	margin: 0 0 25px 0;
-	font:11px/11px "Trebuchet MS", sans-serif;
-	text-transform:uppercase;
+	margin: 0 0 15px 0;
+	font-size:12px;
 	display:block;
 	clear:both;
 }
@@ -410,24 +404,21 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* Typographic Elements */
 
-#content h1.entry-title {
-	font-size:28px;
-	line-height:32px;
+#content .entry-title {
+	font-size:34px;
+	line-height:48px;
 	border-bottom:1px solid #ddd;
-	margin-bottom:20px;
-	padding-bottom: 16px;
+	padding-bottom:0px;
+	margin-bottom:10px;
 }
-#content h1 {
+#content h1, #content h2, #content h3 {
 	padding-bottom: 20px;
 }
-#content h2 {
-	padding-bottom:20px;
-}
-#content h3 {
-	padding-bottom:10px;
+#content h4, #content h5, #content h6 {
+	padding-bottom:15px;
 }
 #content p {
-	margin:0 0 20px 0;
+	margin:0 0 15px 0;
 }
 #content blockquote {
 	color: #444;
@@ -441,7 +432,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	background: url('images/quote.png') no-repeat 0 0;
 }
 .entry-content blockquote, .entry-content blockquote p {
-	font-size:18px;
+	font-size:16px;
 }
 #content ul {
 	margin: 0 0 15px 0;
@@ -522,7 +513,7 @@ img.wp-smiley {
 #content .wp-caption-text {
 	margin:0;
 	padding:0;
-	font:11px/22px sans-serif;
+	font:11px/22px Arial, Helvetica, sans-serif;
 	text-align:center;
 }
 .gallery .gallery-caption {
@@ -540,7 +531,7 @@ figure {
 	padding-top:30px;
 	border-top: 1px solid #DDD;
 }
-.single .format-quote, .single .format-image {
+#content .hentry:first-of-type, .single .format-quote, .single .format-image {
 	padding-top:0;
 	border-top: none;
 }
@@ -553,7 +544,7 @@ figure {
 .format-image .image-wrap {
 	position: relative;
 }
-.image-wrap h3 {
+#content .image-wrap h3 {
 	max-width:630px;
 	background:#000;
 	background:rgba(0,0,0,.6);
@@ -601,7 +592,7 @@ figure {
 	position:absolute;
 	z-index:1;
 	display:block;
-	font-size:18px;
+	font-size:16px;
 	font-weight:bold;
 	color:#fff;
 	display:none;
@@ -684,10 +675,13 @@ figure {
 	width: 50%;
 }
 #nav-below {
-	margin: 1em 0 0 0;
+	clear:both;
+	font-family: 'Rokkitt', serif;
+	font-size:16px;
+	margin: 15px 0 0 0;
 }
 .page-link {
-	margin: 0 0 1em 0;
+	margin: 0 0 15px 0;
 }
 
 /* Reverse order on single-portfolio pages */
@@ -710,15 +704,15 @@ figure {
 	font-size:12px;
 }
 .widget-container h3 {
-	margin: 0 0 20px 0;
-	padding:0 0 15px;
+	font-size:18px;
+	margin: 0 0 20px;
+	padding:0 0 10px;
 	text-transform:uppercase;
-	font:bold 14px sans-serif;
-	color:#666;
+	color:#555;
 	border-bottom:3px solid #ddd;
 }
 .widget-container p {
-	font:12px/20px sans-serif;
+	font:12px/20px;
 	margin-bottom:15px;
 }
 .widget-container ul {
@@ -781,8 +775,8 @@ figure {
 
 #comments {
 	position:relative;
-	margin:40px 0 0;
-	padding:40px 0 0 0;
+	margin:30px 0 0;
+	padding:30px 0 0 0;
 	border-top:1px solid #ddd;
 	border-top:1px solid rgba(0, 0, 0, 0.08);
 }
@@ -868,7 +862,7 @@ figure {
 	margin: 15px 0 0 0;
 }
 #commentform input.txt, #commentform textarea {
-	font:14px/14px sans-serif;
+	font:14px/14px Arial, Helvetica, sans-serif;
 	border-color: #ccc #efefef #efefef #ccc;
 	border-width:1px;
 	border-style:solid;
