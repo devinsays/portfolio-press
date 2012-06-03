@@ -65,8 +65,8 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 
 body {
 	font: 14px/21px 'Open Sans', sans-serif;
+	background:#fff;
 	color: #555;
-	background:#f3f3f3;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Rokkitt', serif;
@@ -322,6 +322,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* Structure */
 
 #main {
+	background:#f3f3f3;
 	padding:40px 0 20px 0;
 }
 .col-width {
