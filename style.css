@@ -771,6 +771,7 @@ figure {
 	margin-left:5px;
 	float:left;
 }
+
 /* Comments */
 
 #comments {
@@ -849,14 +850,86 @@ figure {
 
 /* Comments Form */
 
+#respond {
+	position: relative;
+}
 #respond h3 {
 	color:#333;
 	font-weight:normal;
-	margin-bottom:20px;
+	padding-bottom:0;
 }
 #respond label {
 	font-size:13px;
 	color:#777;
+}
+#respond input[type="text"],
+#respond textarea {
+	background: #fff;
+	position: relative;
+	padding: 5px;
+	text-indent: 95px;
+	top:0;
+}
+#respond .comment-form-author,
+#respond .comment-form-email,
+#respond .comment-form-url,
+#respond .comment-form-comment {
+	position: relative;
+}
+#respond .comment-form-author label,
+#respond .comment-form-email label,
+#respond .comment-form-url label,
+#respond .comment-form-comment label {
+	background:#eee;
+	color: #555;
+	display: inline-block;
+	line-height:20px;
+	padding:5px 15px;
+	font-size: 12px;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	z-index: 1;
+	min-width:60px;
+}
+#respond textarea {
+	width: 95%;
+	height:160px;
+}
+#respond .comment-form-author .required,
+#respond .comment-form-email .required {
+	color: #3f98db;
+	font-weight: bold;
+	left: 67%;
+	position: absolute;
+	top: 5px;
+	z-index: 1;
+}
+#respond input[type="text"]:focus,
+#respond textarea:focus {
+	z-index: 1;
+	text-indent:5px;
+}
+#respond .comment-notes,
+#respond .logged-in-as {
+	font-size: 13px;
+}
+#respond #cancel-comment-reply-link {
+	color: #666;
+	margin-left: 10px;
+	text-decoration: none;
+}
+#respond .logged-in-as a:hover,
+#respond #cancel-comment-reply-link:hover {
+	text-decoration: underline;
+}
+#respond input[type=text] {
+	display: block;
+	width: 68%;
+	height:20px;
+}
+#respond p {
+	font-size: 12px;
 }
 #commentform {
 	margin: 15px 0 0 0;
@@ -959,6 +1032,9 @@ h3#pings {
 }
 
 @media (max-width: 680px) {
+	#respond input[type=text] {
+		width: 90%;
+	}
 	#content, #portfolio {
 		width:100%;
 		padding:0;
