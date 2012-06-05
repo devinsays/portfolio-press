@@ -1,6 +1,7 @@
 Portfolio Press 1.1
 
-- Responsive Design
+- Responsive design
+- Updated styling
 
 Portfolio Press 1.0
 

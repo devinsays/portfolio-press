@@ -573,9 +573,12 @@ figure {
 	width:32%;
 	background-color:#000;
 	float:left;
-	margin:0 2% 2% 0;
+	margin:0 1.95% 2% 0;
 }
-#portfolio .portfolio-item:nth-of-type(3n), #portfolio .ie-col3 {
+#portfolio .portfolio-item:nth-of-type(3n) {
+	margin-right:0;
+}
+#portfolio .ie-col3 {
 	margin-right:0;
 }
 #portfolio .portfolio-item img {
@@ -668,12 +671,12 @@ figure {
 }
 #content nav .nav-previous, #portfolio nav .nav-previous {
 	float: left;
-	width: 50%;
+	width: 40%;
 }
 #content nav .nav-next, #portfolio nav .nav-next {
 	float: right;
 	text-align: right;
-	width: 50%;
+	width: 40%;
 }
 #nav-below {
 	clear:both;
