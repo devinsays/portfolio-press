@@ -70,8 +70,8 @@ add_action('wp_enqueue_scripts', 'portfoliopress_scripts');
 if ( !function_exists( 'portfoliopress_google_fonts' ) ) {
 	function portfoliopress_google_fonts() {
 		if ( !is_admin() ) {
-			wp_register_style( 'portfoliopress_open_sans', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600', '', '', 'screen' );
-			wp_register_style( 'portfoliopress_rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700', '', '', 'screen' );
+			wp_register_style( 'portfoliopress_open_sans', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600', '', null, 'screen' );
+			wp_register_style( 'portfoliopress_rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700', '', null, 'screen' );
 			wp_enqueue_style( 'portfoliopress_open_sans' );
 			wp_enqueue_style( 'portfoliopress_rokkitt' );
 		}
