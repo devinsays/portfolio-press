@@ -305,7 +305,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	left:auto;
 }
 #navigation ul .sf-sub-indicator {
-	background:	url(images/arrow-down.png) no-repeat;
+	background:	url('images/arrow-down.png') no-repeat;
 	position:absolute;
 	display:block;
 	right:0.4em;

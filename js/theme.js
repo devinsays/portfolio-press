@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(window).load(function($){
 	
 	// Portfolio Archive
     $("#portfolio .portfolio-item").hover(function(){
