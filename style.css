@@ -354,6 +354,13 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 .layout-2cl #sidebar {float:left;}
 
+.layout-1col .col-width {
+	max-width:690px;
+}
+.layout-1col #content {
+	width:100%;
+}
+
 /* Footer */
 
 #colophon {

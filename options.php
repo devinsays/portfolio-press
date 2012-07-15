@@ -32,7 +32,7 @@ function optionsframework_options() {
 	$options[] = array( "name" => __('General Settings','portfoliopress'),
                     	"type" => "heading");
 						
-	$options[] = array( "name" => __('Custom Logo','portfoliopress'),
+	$options['logo'] = array( "name" => __('Custom Logo','portfoliopress'),
 						"desc" => __('Upload a logo for your theme if you would like to use one.','portfoliopress'),
 						"id" => "logo",
 						"type" => "upload");
@@ -57,22 +57,23 @@ function optionsframework_options() {
 	$options[] = array( "name" => __('Style and Layout','portfoliopress'),
 						"type" => "heading");
 					
-	$options[] = array( "name" => __('Main Layout','portfoliopress'),
-						"desc" => __('Select main content and sidebar alignment.','portfoliopress'),
-						"id" => "layout",
-						"std" => "layout-2cr",
-						"type" => "images",
-						"options" => array(
-						'layout-2cr' => $imagepath . '2cr.png',
-						'layout-2cl' => $imagepath . '2cl.png')
-						);
+	$options['layout'] = array( 'name' => __('Main Layout','portfoliopress'),
+						'desc' => __('Select main content and sidebar alignment.','portfoliopress'),
+						'id' => 'layout',
+						'std' => 'layout-2cr',
+						'type' => 'images',
+						'options' => array(
+							'layout-2cr' => $imagepath . '2cr.png',
+							'layout-2cl' => $imagepath . '2cl.png',
+							'layout-1col' => $imagepath . '1cl.png')
+						); 
 						
 	$options[] = array( "name" => "Header Color",
 						"id" => "header_color",
 						"std" => "#000000",
 						"type" => "color");
 					
-	$options[] = array( "name" => __('Menu Position','portfoliopress'),
+	$options['menu_position'] = array( "name" => __('Menu Position','portfoliopress'),
 						"desc" => __('Select where the main menu should go in the header.  Long menus should go underneath.','portfoliopress'),
 						"id" => "menu_position",
 						"std" => "right",

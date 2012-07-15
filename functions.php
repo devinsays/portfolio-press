@@ -230,8 +230,9 @@ function portfoliopress_content_nav() {
  */
 function wpt_portfolio_custom_posts_per_page( $query ) {
 	global $wp_the_query;
-	if ( $wp_the_query === $query && !is_admin() && is_post_type_archive( 'portfolio' ) ) {
-		$query->set( 'posts_per_page', '9' );
+	if ( $wp_the_query === $query && !is_admin() ) {
+		if ( is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) )
+			$query->set( 'posts_per_page', '9' );
 	}
 }
 
