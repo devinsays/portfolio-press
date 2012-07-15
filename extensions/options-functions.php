@@ -63,6 +63,17 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
 }
 
 /**
+ * Additional content to display after the options panel
+ * if it is installed
+ */
+
+function portfoliopress_panel_info() { ?>
+    <p style="color: #777;">Theme <a href="http://wptheming.com/portfolio-theme">documentation</a>.  For additional options, see <a href="http://wptheming.com/portfolio-plus/">Portfolio+</a>.</p>
+<?php }
+
+add_action('optionsframework_after','portfoliopress_panel_info', 100);
+
+/**
  * Adds a body class to indicate sidebar position
  */
  

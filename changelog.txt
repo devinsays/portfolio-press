@@ -1,3 +1,11 @@
+Portfolio Press 1.2
+
+- Front end customizer support
+- Additional layout option (single column)
+- Better CSS for captions and images
+- Filterable titles
+- Upsell link for Portfolio+ on options page
+
 Portfolio Press 1.1
 
 - Responsive design
