@@ -1,3 +1,7 @@
+Portfolio Press 1.2.1
+
+- Fix for JS error that causes scripts to break
+
 Portfolio Press 1.2
 
 - Front end customizer support

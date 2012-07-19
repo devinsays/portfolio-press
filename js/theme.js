@@ -1,4 +1,6 @@
-jQuery(window).load(function($){
+jQuery(window).load( function(){
+
+	$ = jQuery;
 	
 	// Portfolio Archive
     $("#portfolio .portfolio-item").hover(function(){
