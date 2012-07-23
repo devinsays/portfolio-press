@@ -469,6 +469,24 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	list-style-type: lower-latin;
 }
 
+/* Alignment */
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 10px;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 10px;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
 /* Images */
 
 .entry-content img,
@@ -497,7 +515,7 @@ img.size-large {
 img.alignleft,
 img.alignright,
 img.aligncenter {
-	margin-bottom: 1.625em;
+	margin-bottom: 15px;
 }
 p img,
 .wp-caption {
@@ -521,19 +539,19 @@ p img,
 	font-size: 12px;
 }
 #content .wp-caption .wp-caption-text {
-	margin-bottom: 5px;
+	margin-bottom: 0;
 	padding: 10px 0 5px 10px;
 	position: relative;
 }
 #content .gallery {
-	margin: 0 auto 1.625em;
+	margin: 0 auto 15px;
 }
 #content .gallery a img {
 	border: none;
 }
 img#wpstats {
 	display: block;
-	margin: 0 auto 1.625em;
+	margin: 0 auto 15px;
 }
 #content .gallery-columns-4 .gallery-item {
 	width: 23%;
