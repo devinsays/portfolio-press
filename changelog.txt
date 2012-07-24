@@ -1,3 +1,7 @@
+Portfolio Press 1.2.2
+
+- Fix for image alignment bug (introduced in 1.2)
+
 Portfolio Press 1.2.1
 
 - Fix for JS error that causes scripts to break
