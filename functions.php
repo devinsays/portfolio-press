@@ -248,20 +248,3 @@ function portfoliopress_template_chooser( $template ) {
 	return $template;
 }
 add_filter( 'template_include', 'portfoliopress_template_chooser' );
-
-/**
- * Deletes the portoliopress_category_query transient if a portfolio post is updated
- */
- 
-function portfoliopress_save_portfolio( $post_id ) {
-
-	// If this is an auto save routine don't do anyting
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
-		return;
-		
-	if ( 'portfolio' == $_POST['post_type'] )
-		delete_transient( 'portoliopress_category_query' );
-	
-}
- 
-add_action( 'save_post', 'portfoliopress_save_portfolio' );

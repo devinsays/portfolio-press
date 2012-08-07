@@ -18,6 +18,10 @@ if ( post_password_required() ) {
 	
 	if ( $fullwidth )
 		$thumbnail = 'portfolio-thumbnail-fullwidth';
+		
+	// This displays the portfolio full width, but doesn't change thumbnail sizes
+	if ( of_get_option('layout','layout-2cr') ==  'layout-1col' )
+		$fullwidth = true;
 	
 	// Query posts if this is being used as a page template
 	if ( is_page_template() ) {
