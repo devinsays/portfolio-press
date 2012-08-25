@@ -134,10 +134,10 @@ if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugi
 		global $current_user ;
 		$user_id = $current_user->ID;
 		/* Check that the user hasn't already clicked to ignore the message */
-		if ( ! get_user_meta( $user_id, 'portfoliopress_install_plugin_notice' ) ) {
+		if ( ! get_user_meta( $user_id, 'portfolio_ignore_notice' ) ) {
 			add_thickbox();
 			echo '<div class="updated"><p>';
-			printf( __( 'If you wish to use custom post types for portfolios, please install the Portfolio Post Type Plugin.  <a href="%1$s" class="thickbox onclick">Install Now</a> | <a href="%2$s">Hide Notice</a>' ), admin_url() . 'plugin-install.php?tab=plugin-information&plugin=portfolio-post-type&TB_iframe=true&width=640&height=517', '?example_nag_ignore=0' );
+			printf( __( 'If you wish to use custom post types for portfolios, please install the Portfolio Post Type Plugin.  <a href="%1$s" class="thickbox onclick">Install Now</a> | <a href="%2$s">Hide Notice</a>' ), admin_url() . 'plugin-install.php?tab=plugin-information&plugin=portfolio-post-type&TB_iframe=true&width=640&height=517', '?portfolio_ignore_notice=1' );
 			echo '</p></div>';
 		}
 	}
@@ -148,8 +148,8 @@ if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugi
 		global $current_user;
 		$user_id = $current_user->ID;
 		/* If user clicks to ignore the notice, add that to their user meta */
-		if ( isset( $_GET['example_nag_ignore'] ) && '0' == $_GET['example_nag_ignore'] ) {
-			add_user_meta( $user_id, 'example_ignore_notice', 'true', true );
+		if ( isset( $_GET['portfolio_ignore_notice'] ) && '1' == $_GET['portfolio_ignore_notice'] ) {
+			add_user_meta( $user_id, 'portfolio_ignore_notice', 'true', true );
 		}
 	}
 }
