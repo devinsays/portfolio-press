@@ -22,12 +22,7 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<?php if ( is_archive() || is_search() ) : // Only display Excerpts for archives & search ?>
 	<div class="entry-summary">
-		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content">
 		<?php if ( post_password_required() ) : ?>
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?>
 
@@ -57,8 +52,7 @@
 			<?php the_excerpt(); ?>
 		<?php endif; ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'portfoliopress' ), 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
+	</div><!-- .entry-summary -->
 
 	<footer class="entry-meta">
 		<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'portfoliopress' ); ?></span><?php the_category( ', ' ); ?></span>
