@@ -3,6 +3,7 @@ Development Version
 - Fix for portfolio pages when single column selected
 - Allow image galleries to display in archives
 - Fix for plugin notices
+- Update thumbnail sizing (props @alexkunz)
 
 Portfolio Press 1.2.2
 

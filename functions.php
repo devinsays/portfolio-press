@@ -43,7 +43,7 @@ function portfoliopress_setup() {
 	add_theme_support( 'post-formats', array( 'gallery', 'quote', 'image' ) );
 	
 	add_image_size( 'portfolio-thumbnail', 215, 175, true );
-	add_image_size( 'portfolio-thumbnail-fullwidth', 308, 220, true );
+	add_image_size( 'portfolio-thumbnail-fullwidth', 314, 224, true );
 	add_image_size( 'portfolio-large', 630, 9999, false );
 
 }
