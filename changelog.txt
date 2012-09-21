@@ -1,4 +1,8 @@
-Version 1.3
+Portfolio Press - Dev
+
+- Max-width for logo image
+
+Portfolio Press 1.3
 
 - Fix for portfolio pages when single column selected
 - Allow image galleries to display in archives

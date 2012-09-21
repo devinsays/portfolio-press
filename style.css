@@ -206,6 +206,9 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	line-height:44px;
 	text-decoration:none;
 }
+#logo #site-title img {
+	max-width:100%;
+}
 #logo #site-description {
 	font-family: 'Rokkitt', serif;
 	font-style: italic;
