@@ -4,7 +4,7 @@ Description: Portfolio Press is a responsive theme for showcasing your photograp
 Author: Devin Price
 Author URI: http://wptheming.com/
 Theme URI: http://wptheming.com/portfolio-theme/
-Version: 1.3
+Version: 1.4
 License: GNU General Public License
 License URI: license.txt
 Tags: white, black, gray, two-columns, left-sidebar, right-sidebar, flexible-width, custom-menu, full-width-template, microformats, post-formats, rtl-language-support, theme-options, translation-ready
@@ -58,8 +58,6 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 	clear: both;
 	visibility: hidden;
 }
-
-.fix { clear: both;height: 1px; margin: -1px 0 0; overflow: hidden;}
 
 /* Base Styles */
 
@@ -353,12 +351,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* Layouts */
 
-.layout-2cl #content, .layout-2cl #portfolio {float:right;}
-
-.layout-2cl #sidebar {float:left;}
-
+.layout-2cl #content, .layout-2cl #portfolio {
+	float:right;
+}
+.layout-2cl #sidebar {
+	float:left;
+}
 .layout-1col .col-width {
-	max-width:690px;
+	max-width:780px;
 }
 .layout-1col #content {
 	width:100%;
@@ -403,6 +403,21 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	display:block;
 	clear:both;
 }
+footer.entry-meta:before {
+	margin-bottom:8px;
+}
+footer.entry-meta:after {
+	margin-top:8px;
+}
+footer.entry-meta:before, footer.entry-meta:after {
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: #ddd;
+	-webkit-box-shadow: 0 1px 0 0 #fff;
+	box-shadow: 0 1px 0 0 #fff;
+	display: block;
+}
 .entry-utility {
 	clear:both;
 }
@@ -415,12 +430,15 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* Typographic Elements */
 
-#content .entry-title {
+#content .entry-title, #portfolio .entry-title {
 	font-size:34px;
-	line-height:48px;
+	line-height:46px;
+	text-shadow: 0px 1px 1px #fff;
 	border-bottom:1px solid #ddd;
+	-webkit-box-shadow: 0 1px 0 0 #fff;
+	box-shadow: 0 1px 0 0 #fff;
 	padding-bottom:0px;
-	margin-bottom:10px;
+	margin-bottom:15px;
 }
 #content h1, #content h2, #content h3 {
 	padding-bottom: 20px;
@@ -475,10 +493,19 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	font-family: 'Rokkitt', serif;
 	font-size:18px;
 	color:#333;
-	border-bottom: 1px solid #DDD;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
-	margin-top:-10px;
+	margin-top:-5px;
+}
+.archive-meta:after {
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: #ddd;
+	-webkit-box-shadow: 0 1px 0 0 #fff;
+	box-shadow: 0 1px 0 0 #fff;
+	display: block;
+	margin-top:10px;
 }
 
 /* Alignment */
@@ -504,7 +531,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .entry-content img,
 .comment-content img,
 .widget img {
-	max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
 	background:#fff;
 }
 img[class*="align"],
@@ -534,10 +561,13 @@ p img,
 	margin-top: 0.4em;
 }
 .wp-caption {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 	background: #eee;
 	background:rgba(200,200,200,.2);
 	margin-bottom: 15px;
-	max-width: 96%;
+	max-width: 100%;
 	padding: 10px;
 }
 .wp-caption img {
@@ -545,8 +575,7 @@ p img,
 	margin: 0 auto;
 	max-width: 98%;
 }
-.wp-caption .wp-caption-text,
-.gallery-caption {
+.wp-caption .wp-caption-text, .gallery-caption {
 	color: #666;
 	font-size: 12px;
 }
@@ -608,10 +637,6 @@ figure {
 
 /* Post Formats */
 
-.format-quote, .format-image {
-	padding-top:30px;
-	border-top: 1px solid #DDD;
-}
 #content .hentry:first-of-type, .single .format-quote, .single .format-image {
 	padding-top:0;
 	border-top: none;
@@ -647,6 +672,13 @@ figure {
 	padding:0 0 4%;
 	float:left;
 	width:70%;
+}
+#portfolio .archive-title {
+	font-size: 34px;
+	line-height: 48px;
+	border-bottom: 1px solid #DDD;
+	padding-bottom: 0px;
+	margin-bottom: 20px;
 }
 #portfolio .portfolio-item {
 	position:relative;
@@ -789,11 +821,14 @@ figure {
 }
 .widget-container h3 {
 	font-size:18px;
+	text-shadow: 0px 1px 1px #fff;
 	margin: 0 0 20px;
 	padding:0 0 10px;
 	text-transform:uppercase;
 	color:#555;
 	border-bottom:3px solid #ddd;
+	-webkit-box-shadow: 0 1px 0 0 #fff;
+	box-shadow: 0 1px 0 0 #fff;
 }
 .widget-container p {
 	font:12px/20px;
@@ -825,7 +860,6 @@ figure {
 	width:210px;
 	float:left;
 }
-
 /* Calendar */
 
 #wp-calendar {
@@ -860,10 +894,17 @@ figure {
 
 #comments {
 	position:relative;
-	margin:30px 0 0;
-	padding:30px 0 0 0;
-	border-top:1px solid #ddd;
-	border-top:1px solid rgba(0, 0, 0, 0.08);
+	margin:15px 0 0;
+}
+.page #comments:before {
+	margin-bottom:30px;
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: #ddd;
+	-webkit-box-shadow: 0 1px 0 0 #fff;
+	box-shadow: 0 1px 0 0 #fff;
+	display: block;
 }
 #comments .commentlist {
 	padding-left:0px;
@@ -1091,10 +1132,20 @@ h3#pings {
 	margin-bottom:30px;
 }
 
-/* Other Classes */
+/* Clearfix */
 
 .clear {
 	clear:both;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
 }
 
 /* =Responsive Structure

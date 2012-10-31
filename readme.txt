@@ -28,4 +28,4 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 Portfolio was built on the solid foundation of Toolbox:
 http://wordpress.org/extend/themes/toolbox
 
-Testing and extremely helpful code reviews were done by Michael Fields (http://wordpress.mfields.org/) and Jacob M Goldman (http://www.cmurrayconsulting.com).
+Testing and extremely helpful code reviews were done by Michael Fields (http://wordpress.mfields.org/) and Jacob M Goldman (https://twitter.com/jakemgold).

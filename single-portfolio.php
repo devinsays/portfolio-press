@@ -32,7 +32,11 @@ get_header(); ?>
 				<div class="entry-content">
                 
                 <?php if ( has_post_thumbnail() && of_get_option('portfolio_images', "1") ) {
-					the_post_thumbnail('portfolio-large');
+                	if ( of_get_option( 'layout') == 'layout-1col' ) {
+	                	the_post_thumbnail( 'full' );
+                	} else {
+	                	the_post_thumbnail( 'portfolio-large' );
+                	}
 				}
 				?>
 
@@ -62,12 +66,6 @@ get_header(); ?>
 					<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="edit-link">', '</span>' ); ?>
 				</footer><!-- .entry-meta -->
 			</article><!-- #post-<?php the_ID(); ?> -->
-
-			<nav id="nav-below">
-				<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>
-				<div class="nav-previous"><?php previous_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Previous post link', 'portfoliopress' ) . '</span>' ); ?></div>
-				<div class="nav-next"><?php next_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Next post link', 'portfoliopress' ) . '</span> %title' ); ?></div>
-			</nav><!-- #nav-below -->
 
 			<?php if ( comments_open() ) {
 				comments_template( '', true );

@@ -1,6 +1,14 @@
-Portfolio Press - Dev
+Portfolio Press 1.4
 
+- Added box shadows to borders
 - Max-width for logo image
+- Update portfolio-large size to 640px
+- Remove prev/next post navigation on single posts and portfolio items
+- Add borders around post meta
+- Make the full width layout option max-width 780px
+- Update screenshot image for retina
+- Show titles and descriptions on portfolio taxonomy pages
+
 
 Portfolio Press 1.3
 
