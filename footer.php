@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * Footer template
+ *
+ * @package Portfolio Press
  */
 ?>
 	</div>

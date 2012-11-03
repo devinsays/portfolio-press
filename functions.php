@@ -1,9 +1,15 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * Functions
+ *
+ * @package      Portfolio Press
+ * @author       Devin Price <devin@wptheming.com>
+ * @license      http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
- 
+	
+// Sets up the options panel and default functions
+require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
+
 // Set the content width based on the theme's design and stylesheet
 if ( ! isset( $content_width ) ) {
 	if ( of_get_option('layout') == 'layout-1col' ) {
@@ -12,9 +18,6 @@ if ( ! isset( $content_width ) ) {
 		$content_width = 640;
 	}
 }
-	
-// Sets up the options panel and default functions
-require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 
 // Tell WordPress to run portfoliopress_setup() when the 'after_setup_theme' hook is run
 add_action( 'after_setup_theme', 'portfoliopress_setup' );

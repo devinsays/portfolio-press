@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * Sidebar template
+ *
+ * @package Portfolio Press
  */
 ?>
 	<?php if ( of_get_option('layout') != 'layout-1col' ) : ?>

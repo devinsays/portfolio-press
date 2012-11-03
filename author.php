@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * The template for displaying author pages
+ *
+ * @package Portfolio Press
  */
 
 get_header(); ?>

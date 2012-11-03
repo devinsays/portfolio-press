@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * Quote post format template
+ *
+ * @package Portfolio Press
  */
 ?>
 

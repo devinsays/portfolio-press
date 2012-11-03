@@ -1,10 +1,12 @@
 <?php
 /**
- * A unique identifier is defined to store the options in the database and reference them from the theme.
- * By default it uses 'portfoliopress'.  If the identifier changes, it'll appear as if the options have been reset.
+ * This file only gets loaded if the Options Framework plugin is installed
  *
- * @package WordPress
- * @subpackage Portfolio Press
+ * A unique identifier is defined to store the options in the database
+ * and reference them from the theme.  By default it uses 'portfoliopress'.
+ * If the identifier changes, it'll appear as if the options have been reset.
+ *
+ * @package Portfolio Press
  */
 
 function optionsframework_option_name() {

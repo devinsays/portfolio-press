@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * The template for displaying 404 pages (Not Found)
+ *
+ * @package Portfolio Press
  */
 
 get_header(); ?>

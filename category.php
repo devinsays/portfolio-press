@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * The template used to display categories (for standard posts)
+ *
+ * @package Portfolio Press
  */
 
 get_header(); ?>

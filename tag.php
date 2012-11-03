@@ -1,9 +1,8 @@
 <?php
 /**
- * The template used to display Tag Archive pages
+ * The template used to display tag archive pages
  *
- * @package WordPress
- * @subpackage Portfolio Press
+ * @package Portfolio Press
  */
 
 get_header(); ?>

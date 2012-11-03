@@ -1,9 +1,11 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * Header template
+ *
+ * @package Portfolio Press
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />

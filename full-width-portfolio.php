@@ -3,8 +3,7 @@
  * Template Name: Full-width Portfolio
  * Description: A full-width portfolio template with no sidebar.
  *
- * @package WordPress
- * @subpackage Portfolio Press
+ * @package Portfolio Press
  */
 
 global $content_width;

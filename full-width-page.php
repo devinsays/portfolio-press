@@ -3,8 +3,7 @@
  * Template Name: Full-width Page
  * Description: A full-width template with no sidebar
  *
- * @package WordPress
- * @subpackage Portfolio Press
+ * @package Portfolio Press
  */
 
 get_header(); ?>

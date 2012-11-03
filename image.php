@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * The template for displaying image attachments
+ *
+  * @package Portfolio Press
  */
 
 get_header(); ?>

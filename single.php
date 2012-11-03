@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * Template for displaying a single post
+ *
+ * @package Portfolio Press
  */
 
 get_header(); ?>

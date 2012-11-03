@@ -1,7 +1,8 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * General post content template
+ *
+ * @package Portfolio Press
  */
 ?>
 

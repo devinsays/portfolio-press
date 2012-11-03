@@ -1,9 +1,8 @@
 <?php
 /**
- * The template for displaying portfolio post content
+ * This template displays portfolio post content
  *
- * @package WordPress
- * @subpackage Portfolio Press
+ * @package Portfolio Press
  */
 
 if ( post_password_required() ) {

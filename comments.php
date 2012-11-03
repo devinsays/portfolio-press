@@ -1,9 +1,10 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * The template used for displaying comments
+ *
+ * @package Portfolio Press
  */
-?>
+ ?>
 
 	<div id="comments">
 	<?php if ( post_password_required() ) : ?>
