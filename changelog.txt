@@ -1,3 +1,8 @@
+
+Portfolio Press (Development)
+
+- Add single portfolio post navigation back
+
 Portfolio Press 1.4.1
 
 - Fixed theme dependency on Options Framework plugin
