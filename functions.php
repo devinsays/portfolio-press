@@ -13,7 +13,7 @@ require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 // Set the content width based on the theme's design and stylesheet
 if ( ! isset( $content_width ) ) {
 	if ( of_get_option('layout') == 'layout-1col' ) {
-		$content_width = 980;
+		$content_width = 780;
 	} else {
 		$content_width = 640;
 	}
@@ -50,9 +50,11 @@ function portfoliopress_setup() {
 	// Add support for a variety of post formats ( will be added in next version )
 	add_theme_support( 'post-formats', array( 'gallery', 'quote', 'image' ) );
 	
+	// Add all the images sizes for the various thumbnails
 	add_image_size( 'portfolio-thumbnail', 215, 175, true );
 	add_image_size( 'portfolio-thumbnail-fullwidth', 314, 224, true );
 	add_image_size( 'portfolio-large', 640, 9999, false );
+	add_image_size( 'portfolio-fullwidth', 780, 9999, false );
 
 }
 endif; // portfoliopress_setup
