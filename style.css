@@ -621,18 +621,30 @@ a:hover img[class*="wp-image-"],
 a:active img[class*="wp-image-"],
 #content .gallery .gallery-icon a:focus img,
 #content .gallery .gallery-icon a:hover img,
-#content .gallery .gallery-icon a:active img {/* Add some useful style to those fancy borders for linked images ... */
+#content .gallery .gallery-icon a:active img {
 	background: #eee;
 	border-color: #bbb;
 }
 .wp-caption a:focus img,
 .wp-caption a:active img,
-.wp-caption a:hover img {/* ... including captioned images! */
+.wp-caption a:hover img {
 	background: #fff;
 	border-color: #ddd;
 }
 figure {
 	margin:0 0 10px 0;
+}
+.type-portfolio img.wp-post-image {
+	margin:0 0 10px 0;
+}
+
+/* Make sure videos and embeds fit their containers */
+
+embed, iframe, object {
+	max-width: 100%;
+}
+.entry-content .twitter-tweet-rendered {
+	max-width: 100% !important; /* Override the Twitter embed fixed width */
 }
 
 /* Post Formats */

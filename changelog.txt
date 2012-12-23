@@ -2,6 +2,7 @@ Portfolio Press (Development)
 
 - Add single portfolio post navigation back
 - Add fullwidth portfolio thumnail size
+- Max-width for iframe,embeds and objects
 
 Portfolio Press 1.4.1
 
