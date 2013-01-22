@@ -9,7 +9,7 @@
  * CHANGELOG: http://users.tpg.com.au/j_birch/plugins/superfish/changelog.txt
  */
 
-;(function($){
+(function($){
 	$.fn.superfish = function(op){
 
 		var sf = $.fn.superfish,
@@ -120,8 +120,20 @@
 })(jQuery);
 
 jQuery(document).ready(function($){
+
 	$('#navigation .menu ul').superfish({
 		animation: {opacity:'show',height:'show'},
 		speed: 'fast'
 	});
+	
+	$('.menu-toggle').on( 'click', function() {
+		$('#navigation .menu').fadeToggle( 400, function () {
+			// In the edge case of someone hiding the menu in a small screen
+			// But then making the browser window larger, the menu will show
+			if ( $(this).is(":hidden") ) {
+				$(this).attr('style','');
+			}
+		});
+	});
+	
 });

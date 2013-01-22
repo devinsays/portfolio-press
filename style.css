@@ -216,6 +216,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 /* Navigation */
 
+#navigation .menu-toggle {
+	display: none;
+}
+
 #navigation {
 	float:right;
 	font-size:14px;
@@ -264,40 +268,42 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* Drop-down menus */
 
 #navigation ul ul .current-page-item, #navigation ul ul .current-menu-parent, #navigation ul ul .current-menu-item {
-	background:#eee;
+	background:#ccc;
 }
 #navigation ul li ul {
 	background: #FFF;
 	position: absolute;
 	left: -999em;
 	width: 180px;
-	border: 1px solid #aaa;
-	border-width:1px;
+	border: 1px solid #ccc;
 	z-index:999;
 	margin-left:0;
 }
 #navigation ul li ul li {
 	background:#eee;
-	border-top:1px solid #ccc;
-	border-bottom:1px solid #ddd;
+	border-top:1px solid #ddd;
 	margin-left:0px;
 	margin-bottom:0px;
+}
+#navigation ul li ul li:first-of-type {
+	border-top:none;
 }
 #navigation ul li ul li a {
 	width:160px;
 	color:#555;
 	font-size:0.9em;
 	line-height:18px;
+	padding:8px 10px;
 }
 #navigation ul li ul li a.sf-with-ul {
-	padding:5px 10px;
+	padding:8px 10px;
 }
 #navigation ul li ul li a:hover, #navigation ul ul .current-menu-item {
-	background:#c6c6c6;
+	background:#ccc;
 	color:#111;
 }
 #navigation ul li ul ul {
-	margin: -30px 0 0 180px;
+	margin: -35px 0 0 180px;
 }
 #navigation ul ul li:hover, #navigation ul ul li.hover {
 	background:#eee;
@@ -1225,6 +1231,28 @@ h3#pings {
 }
 	
 @media (max-width: 480px) {
+	#navigation {
+		width:100%;
+		margin:0;
+	}
+	#navigation .menu-toggle {
+		cursor: pointer;
+		font: 14px/18px 'Open Sans', sans-serif;
+		display: block;
+		color:#fff;
+		padding:5px 10px;
+		font-size:14px;
+		-moz-border-radius:2px;
+		-webkit-border-radius:2px;
+		border-radius:2px;
+		background:#333;
+		background:rgba(255,255,255,.25);
+		box-shadow:0 1px 0px rgba(255, 255, 255, 0.3);
+	}
+	#navigation .menu {
+		margin-top:20px;
+		display:none;
+	}
 	#portfolio .portfolio-item {
 		float:none;
 		min-width:46%;
