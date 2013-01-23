@@ -1,7 +1,6 @@
 <?php
 /**
- * @package WordPress
- * @subpackage Portfolio Press
+ * @package Portfolio Press
  */
  
 /**
