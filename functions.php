@@ -50,7 +50,10 @@ function portfoliopress_setup() {
 	// Add support for a variety of post formats ( will be added in next version )
 	add_theme_support( 'post-formats', array( 'gallery', 'quote', 'image' ) );
 	
-	// Add all the images sizes for the various thumbnails
+	// Add support for featured images
+	add_theme_support( 'post-thumbnails' );
+	
+	// Add images sizes for the various thumbnails
 	add_image_size( 'portfolio-thumbnail', 215, 175, true );
 	add_image_size( 'portfolio-thumbnail-fullwidth', 314, 224, true );
 	add_image_size( 'portfolio-large', 640, 9999, false );
