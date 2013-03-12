@@ -7,7 +7,12 @@
  */
 
 global $content_width;
-$content_width = 980;
+
+if ( of_get_option('layout') == 'layout-1col' ) {
+	$content_width = 780;
+} else {
+	$content_width = 980;
+}
 	
 get_header();
 

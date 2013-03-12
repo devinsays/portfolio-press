@@ -6,6 +6,14 @@
  * @package Portfolio Press
  */
 
+global $content_width;
+
+if ( of_get_option('layout') == 'layout-1col' ) {
+	$content_width = 780;
+} else {
+	$content_width = 980;
+}
+
 get_header(); ?>
 
 	<div id="primary" class="full-width">
