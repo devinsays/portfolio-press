@@ -1,3 +1,8 @@
+Portfolio Press 1.5.1
+
+- Update $content_width on full page templates
+- Improvements for password protected portfolio posts
+
 Portfolio Press 1.5
 
 - Add single portfolio post navigation back

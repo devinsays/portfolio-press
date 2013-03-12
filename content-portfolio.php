@@ -5,7 +5,7 @@
  * @package Portfolio Press
  */
 
-if ( post_password_required() ) {
+if ( is_page() && post_password_required() ) {
 	echo get_the_password_form();
 } else {
 	// Set the size of the thumbnails and content width
@@ -53,6 +53,10 @@ if ( post_password_required() ) {
 
 	<?php  if ( have_posts() ) : $count = 0;
 		while ( have_posts() ) : the_post(); $count++;
+		if ( post_password_required() ) {
+			$count = $count - 1;
+			continue;
+		}
 		$classes = 'portfolio-item item-' . $count;
 		if ( $count % 3 == 0 ) {
 			$classes .= ' ie-col3';
