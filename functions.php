@@ -130,7 +130,7 @@ if ( !function_exists( 'portfoliopress_google_fonts' ) ) {
 	}
 }
 
-add_action( 'init', 'portfoliopress_google_fonts' );
+add_action( 'init', 'portfoliopress_google_fonts', 10 );
 
 /**
  * Displays a notice letting the user know that portfolio post type functionality
