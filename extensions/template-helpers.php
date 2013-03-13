@@ -6,6 +6,8 @@
 /**
  * Outputs author information
  */
+ 
+if ( ! function_exists( 'portfoliopress_postby_meta' ) ):
 function portfoliopress_postby_meta() {
 
 	printf( __( '<span class="meta-prep meta-prep-author">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'portfoliopress' ),
@@ -18,11 +20,13 @@ function portfoliopress_postby_meta() {
 	);
 			
 }
+endif;
 
 /**
  * Displays footer text
  */
- 
+
+if ( ! function_exists( 'portfoliopress_footer_meta' ) ): 
 function portfoliopress_footer_meta( $format ) { ?>
 
 	<footer class="entry-meta">
@@ -45,11 +49,14 @@ function portfoliopress_footer_meta( $format ) { ?>
 	</footer><!-- #entry-meta -->
 
 <?php }
+endif;
 
 /**
  * Reusable navigation code for navigation
  * Display navigation to next/previous pages when applicable
  */
+
+if ( ! function_exists( 'portfoliopress_content_nav' ) ): 
 function portfoliopress_content_nav() {
 	global $wp_query;
 	if (  $wp_query->max_num_pages > 1 ) :
@@ -64,3 +71,4 @@ function portfoliopress_content_nav() {
     	<?php }
 	endif;
 }
+endif;

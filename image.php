@@ -2,7 +2,7 @@
 /**
  * The template for displaying image attachments
  *
-  * @package Portfolio Press
+ * @package Portfolio Press
  */
 
 get_header(); ?>
