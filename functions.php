@@ -6,7 +6,10 @@
  * @author       Devin Price <devin@wptheming.com>
  * @license      http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
-	
+
+// Adds some template functions
+require_once( TEMPLATEPATH . '/extensions/template-helpers.php' );
+
 // Sets up the options panel and default functions
 require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 
