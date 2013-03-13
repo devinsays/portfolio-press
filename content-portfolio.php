@@ -33,10 +33,11 @@ if ( is_page() && post_password_required() ) {
 			$paged = get_query_var( 'page' );
 		else
 			$paged = 1;
-			
+		
+		$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );	
 		$args = array(
 			'post_type' => 'portfolio',
-			'posts_per_page' => 9,
+			'posts_per_page' => $posts_per_page,
 			'paged' => $paged );
 		query_posts( $args );
 	}
@@ -53,19 +54,15 @@ if ( is_page() && post_password_required() ) {
 
 	<?php  if ( have_posts() ) : $count = 0;
 		while ( have_posts() ) : the_post(); $count++;
-		if ( post_password_required() ) {
-			$count = $count - 1;
-			continue;
-		}
 		$classes = 'portfolio-item item-' . $count;
 		if ( $count % 3 == 0 ) {
 			$classes .= ' ie-col3';
 		}
-		if ( !has_post_thumbnail() ) {
+		if ( !has_post_thumbnail() || post_password_required() ) {
 			$classes .= ' no-thumb';
 		} ?>
 		<div class="<?php echo $classes; ?>">
-			<?php if ( has_post_thumbnail() ) { ?>
+			<?php if ( has_post_thumbnail() && !post_password_required() ) { ?>
 			<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb"><?php the_post_thumbnail( $thumbnail ); ?></a>
 			<?php } ?>
 			<a href="<?php the_permalink() ?>" rel="bookmark" class="title-overlay"><?php the_title() ?></a>

@@ -2,7 +2,10 @@
 /**
  * @package Portfolio Press
  */
- 
+
+/**
+ * Outputs author information
+ */
 function portfoliopress_postby_meta() {
 
 	printf( __( '<span class="meta-prep meta-prep-author">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'portfoliopress' ),
@@ -15,6 +18,10 @@ function portfoliopress_postby_meta() {
 	);
 			
 }
+
+/**
+ * Displays footer text
+ */
  
 function portfoliopress_footer_meta( $format ) { ?>
 
@@ -38,3 +45,22 @@ function portfoliopress_footer_meta( $format ) { ?>
 	</footer><!-- #entry-meta -->
 
 <?php }
+
+/**
+ * Reusable navigation code for navigation
+ * Display navigation to next/previous pages when applicable
+ */
+function portfoliopress_content_nav() {
+	global $wp_query;
+	if (  $wp_query->max_num_pages > 1 ) :
+		if (function_exists('wp_pagenavi') ) {
+			wp_pagenavi();
+		} else { ?>
+        	<nav id="nav-below">
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>		
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'portfoliopress' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?></div>
+			</nav><!-- #nav-below -->
+    	<?php }
+	endif;
+}

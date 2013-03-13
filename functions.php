@@ -115,7 +115,6 @@ function portfoliopress_scripts() {
 		wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
 	}
 }
-
 add_action('wp_enqueue_scripts', 'portfoliopress_scripts');
 
 /**
@@ -178,7 +177,6 @@ function portfolio_page_menu_args( $args ) {
 	$args['menu_class'] = 'menu';
 	return $args;
 }
-
 add_filter( 'wp_page_menu_args', 'portfolio_page_menu_args' );
 
 /**
@@ -189,7 +187,6 @@ function portfolio_wp_nav_menu_args( $args ) {
 	$args['menu_class'] = '';
 	return $args;
 }
-
 add_filter( 'wp_nav_menu_args', 'portfolio_wp_nav_menu_args' );
 
 /**
@@ -219,27 +216,8 @@ function portfoliopress_widgets_init() {
 	register_sidebar( array( 'name' => __( 'Footer 3', 'portfoliopress' ),'id' => 'footer-3', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
 	register_sidebar( array( 'name' => __( 'Footer 4', 'portfoliopress' ),'id' => 'footer-4', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
 }
-
 add_action( 'init', 'portfoliopress_widgets_init' );
 
-/**
- * Reusable navigation code for navigation
- * Display navigation to next/previous pages when applicable
- */
-function portfoliopress_content_nav() {
-	global $wp_query;
-	if (  $wp_query->max_num_pages > 1 ) :
-		if (function_exists('wp_pagenavi') ) {
-			wp_pagenavi();
-		} else { ?>
-        	<nav id="nav-below">
-			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>		
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'portfoliopress' ) ); ?></div>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?></div>
-			</nav><!-- #nav-below -->
-    	<?php }
-	endif;
-}
 
 /**
  * Sets posts displayed per portfolio page to 9
@@ -247,11 +225,12 @@ function portfoliopress_content_nav() {
 function wpt_portfolio_custom_posts_per_page( $query ) {
 	global $wp_the_query;
 	if ( $wp_the_query === $query && !is_admin() ) {
-		if ( is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) )
-			$query->set( 'posts_per_page', '9' );
+		if ( is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) ) {
+			$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );
+			$query->set( 'posts_per_page', $posts_per_page );
+		}
 	}
 }
-
 add_action( 'pre_get_posts', 'wpt_portfolio_custom_posts_per_page' );
 
 /**
