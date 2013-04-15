@@ -1,3 +1,7 @@
+Development
+
+- Show larger thumbnails on one-column layouts
+
 Portfolio Press 1.6
 
 - Update $content_width on full page templates

@@ -10,17 +10,19 @@ if ( is_page() && post_password_required() ) {
 } else {
 	// Set the size of the thumbnails and content width
 	$fullwidth = false;
-	if ( of_get_option( 'portfolio_sidebar' ) || is_page_template('full-width-portfolio.php') )
+	
+	// If portfolio is displayed full width
+	if ( of_get_option( 'portfolio_sidebar' ) || is_page_template( 'full-width-portfolio.php' ) )
+		$fullwidth = true;
+		
+	// If portfolio is a 1-column layout
+	if ( of_get_option('layout','layout-2cr') ==  'layout-1col' )
 		$fullwidth = true;
 	
 	$thumbnail = 'portfolio-thumbnail';
-	
+
 	if ( $fullwidth )
 		$thumbnail = 'portfolio-thumbnail-fullwidth';
-		
-	// This displays the portfolio full width, but doesn't change thumbnail sizes
-	if ( of_get_option('layout','layout-2cr') ==  'layout-1col' )
-		$fullwidth = true;
 	
 	// Query posts if this is being used as a page template
 	if ( is_page_template() ) {
