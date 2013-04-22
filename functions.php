@@ -57,7 +57,7 @@ function portfoliopress_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Add images sizes for the various thumbnails
-	add_image_size( 'portfolio-thumbnail', 215, 175, true );
+	add_image_size( 'portfolio-thumbnail', 220, 175, true );
 	add_image_size( 'portfolio-thumbnail-fullwidth', 314, 224, true );
 	add_image_size( 'portfolio-large', 640, 9999, false );
 	add_image_size( 'portfolio-fullwidth', 780, 9999, false );
@@ -139,7 +139,8 @@ add_action( 'init', 'portfoliopress_google_fonts', 10 );
  * will be moving into a plugin.  They can upgrade now, or wait one more
  * version before this code is removed.
  */
-if ( !function_exists( 'portfolioposttype' ) && current_user_can( 'install_plugins' ) ) {
+ 
+if ( ! class_exists( 'Portfolio_Post_Type' ) && current_user_can( 'install_plugins' ) ) {
 
 	/* Display a notice that can be dismissed */
 
