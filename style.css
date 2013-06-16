@@ -731,8 +731,6 @@ embed, iframe, object {
 }
 #portfolio .portfolio-item img {
 	display:block;
-	width:100%;
-	height:auto;
 }
 #portfolio .thumb {
 	display:block;
