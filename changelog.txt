@@ -3,7 +3,6 @@ Development
 - Show larger thumbnails on one-column layouts
 - Increase thumbnail sizes on regular layouts
 - Fix for max-width logo in Firefox
-- Fix for Firefox 1px margin on portfolio items
 
 Portfolio Press 1.6
 
