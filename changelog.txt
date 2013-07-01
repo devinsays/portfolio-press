@@ -1,4 +1,4 @@
-Development
+Portfolio Press 1.7
 
 - Show larger thumbnails on one-column layouts
 - Increase thumbnail sizes on regular layouts

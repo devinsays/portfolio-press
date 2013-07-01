@@ -18,7 +18,7 @@
 	<div class="entry-summary">
 		<?php if ( has_post_thumbnail() && !post_password_required() ) { ?>
 			<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb"><?php the_post_thumbnail( 'portfolio-thumbnail-fullwidth' ); ?></a>
-			<?php } ?>
+		<?php } ?>
 		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
