@@ -2,24 +2,24 @@
 /**
  * @package Portfolio Press
  */
- 
+
 /**
  * Theme options require the "Options Framework" plugin to be installed in order to display.
  * If it's not installed, default settings will be used.
  */
- 
+
 if ( !function_exists( 'of_get_option' ) ) {
 function of_get_option($name, $default = false) {
-	
+
 	$optionsframework_settings = get_option('optionsframework');
-	
+
 	// Gets the unique option id
 	$option_name = $optionsframework_settings['id'];
-	
+
 	if ( get_option($option_name) ) {
 		$options = get_option($option_name);
 	}
-		
+
 	if ( isset($options[$name]) ) {
 		return $options[$name];
 	} else {
@@ -28,7 +28,7 @@ function of_get_option($name, $default = false) {
 }
 }
 
-if ( !function_exists( 'optionsframework_add_page' ) && current_user_can('edit_theme_options') ) {
+if ( !function_exists( 'optionsframework_init' ) && current_user_can('edit_theme_options') ) {
 	function portfolio_options_default() {
 		add_theme_page(__('Theme Options','portfoliopress'), __('Theme Options','portfoliopress'), 'edit_theme_options', 'options-framework','optionsframework_page_notice');
 	}
@@ -41,7 +41,7 @@ if ( !function_exists( 'optionsframework_add_page' ) && current_user_can('edit_t
 
 if ( !function_exists( 'optionsframework_page_notice' ) ) {
 	function optionsframework_page_notice() { ?>
-	
+
 		<div class="wrap">
 		<?php screen_icon( 'themes' ); ?>
 		<h2><?php _e('Theme Options','portfoliopress'); ?></h2>
@@ -54,7 +54,7 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
         <li><?php _e('Hide the portfolio image on the single post','portfoliopress'); ?></li>
         <li><?php _e('Update the footer text','portfoliopress'); ?></li>
         </ul>
-        
+
         <p><?php _e('If you don\'t need these options, the plugin is not required and default settings will be used.','portfoliopress'); ?></p>
 		</div>
 	<?php
@@ -67,7 +67,14 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
  */
 
 function portfoliopress_panel_info() { ?>
-    <p style="color: #777;">Theme <a href="http://wptheming.com/portfolio-theme">documentation</a>.  For additional options, see <a href="http://wptheming.com/portfolio-plus/">Portfolio+</a>.</p>
+    <p style="color: #777;">
+    <?php printf(
+    	'Theme <a href="%s">documentation</a>.  For additional options, see <a href="%s">Portfolio+</a>.',
+    	esc_url( 'http://wptheming.com/portfolio-theme' ),
+    	esc_url( 'http://wptheming.com/portfolio-plus/' )
+    );
+    ?>
+    </p>
 <?php }
 
 add_action('optionsframework_after','portfoliopress_panel_info', 100);
@@ -75,7 +82,7 @@ add_action('optionsframework_after','portfoliopress_panel_info', 100);
 /**
  * Adds a body class to indicate sidebar position
  */
- 
+
 function portfolio_body_class($classes) {
 	$layout = of_get_option('layout','layout-2cr');
 	$classes[] = $layout;
@@ -102,18 +109,18 @@ add_action('wp_head', 'portfolio_favicon');
  */
 
 function portfolio_head_css() {
-				
+
 		$output = '';
-		
+
 		if ( of_get_option('menu_position') == "clear") {
 			$output .= "#navigation {clear:both; float:none; margin-left:-10px;}\n";
 			$output .= "#navigation ul li {margin-left:0; margin-right:10px;}\n";
 		}
-		
+
 		if ( of_get_option('header_color') != "#000000") {
 			$output .= "#branding {background:" . of_get_option('header_color') . "}\n";
 		}
-		
+
 		// Output styles
 		if ($output <> '') {
 			$output = "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . $output . "</style>\n";
@@ -138,24 +145,24 @@ function portfoliopress_customize_register($wp_customize) {
 	$options = optionsframework_options();
 
 	/* Title & Tagline */
-	
+
 	$wp_customize->add_setting( 'portfoliopress[logo]', array(
 		'type' => 'option'
 	) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo', array(
 		'label' => $options['logo']['name'],
 		'section' => 'title_tagline',
 		'settings' => 'portfoliopress[logo]'
 	) ) );
-	
+
 	/* Layout */
 
 	$wp_customize->add_section( 'portfoliopress_layout', array(
 		'title' => __( 'Layout', 'portfoliopress' ),
 		'priority' => 100,
 	) );
-	
+
 	$wp_customize->add_setting( 'portfoliopress[layout]', array(
 		'default' => 'layout-2cr',
 		'type' => 'option'
@@ -171,7 +178,7 @@ function portfoliopress_customize_register($wp_customize) {
 			'layout-2cl' => 'Sidebar Left',
 			'layout-1col' => 'Single Column')
 	) );
-	
+
 	$wp_customize->add_setting( 'portfoliopress[menu_position]', array(
 		'default' => 'right',
 		'type' => 'option'
@@ -184,24 +191,24 @@ function portfoliopress_customize_register($wp_customize) {
 		'type' => 'radio',
 		'choices' => $options['menu_position']['options']
 	) );
-	
+
 	/* Header Styles */
-	
+
 	$wp_customize->add_section( 'portfolioplus_header_styles', array(
 		'title' => __( 'Header Style', 'portfoliopress' ),
 		'priority' => 105,
 	) );
-	
+
 	$wp_customize->add_setting( 'portfoliopress[header_color][color]', array(
 		'default' => '#000000',
 		'type' => 'option'
 	) );
-	
+
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_bg_color', array(
 		'label' => __( 'Background Color', 'portfolioplus' ),
 		'section' => 'portfoliopress_header_styles',
 		'settings'   => 'portfoliopress[header_color]'
-	) ) );	
+	) ) );
 }
 
 ?>
