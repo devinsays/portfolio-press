@@ -1,9 +1,4 @@
-Portfolio Press 1.8
-
-- Larger screenshot for WordPress 3.8
-- Compatibility update for Options Framework 1.7
-
-Portfolio Press 1.7
+Development
 
 - Show larger thumbnails on one-column layouts
 - Increase thumbnail sizes on regular layouts
