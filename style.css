@@ -387,16 +387,17 @@ footer.entry-meta:before, footer.entry-meta:after {
 }
 
 /* Typographic Elements */
-
+.entry-header {
+	border-bottom:1px solid #ddd;
+	-webkit-box-shadow: 0 1px 0 0 #fff;
+	box-shadow: 0 1px 0 0 #fff;
+	margin-bottom:20px;
+}
 #content .entry-title, #portfolio .entry-title {
 	font-size:34px;
 	line-height:46px;
 	text-shadow: 0px 1px 1px #fff;
-	border-bottom:1px solid #ddd;
-	-webkit-box-shadow: 0 1px 0 0 #fff;
-	box-shadow: 0 1px 0 0 #fff;
-	padding-bottom:0px;
-	margin-bottom:15px;
+	padding:0;
 }
 #content h1, #content h2, #content h3 {
 	padding-bottom: 20px;
