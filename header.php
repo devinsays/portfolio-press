@@ -39,16 +39,15 @@
                 	<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
                 <?php } ?>
 			</hgroup>
-      
-		<nav id="navigation">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'portfoliopress' ); ?></h3>
-			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'portfoliopress' ); ?>"><?php _e( 'Skip to content', 'portfoliopress' ); ?></a></div>
-	
-			<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
-		</nav><!-- #access -->
-    
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<h1 class="menu-toggle"><?php _e( 'Menu', 'twentyfourteen' ); ?></h1>
+				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'depth' => '2' ) ); ?>
+			</nav>
+
     </div>
-    
+
 	</header><!-- #branding -->
 
 	<div id="main">

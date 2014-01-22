@@ -24,7 +24,7 @@ if ( ! isset( $content_width ) ) {
 
 // Tell WordPress to run portfoliopress_setup() when the 'after_setup_theme' hook is run
 add_action( 'after_setup_theme', 'portfoliopress_setup' );
- 
+
 if ( ! function_exists( 'portfoliopress_setup' ) ):
 function portfoliopress_setup() {
 
@@ -33,29 +33,29 @@ function portfoliopress_setup() {
 	 * Translations can be added in the /languages/ directory.
 	 */
 	load_theme_textdomain( 'portfoliopress', TEMPLATEPATH . '/languages' );
-	
+
 	$locale = get_locale();
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
-	
+
 	// This theme styles the visual editor with editor-style.css to match the theme style
 	add_editor_style();
-	
+
 	// This theme uses wp_nav_menu() in one location
 	register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'portfoliopress' ),
 		) );
-	
+
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
-	
+
 	// Add support for a variety of post formats ( will be added in next version )
 	add_theme_support( 'post-formats', array( 'gallery', 'quote', 'image' ) );
-	
+
 	// Add support for featured images
 	add_theme_support( 'post-thumbnails' );
-	
+
 	// Add images sizes for the various thumbnails
 	add_image_size( 'portfolio-thumbnail', 220, 175, true );
 	add_image_size( 'portfolio-thumbnail-fullwidth', 314, 224, true );
@@ -108,38 +108,32 @@ add_filter( 'wp_title', 'portfolioplus_wp_title', 10, 2 );
  * Loads the required javascript for the drop down menus and jquery effects
  * on portfolio items and post formats.
  */
- 
+
 function portfoliopress_scripts() {
-	wp_enqueue_script( 'superfish', get_template_directory_uri() .'/js/superfish.js', array( 'jquery' ), false, true );
-	if ( !is_single() ) {
-		wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
-	}
+	wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
 }
-add_action('wp_enqueue_scripts', 'portfoliopress_scripts');
+add_action( 'wp_enqueue_scripts', 'portfoliopress_scripts' );
 
 /**
  * Load webfonts from Google
  */
- 
-if ( !function_exists( 'portfoliopress_google_fonts' ) ) {
-	function portfoliopress_google_fonts() {
-		if ( !is_admin() ) {
-			wp_register_style( 'portfoliopress_open_sans', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600', '', null, 'screen' );
-			wp_register_style( 'portfoliopress_rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700', '', null, 'screen' );
-			wp_enqueue_style( 'portfoliopress_open_sans' );
-			wp_enqueue_style( 'portfoliopress_rokkitt' );
-		}
-	}
+
+function portfoliopress_fonts() {
+	wp_register_style( 'portfoliopress_open_sans', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600', '', null, 'screen' );
+	wp_register_style( 'portfoliopress_rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700', '', null, 'screen' );
+	wp_enqueue_style( 'portfoliopress_open_sans' );
+	wp_enqueue_style( 'portfoliopress_rokkitt' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
 }
 
-add_action( 'init', 'portfoliopress_google_fonts', 10 );
+add_action( 'wp_enqueue_scripts', 'portfoliopress_fonts', 10 );
 
 /**
  * Displays a notice letting the user know that portfolio post type functionality
  * will be moving into a plugin.  They can upgrade now, or wait one more
  * version before this code is removed.
  */
- 
+
 if ( ! class_exists( 'Portfolio_Post_Type' ) && current_user_can( 'install_plugins' ) ) {
 
 	/* Display a notice that can be dismissed */
@@ -171,26 +165,6 @@ if ( ! class_exists( 'Portfolio_Post_Type' ) && current_user_can( 'install_plugi
 }
 
 /**
- * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
- */
-function portfolio_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	$args['menu_class'] = 'menu';
-	return $args;
-}
-add_filter( 'wp_page_menu_args', 'portfolio_page_menu_args' );
-
-/**
- * Class name for wp_nav_menu
- */
-function portfolio_wp_nav_menu_args( $args ) {
-	$args['container_class'] = 'menu';
-	$args['menu_class'] = '';
-	return $args;
-}
-add_filter( 'wp_nav_menu_args', 'portfolio_wp_nav_menu_args' );
-
-/**
  * Register widgetized area and update sidebar with default widgets
  */
 function portfoliopress_widgets_init() {
@@ -212,7 +186,7 @@ function portfoliopress_widgets_init() {
 		'after_widget' => '</div>','before_title' =>
 		'<h3>','after_title' => '</h3>' )
 	);
-	
+
 	register_sidebar( array( 'name' => __( 'Footer 2', 'portfoliopress' ),'id' => 'footer-2', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
 	register_sidebar( array( 'name' => __( 'Footer 3', 'portfoliopress' ),'id' => 'footer-3', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
 	register_sidebar( array( 'name' => __( 'Footer 4', 'portfoliopress' ),'id' => 'footer-4', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
