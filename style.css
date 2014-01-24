@@ -281,7 +281,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* Structure */
 
 #main {
-	background:#f3f3f3;
+	background:#f6f6f6;
 	padding:40px 0 20px 0;
 }
 .col-width {
@@ -624,35 +624,6 @@ embed, iframe, object {
 }
 
 /* Post Formats */
-
-#content .hentry:first-of-type, .single .format-quote, .single .format-image {
-	padding-top:0;
-	border-top: none;
-}
-.format-image header {
-	display:none;
-}
-.single .format-image header {
-	display:block;
-}
-.format-image .image-wrap {
-	position: relative;
-}
-#content .image-wrap h3 {
-	max-width:630px;
-	background:#000;
-	background:rgba(0,0,0,.6);
-	color:#fff;
-	padding:10px;
-	position:absolute;
-	bottom:13px;
-	left:6px;
-	display: none;
-	text-decoration: none;
-}
-.image-wrap a {
-	text-decoration: none;
-}
 
 /* Portfolio Posts */
 

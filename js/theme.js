@@ -39,27 +39,6 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
-	// Image Post Format
-	$('#content .format-image').each( function() {
-		var image = $(this).find('img:first');
-		if (image.width() > 200 ) {
-	    	var link = $(this).find('.entry-title').children();
-	    	var title = link.text();
-	    	image.unwrap('a');
-	    	image.wrap('<div class="image-wrap" />');
-	    	image.wrap(link.text(''));
-	    	image.parent().append('<h3/>');
-	    	$(this).find('h3').text(title);
-		}
-	});
-
-    $('.format-image .image-wrap a').hover( function() {
-    	var img_width  = $(this).children('img').width();
-    	$(this).children('h3').width(img_width-20).slideDown(100);
-    }, function(){
-    	$(this).children('h3').slideUp(200);
-    });
-
 	// Centers the submenus directly under the top menu
     function portfolio_desktop_submenus() {
 		if ( document.body.clientWidth > 780 && !submenu_alignment ) {
