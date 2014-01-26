@@ -1,11 +1,24 @@
 <?php
-/**
- * This is the default view for portfolio archives.
+/*
+ * Template Name: Full-width Portfolio
+ * Description: A full-width portfolio template with no sidebar.
  *
  * @package Portfolio Press
  */
 
 get_header(); ?>
+
+<?php
+global $paged;
+$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );
+$args = array(
+	'post_type' => 'portfolio',
+	'posts_per_page' => $posts_per_page,
+	'paged' => $paged
+);
+// Override the primary post loop
+query_posts( $args );
+?>
 
 	<div id="primary">
 		<div id="content" role="main">
@@ -14,6 +27,7 @@ get_header(); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
+
 
 					<?php
 						/* Include the Post-Format-specific template for the content.
@@ -34,6 +48,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php if ( !of_get_option( 'portfolio_sidebar' ) )
-        get_sidebar(); ?>
+<?php wp_reset_query(); ?>
 <?php get_footer(); ?>

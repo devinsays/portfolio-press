@@ -83,9 +83,21 @@ add_action('optionsframework_after','portfoliopress_panel_info', 100);
  * Adds a body class to indicate sidebar position
  */
 
-function portfolio_body_class($classes) {
-	$layout = of_get_option('layout','layout-2cr');
-	$classes[] = $layout;
+function portfolio_body_class( $classes ) {
+	// Body class for the layout options
+	$classes[] = of_get_option( 'layout','layout-2cr' );
+	// Body class for full width portfolio archives
+	if ( of_get_option( 'portfolio_sidebar', false ) ) {
+		if ( is_post_type_archive( 'portfolio' ) ) {
+			$classes[] = 'full-width-portfolio';
+		}
+	}
+	if ( is_page_template( 'template-portfolio.php' ) ) {
+		$classes[] = 'post-type-archive-portfolio';
+	}
+	if ( is_page_template( 'template-full-width-portfolio.php' ) ) {
+		$classes[] = 'post-type-archive-portfolio full-width-portfolio';
+	}
 	return $classes;
 }
 

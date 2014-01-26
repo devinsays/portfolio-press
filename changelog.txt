@@ -1,6 +1,7 @@
 Portfolio Press 1.9
 
-- Updated menu styling
+- New menu styling
+- Portfolio templates and styles rebuilt
 
 Portfolio Press 1.8
 

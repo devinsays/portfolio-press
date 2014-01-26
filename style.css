@@ -121,6 +121,10 @@ table {
 th {
 	font-weight: bold;
 }
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
 blockquote {
 	display:block;
 }
@@ -218,9 +222,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* Navigation */
 
 .primary-navigation {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	font-size: 14px;
 	clear:both;
 	padding-top:20px;
@@ -315,9 +316,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .layout-2cl #sidebar {
 	float:left;
 }
-.layout-1col .col-width {
-	max-width:780px;
-}
 .layout-1col #content {
 	width:100%;
 }
@@ -352,7 +350,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 #content article {
 	display:block;
-	clear:both;
 	margin-bottom:30px;
 }
 .entry-meta {
@@ -502,191 +499,109 @@ footer.entry-meta:before, footer.entry-meta:after {
 	margin: 0 auto;
 }
 
-/* Images */
+/* =Media
+----------------------------------------------- */
 
-.entry-content img,
-.comment-content img,
-.widget img {
-	max-width: 100%; /* Fluid images for posts, comments, and widgets */
-	background:#fff;
-}
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"] {
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-img.size-full,
-img.size-large {
-	max-width: 97.5%;
-	width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-.entry-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-img.alignleft,
-img.alignright,
-img.aligncenter {
-	margin-bottom: 15px;
-}
-p img,
-.wp-caption {
-	margin-top: 0.4em;
+#content img.wp-smiley,
+.comment-content img.wp-smiley {
+        border: none;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0;
 }
 .wp-caption {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
-	background: #eee;
-	background:rgba(200,200,200,.2);
-	margin-bottom: 15px;
-	max-width: 100%;
-	padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 1.5em;
+        max-width: 100%;
 }
-.wp-caption img {
-	display: block;
-	margin: 0 auto;
-	max-width: 98%;
+.wp-caption img[class*="wp-image-"] {
+        display: block;
+        margin: 1.2% auto 0;
+        max-width: 98%;
 }
-.wp-caption .wp-caption-text, .gallery-caption {
-	color: #666;
-	font-size: 12px;
+.wp-caption-text {
+        text-align: center;
 }
-#content .wp-caption .wp-caption-text {
-	margin-bottom: 0;
-	padding: 10px 0 5px 10px;
-	position: relative;
+.wp-caption .wp-caption-text {
+        margin: 0.8075em 0;
 }
 #content .gallery {
-	margin: 0 auto 15px;
+        margin-bottom: 1.5em;
+}
+.gallery-caption {
 }
 #content .gallery a img {
-	border: none;
+        border: none;
+        height: auto;
+        max-width: 90%;
 }
-img#wpstats {
-	display: block;
-	margin: 0 auto 15px;
+#content .gallery dd {
+        margin: 0;
 }
 #content .gallery-columns-4 .gallery-item {
-	width: 23%;
-	padding-right: 2%;
 }
 #content .gallery-columns-4 .gallery-item img {
-	width: 100%;
-	height: auto;
 }
 
-/* Image borders */
-img[class*="align"],
-img[class*="wp-image-"],
-#content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
-	border: 1px solid #ddd;
-	padding: 6px;
-}
-.wp-caption img {
-	border-color: #eee;
-}
-a:focus img[class*="align"],
-a:hover img[class*="align"],
-a:active img[class*="align"],
-a:focus img[class*="wp-image-"],
-a:hover img[class*="wp-image-"],
-a:active img[class*="wp-image-"],
-#content .gallery .gallery-icon a:focus img,
-#content .gallery .gallery-icon a:hover img,
-#content .gallery .gallery-icon a:active img {
-	background: #eee;
-	border-color: #bbb;
-}
-.wp-caption a:focus img,
-.wp-caption a:active img,
-.wp-caption a:hover img {
-	background: #fff;
-	border-color: #ddd;
-}
-figure {
-	margin:0 0 10px 0;
-}
-.type-portfolio img.wp-post-image {
-	margin:0 0 10px 0;
-}
-
-/* Make sure videos and embeds fit their containers */
-
-embed, iframe, object {
-	max-width: 100%;
-}
-.entry-content .twitter-tweet-rendered {
-	max-width: 100% !important; /* Override the Twitter embed fixed width */
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+        max-width: 100%;
 }
 
 /* Post Formats */
 
 /* Portfolio Posts */
 
-#portfolio {
-	padding:0 0 4%;
-	float:left;
-	width:70%;
-}
-#portfolio .archive-title {
-	font-size: 34px;
-	line-height: 48px;
-	border-bottom: 1px solid #DDD;
-	padding-bottom: 0px;
-	margin-bottom: 20px;
-}
-#portfolio .portfolio-item {
+.post-type-archive-portfolio .type-portfolio {
 	position:relative;
 	width:32%;
-	background-color:#000;
+	background:#000;
 	float:left;
-	margin:0 1.95% 2% 0;
+	margin:0 2% 2% 0;
+	overflow: hidden;
 }
-#portfolio .portfolio-item:nth-of-type(3n) {
+.post-type-archive-portfolio .type-portfolio:nth-of-type(3n) {
 	margin-right:0;
 }
-#portfolio .ie-col3 {
-	margin-right:0;
-}
-#portfolio .portfolio-item img {
-	display:block;
-	width:100%;
-	height:auto;
-}
-#portfolio .thumb {
-	display:block;
-	width:100%;
-}
-#portfolio a.title-overlay {
-	padding:5%;
-	top:0;
-	position:absolute;
-	z-index:1;
-	display:block;
+.post-type-archive-portfolio .type-portfolio h3 {
+	font-family: 'Open Sans', sans-serif;
 	font-size:16px;
 	font-weight:bold;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	padding: 1em 5%;
+	width: 90%;
+	text-align: center;
+	display: none;
+	pointer-events: none;
+}
+.post-type-archive-portfolio .type-portfolio h3 a {
 	color:#fff;
-	display:none;
 }
-#portfolio a.title-overlay:hover {
-	text-decoration:none;
-}
-#portfolio .no-thumb {
-	background:#000;
-}
-#portfolio .no-thumb a.title-overlay {
+.post-type-archive-portfolio .type-portfolio img {
 	display:block;
-	position: relative;
+	max-width: 100%;
+	height: auto;
+	opacity: 1;
+	-webkit-filter: none;
+	-webkit-transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	transition: .opacity 3s ease-in-out;
+	-webkit-backface-visibility: hidden;
 }
-/* Increase the size of the content area for templates without sidebars */
-
-.full-width #content, #portfolio.full-width {
-	width:100%;
-	max-width: 980px;
+.post-type-archive-portfolio .type-portfolio:hover h3 {
+	display: block;
+	z-index:1;
+}
+.post-type-archive-portfolio .type-portfolio .thumb:hover img {
+	opacity:.3;
+}
+.full-width-portfolio #content {
+	width:auto;
+	float:none;
 }
 
 /* Pagination / WP-Pagenavi */
@@ -1213,12 +1128,12 @@ h3#pings {
 	#respond input[type=text] {
 		width: 90%;
 	}
-	#content, #portfolio {
+	#content {
 		width:100%;
 		padding:0;
 		margin-bottom:40px;
 	}
-	.portfolio-item {
+	.post-type-archive-portfolio .type-portfolio {
 		-webkit-transition-duration: 0.6s;
      	-moz-transition-duration: 0.6s;
       	-ms-transition-duration: 0.6s;
@@ -1229,17 +1144,15 @@ h3#pings {
       	-ms-transition-property: height, width;
        	-o-transition-property: height, width;
         transition-property: height, width;
-	}
-	#portfolio .portfolio-item {
-		min-width:46%;
+        min-width:46%;
 		width:46%;
 		margin-right:4%;
 	}
-	#portfolio .portfolio-item:nth-of-type(3n) {
-		margin-right:4%;
+	.post-type-archive-portfolio .type-portfolio:nth-of-type(3n) {
+		margin-right:0%;
 	}
-	#portfolio .portfolio-item:nth-of-type(2n) {
-		margin-right:0;
+	.post-type-archive-portfolio .type-portfolio:nth-of-type(2n) {
+		margin-right:4%;
 	}
 	#sidebar {
 		clear:both;
@@ -1256,13 +1169,13 @@ h3#pings {
 }
 
 @media (max-width: 480px) {
-	#portfolio .portfolio-item {
+	.post-type-archive-portfolio .type-portfolio {
 		float:none;
 		min-width:46%;
 		width:auto;
 		margin:0 0 20px;
 	}
-	#portfolio .portfolio-item:nth-of-type(1n) {
+	.post-type-archive-portfolio .type-portfolio(1n) {
 		margin-right:0;
 	}
 }
