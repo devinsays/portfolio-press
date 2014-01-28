@@ -192,29 +192,3 @@ function portfoliopress_widgets_init() {
 	register_sidebar( array( 'name' => __( 'Footer 4', 'portfoliopress' ),'id' => 'footer-4', 'description' => __( "Widetized footer", 'portfoliopress' ), 'before_widget' => '<div id="%1$s" class="widget-container %2$s">','after_widget' => '</div>','before_title' => '<h3>','after_title' => '</h3>' ) );
 }
 add_action( 'init', 'portfoliopress_widgets_init' );
-
-
-/**
- * Sets posts displayed per portfolio page to 9
- */
-function wpt_portfolio_custom_posts_per_page( $query ) {
-	global $wp_the_query;
-	if ( $wp_the_query === $query && !is_admin() ) {
-		if ( is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) ) {
-			$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );
-			$query->set( 'posts_per_page', $posts_per_page );
-		}
-	}
-}
-add_action( 'pre_get_posts', 'wpt_portfolio_custom_posts_per_page' );
-
-/**
- * Overrides the default behavior of portfolio taxonomies to use the archive-portfolio template
- * http://www.billerickson.net/reusing-wordpress-theme-files/
- */
-function portfoliopress_template_chooser( $template ) {
-	if ( is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) )
-		$template = get_query_template( 'archive-portfolio' );
-	return $template;
-}
-add_filter( 'template_include', 'portfoliopress_template_chooser' );
