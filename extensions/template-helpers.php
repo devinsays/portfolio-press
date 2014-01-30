@@ -76,6 +76,7 @@ endif;
 /**
  * Sets posts displayed per portfolio page to 9
  */
+
 function wpt_portfolio_custom_posts_per_page( $query ) {
 	global $wp_the_query;
 	if ( $wp_the_query === $query && !is_admin() ) {
@@ -91,6 +92,7 @@ add_action( 'pre_get_posts', 'wpt_portfolio_custom_posts_per_page' );
  * Overrides the default behavior of portfolio taxonomies to use the archive-portfolio template
  * http://www.billerickson.net/reusing-wordpress-theme-files/
  */
+
 function portfoliopress_template_chooser( $template ) {
 	if ( is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) )
 		$template = get_query_template( 'archive-portfolio' );
@@ -103,6 +105,7 @@ add_filter( 'template_include', 'portfoliopress_template_chooser' );
 /**
  * Adds a body class to indicate sidebar position
  */
+
 function portfolio_body_class( $classes ) {
 
 	// Body class for full width portfolio archives
@@ -113,12 +116,16 @@ function portfolio_body_class( $classes ) {
 	}
 
 	// Body class for portfolio page template
-	if ( is_page_template( 'template-portfolio.php' ) )
+	if ( is_page_template( 'templates/template-portfolio.php' ) )
 		$classes[] = 'post-type-archive-portfolio';
 
 	// Body class for full width portfolio page template
-	if ( is_page_template( 'template-full-width-portfolio.php' ) )
+	if ( is_page_template( 'templates/template-full-width-portfolio.php' ) )
 		$classes[] = 'post-type-archive-portfolio full-width-portfolio';
+
+	// Body class for image post format archive template
+	if ( is_page_template( 'templates/post-format-gallery-image.php' ) )
+		$classes[] = 'post-type-archive-portfolio';
 
 	// Body class for image post format
 	if ( is_tax( 'post_format', 'post-format-image' ) )
@@ -126,5 +133,4 @@ function portfolio_body_class( $classes ) {
 
 	return $classes;
 }
-
 add_filter('body_class','portfolio_body_class');
