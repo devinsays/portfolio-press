@@ -1,8 +1,7 @@
 <?php
 /**
  * Template Name: Portfolio
- *
- * This page template does a custom query for portfolio post types.
+ * Description: Basic Portfolio template.
  *
  * @package Portfolio Press
  */

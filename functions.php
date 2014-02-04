@@ -54,7 +54,7 @@ function portfoliopress_setup() {
 	add_theme_support( 'post-formats', array( 'gallery', 'quote', 'image' ) );
 
 	// Add support for featured images
-	add_theme_support( 'post-thumbnails' );
+	// add_theme_support( 'post-thumbnails' );
 
 	// Add images sizes for the various thumbnails
 	add_image_size( 'portfolio-thumbnail', 220, 175, true );

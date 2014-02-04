@@ -16,15 +16,24 @@ if ( of_get_option( 'portfolio_sidebar' ) || is_page_template( 'full-width-portf
 if ( of_get_option('layout','layout-2cr') ==  'layout-1col' )
 	$fullwidth = true;
 
-$thumbnail = 'portfolio-thumbnail';
+$thumbnail = 'thumbnail';
 
 if ( $fullwidth )
-	$thumbnail = 'portfolio-thumbnail-fullwidth';
+	$thumbnail = 'thumbnail-fullwidth';
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
-		<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb"><?php the_post_thumbnail( $thumbnail ); ?></a>
+		<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
+			<?php if ( post_password_required() ) { ?>
+				<img src="<?php echo get_template_directory_uri() . '/images/placeholder-' . $thumbnail . '.gif'; ?>">
+			<?php }
+			elseif ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'portfolio-' . $thumbnail );
+			} else { ?>
+				<img src="<?php echo get_template_directory_uri() . '/images/placeholder-' . $thumbnail . '.gif'; ?>">
+			<?php } ?>
+		</a>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

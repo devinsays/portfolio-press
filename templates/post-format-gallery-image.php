@@ -1,8 +1,8 @@
 <?php
 /**
  * Template Name: Image and Gallery Posts
+ * Descriptions: Displays all image post formats.
  *
- * This page template displays all image post types.
  * @package Portfolio Press
  */
 

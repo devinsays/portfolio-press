@@ -116,11 +116,11 @@ function portfolio_body_class( $classes ) {
 	}
 
 	// Body class for portfolio page template
-	if ( is_page_template( 'templates/template-portfolio.php' ) )
+	if ( is_page_template( 'templates/portfolio.php' ) )
 		$classes[] = 'post-type-archive-portfolio';
 
 	// Body class for full width portfolio page template
-	if ( is_page_template( 'templates/template-full-width-portfolio.php' ) )
+	if ( is_page_template( 'templates/full-width-portfolio.php' ) )
 		$classes[] = 'post-type-archive-portfolio full-width-portfolio';
 
 	// Body class for image post format archive template
