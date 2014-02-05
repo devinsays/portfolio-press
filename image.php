@@ -5,7 +5,21 @@
  * @package Portfolio Press
  */
 
-get_header(); ?>
+/** 
+ * Check if the portfolio is password protected
+ * When the portfolio is password protected redirect to the portfolio.
+ * 
+ * post_password_required ($post)
+ * returns a boolean
+ * False if a password is not required or the correct password cookie is present, true otherwise
+ * 
+ * http://codex.wordpress.org/Function_Reference/post_password_required
+ */
+ 
+if (post_password_required( $post->post_parent )) :
+	wp_redirect(get_permalink($post->post_parent));                                 
+else :
+	get_header(); ?>
 
 		<div id="primary" class="image-attachment">
 			<div id="content" role="main">
@@ -107,3 +121,4 @@ get_header(); ?>
 		</div><!-- #primary -->
 
 <?php get_footer(); ?>
+<?php endif; ?>
