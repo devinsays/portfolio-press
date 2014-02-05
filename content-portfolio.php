@@ -27,7 +27,7 @@ if ( $fullwidth )
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
 		<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
 			<?php if ( post_password_required() ) { ?>
-				<img src="<?php echo get_template_directory_uri() . '/images/placeholder-' . $thumbnail . '.gif'; ?>">
+				<img src="<?php echo get_template_directory_uri() . '/images/protected-' . $thumbnail . '.gif'; ?>">
 			<?php }
 			elseif ( has_post_thumbnail() ) {
 				the_post_thumbnail( 'portfolio-' . $thumbnail );

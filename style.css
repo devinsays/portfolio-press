@@ -1164,12 +1164,12 @@ h3#pings {
 	.primary-navigation .menu-item-has-children > a:after,
 	.primary-navigation .page_item_has_children > a:after {
 		-webkit-font-smoothing: antialiased;
-		content: "\f502";
+		content: "\e806";
 		display: inline-block;
-		font: normal 10px/1 Genericons;
+		font: normal 13px/1 PortfolioPressCustom;
 		position: absolute;
 		right: 10px;
-		top: 18px;
+		top: 12px;
 		vertical-align: text-bottom;
 	}
 	.primary-navigation ul li:hover > ul {

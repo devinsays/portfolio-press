@@ -123,7 +123,7 @@ function portfoliopress_fonts() {
 	wp_register_style( 'portfoliopress_rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700', '', null, 'screen' );
 	wp_enqueue_style( 'portfoliopress_open_sans' );
 	wp_enqueue_style( 'portfoliopress_rokkitt' );
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
+	wp_enqueue_style( 'portfoliopress_icon_font', get_template_directory_uri() . '/fonts/custom/portfolio-custom.css', array(), '1.0.0' );
 }
 
 add_action( 'wp_enqueue_scripts', 'portfoliopress_fonts', 10 );

@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'PortfolioPressCustom';
+	src: url('portfolio-custom.eot?15931918');
+	src: url('portfolio-custom.eot?15931918#iefix') format('embedded-opentype'),
+	   url('portfolio-custom.woff?15931918') format('woff'),
+	   url('portfolio-custom.ttf?15931918') format('truetype'),
+	   url('portfolio-custom.svg?15931918#portfolio-custom') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "portfolio-custom";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+}
+
+.icon-picture:before { content: '\e800'; }
+.icon-lock:before { content: '\e803'; }
+.icon-left-open:before { content: '\e804'; }
+.icon-right-open:before { content: '\e805'; }
+.icon-dribbble:before { content: '\e80c'; }
+.icon-facebook-squared:before { content: '\e807'; }
+.icon-github-squared:before { content: '\e808'; }
+.icon-down-dir:before { content: '\e806'; }
+.icon-twitter-squared:before { content: '\e80a'; }
+.icon-link:before { content: '\e80d'; }
+.icon-quote-left:before { content: '\e802'; }
+.icon-quote-right:before { content: '\e80b'; }
+.icon-video-alt:before { content: '\e80e'; }
+.icon-camera:before { content: '\e801'; }
+.icon-linkedin-squared:before { content: '\e809'; }
