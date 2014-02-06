@@ -10,7 +10,7 @@
 if ( ! function_exists( 'portfoliopress_postby_meta' ) ):
 function portfoliopress_postby_meta() {
 
-	printf( __( '<span class="meta-prep meta-prep-author">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'portfoliopress' ),
+	printf( __( '<span class="meta-prep meta-prep-author">Posted </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'portfoliopress' ),
 		get_permalink(),
 		get_the_date( 'c' ),
 		get_the_date(),
@@ -108,29 +108,29 @@ add_filter( 'template_include', 'portfoliopress_template_chooser' );
 
 function portfolio_body_class( $classes ) {
 
-	// Body class for full width portfolio archives
-	if ( of_get_option( 'portfolio_sidebar', false ) ) {
-		if ( is_post_type_archive( 'portfolio' ) || is_tax( 'post_format', 'post-format-image' ) ) {
+	if (
+		is_post_type_archive( 'portfolio' ) ||
+		is_page_template( 'templates/portfolio.php' ) ||
+		is_page_template( 'templates/full-width-portfolio.php' ) ||
+		is_page_template( 'templates/post-format-gallery-image.php' ) ||
+		is_tax( 'post_format', 'post-format-image' ) ||
+		is_tax( 'post_format', 'post-format-gallery' ) ||
+		is_tax( 'portfolio_category' ) ||
+		is_tax( 'portfolio_tag' )
+	) {
+		$classes[] = 'portfolio-view';
+		if ( of_get_option( 'portfolio_sidebar', false ) ) {
 			$classes[] = 'full-width-portfolio';
 		}
 	}
 
-	// Body class for portfolio page template
-	if ( is_page_template( 'templates/portfolio.php' ) )
-		$classes[] = 'post-type-archive-portfolio';
-
-	// Body class for full width portfolio page template
-	if ( is_page_template( 'templates/full-width-portfolio.php' ) )
-		$classes[] = 'post-type-archive-portfolio full-width-portfolio';
-
-	// Body class for image post format archive template
-	if ( is_page_template( 'templates/post-format-gallery-image.php' ) )
-		$classes[] = 'post-type-archive-portfolio';
-
-	// Body class for image post format
-	if ( is_tax( 'post_format', 'post-format-image' ) )
-		$classes[] = 'post-type-archive-portfolio';
+	if ( !of_get_option( 'portfolio_sidebar', false ) ) {
+		if ( is_page_template( 'templates/full-width-portfolio.php' ) ) {
+			$classes[] = 'full-width-portfolio';
+		}
+	}
 
 	return $classes;
 }
-add_filter('body_class','portfolio_body_class');
+
+add_filter( 'body_class','portfolio_body_class' );

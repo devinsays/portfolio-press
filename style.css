@@ -231,6 +231,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	margin: 0;
 }
 .primary-navigation li {
+    word-wrap: break-word;
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 .primary-navigation ul ul li {
@@ -610,8 +611,8 @@ object {
 
 /* Portfolio Posts */
 
-.post-type-archive-portfolio .type-portfolio,
-.post-type-archive-portfolio .format-image {
+.portfolio-view .type-portfolio,
+.portfolio-view .format-image {
 	position:relative;
 	width:32%;
 	background:#000;
@@ -619,12 +620,12 @@ object {
 	margin:0 2% 2% 0;
 	overflow: hidden;
 }
-.post-type-archive-portfolio .type-portfolio:nth-of-type(3n),
-.post-type-archive-portfolio .format-image:nth-of-type(3n) {
+.portfolio-view .type-portfolio:nth-of-type(3n),
+.portfolio-view .format-image:nth-of-type(3n) {
 	margin-right:0;
 }
-.post-type-archive-portfolio .type-portfolio h3,
-.post-type-archive-portfolio .format-image h3 {
+.portfolio-view .type-portfolio h3,
+.portfolio-view .format-image h3 {
 	font-family: 'Open Sans', sans-serif;
 	font-size:16px;
 	font-weight:bold;
@@ -637,12 +638,12 @@ object {
 	display: none;
 	pointer-events: none;
 }
-.post-type-archive-portfolio .type-portfolio h3 a,
-.post-type-archive-portfolio .format-image h3 a {
+.portfolio-view .type-portfolio h3 a,
+.portfolio-view .format-image h3 a {
 	color:#fff;
 }
-.post-type-archive-portfolio .type-portfolio img,
-.post-type-archive-portfolio .format-image img {
+.portfolio-view .type-portfolio img,
+.portfolio-view .format-image img {
 	display:block;
 	max-width: 100%;
 	height: auto;
@@ -653,13 +654,13 @@ object {
 	transition: .opacity 3s ease-in-out;
 	-webkit-backface-visibility: hidden;
 }
-.post-type-archive-portfolio .type-portfolio:hover h3,
-.post-type-archive-portfolio .format-image:hover h3 {
+.portfolio-view .type-portfolio:hover h3,
+.portfolio-view .format-image:hover h3 {
 	display: block;
 	z-index:1;
 }
-.post-type-archive-portfolio .type-portfolio .thumb:hover img,
-.post-type-archive-portfolio .format-image .thumb:hover img {
+.portfolio-view .type-portfolio .thumb:hover img,
+.portfolio-view .format-image .thumb:hover img {
 	opacity:.3;
 }
 .full-width-portfolio #content {
@@ -1091,6 +1092,7 @@ h3#pings {
 		float: right;
 		clear:none;
 		padding: 0;
+		margin-top:18px;
 	}
 	.primary-navigation .menu-toggle {
 		display: none;
@@ -1110,13 +1112,14 @@ h3#pings {
 		display: inline-block;
 		white-space: nowrap;
 		display: block;
-		margin: 0 4px 20px;
+		margin: 0 4px 15px;
+		padding: 5px 12px;
 	}
 	.primary-navigation ul li.current-menu-item > a, .primary-navigation ul > li:hover > a {
 		color: #fff;
 		-webkit-transition: .07s ease-in;
 		transition: .07s ease-in;
-		background: rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.25);
 		border-radius: 2px;
 	}
 	.primary-navigation ul ul {
@@ -1159,7 +1162,7 @@ h3#pings {
 	}
 	.primary-navigation .menu-item-has-children > a,
 	.primary-navigation .page_item_has_children > a {
-		padding-right: 25px;
+		padding-right: 30px;
 	}
 	.primary-navigation .menu-item-has-children > a:after,
 	.primary-navigation .page_item_has_children > a:after {
@@ -1168,8 +1171,8 @@ h3#pings {
 		display: inline-block;
 		font: normal 13px/1 PortfolioPressCustom;
 		position: absolute;
-		right: 10px;
-		top: 12px;
+		right: 15px;
+		top: 10px;
 		vertical-align: text-bottom;
 	}
 	.primary-navigation ul li:hover > ul {
@@ -1196,7 +1199,7 @@ h3#pings {
 		padding:0;
 		margin-bottom:40px;
 	}
-	.post-type-archive-portfolio .type-portfolio {
+	.portfolio-view .type-portfolio {
 		-webkit-transition-duration: 0.6s;
      	-moz-transition-duration: 0.6s;
       	-ms-transition-duration: 0.6s;
@@ -1211,10 +1214,10 @@ h3#pings {
 		width:46%;
 		margin-right:4%;
 	}
-	.post-type-archive-portfolio .type-portfolio:nth-of-type(3n) {
+	.portfolio-view .type-portfolio:nth-of-type(3n) {
 		margin-right:0%;
 	}
-	.post-type-archive-portfolio .type-portfolio:nth-of-type(2n) {
+	.portfolio-view .type-portfolio:nth-of-type(2n) {
 		margin-right:4%;
 	}
 	#sidebar {
@@ -1232,13 +1235,13 @@ h3#pings {
 }
 
 @media (max-width: 480px) {
-	.post-type-archive-portfolio .type-portfolio {
+	.portfolio-view .type-portfolio {
 		float:none;
 		min-width:46%;
 		width:auto;
 		margin:0 0 20px;
 	}
-	.post-type-archive-portfolio .type-portfolio(1n) {
+	.portfolio-view .type-portfolio(1n) {
 		margin-right:0;
 	}
 }
