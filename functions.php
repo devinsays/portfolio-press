@@ -154,4 +154,4 @@ require_once( TEMPLATEPATH . '/extensions/portfolio-helpers.php' );
 /**
  * Custom functions that act independently of the theme templates.
  */
-require_once( TEMPLATEPATH . '/extensions/portfolio-helpers.php' );
+require_once( TEMPLATEPATH . '/extensions/extras.php' );

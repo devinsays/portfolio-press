@@ -1,28 +1,28 @@
-Portfolio Press 1.9
+Portfolio Press 1.9.0
 
 - New menu styling
 - Portfolio templates and styles rebuilt
 
-Portfolio Press 1.8
+Portfolio Press 1.8.0
 
 - Larger screenshot for WordPress 3.8
 - Compatibility update for Options Framework 1.7
 
-Portfolio Press 1.7
+Portfolio Press 1.7.0
 
 - Show larger thumbnails on one-column layouts
 - Increase thumbnail sizes on regular layouts
 - Fix for max-width logo in Firefox
 - Show thumbnails on search pages
 
-Portfolio Press 1.6
+Portfolio Press 1.6.0
 
 - Update $content_width on full page templates
 - Improvements for password protected portfolio posts
 - Normalize post meta
 - New portfoliopress_posts_per_page filter
 
-Portfolio Press 1.5
+Portfolio Press 1.5.0
 
 - Add single portfolio post navigation back
 - Add fullwidth portfolio thumnail size
@@ -35,7 +35,7 @@ Portfolio Press 1.4.1
 - Fixed theme dependency on Options Framework plugin
 - Updated inline theme documentation
 
-Portfolio Press 1.4
+Portfolio Press 1.4.0
 
 - Added box shadows to borders
 - Max-width for logo image
@@ -46,8 +46,7 @@ Portfolio Press 1.4
 - Update screenshot image for retina
 - Show titles and descriptions on portfolio taxonomy pages
 
-
-Portfolio Press 1.3
+Portfolio Press 1.3.0
 
 - Fix for portfolio pages when single column selected
 - Allow image galleries to display in archives
@@ -62,7 +61,7 @@ Portfolio Press 1.2.1
 
 - Fix for JS error that causes scripts to break
 
-Portfolio Press 1.2
+Portfolio Press 1.2.0
 
 - Front end customizer support
 - Additional layout option (single column)
@@ -70,17 +69,17 @@ Portfolio Press 1.2
 - Filterable titles
 - Upsell link for Portfolio+ on options page
 
-Portfolio Press 1.1
+Portfolio Press 1.1.0
 
 - Responsive design
 - Updated styling
 
-Portfolio Press 1.0
+Portfolio Press 1.0.0
 
 - Fix for search.php template
 - Fix for pagination in portfolio page template
 
-Portfolio Press 0.9
+Portfolio Press 0.9.0
 
 - Paging bug fixes for portfolio items
 - Fix for missing blockquote image
@@ -90,7 +89,7 @@ Portfolio Press 0.9
 - Added post format support for quotes, images, and galleries
 - Renamed scripts files
 
-Portfolio Press 0.8
+Portfolio Press 0.8.0
 
 - WordPress 3.1 or higher is now required
 - Updated Spanish translations from Eduardo Larequi
@@ -137,7 +136,7 @@ Portfolio Press 0.7.2
 - Deleted styles folder
 - Removed option to set portfolio as home.  Better done through core..
 
-Portfolio Press 0.7
+Portfolio Press 0.7.0
 
 - Major updates to the options panel
 - Minor updates to how Portfolio post type is set up
@@ -148,7 +147,7 @@ Portfolio Press 0.6.1
 - Added Norwegian translations from Erling Hamso - http://www.erlinghamso.no
 - Minor update to the 404 page from Michael Fields - http://wordpress.mfields.org
 
-Portfolio Press 0.6
+Portfolio Press 0.6.0
 
 - Made further updates for WordPress 3.1 compatibility
 - Added options panel (props WooThemes)
@@ -177,34 +176,34 @@ Portfolio Press 0.5.1
 - Updated the text domain for translations
 - Made the name change to "Portfolio Press" to comply with repo guidelines
 
-Portfolio Press 0.5
+Portfolio Press 0.5.0
 
 - Added templates for full-width portfolio, and taxonomy portfolio-tags
 - Updated style.css for new templates and for full-width page template
 - Added additional thumbnail size for the full width portfolio templates
 
-Portfolio Press 0.44
+Portfolio Press 0.4.4
 
 - Updated style.css and reset.css to have styling for sub & sup html tags + code, pre, dl, dt, dd, abbr, cite
 
-Portfolio Press 0.43
+Portfolio Press 0.4.3
 
 - Updated style.css to have a clear on the .entry-utility
 - Updated the screenshot.png
 - Updated the theme description
 
-Portfolio Press 0.42
+Portfolio Press 0.4.2
 
 - Updated style.css to properly align center images with captions
 - Updated style.css to better display very long post titles
 - Updated screenshot to reflect initial install (as per repository specs)
 
-Portfolio Press 0.41
+Portfolio Press 0.4.1
 
 - Updated style.css to properly clear images when they are floated at the bottom of a post
 - Updated styles.css to apply a max-width of 640px to images in #content
 
-Portfolio Press 0.4
+Portfolio Press 0.4.0
 
 - Changed title filter priority in simple-custom-post-type-archives.php
 - Added better handling for the Simple Custom Post Type Archives plugin
