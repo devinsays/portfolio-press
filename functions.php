@@ -44,7 +44,7 @@ function portfoliopress_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	// Add support for a variety of post formats ( will be added in next version )
-	add_theme_support( 'post-formats', array( 'gallery', 'quote', 'image' ) );
+	add_theme_support( 'post-formats', array( 'gallery', 'image', 'video', 'quote', 'link' ) );
 
 	// Add support for featured images
 	add_theme_support( 'post-thumbnails' );

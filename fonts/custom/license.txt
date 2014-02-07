@@ -28,6 +28,15 @@ Font license info
    Homepage:  http://www.entypo.com
 
 
+## Typicons
+
+   (c) Stephen Hutchings 2012
+
+   Author:    Stephen Hutchings
+   License:   CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)
+   Homepage:  http://typicons.com/
+
+
 ## Iconic
 
    Copyright (C) 2012 by P.J. Onori

@@ -24,18 +24,18 @@ endif;
  * Displays footer text
  */
 if ( ! function_exists( 'portfoliopress_footer_meta' ) ):
-function portfoliopress_footer_meta( $format ) { ?>
+function portfoliopress_footer_meta( $format ) {
+	if ( ! $format ) {
+		$format = 'standard';
+	}
+	?>
 
 	<footer class="entry-meta">
 
-		<?php if ( $format == 'quote' || $format == 'image' ) {
-			portfoliopress_postby_meta();
-		} ?>
+		<span class="entry-meta-icon icon-format-<?php echo $format ?>"></span>
 
-		<?php if ( $format != 'quote' && $format != 'image'  ) : ?>
 		<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'portfoliopress' ); ?></span><?php the_category( ', ' ); ?></span>
 		<?php the_tags( '<span class="meta-sep"> | </span><span class="tag-links">' . __( 'Tagged ', 'portfoliopress' ) . '</span>', ', ', '' ); ?>
-		<?php endif; ?>
 
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 		<span class="meta-sep"> | </span>

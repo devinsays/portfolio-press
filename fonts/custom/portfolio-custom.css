@@ -26,6 +26,11 @@
 
 .icon-format-image:before { content: '\e800'; }
 .icon-format-gallery:before  { content: '\e80f'; }
+.icon-format-quote:before { content: '\e802'; }
+.icon-format-link:before { content: '\e80d'; }
+.icon-format-video:before { content: '\e80e'; }
+.icon-format-standard:before { content: '\e810'; }
+
 .icon-lock:before { content: '\e803'; }
 .icon-left-open:before { content: '\e804'; }
 .icon-right-open:before { content: '\e805'; }
@@ -34,9 +39,8 @@
 .icon-github-squared:before { content: '\e808'; }
 .icon-down-dir:before { content: '\e806'; }
 .icon-twitter-squared:before { content: '\e80a'; }
-.icon-link:before { content: '\e80d'; }
 .icon-quote-left:before { content: '\e802'; }
 .icon-quote-right:before { content: '\e80b'; }
-.icon-video-alt:before { content: '\e80e'; }
 .icon-camera:before { content: '\e801'; }
 .icon-linkedin-squared:before { content: '\e809'; }
+.icon-chat:before { content: '\e811'; }
