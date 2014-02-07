@@ -416,9 +416,16 @@ footer.entry-meta:before, footer.entry-meta:after {
 .entry-content blockquote {
 	font-style: italic;
 	font-size:18px;
+	line-height: 1.4;
 }
 .entry-content blockquote cite {
+	display: block;
 	font-size:14px;
+	margin-top:5px;
+}
+.entry-content blockquote cite:before {
+	content:'\2014';
+	margin-right:2px;
 }
 #content ul {
 	margin: 0 0 15px 0;

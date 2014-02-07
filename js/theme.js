@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 
 	// Enable menu toggle for small screens
 	(function() {
-		var nav = $( '#primary-navigation' ), button, menu;
+		var nav = $( '#navigation' ), button, menu;
 		if ( ! nav ) {
 			return;
 		}
@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
 	// Clears submenu alignment for the mobile menu
 	function portfolio_mobile_submenus() {
 		if ( document.body.clientWidth <= 780 && submenu_alignment ) {
-			nav = $( '#primary-navigation' );
+			nav = $( '#navigation' );
 			nav.find('ul').css('margin-left', '');
 			submenu_alignment = false;
 		}
