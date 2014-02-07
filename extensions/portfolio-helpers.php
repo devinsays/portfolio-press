@@ -7,7 +7,6 @@
  * Overrides the default behavior of portfolio taxonomies to use the archive-portfolio template
  * http://www.billerickson.net/reusing-wordpress-theme-files/
  */
-
 function portfoliopress_template_chooser( $template ) {
 	if ( is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) )
 		$template = get_query_template( 'archive-portfolio' );
@@ -20,7 +19,6 @@ add_filter( 'template_include', 'portfoliopress_template_chooser' );
 /**
  * Adds a body class to archives that display as a portfolio view
  */
-
 function portfoliopress_body_class( $classes ) {
 
 	if (
@@ -47,5 +45,4 @@ function portfoliopress_body_class( $classes ) {
 
 	return $classes;
 }
-
 add_filter( 'body_class','portfoliopress_body_class' );

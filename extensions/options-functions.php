@@ -4,11 +4,9 @@
  */
 
 /**
- * Theme options require the "Options Framework" plugin to be installed in order to display.
- * If it's not installed, default settings will be used.
+ * Helper function to get options set by the Options Framework plugin
  */
-
-if ( !function_exists( 'of_get_option' ) ) {
+if ( !function_exists( 'of_get_option' ) ) :
 function of_get_option($name, $default = false) {
 
 	$optionsframework_settings = get_option('optionsframework');
@@ -26,9 +24,12 @@ function of_get_option($name, $default = false) {
 		return $default;
 	}
 }
-}
+endif;
 
-if ( !function_exists( 'optionsframework_init' ) && current_user_can('edit_theme_options') ) {
+/**
+ * Adds a page to the appearance section to let users know about theme options
+ */
+if ( !function_exists( 'optionsframework_init' ) && current_user_can( 'edit_theme_options' ) ) {
 	function portfolio_options_default() {
 		add_theme_page(__('Theme Options','portfoliopress'), __('Theme Options','portfoliopress'), 'edit_theme_options', 'options-framework','optionsframework_page_notice');
 	}
@@ -36,9 +37,8 @@ if ( !function_exists( 'optionsframework_init' ) && current_user_can('edit_theme
 }
 
 /**
- * Displays a notice on the theme options page if the Options Framework plugin is not installed
+ * Output of the page informing users about theme options
  */
-
 if ( !function_exists( 'optionsframework_page_notice' ) ) {
 	function optionsframework_page_notice() { ?>
 
@@ -63,9 +63,7 @@ if ( !function_exists( 'optionsframework_page_notice' ) ) {
 
 /**
  * Additional content to display after the options panel
- * if it is installed
  */
-
 function portfoliopress_panel_info() { ?>
     <p style="color: #777;">
     <?php printf(
@@ -77,42 +75,37 @@ function portfoliopress_panel_info() { ?>
     </p>
 <?php }
 
-add_action('optionsframework_after','portfoliopress_panel_info', 100);
+add_action( 'optionsframework_after', 'portfoliopress_panel_info', 100 );
 
 /**
  * Adds a body class to indicate sidebar position
  */
-
 function portfolio_layout_class( $classes ) {
 	// Body class for the layout options
 	$classes[] = of_get_option( 'layout','layout-2cr' );
 	return $classes;
 }
-
 add_filter('body_class','portfolio_layout_class');
 
 /**
  * Favicon Option
  */
-
 function portfolio_favicon() {
-	$favicon = of_get_option('custom_favicon', false);
+	$favicon = of_get_option( 'custom_favicon', false );
 	if ( $favicon ) {
         echo '<link rel="shortcut icon" href="'.  $favicon  .'"/>'."\n";
     }
 }
-
 add_action('wp_head', 'portfolio_favicon');
 
 /**
  * Menu Position Option
  */
-
 function portfolio_head_css() {
 
 		$output = '';
 
-		if ( of_get_option('menu_position') == "clear") {
+		if ( of_get_option( 'menu_position' ) == "clear") {
 			$output .= "#navigation {clear:both; float:none; margin-left:-10px;}\n";
 			$output .= "#navigation ul li {margin-left:0; margin-right:10px;}\n";
 		}
@@ -140,7 +133,7 @@ if ( function_exists( 'optionsframework_init' ) ) {
 	add_action( 'customize_register', 'portfoliopress_customize_register' );
 }
 
-function portfoliopress_customize_register($wp_customize) {
+function portfoliopress_customize_register( $wp_customize ) {
 
 	$options = optionsframework_options();
 
@@ -210,5 +203,3 @@ function portfoliopress_customize_register($wp_customize) {
 		'settings'   => 'portfoliopress[header_color]'
 	) ) );
 }
-
-?>

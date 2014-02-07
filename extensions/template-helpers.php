@@ -6,7 +6,6 @@
 /**
  * Outputs author information
  */
-
 if ( ! function_exists( 'portfoliopress_postby_meta' ) ):
 function portfoliopress_postby_meta() {
 
@@ -18,14 +17,12 @@ function portfoliopress_postby_meta() {
 		sprintf( esc_attr__( 'View all posts by %s', 'portfoliopress' ), get_the_author() ),
 		get_the_author()
 	);
-
 }
 endif;
 
 /**
  * Displays footer text
  */
-
 if ( ! function_exists( 'portfoliopress_footer_meta' ) ):
 function portfoliopress_footer_meta( $format ) { ?>
 
