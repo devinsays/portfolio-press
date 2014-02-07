@@ -22,7 +22,7 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-                
+
                 <?php if ( has_post_thumbnail() && of_get_option('portfolio_images', "1") ) {
                 	if ( of_get_option( 'layout') == 'layout-1col' ) {
 	                	the_post_thumbnail( 'portfolio-fullwidth' );
@@ -32,7 +32,7 @@ get_header(); ?>
 				}
 				?>
 
-                
+
 					<?php the_content(); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'portfoliopress' ), 'after' => '</div>' ) ); ?>
 				</div><!-- .entry-content -->
@@ -58,7 +58,7 @@ get_header(); ?>
 					<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="edit-link">', '</span>' ); ?>
 				</footer><!-- .entry-meta -->
 			</article><!-- #post-<?php the_ID(); ?> -->
-			
+
 			<nav id="nav-below">
 				<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfolioplus' ); ?></h1>
 				<div class="nav-previous"><?php previous_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Previous post link', 'portfolioplus' ) . '</span>' ); ?></div>

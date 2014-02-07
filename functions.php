@@ -10,16 +10,15 @@
 // Adds some template functions
 require_once( TEMPLATEPATH . '/extensions/template-helpers.php' );
 
+// Adds some portfolio functions
+require_once( TEMPLATEPATH . '/extensions/portfolio-helpers.php' );
+
 // Sets up the options panel and default functions
 require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 
 // Set the content width based on the theme's design and stylesheet
 if ( ! isset( $content_width ) ) {
-	if ( of_get_option('layout') == 'layout-1col' ) {
-		$content_width = 980;
-	} else {
-		$content_width = 640;
-	}
+	$content_width = 980;
 }
 
 // Tell WordPress to run portfoliopress_setup() when the 'after_setup_theme' hook is run
@@ -54,7 +53,7 @@ function portfoliopress_setup() {
 	add_theme_support( 'post-formats', array( 'gallery', 'quote', 'image' ) );
 
 	// Add support for featured images
-	// add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// Add images sizes for the various thumbnails
 	add_image_size( 'portfolio-thumbnail', 220, 175, true );

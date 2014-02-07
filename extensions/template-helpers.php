@@ -55,10 +55,13 @@ endif;
  * Reusable navigation code for navigation
  * Display navigation to next/previous pages when applicable
  */
-
 if ( ! function_exists( 'portfoliopress_content_nav' ) ):
-function portfoliopress_content_nav() {
+function portfoliopress_content_nav( $query = false ) {
 	global $wp_query;
+	if ( $query ) {
+		$temp_query = $wp_query;
+		$wp_query = $query;
+	}
 	if (  $wp_query->max_num_pages > 1 ) :
 		if (function_exists('wp_pagenavi') ) {
 			wp_pagenavi();
@@ -70,67 +73,8 @@ function portfoliopress_content_nav() {
 			</nav><!-- #nav-below -->
     	<?php }
 	endif;
+	if ( isset( $temp_query ) ) {
+		$wp_query = $temp_query;
+	}
 }
 endif;
-
-/**
- * Sets posts displayed per portfolio page to 9
- */
-
-function wpt_portfolio_custom_posts_per_page( $query ) {
-	global $wp_the_query;
-	if ( $wp_the_query === $query && !is_admin() ) {
-		if ( is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) ) {
-			$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );
-			$query->set( 'posts_per_page', $posts_per_page );
-		}
-	}
-}
-add_action( 'pre_get_posts', 'wpt_portfolio_custom_posts_per_page' );
-
-/**
- * Overrides the default behavior of portfolio taxonomies to use the archive-portfolio template
- * http://www.billerickson.net/reusing-wordpress-theme-files/
- */
-
-function portfoliopress_template_chooser( $template ) {
-	if ( is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) )
-		$template = get_query_template( 'archive-portfolio' );
-	if ( is_tax( 'post_format', 'post-format-image' ) )
-		$template = get_query_template( 'archive-portfolio' );
-	return $template;
-}
-add_filter( 'template_include', 'portfoliopress_template_chooser' );
-
-/**
- * Adds a body class to indicate sidebar position
- */
-
-function portfolio_body_class( $classes ) {
-
-	if (
-		is_post_type_archive( 'portfolio' ) ||
-		is_page_template( 'templates/portfolio.php' ) ||
-		is_page_template( 'templates/full-width-portfolio.php' ) ||
-		is_page_template( 'templates/post-format-gallery-image.php' ) ||
-		is_tax( 'post_format', 'post-format-image' ) ||
-		is_tax( 'post_format', 'post-format-gallery' ) ||
-		is_tax( 'portfolio_category' ) ||
-		is_tax( 'portfolio_tag' )
-	) {
-		$classes[] = 'portfolio-view';
-		if ( of_get_option( 'portfolio_sidebar', false ) ) {
-			$classes[] = 'full-width-portfolio';
-		}
-	}
-
-	if ( !of_get_option( 'portfolio_sidebar', false ) ) {
-		if ( is_page_template( 'templates/full-width-portfolio.php' ) ) {
-			$classes[] = 'full-width-portfolio';
-		}
-	}
-
-	return $classes;
-}
-
-add_filter( 'body_class','portfolio_body_class' );

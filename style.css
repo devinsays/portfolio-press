@@ -391,11 +391,15 @@ footer.entry-meta:before, footer.entry-meta:after {
 	box-shadow: 0 1px 0 0 #fff;
 	margin-bottom:20px;
 }
-#content .entry-title, #portfolio .entry-title {
+#content .entry-title {
 	font-size:34px;
 	line-height:46px;
 	text-shadow: 0px 1px 1px #fff;
 	padding:0;
+}
+.entry-title a:hover {
+	color:#000;
+	text-decoration: none;
 }
 #content h1, #content h2, #content h3 {
 	padding-bottom: 20px;
@@ -607,12 +611,9 @@ object {
 	max-width: 100%;
 }
 
-/* Post Formats */
-
 /* Portfolio Posts */
 
-.portfolio-view .type-portfolio,
-.portfolio-view .format-image {
+.portfolio-view .hentry {
 	position:relative;
 	width:32%;
 	background:#000;
@@ -620,17 +621,15 @@ object {
 	margin:0 2% 2% 0;
 	overflow: hidden;
 }
-.portfolio-view .type-portfolio:nth-of-type(3n),
-.portfolio-view .format-image:nth-of-type(3n) {
+.portfolio-view .hentry:nth-of-type(3n) {
 	margin-right:0;
 }
-.portfolio-view .type-portfolio h3,
-.portfolio-view .format-image h3 {
+.portfolio-view .hentry h3 {
 	font-family: 'Open Sans', sans-serif;
 	font-size:16px;
 	font-weight:bold;
 	position: absolute;
-	top: 30%;
+	top: 35%;
 	left: 0;
 	padding: 1em 5%;
 	width: 90%;
@@ -638,12 +637,21 @@ object {
 	display: none;
 	pointer-events: none;
 }
-.portfolio-view .type-portfolio h3 a,
-.portfolio-view .format-image h3 a {
+.portfolio-view .hentry h3 a {
 	color:#fff;
 }
-.portfolio-view .type-portfolio img,
-.portfolio-view .format-image img {
+.portfolio-view .portfolio-format-meta {
+	height:18px;
+	width:18px;
+	color:#fff;
+	position: absolute;
+	bottom:10px;
+	right:10px;
+	font-size:18px;
+	text-align: center;
+	display: none;
+}
+.portfolio-view .hentry img {
 	display:block;
 	max-width: 100%;
 	height: auto;
@@ -654,13 +662,12 @@ object {
 	transition: .opacity 3s ease-in-out;
 	-webkit-backface-visibility: hidden;
 }
-.portfolio-view .type-portfolio:hover h3,
-.portfolio-view .format-image:hover h3 {
+.portfolio-view .hentry:hover h3,
+.portfolio-view .hentry:hover .portfolio-format-meta {
 	display: block;
 	z-index:1;
 }
-.portfolio-view .type-portfolio .thumb:hover img,
-.portfolio-view .format-image .thumb:hover img {
+.portfolio-view .hentry .thumb:hover img {
 	opacity:.3;
 }
 .full-width-portfolio #content {
@@ -1010,7 +1017,7 @@ object {
 }
 #commentform textarea {
 	color:#666;
-	background: #fcfcfc;
+	background: #fefefe;
 	width: 95%;
 	padding: 5px 7px;
 }

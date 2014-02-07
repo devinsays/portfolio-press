@@ -16,37 +16,49 @@ $args = array(
 	'posts_per_page' => $posts_per_page,
 	'paged' => $paged
 );
-// Override the primary post loop
-query_posts( $args );
+$portfolio = new WP_Query( $args );
+$thumbnail = 'thumbnail-fullwidth';
 ?>
 
 	<div id="primary">
 		<div id="content" role="main">
 
-			<?php if ( have_posts() ) : ?>
+			<?php if ( $portfolio->have_posts() ) : ?>
 
 				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( $portfolio->have_posts() ) : $portfolio->the_post(); ?>
 
-
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', 'portfolio' );
-					?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<div class="entry-content">
+							<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
+							<?php if ( has_post_format() ) :
+								$format = get_post_format();
+							?>
+							<div class="portfolio-format-meta icon-format-<?php echo $format; ?>"></div>
+							<?php endif; ?>
+							<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
+								<?php if ( post_password_required() ) { ?>
+									<img src="<?php echo get_template_directory_uri() . '/images/protected-' . $thumbnail . '.gif'; ?>">
+								<?php }
+								elseif ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'portfolio-' . $thumbnail );
+								} else { ?>
+									<img src="<?php echo get_template_directory_uri() . '/images/placeholder-' . $thumbnail . '.gif'; ?>">
+								<?php } ?>
+							</a>
+						</div><!-- .entry-content -->
+					</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php endwhile; ?>
 
-				<?php portfoliopress_content_nav(); ?>
+				<?php portfoliopress_content_nav( $portfolio ); ?>
 
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 			<?php endif; ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
 
 <?php wp_reset_query(); ?>
 <?php get_footer(); ?>

@@ -10,7 +10,7 @@
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "portfolio-custom";
+  font-family: "PortfolioPressCustom";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -24,7 +24,8 @@
   text-transform: none;
 }
 
-.icon-picture:before { content: '\e800'; }
+.icon-format-image:before { content: '\e800'; }
+.icon-format-gallery:before  { content: '\e80f'; }
 .icon-lock:before { content: '\e803'; }
 .icon-left-open:before { content: '\e804'; }
 .icon-right-open:before { content: '\e805'; }

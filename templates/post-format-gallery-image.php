@@ -16,7 +16,7 @@ $args = array(
 		array(
 		    'taxonomy' => 'post_format',
 		    'field' => 'slug',
-		    'terms' => 'post-format-image',
+		    'terms' => array( 'post-format-image', 'post-format-gallery' ),
 		)
 	),
 	'posts_per_page' => $posts_per_page,

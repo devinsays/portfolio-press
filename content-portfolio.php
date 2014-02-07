@@ -20,11 +20,15 @@ $thumbnail = 'thumbnail';
 
 if ( $fullwidth )
 	$thumbnail = 'thumbnail-fullwidth';
-
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
+		<?php if ( has_post_format() ) :
+			$format = get_post_format();
+		?>
+		<div class="portfolio-format-meta icon-format-<?php echo $format; ?>"></div>
+		<?php endif; ?>
 		<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
 			<?php if ( post_password_required() ) { ?>
 				<img src="<?php echo get_template_directory_uri() . '/images/protected-' . $thumbnail . '.gif'; ?>">

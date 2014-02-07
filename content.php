@@ -27,7 +27,7 @@
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'portfoliopress' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-	
+
 	<?php portfoliopress_footer_meta( get_post_format() ); ?>
-	
+
 </article><!-- #post-<?php the_ID(); ?> -->
