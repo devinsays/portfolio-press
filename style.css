@@ -271,10 +271,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 .menu-toggle:before {
 	color: #fff;
-	content: "\f419";
+	content: "\e812";
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
-	font: normal 16px/1 Genericons;
+	font: normal 18px/1 PortfolioPressCustom;
 	text-decoration: inherit;
 	vertical-align: text-bottom;
 	margin-right:10px;
@@ -1123,9 +1123,6 @@ h3#pings {
 		position: relative;
 	}
 	.primary-navigation a {
-		display: inline-block;
-		white-space: nowrap;
-		display: block;
 		margin: 0 4px 15px;
 		padding: 5px 12px;
 	}

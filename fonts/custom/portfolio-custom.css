@@ -31,6 +31,7 @@
 .icon-format-video:before { content: '\e80e'; }
 .icon-format-standard:before { content: '\e810'; }
 
+.icon-menu:before { content: '\e812'; }
 .icon-lock:before { content: '\e803'; }
 .icon-left-open:before { content: '\e804'; }
 .icon-right-open:before { content: '\e805'; }

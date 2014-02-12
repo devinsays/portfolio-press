@@ -67,10 +67,28 @@
       "src": "entypo"
     },
     {
+      "uid": "2cfb3f2b46b34a1790aec0aa846297b6",
+      "css": "menu",
+      "code": 59410,
+      "src": "entypo"
+    },
+    {
       "uid": "815503841e980c848f55e0271deacead",
       "css": "link",
       "code": 59405,
       "src": "entypo"
+    },
+    {
+      "uid": "2c0b53280f82068f6bab4e2200025d9f",
+      "css": "chat",
+      "code": 59409,
+      "src": "entypo"
+    },
+    {
+      "uid": "6a06892e76b81e023da6ddfb38a26b37",
+      "css": "doc-text",
+      "code": 59408,
+      "src": "typicons"
     },
     {
       "uid": "661bd5ba1dad15ad9acbfcd8b8af76f3",
