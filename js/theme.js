@@ -1,35 +1,39 @@
 jQuery(document).ready(function ($) {
 
-	submenu_alignment = false;
+	var PortfolioPressJS = {
+		'nav' : $('#navigation'),
+		'menu' : $('#navigation .nav-menu'),
+		'submenu' : false
+	};
 
 	// Enable menu toggle for small screens
 	(function() {
-		var nav = $( '#navigation' ), button, menu;
-		if ( ! nav ) {
+		if ( ! PortfolioPressJS.nav ) {
 			return;
 		}
 
-		button = nav.find( '.menu-toggle' );
+		button = PortfolioPressJS.nav.find('.menu-toggle');
 		if ( ! button ) {
 			return;
 		}
 
 		// Hide button if menu is missing or empty.
-		menu = nav.find( '.nav-menu' );
-		if ( ! menu || ! menu.children().length ) {
+		if ( ! PortfolioPressJS.menu || ! PortfolioPressJS.menu.children().length ) {
 			button.hide();
 			return;
 		}
 
-		$( '.menu-toggle' ).on( 'click', function() {
-			nav.toggleClass( 'toggled-on' );
+		button.on( 'click', function() {
+			PortfolioPressJS.nav.toggleClass('toggled-on');
+			PortfolioPressJS.menu.slideToggle( '200' );
 		} );
 	})();
 
 	// Centers the submenus directly under the top menu
     function portfolio_desktop_submenus() {
-		if ( document.body.clientWidth > 780 && !submenu_alignment ) {
-			$(".primary-navigation li").each( function() {
+		if ( document.body.clientWidth > 780 && !PortfolioPressJS.submenu ) {
+			PortfolioPressJS.menu.attr('style','');
+			PortfolioPressJS.nav.find('li').each( function() {
 			    if ( $(this).find("ul").length > 0 ) {
 			        var parent_width = $(this).outerWidth( true );
 			        var child_width = $(this).find("ul").outerWidth( true );
@@ -37,16 +41,15 @@ jQuery(document).ready(function ($) {
 			        $(this).find("ul").css('margin-left', -new_width+"px");
 			    }
 			});
-			submenu_alignment = true;
+			PortfolioPressJS.submenu = true;
 		}
 	}
 
 	// Clears submenu alignment for the mobile menu
 	function portfolio_mobile_submenus() {
-		if ( document.body.clientWidth <= 780 && submenu_alignment ) {
-			nav = $( '#navigation' );
-			nav.find('ul').css('margin-left', '');
-			submenu_alignment = false;
+		if ( document.body.clientWidth <= 780 && PortfolioPressJS.submenu ) {
+			PortfolioPressJS.nav.find('ul').css('margin-left', '');
+			PortfolioPressJS.submenu = false;
 		}
 	}
 

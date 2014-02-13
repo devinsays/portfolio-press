@@ -17,6 +17,29 @@ function portfoliopress_template_chooser( $template ) {
 add_filter( 'template_include', 'portfoliopress_template_chooser' );
 
 /**
+ * Sets posts displayed per portfolio to 9
+ */
+function portfoliopress_portfolio_posts( $query ) {
+
+	if (
+		is_post_type_archive( 'portfolio' ) ||
+		is_page_template( 'templates/portfolio.php' ) ||
+		is_page_template( 'templates/full-width-portfolio.php' ) ||
+		is_page_template( 'templates/post-format-gallery-image.php' ) ||
+		is_tax( 'post_format', 'post-format-image' ) ||
+		is_tax( 'post_format', 'post-format-gallery' ) ||
+		is_tax( 'portfolio_category' ) ||
+		is_tax( 'portfolio_tag' )
+	) {
+		$posts_per_page = apply_filters( 'portfolioplus_posts_per_page', of_get_option('portfolio_num','9') );
+		$query->set( 'posts_per_page', $posts_per_page );
+	}
+
+}
+
+add_action( 'pre_get_posts', 'portfoliopress_portfolio_posts' );
+
+/**
  * Adds a body class to archives that display as a portfolio view
  */
 function portfoliopress_body_class( $classes ) {

@@ -224,7 +224,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .primary-navigation {
 	font-size: 14px;
 	clear:both;
-	padding-top:20px;
 }
 .primary-navigation ul {
 	list-style: none;
@@ -251,10 +250,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 .primary-navigation .nav-menu {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	padding-top:20px;
 	display: none;
-}
-.primary-navigation.toggled-on .nav-menu {
-	display: block;
 }
 
 /* Small Menu */
@@ -298,7 +295,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	padding:0 0 4%;
 	float:left;
 	position:relative;
-	width:65%;
+	width:70%;
 }
 
 /* Sidebar */
@@ -626,7 +623,6 @@ object {
 .portfolio-view .hentry {
 	position:relative;
 	width:32%;
-	background:#000;
 	float:left;
 	margin:0 2% 2% 0;
 	overflow: hidden;
@@ -663,7 +659,7 @@ object {
 }
 .portfolio-view .hentry img {
 	display:block;
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 	opacity: 1;
 	-webkit-filter: none;
@@ -671,6 +667,9 @@ object {
 	-moz-transition: opacity .3s ease-in-out;
 	transition: .opacity 3s ease-in-out;
 	-webkit-backface-visibility: hidden;
+}
+.portfolio-view .hentry:hover {
+	background:#000;
 }
 .portfolio-view .hentry:hover h3,
 .portfolio-view .hentry:hover .portfolio-format-meta {
@@ -1022,7 +1021,7 @@ object {
 }
 #commentform textarea {
 	color:#666;
-	background: #fefefe;
+	background: #fff;
 	width: 95%;
 	padding: 5px 7px;
 }
@@ -1113,6 +1112,7 @@ h3#pings {
 		padding: 0;
 	}
 	.primary-navigation .nav-menu {
+		padding-top:0;
 		border-bottom: 0;
 		display: block;
 		clear:both;
@@ -1210,7 +1210,7 @@ h3#pings {
 		padding:0;
 		margin-bottom:40px;
 	}
-	.portfolio-view .type-portfolio {
+	.portfolio-view .hentry {
 		-webkit-transition-duration: 0.6s;
      	-moz-transition-duration: 0.6s;
       	-ms-transition-duration: 0.6s;
@@ -1225,11 +1225,15 @@ h3#pings {
 		width:46%;
 		margin-right:4%;
 	}
-	.portfolio-view .type-portfolio:nth-of-type(3n) {
-		margin-right:0%;
+	.portfolio-view .hentry:nth-of-type(odd) {
+		clear:both;
 	}
-	.portfolio-view .type-portfolio:nth-of-type(2n) {
+	.portfolio-view .hentry:nth-of-type(3n) {
 		margin-right:4%;
+	}
+	.portfolio-view .hentry:nth-of-type(2n) {
+		float:right;
+		margin-right:0;
 	}
 	#sidebar {
 		clear:both;
@@ -1245,14 +1249,15 @@ h3#pings {
 	}
 }
 
-@media (max-width: 480px) {
-	.portfolio-view .type-portfolio {
+@media (max-width: 380px) {
+	.portfolio-view .hentry {
 		float:none;
 		min-width:46%;
 		width:auto;
 		margin:0 0 20px;
 	}
-	.portfolio-view .type-portfolio(1n) {
+	.portfolio-view .hentry:nth-of-type(1n) {
+		float:none;
 		margin-right:0;
 	}
 }
