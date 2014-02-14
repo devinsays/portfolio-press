@@ -35,38 +35,71 @@ function portfoliopress_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'portfoliopress_wp_title', 10, 2 );
 
+
 /**
- * Displays a notice letting the user know that portfolio post type functionality
- * will be moving into a plugin.  They can upgrade now, or wait one more
- * version before this code is removed.
+ * Upgrade routine for Portfolio Press.
+ * Sets $options['upgrade'] to true if user is updating
  */
+function portfoliopress_upgrade_routine() {
 
-if ( ! class_exists( 'Portfolio_Post_Type' ) && current_user_can( 'install_plugins' ) ) {
+	$options = get_option( 'portfoliopress', false );
 
-	/* Display a notice that can be dismissed */
+	// If version is set, upgrade routine has already run
+	if ( !empty( $options['version'] ) ) {
+		return;
+	}
 
-	add_action( 'admin_notices', 'portfoliopress_install_plugin_notice' );
+	// If $options exist, user is upgrading
+	if ( $options ) {
+		$options['upgrade'] = true;
+	}
 
-	function portfoliopress_install_plugin_notice() {
-		global $current_user ;
-		$user_id = $current_user->ID;
-		/* Check that the user hasn't already clicked to ignore the message */
-		if ( ! get_user_meta( $user_id, 'portfolio_ignore_notice' ) ) {
-			add_thickbox();
+	// If 'portfolio_ignore_notice' exists, user is upgrading
+	// We'll also delete that data since it's no longer used
+	global $current_user;
+	if ( get_user_meta( $current_user->ID, 'portfolio_ignore_notice' ) ) {
+		$options['upgrade'] = true;
+		delete_user_meta( $current_user->ID, 'portfolio_ignore_notice' );
+	}
+
+	// New version number
+	$options['version'] = '2.0';
+
+	update_option( 'portfoliopress', $options );
+}
+
+
+add_action( 'admin_init', 'portfoliopress_upgrade_routine' );
+
+/**
+ * Displays notice if user has upgraded theme
+ */
+function portfoliopress_upgrade_notice() {
+
+	if ( current_user_can( 'edit_theme_options' ) ) {
+
+		$options = get_option( 'portfoliopress', false );
+
+		if ( !empty( $options['upgrade'] ) ) {
 			echo '<div class="updated"><p>';
-			printf( __( 'If you wish to use custom post types for portfolios, please install the Portfolio Post Type Plugin.  <a href="%1$s" class="thickbox onclick">Install Now</a> | <a href="%2$s">Hide Notice</a>' ), admin_url() . 'plugin-install.php?tab=plugin-information&plugin=portfolio-post-type&TB_iframe=true&width=640&height=517', '?portfolio_ignore_notice=1' );
+				printf( __( 'Thanks for updating Portfolio Press.  Please read <b><a href="%1$s">about the significant changes</a></b> in this version. <b><a href="%2$s">Dismiss this Notice</a></b>.' ), 'http://wptheming.com', '?portfolio_upgrade_notice_ignore=1' );
 			echo '</p></div>';
 		}
-	}
 
-	add_action( 'admin_init', 'portfoliopress_post_plugin_ignore' );
-
-	function portfoliopress_post_plugin_ignore() {
-		global $current_user;
-		$user_id = $current_user->ID;
-		/* If user clicks to ignore the notice, add that to their user meta */
-		if ( isset( $_GET['portfolio_ignore_notice'] ) && '1' == $_GET['portfolio_ignore_notice'] ) {
-			add_user_meta( $user_id, 'portfolio_ignore_notice', 'true', true );
-		}
 	}
 }
+
+add_action( 'admin_notices', 'portfoliopress_upgrade_notice', 100 );
+
+/**
+ * Hides update notice if user chooses to dismiss it
+ */
+function portfoliopress_upgrade_notice_ignore() {
+	if ( isset( $_GET['portfolio_upgrade_notice_ignore'] ) && '1' == $_GET['portfolio_upgrade_notice_ignore'] ) {
+		$options = get_option( 'portfoliopress' );
+		$options['upgrade'] = false;
+		update_option( 'portfoliopress', $options );
+	}
+}
+
+add_action( 'admin_init', 'portfoliopress_upgrade_notice_ignore' );

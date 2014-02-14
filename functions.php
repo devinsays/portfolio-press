@@ -155,3 +155,8 @@ require_once( TEMPLATEPATH . '/extensions/portfolio-helpers.php' );
  * Custom functions that act independently of the theme templates.
  */
 require_once( TEMPLATEPATH . '/extensions/extras.php' );
+
+/**
+ * Displays notices for recommended plugins
+ */
+require_once( TEMPLATEPATH . '/extensions/recommended-plugins.php' );
