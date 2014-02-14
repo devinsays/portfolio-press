@@ -7,9 +7,9 @@
  * Helper function to get options set by the Options Framework plugin
  */
 if ( !function_exists( 'of_get_option' ) ) :
-function of_get_option($name, $default = false) {
+function of_get_option( $name, $default = false ) {
 
-	$optionsframework_settings = get_option('optionsframework');
+	$optionsframework_settings = get_option( 'optionsframework' );
 
 	// Gets the unique option id
 	$option_name = $optionsframework_settings['id'];
@@ -27,41 +27,6 @@ function of_get_option($name, $default = false) {
 endif;
 
 /**
- * Adds a page to the appearance section to let users know about theme options
- */
-if ( !function_exists( 'optionsframework_init' ) && current_user_can( 'edit_theme_options' ) ) {
-	function portfolio_options_default() {
-		add_theme_page(__('Theme Options','portfoliopress'), __('Theme Options','portfoliopress'), 'edit_theme_options', 'options-framework','optionsframework_page_notice');
-	}
-	add_action('admin_menu', 'portfolio_options_default');
-}
-
-/**
- * Output of the page informing users about theme options
- */
-if ( !function_exists( 'optionsframework_page_notice' ) ) {
-	function optionsframework_page_notice() { ?>
-
-		<div class="wrap">
-		<?php screen_icon( 'themes' ); ?>
-		<h2><?php _e('Theme Options','portfoliopress'); ?></h2>
-        <p><b><?php printf( __( 'If you would like to use the Portfolio Press theme options, please install the %s plugin.', 'portfoliopress' ), '<a href="http://wordpress.org/extend/plugins/options-framework/">Options Framework</a>' ); ?></b></p>
-        <p><?php _e('Once the plugin is activated you will have option to:','portfoliopress'); ?></p>
-        <ul class="ul-disc">
-        <li><?php _e('Upload a logo image','portfoliopress'); ?></li>
-        <li><?php _e('Change the sidebar position','portfoliopress'); ?></li>
-        <li><?php _e('Change the menu position','portfoliopress'); ?></li>
-        <li><?php _e('Hide the portfolio image on the single post','portfoliopress'); ?></li>
-        <li><?php _e('Update the footer text','portfoliopress'); ?></li>
-        </ul>
-
-        <p><?php _e('If you don\'t need these options, the plugin is not required and default settings will be used.','portfoliopress'); ?></p>
-		</div>
-	<?php
-	}
-}
-
-/**
  * Additional content to display after the options panel
  */
 function portfoliopress_panel_info() { ?>
@@ -69,7 +34,7 @@ function portfoliopress_panel_info() { ?>
     <?php printf(
     	'Theme <a href="%s">documentation</a>.  For additional options, see <a href="%s">Portfolio+</a>.',
     	esc_url( 'http://wptheming.com/portfolio-theme' ),
-    	esc_url( 'http://wptheming.com/portfolio-plus/' )
+    	esc_url( 'http://wptheming.com/portfolio-plus' )
     );
     ?>
     </p>
@@ -80,12 +45,19 @@ add_action( 'optionsframework_after', 'portfoliopress_panel_info', 100 );
 /**
  * Adds a body class to indicate sidebar position
  */
-function portfolio_layout_class( $classes ) {
-	// Body class for the layout options
+function portfoliopress_body_class_options( $classes ) {
+
+	// Layout options
 	$classes[] = of_get_option( 'layout','layout-2cr' );
+
+	// Clear the menu if selected
+	if ( of_get_option( 'menu_position', false ) == 'clear' ) {
+		$classes[] = 'clear-menu';
+	}
+
 	return $classes;
 }
-add_filter('body_class','portfolio_layout_class');
+add_filter( 'body_class', 'portfoliopress_body_class_options' );
 
 /**
  * Favicon Option
@@ -96,7 +68,7 @@ function portfolio_favicon() {
         echo '<link rel="shortcut icon" href="'.  $favicon  .'"/>'."\n";
     }
 }
-add_action('wp_head', 'portfolio_favicon');
+add_action( 'wp_head', 'portfolio_favicon' );
 
 /**
  * Menu Position Option
@@ -105,12 +77,7 @@ function portfolio_head_css() {
 
 		$output = '';
 
-		if ( of_get_option( 'menu_position' ) == "clear") {
-			$output .= "#navigation {clear:both; float:none; margin-left:-10px;}\n";
-			$output .= "#navigation ul li {margin-left:0; margin-right:10px;}\n";
-		}
-
-		if ( of_get_option('header_color') != "#000000") {
+		if ( of_get_option( 'header_color' ) != "#000000") {
 			$output .= "#branding {background:" . of_get_option('header_color') . "}\n";
 		}
 
@@ -121,7 +88,7 @@ function portfolio_head_css() {
 		}
 }
 
-add_action('wp_head', 'portfolio_head_css');
+add_action( 'wp_head', 'portfolio_head_css' );
 
 /**
  * Front End Customizer

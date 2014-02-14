@@ -63,7 +63,7 @@ function portfoliopress_upgrade_routine() {
 	}
 
 	// New version number
-	$options['version'] = '2.0';
+	$options['version'] = '1.9';
 
 	update_option( 'portfoliopress', $options );
 }
@@ -82,7 +82,10 @@ function portfoliopress_upgrade_notice() {
 
 		if ( !empty( $options['upgrade'] ) ) {
 			echo '<div class="updated"><p>';
-				printf( __( 'Thanks for updating Portfolio Press.  Please read <b><a href="%1$s">about the significant changes</a></b> in this version. <b><a href="%2$s">Dismiss this Notice</a></b>.' ), 'http://wptheming.com', '?portfolio_upgrade_notice_ignore=1' );
+				printf( __(
+					'Thanks for updating Portfolio Press to version 1.9.  Please <b><a href="%1$s">read about the changes</a></b> in this version. <b><a href="%2$s">Dismiss this Notice</a></b>.' ),
+					'http://wptheming.com',
+					'?portfolio_upgrade_notice_ignore=1' );
 			echo '</p></div>';
 		}
 

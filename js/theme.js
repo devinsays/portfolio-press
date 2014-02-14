@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 	var PortfolioPressJS = {
 		'nav' : $('#navigation'),
 		'menu' : $('#navigation .nav-menu'),
-		'submenu' : false
+		'submenu' : false,
 	};
 
 	// Enable menu toggle for small screens
@@ -28,6 +28,11 @@ jQuery(document).ready(function ($) {
 			PortfolioPressJS.menu.slideToggle( '200' );
 		} );
 	})();
+
+	// If the site title and menu don't fit on the same line, clear the menu
+	if ( $('#branding .col-width').width() < ( $('#logo').width() + PortfolioPressJS.nav.width() ) ) {
+		$('body').addClass('clear-menu');
+	}
 
 	// Centers the submenus directly under the top menu
     function portfolio_desktop_submenus() {

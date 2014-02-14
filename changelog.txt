@@ -2,6 +2,9 @@ Portfolio Press 1.9.0
 
 - New menu styling
 - Portfolio templates and styles rebuilt
+- Support post formats in portfolio layout
+- Icon font
+- Single column is now 980px
 
 Portfolio Press 1.8.0
 
