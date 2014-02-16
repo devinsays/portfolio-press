@@ -5,6 +5,7 @@ Portfolio Press 1.9.0
 - Support post formats in portfolio layout
 - Icon font
 - Single column is now 980px
+- Support Jetpack Carousel Module
 
 Portfolio Press 1.8.0
 

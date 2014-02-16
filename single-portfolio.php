@@ -24,7 +24,7 @@ get_header(); ?>
 				<div class="entry-content">
 
 					<?php if ( !post_password_required() ) :
-	                	if ( has_post_thumbnail() && of_get_option( 'portfolio_images', "1" ) ) {
+	                	if ( has_post_thumbnail() && of_get_option( 'portfolio_images', '1' ) ) {
 		                	if ( of_get_option( 'layout') == 'layout-1col' ) {
 			                	the_post_thumbnail( 'portfolio-fullwidth' );
 		                	} else {

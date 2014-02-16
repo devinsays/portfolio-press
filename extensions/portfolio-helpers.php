@@ -31,12 +31,11 @@ function portfoliopress_portfolio_posts( $query ) {
 		is_tax( 'portfolio_category' ) ||
 		is_tax( 'portfolio_tag' )
 	) {
-		$posts_per_page = apply_filters( 'portfolioplus_posts_per_page', of_get_option('portfolio_num','9') );
+		$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', of_get_option('portfolio_num','9') );
 		$query->set( 'posts_per_page', $posts_per_page );
 	}
 
 }
-
 add_action( 'pre_get_posts', 'portfoliopress_portfolio_posts' );
 
 /**

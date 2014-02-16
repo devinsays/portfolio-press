@@ -199,6 +199,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	float:left;
 	max-width: 100%;
 	line-height:1;
+	padding-right:75px;
+	word-wrap: break-word;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 #logo #site-title {
 	font-family: 'Rokkitt', sans-serif;

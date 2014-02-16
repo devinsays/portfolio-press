@@ -23,11 +23,11 @@ get_header(); ?>
 					<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-<?php the_ID(); ?> -->
-            
+
             <?php if ( comments_open() ) {
             	comments_template( '', true );
 			} ?>
-			
+
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
