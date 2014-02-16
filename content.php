@@ -15,20 +15,25 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<?php if ( is_archive() || is_search() ) : // Only display Excerpts for archives & search ?>
+	<?php // Display excerpts for archives and search ?>
+	<?php if ( is_archive() || is_search() ) :?>
 	<div class="entry-summary">
 		<?php if ( has_post_thumbnail() && !post_password_required() ) { ?>
-			<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb"><?php the_post_thumbnail( 'portfolio-large' ); ?></a>
+			<div class="portfolio-image">
+				<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'portfolio-large' ); ?></a>
+			</div>
 			<?php } ?>
 		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
+
+	<?php // Otherwise show full content ?>
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'portfoliopress' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<?php portfoliopress_footer_meta( get_post_format() ); ?>
+	<?php portfoliopress_footer_meta( $post, get_post_format() ); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

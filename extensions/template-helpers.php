@@ -24,13 +24,32 @@ endif;
  * Displays footer text
  */
 if ( ! function_exists( 'portfoliopress_footer_meta' ) ):
-function portfoliopress_footer_meta( $format ) {
-	if ( ! $format ) {
+function portfoliopress_footer_meta( $post, $format ) {
+
+	if ( !$format )
 		$format = 'standard';
-	}
-	?>
+	$post_type = $post->post_type ?>
 
 	<footer class="entry-meta">
+
+	<?php if ( 'portfolio' == $post_type ) {
+
+		$cat_list = get_the_term_list( $post->ID, 'portfolio_category', '', ', ', '' );
+		$tag_list = get_the_term_list( $post->ID, 'portfolio_tag', '', ', ', '' );
+		$utility_text = '';
+		if ( ( $cat_list ) && ( '' ==  $tag_list ) )
+			$utility_text = __( 'This entry was posted in %1$s.', 'portfoliopress' );
+		if ( ( '' != $tag_list ) && ( '' ==  $cat_list ) )
+			$utility_text = __( 'This entry was tagged %2$s.', 'portfoliopress' );
+		if ( ( '' != $cat_list ) && ( '' !=  $tag_list ) )
+			$utility_text = __( 'This entry was posted in %1$s and tagged %2$s.', 'portfoliopress' );
+		printf(
+			$utility_text,
+			$cat_list,
+			$tag_list
+		);
+
+	} else { ?>
 
 		<span class="entry-meta-icon icon-format-<?php echo $format ?>"></span>
 
@@ -42,8 +61,11 @@ function portfoliopress_footer_meta( $format ) {
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'portfoliopress' ), __( '1 Comment', 'portfoliopress' ), __( '% Comments', 'portfoliopress' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-	</footer><!-- #entry-meta -->
+	<?php } ?>
+
+	<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+
+	</footer><!-- .entry-meta -->
 
 <?php }
 endif;

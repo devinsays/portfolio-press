@@ -24,12 +24,15 @@ get_header(); ?>
 				<div class="entry-content">
 
 					<?php if ( !post_password_required() ) :
-	                	if ( has_post_thumbnail() && of_get_option( 'portfolio_images', '1' ) ) {
-		                	if ( of_get_option( 'layout') == 'layout-1col' ) {
+	                	if ( has_post_thumbnail() && of_get_option( 'portfolio_images', '1' ) ) { ?>
+	                		<div class="portfolio-image">
+		                	<?php if ( of_get_option( 'layout') == 'layout-1col' ) {
 			                	the_post_thumbnail( 'portfolio-fullwidth' );
 		                	} else {
 			                	the_post_thumbnail( 'portfolio-large' );
-		                	}
+		                	} ?>
+	                		</div>
+	                		<?php
 						}
 					endif;
 					?>
@@ -38,26 +41,8 @@ get_header(); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'portfoliopress' ), 'after' => '</div>' ) ); ?>
 				</div><!-- .entry-content -->
 
-				<footer class="entry-meta">
-					<?php
-						$cat_list = get_the_term_list( $post->ID, 'portfolio_category', '', ', ', '' );
-						$tag_list = get_the_term_list( $post->ID, 'portfolio_tag', '', ', ', '' );
-						$utility_text = '';
-						if ( ( $cat_list ) && ( '' ==  $tag_list ) )
-							$utility_text = __( 'This entry was posted in %1$s.', 'portfoliopress' );
-						if ( ( '' != $tag_list ) && ( '' ==  $cat_list ) )
-							$utility_text = __( 'This entry was tagged %2$s.', 'portfoliopress' );
-						if ( ( '' != $cat_list ) && ( '' !=  $tag_list ) )
-							$utility_text = __( 'This entry was posted in %1$s and tagged %2$s.', 'portfoliopress' );
-						printf(
-							$utility_text,
-							$cat_list,
-							$tag_list
-						);
-					?>
+				<?php portfoliopress_footer_meta( $post ); ?>
 
-					<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="edit-link">', '</span>' ); ?>
-				</footer><!-- .entry-meta -->
 			</article><!-- #post-<?php the_ID(); ?> -->
 
 			<nav id="nav-below">

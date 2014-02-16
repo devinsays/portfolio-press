@@ -689,6 +689,10 @@ object {
 	width:auto;
 	float:none;
 }
+.portfolio-image {
+	display: block;
+	margin-bottom:15px;
+}
 
 /* =Pagination
 ----------------------------------------------- */
@@ -845,10 +849,6 @@ object {
 .widget-container input.submit {
 	margin-left:5px;
 	float:left;
-}
-.search-results .thumb {
-	display: block;
-	margin-bottom:15px;
 }
 
 /* =Comments
