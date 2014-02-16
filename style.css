@@ -623,7 +623,8 @@ object {
 	max-width: 100%;
 }
 
-/* Portfolio Posts */
+/* =Portfolio
+----------------------------------------------- */
 
 .portfolio-view .hentry {
 	position:relative;
@@ -689,7 +690,8 @@ object {
 	float:none;
 }
 
-/* Pagination / WP-Pagenavi */
+/* =Pagination
+----------------------------------------------- */
 
 /* If you're using PageNavi you should turn the css in its settings page */
 
@@ -768,7 +770,8 @@ object {
 	text-align: left;
 }
 
-/* Widgets */
+/* =Widgets
+----------------------------------------------- */
 
 .widget-container {
 	margin: 0 0 30px 0;
@@ -836,14 +839,20 @@ object {
 	padding:3px 0;
 }
 
-/* Search */
+/* =Search
+----------------------------------------------- */
 
 .widget-container input.submit {
 	margin-left:5px;
 	float:left;
 }
+.search-results .thumb {
+	display: block;
+	margin-bottom:15px;
+}
 
-/* Comments */
+/* =Comments
+----------------------------------------------- */
 
 #comments {
 	position:relative;
