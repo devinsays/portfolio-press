@@ -34,6 +34,6 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<?php portfoliopress_footer_meta( $post, get_post_format() ); ?>
+	<?php portfoliopress_footer_meta( $post ); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -24,11 +24,12 @@ endif;
  * Displays footer text
  */
 if ( ! function_exists( 'portfoliopress_footer_meta' ) ):
-function portfoliopress_footer_meta( $post, $format ) {
+function portfoliopress_footer_meta( $post ) {
 
-	if ( !$format )
-		$format = 'standard';
-	$post_type = $post->post_type ?>
+	$post_type = $post->post_type;
+	if ( ( 'portfolio' != $post_type ) && ( 'page' !=  $post_type ) )
+		return;
+	?>
 
 	<footer class="entry-meta">
 
@@ -49,7 +50,13 @@ function portfoliopress_footer_meta( $post, $format ) {
 			$tag_list
 		);
 
-	} else { ?>
+	} else {
+
+		$format = get_post_format( $post );
+		if ( false === $format ) {
+			$format = 'standard';
+		}
+		?>
 
 		<span class="entry-meta-icon icon-format-<?php echo $format ?>"></span>
 
