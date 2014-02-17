@@ -18,17 +18,14 @@
 	<?php // Display excerpts for archives and search ?>
 	<?php if ( is_archive() || is_search() ) :?>
 	<div class="entry-summary">
-		<?php if ( has_post_thumbnail() && !post_password_required() ) { ?>
-			<div class="portfolio-image">
-				<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'portfolio-large' ); ?></a>
-			</div>
-			<?php } ?>
+		<?php portfoliopress_display_image(); ?>
 		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 
 	<?php // Otherwise show full content ?>
 	<div class="entry-content">
+		<?php portfoliopress_display_image(); ?>
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'portfoliopress' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->

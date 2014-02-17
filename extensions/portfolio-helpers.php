@@ -68,3 +68,25 @@ function portfoliopress_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class','portfoliopress_body_class' );
+
+/**
+ * Helper function for displaying image
+ */
+function portfoliopress_display_image() {
+
+	if (
+		!post_password_required() &&
+		has_post_thumbnail() &&
+		of_get_option( 'portfolio_images', '1' )
+	) :
+	if ( ( 'image' == get_post_format() ) || 'portfolio' == get_post_type() ) { ?>
+	<div class="portfolio-image">
+		<?php if ( of_get_option( 'layout') == 'layout-1col' ) {
+			the_post_thumbnail( 'portfolio-fullwidth' );
+		} else {
+			the_post_thumbnail( 'portfolio-large' );
+		} ?>
+	</div>
+	<?php  }
+	endif;
+}

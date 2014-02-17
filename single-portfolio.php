@@ -22,21 +22,7 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-
-					<?php if ( !post_password_required() ) :
-	                	if ( has_post_thumbnail() && of_get_option( 'portfolio_images', '1' ) ) { ?>
-	                		<div class="portfolio-image">
-		                	<?php if ( of_get_option( 'layout') == 'layout-1col' ) {
-			                	the_post_thumbnail( 'portfolio-fullwidth' );
-		                	} else {
-			                	the_post_thumbnail( 'portfolio-large' );
-		                	} ?>
-	                		</div>
-	                		<?php
-						}
-					endif;
-					?>
-
+					<?php portfoliopress_display_image(); ?>
 					<?php the_content(); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'portfoliopress' ), 'after' => '</div>' ) ); ?>
 				</div><!-- .entry-content -->
@@ -48,7 +34,7 @@ get_header(); ?>
 			<nav id="nav-below">
 				<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>
 				<div class="nav-previous"><?php previous_post_link( '%link', '%title <span class="meta-nav">' . _e( '&rarr;', 'Previous post link', 'portfoliopress' ) . '</span>' ); ?></div>
-				<div class="nav-next"><?php next_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Next post link', 'portfoliopress' ) . '</span> %title' ); ?></div>
+				<div class="nav-next"><?php next_post_link( '%link', '<span class="meta-nav">' . _e( '&larr;', 'Next post link', 'portfoliopress' ) . '</span> %title' ); ?></div>
 			</nav><!-- #nav-below -->
 
 			<?php if ( comments_open() ) {

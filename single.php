@@ -22,29 +22,13 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
+						<?php portfoliopress_display_image(); ?>
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'portfoliopress' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-content -->
 
-					<footer class="entry-meta">
-						<?php
-							$tag_list = get_the_tag_list( '', ', ' );
-							if ( '' != $tag_list ) {
-								$utility_text = __( 'This entry was posted in %1$s and tagged %2$s.', 'portfoliopress' );
-							} else {
-								$utility_text = __( 'This entry was posted in %1$s.', 'portfoliopress' );
-							}
-							printf(
-								$utility_text,
-								get_the_category_list( ', ' ),
-								$tag_list,
-								get_permalink(),
-								the_title_attribute( 'echo=0' )
-							);
-						?>
+					<?php portfoliopress_footer_meta( $post ); ?>
 
-						<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="edit-link">', '</span>' ); ?>
-					</footer><!-- .entry-meta -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php if ( comments_open() ) {

@@ -767,11 +767,9 @@ object {
 
 .single-portfolio #content nav .nav-previous {
 	float: right;
-	text-align: right;
 }
 .single-portfolio #content nav .nav-next {
 	float: left;
-	text-align: left;
 }
 
 /* =Widgets
