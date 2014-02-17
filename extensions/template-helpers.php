@@ -27,7 +27,7 @@ if ( ! function_exists( 'portfoliopress_footer_meta' ) ):
 function portfoliopress_footer_meta( $post ) {
 
 	$post_type = $post->post_type;
-	if ( ( 'portfolio' != $post_type ) && ( 'page' !=  $post_type ) )
+	if ( !in_array( $post_type, array( 'post', 'portfolio' ) ) )
 		return;
 	?>
 
