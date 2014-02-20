@@ -28,7 +28,7 @@
     	<div class="col-width">
         <?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 			<hgroup id="logo">
-				<<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				<<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>" rel="home">
                 <?php if ( of_get_option( 'logo', false) ) { ?>
 					<img src="<?php echo of_get_option( 'logo' ); ?>" alt="<?php echo bloginfo( 'name' ) ?>" />
 				<?php } else {
