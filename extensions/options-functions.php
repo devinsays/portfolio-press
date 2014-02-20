@@ -159,14 +159,14 @@ function portfoliopress_customize_register( $wp_customize ) {
 		'priority' => 105,
 	) );
 
-	$wp_customize->add_setting( 'portfoliopress[header_color][color]', array(
+	$wp_customize->add_setting( 'portfoliopress[header_color]', array(
 		'default' => '#000000',
 		'type' => 'option'
 	) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_bg_color', array(
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_color', array(
 		'label' => __( 'Background Color', 'portfoliopress' ),
 		'section' => 'portfoliopress_header_styles',
-		'settings'   => 'portfoliopress[header_color]'
+		'settings' => 'portfoliopress[header_color]'
 	) ) );
 }
