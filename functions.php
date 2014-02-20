@@ -64,6 +64,9 @@ add_action( 'after_setup_theme', 'portfoliopress_setup' );
  */
 function portfoliopress_scripts() {
 	wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+    	wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'portfoliopress_scripts' );
 
