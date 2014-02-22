@@ -29,11 +29,6 @@ jQuery(document).ready(function ($) {
 		} );
 	})();
 
-	// If the site title and menu don't fit on the same line, clear the menu
-	if ( $('#branding .col-width').width() < ( $('#logo').width() + PortfolioPressJS.nav.width() ) ) {
-		$('body').addClass('clear-menu');
-	}
-
 	// Centers the submenus directly under the top menu
     function portfolio_desktop_submenus() {
 		if ( document.body.clientWidth > 780 && !PortfolioPressJS.submenu ) {
@@ -59,12 +54,35 @@ jQuery(document).ready(function ($) {
 		}
 	}
 
+	// Fired by the resize event
+	function menu_alignment() {
+		console.log('fires');
+		portfolio_desktop_submenus();
+		portfolio_mobile_submenus();
+	}
+
+	// Debounce function
+	// http://remysharp.com/2010/07/21/throttling-function-calls/
+	function debounce(fn, delay) {
+		var timer = null;
+			return function () {
+			var context = this, args = arguments;
+			clearTimeout(timer);
+			timer = setTimeout(function () {
+			  fn.apply(context, args);
+			}, delay);
+		};
+	}
+
+	// If the site title and menu don't fit on the same line, clear the menu
+	if ( $('#branding .col-width').width() < ( $('#logo').width() + PortfolioPressJS.nav.width() ) ) {
+		$('body').addClass('clear-menu');
+	}
+
 	// Menu Alignment
     portfolio_desktop_submenus();
 
-    $(window).on('resize', function(){
-		portfolio_desktop_submenus();
-		portfolio_mobile_submenus();
-	});
+    // Recheck menu alignment on resize
+    $(window).on( 'resize', debounce( menu_alignment, 100) );
 
 });
