@@ -39,11 +39,12 @@ jQuery(document).ready(function ($) {
 		if ( document.body.clientWidth > 780 && !PortfolioPressJS.submenu ) {
 			PortfolioPressJS.menu.attr('style','');
 			PortfolioPressJS.nav.find('li').each( function() {
-			    if ( $(this).find("ul").length > 0 ) {
+				var ul = $(this).find("ul");
+			    if ( ul.length > 0 ) {
 			        var parent_width = $(this).outerWidth( true );
-			        var child_width = $(this).find("ul").outerWidth( true );
+			        var child_width = ul.outerWidth( true );
 			        var new_width = parseInt((child_width - parent_width)/2);
-			        $(this).find("ul").css('margin-left', -new_width+"px");
+			        ul.css('margin-left', -new_width+"px");
 			    }
 			});
 			PortfolioPressJS.submenu = true;
