@@ -58,7 +58,7 @@ function portfoliopress_footer_meta( $post ) {
 		}
 		?>
 
-		<span class="entry-meta-icon icon-format-<?php echo $format ?>"></span>
+		<span class="entry-meta-icon icon-format-<?php echo esc_attr( $format ); ?>"></span>
 
 		<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'portfoliopress' ); ?></span><?php the_category( ', ' ); ?></span>
 		<?php the_tags( '<span class="meta-sep"> | </span><span class="tag-links">' . __( 'Tagged ', 'portfoliopress' ) . '</span>', ', ', '' ); ?>
