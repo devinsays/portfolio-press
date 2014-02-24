@@ -21,7 +21,12 @@
 	<?php if ( is_archive() || is_search() ) :?>
 	<div class="entry-summary">
 		<?php portfoliopress_display_image(); ?>
-		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?>
+		<?php $excerpt = get_the_excerpt(); ?>
+		<?php if ( ( !$excerpt ) && !has_post_thumbnail() ) {
+			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) );
+		} else {
+			echo '<p>' . $excerpt . '</p>';
+		} ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 

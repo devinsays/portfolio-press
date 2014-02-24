@@ -89,11 +89,17 @@ function portfoliopress_display_image() {
 	) :
 	if ( ( 'image' == get_post_format() ) || 'portfolio' == get_post_type() ) { ?>
 	<div class="portfolio-image">
+		<?php if ( is_search() || is_archive() ) { ?>
+			<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
+		<?php } ?>
 		<?php if ( of_get_option( 'layout') == 'layout-1col' ) {
 			the_post_thumbnail( 'portfolio-fullwidth' );
 		} else {
 			the_post_thumbnail( 'portfolio-large' );
 		} ?>
+		<?php if ( is_search() || is_archive() ) { ?>
+			</a>
+		<?php } ?>
 	</div>
 	<?php  }
 	endif;
