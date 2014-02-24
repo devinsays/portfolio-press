@@ -52,19 +52,13 @@ function optionsframework_options() {
 		"type" => "upload"
 	);
 
+	if ( class_exists( 'Portfolio_Post_Type' ) ) :
+
 	$options[] = array(
 		"name" => __( 'Display Images on Portfolio Posts', 'portfoliopress' ),
 		"desc" => __( 'Uncheck this if you wish to manually display portfolio images on single posts.', 'portfoliopress' ),
 		"id" => "portfolio_images",
 		"std" => "1",
-		"type" => "checkbox"
-	);
-
-	$options[] = array(
-		"name" => __( 'Hide Image and Gallery Formats on Posts Page', 'portfoliopress' ),
-		"desc" => __( 'Check this to remove image and gallery posts from your standard posts page.' ),
-		"id" => "display_image_gallery_post_formats",
-		"std" => "0",
 		"type" => "checkbox"
 	);
 
@@ -75,6 +69,36 @@ function optionsframework_options() {
 		"std" => "0",
 		"type" => "checkbox"
 	);
+
+	endif;
+
+	if ( !class_exists( 'Portfolio_Post_Type' ) ) :
+
+	$options[] = array(
+		"name" => __( 'Hide Image and Gallery Formats on Posts Page', 'portfoliopress' ),
+		"desc" => __( 'Check this to remove image and gallery posts from your standard posts page.' ),
+		"id" => "display_image_gallery_post_formats",
+		"std" => "0",
+		"type" => "checkbox"
+	);
+
+	$options[] = array(
+		"name" => __( 'Display Images Automatically on Image Post Formats', 'portfoliopress' ),
+		"desc" => __( 'Uncheck this if you wish to manually control images on image format posts.', 'portfoliopress' ),
+		"id" => "portfolio_images",
+		"std" => "1",
+		"type" => "checkbox"
+	);
+
+	$options[] = array(
+		"name" => __( 'Display Image and Gallery Post Format Archives Full Width', 'portfoliopress' ),
+		"desc" => __( 'Check this to display all image/gallery archives full width.', 'portfoliopress' ),
+		"id" => "portfolio_sidebar",
+		"std" => "0",
+		"type" => "checkbox"
+	);
+
+	endif;
 
 	/* Style and Layout */
 
