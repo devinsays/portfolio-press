@@ -169,4 +169,24 @@ function portfoliopress_customize_register( $wp_customize ) {
 		'section' => 'portfoliopress_header_styles',
 		'settings' => 'portfoliopress[header_color]'
 	) ) );
+
+	/* PostMessage Support */
+	$wp_customize->get_setting( 'portfoliopress[header_color]' )->transport = 'postMessage';
 }
+
+/**
+ * Register asynchronous customizer support for core controls.
+ */
+function portfoliopress_async_suport_core( $wp_customize ) {
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+}
+add_action( 'customize_register', 'portfoliopress_async_suport_core' );
+
+/**
+ * Enqueue script enabling asynchronous customizer support.
+ */
+function portfoliopress_customize_preview_js() {
+	wp_enqueue_script( 'portfoliopress_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20140221', true );
+}
+add_action( 'customize_preview_init', 'portfoliopress_customize_preview_js' );
