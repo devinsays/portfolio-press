@@ -21,15 +21,23 @@ add_filter( 'template_include', 'portfoliopress_template_chooser' );
  */
 function portfoliopress_portfolio_posts( $query ) {
 
+	if ( !$query->is_main_query() )
+        return;
+
+
+
 	if (
 		is_post_type_archive( 'portfolio' ) ||
-		is_page_template( 'templates/portfolio.php' ) ||
-		is_page_template( 'templates/full-width-portfolio.php' ) ||
-		is_page_template( 'templates/post-format-gallery-image.php' ) ||
 		is_tax( 'post_format', 'post-format-image' ) ||
 		is_tax( 'post_format', 'post-format-gallery' ) ||
 		is_tax( 'portfolio_category' ) ||
-		is_tax( 'portfolio_tag' )
+		is_tax( 'portfolio_tag' ) ||
+		// Check for $post to avoid notices on 404 page
+		( isset( $post) ) && (
+			is_page_template( 'templates/portfolio.php' ) ||
+			is_page_template( 'templates/full-width-portfolio.php' ) ||
+			is_page_template( 'templates/post-format-gallery-image.php' )
+		)
 	) {
 		$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', of_get_option('portfolio_num','9') );
 		$query->set( 'posts_per_page', $posts_per_page );
