@@ -36,20 +36,9 @@ function portfoliopress_footer_meta( $post ) {
 
 	<?php if ( 'portfolio' == $post_type ) {
 
+		$format = 'image';
 		$cat_list = get_the_term_list( $post->ID, 'portfolio_category', '', ', ', '' );
 		$tag_list = get_the_term_list( $post->ID, 'portfolio_tag', '', ', ', '' );
-		$utility_text = '';
-		if ( ( $cat_list ) && ( '' ==  $tag_list ) )
-			$utility_text = __( 'This entry was posted in %1$s.', 'portfoliopress' );
-		if ( ( '' != $tag_list ) && ( '' ==  $cat_list ) )
-			$utility_text = __( 'This entry was tagged %2$s.', 'portfoliopress' );
-		if ( ( '' != $cat_list ) && ( '' !=  $tag_list ) )
-			$utility_text = __( 'This entry was posted in %1$s and tagged %2$s.', 'portfoliopress' );
-		printf(
-			$utility_text,
-			$cat_list,
-			$tag_list
-		);
 
 	} else {
 
@@ -57,19 +46,28 @@ function portfoliopress_footer_meta( $post ) {
 		if ( false === $format ) {
 			$format = 'standard';
 		}
-		?>
+		$cat_list = get_the_term_list( $post->ID, 'category', '', ', ', '' );
+		$tag_list = get_the_term_list( $post->ID, 'post_tag', '', ', ', '' );
+	} ?>
 
-		<span class="entry-meta-icon icon-format-<?php echo esc_attr( $format ); ?>"></span>
+	<span class="entry-meta-icon icon-format-<?php echo esc_attr( $format ); ?>"></span>
 
-		<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'portfoliopress' ); ?></span><?php the_category( ', ' ); ?></span>
-		<?php the_tags( '<span class="meta-sep"> | </span><span class="tag-links">' . __( 'Tagged ', 'portfoliopress' ) . '</span>', ', ', '' ); ?>
+	<?php if ( $cat_list ) : ?>
+	<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in: ', 'portfoliopress' ); ?></span><?php echo $cat_list; ?></span>
+	<?php endif; ?>
 
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+	<?php if ( $cat_list && $tag_list ) : ?>
 		<span class="meta-sep"> | </span>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'portfoliopress' ), __( '1 Comment', 'portfoliopress' ), __( '% Comments', 'portfoliopress' ) ); ?></span>
-		<?php endif; ?>
+	<?php endif; ?>
 
-	<?php } ?>
+	<?php if ( $tag_list ) : ?>
+	<span class="tag-links"><span class="entry-utility-prep entry-utility-prep-tag-links"><?php _e( 'Tagged: ', 'portfoliopress' ); ?></span><?php echo $tag_list; ?></span>
+	<?php endif; ?>
+
+	<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+	<span class="meta-sep"> | </span>
+	<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'portfoliopress' ), __( '1 Comment', 'portfoliopress' ), __( '% Comments', 'portfoliopress' ) ); ?></span>
+	<?php endif; ?>
 
 	<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 
