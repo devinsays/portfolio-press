@@ -65,7 +65,7 @@ add_filter( 'body_class', 'portfoliopress_body_class_options' );
 function portfolio_favicon() {
 	$favicon = of_get_option( 'custom_favicon', false );
 	if ( $favicon ) {
-        echo '<link rel="shortcut icon" href="'.  $favicon  .'"/>'."\n";
+        echo '<link rel="shortcut icon" href="' . esc_url( $favicon ) . '"/>'."\n";
     }
 }
 add_action( 'wp_head', 'portfolio_favicon' );

@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_uri(); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
+<script src="<?php echo esc_url( get_template_directory_uri() . '/js/html5.js' ); ?>"></script>
 <![endif]-->
 <?php wp_head(); ?>
 </head>
@@ -27,9 +27,9 @@
     	<div class="col-width">
         <?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 			<hgroup id="logo">
-				<<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>" rel="home">
+				<<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <?php if ( of_get_option( 'logo', false) ) { ?>
-					<img src="<?php echo of_get_option( 'logo' ); ?>" alt="<?php echo bloginfo( 'name' ) ?>" />
+					<img src="<?php echo esc_url( of_get_option( 'logo' ) ); ?>" alt="<?php echo bloginfo( 'name' ) ?>" />
 				<?php } else {
 					bloginfo( 'name' );
 				}?>
