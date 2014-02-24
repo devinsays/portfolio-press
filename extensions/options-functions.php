@@ -91,6 +91,31 @@ function portfolio_head_css() {
 add_action( 'wp_head', 'portfolio_head_css' );
 
 /**
+ * Removes image and gallery post formats from is_home if option is set
+ */
+function portfoliopress_exclude_post_formats( $query ) {
+	if (
+		of_get_option( 'display_image_gallery_post_formats', false ) &&
+		$query->is_main_query() &&
+		$query->is_home()
+	) {
+		$tax_query = array(
+			array(
+				'taxonomy' => 'post_format',
+				'field' => 'slug',
+				'terms' => array(
+					'post-format-image',
+					'post-format-gallery'
+				),
+				'operator' => 'NOT IN',
+			)
+		);
+		$query->set( 'tax_query', $tax_query );
+	}
+}
+add_action( 'pre_get_posts', 'portfoliopress_exclude_post_formats' );
+
+/**
  * Front End Customizer
  *
  * WordPress 3.4 Required

@@ -21,87 +21,124 @@ function optionsframework_option_name() {
  * Defines an array of options that will be used to generate the settings page and be saved in the database.
  * When creating the "id" fields, make sure to use all lowercase and no spaces.
  *
+ * @returns array $options
  */
 
 function optionsframework_options() {
 
 	// If using image radio buttons, define a directory path
-	$imagepath =  get_template_directory_uri() . '/images/';
+	$imagepath =  esc_url( get_template_directory_uri() . '/images/' );
 
 	// Options array
 	$options = array();
 
-	$options[] = array( "name" => __( 'General Settings', 'portfoliopress' ),
-                    	"type" => "heading");
+	/* General Settings */
 
-	$options['logo'] = array( "name" => __( 'Custom Logo', 'portfoliopress' ),
-						"desc" => __( 'Upload a logo for your theme if you would like to use one.','portfoliopress' ),
-						"id" => "logo",
-						"type" => "upload");
+	$options[] = array(
+		"name" => __( 'General Settings', 'portfoliopress' ),
+		"type" => "heading"
+	);
 
-	$options[] = array( "name" => __( 'Custom Favicon', 'portfoliopress' ),
-						"desc" => __( 'Upload a 16px x 16px png/gif image to represent your website.' , 'portfoliopress' ),
-						"id" => "custom_favicon",
-						"type" => "upload");
+	$options['logo'] = array(
+		"name" => __( 'Custom Logo', 'portfoliopress' ),
+		"desc" => __( 'Upload a logo for your theme if you would like to use one.','portfoliopress' ),
+		"id" => "logo",
+		"type" => "upload");
 
-	$options[] = array( "name" => __( 'Display Images on Portfolio Posts', 'portfoliopress' ),
-						"desc" => __( 'Uncheck this if you wish to manually display portfolio images on single posts.', 'portfoliopress' ),
-						"id" => "portfolio_images",
-						"std" => "1",
-						"type" => "checkbox");
+	$options[] = array(
+		"name" => __( 'Custom Favicon', 'portfoliopress' ),
+		"desc" => __( 'Upload a 16px x 16px png/gif image to represent your website.' , 'portfoliopress' ),
+		"id" => "custom_favicon",
+		"type" => "upload"
+	);
 
-	$options[] = array( "name" => __( 'Display Portfolio Archives Full Width', 'portfoliopress' ),
-						"desc" => __( 'Check this to display all portfolio archives full width.', 'portfoliopress' ),
-						"id" => "portfolio_sidebar",
-						"std" => "0",
-						"type" => "checkbox");
+	$options[] = array(
+		"name" => __( 'Display Images on Portfolio Posts', 'portfoliopress' ),
+		"desc" => __( 'Uncheck this if you wish to manually display portfolio images on single posts.', 'portfoliopress' ),
+		"id" => "portfolio_images",
+		"std" => "1",
+		"type" => "checkbox"
+	);
 
-	$options[] = array( "name" => __( 'Style and Layout','portfoliopress' ),
-						"type" => "heading");
+	$options[] = array(
+		"name" => __( 'Hide Image and Gallery Formats on Posts Page', 'portfoliopress' ),
+		"desc" => __( 'Check this to remove image and gallery posts from your standard posts page.' ),
+		"id" => "display_image_gallery_post_formats",
+		"std" => "0",
+		"type" => "checkbox"
+	);
 
-	$options['layout'] = array( 'name' => __( 'Main Layout','portfoliopress' ),
-						'desc' => __( 'Select main content and sidebar alignment.','portfoliopress' ),
-						'id' => 'layout',
-						'std' => 'layout-2cr',
-						'type' => 'images',
-						'options' => array(
-							'layout-2cr' => $imagepath . '2cr.png',
-							'layout-2cl' => $imagepath . '2cl.png',
-							'layout-1col' => $imagepath . '1cl.png')
-						);
+	$options[] = array(
+		"name" => __( 'Display Portfolio Archives Full Width', 'portfoliopress' ),
+		"desc" => __( 'Check this to display all portfolio archives full width.', 'portfoliopress' ),
+		"id" => "portfolio_sidebar",
+		"std" => "0",
+		"type" => "checkbox"
+	);
 
-	$options[] = array( "name" => "Header Color",
-						"id" => "header_color",
-						"std" => "#000000",
-						"type" => "color");
+	/* Style and Layout */
 
-	$options['menu_position'] = array( "name" => __( 'Menu Position','portfoliopress' ),
-						"desc" => __( 'Select where the main menu should go in the header.  Long menus should go underneath.','portfoliopress' ),
-						"id" => "menu_position",
-						"std" => "right",
-						"type" => "radio",
-						"options" => array("right" => "Right of logo.","clear" => "Underneath logo."));
+	$options[] = array(
+		"name" => __( 'Style and Layout','portfoliopress' ),
+		"type" => "heading");
 
+	$options['layout'] = array(
+		'name' => __( 'Main Layout','portfoliopress' ),
+		'desc' => __( 'Select main content and sidebar alignment.','portfoliopress' ),
+		'id' => 'layout',
+		'std' => 'layout-2cr',
+		'type' => 'images',
+		'options' => array(
+			'layout-2cr' => $imagepath . '2cr.png',
+			'layout-2cl' => $imagepath . '2cl.png',
+			'layout-1col' => $imagepath . '1cl.png')
+		);
 
-	$options[] = array( "name" => __( 'Footer Settings', 'portfoliopress' ),
-						"type" => "heading");
+	$options[] = array(
+		"name" => "Header Color",
+		"id" => "header_color",
+		"std" => "#000000",
+		"type" => "color"
+	);
 
-	$options[] = array( "name" => __( 'Custom Footer Text', 'portfoliopress' ),
-						"desc" => __( 'Custom text that will appear in the footer of your theme.','portfoliopress' ),
-						"id" => "footer_text",
-						"type" => "textarea");
+	$options['menu_position'] = array(
+		"name" => __( 'Menu Position', 'portfoliopress' ),
+		"desc" => __( 'Select where the main menu should go in the header.  Long menus should go underneath.','portfoliopress' ),
+		"id" => "menu_position",
+		"std" => "right",
+		"type" => "radio",
+		"options" => array("right" => "Right of logo.","clear" => "Underneath logo.")
+	);
 
-	$options[] = array( "name" => __( 'Upgrade','portfoliopress' ),
-						"id" => "upgrade",
-						"std" => '0',
-						"class" => "hidden",
-						"type" => "text" );
+	/* Footer Settings */
 
-	$options[] = array( "name" => __( 'Version','portfoliopress' ),
-						"id" => "version",
-						"std" => '1.9',
-						"class" => "hidden",
-						"type" => "text" );
+	$options[] = array(
+		"name" => __( 'Footer Settings', 'portfoliopress' ),
+		"type" => "heading");
+
+	$options[] = array(
+		"name" => __( 'Custom Footer Text', 'portfoliopress' ),
+		"desc" => __( 'Custom text that will appear in the footer of your theme.','portfoliopress' ),
+		"id" => "footer_text",
+		"type" => "textarea"
+	);
+
+	/* Utility Options (Not Displayed) */
+
+	$options[] = array(
+		"name" => __( 'Upgrade', 'portfoliopress' ),
+		"id" => "upgrade",
+		"std" => '0',
+		"class" => "hidden",
+		"type" => "text" );
+
+	$options[] = array(
+		"name" => __( 'Version', 'portfoliopress' ),
+		"id" => "version",
+		"std" => '1.9',
+		"class" => "hidden",
+		"type" => "text"
+	);
 
 	return $options;
 }
