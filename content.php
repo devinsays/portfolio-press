@@ -10,9 +10,11 @@
 
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+		<?php if ( 'page' != $post->post_type ) : ?>
 		<div class="entry-meta">
 			<?php portfoliopress_postby_meta(); ?>
 		</div><!-- .entry-meta -->
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php // Display excerpts for archives and search ?>
