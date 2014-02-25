@@ -56,7 +56,6 @@ jQuery(document).ready(function ($) {
 
 	// Fired by the resize event
 	function menu_alignment() {
-		console.log('fires');
 		portfolio_desktop_submenus();
 		portfolio_mobile_submenus();
 	}

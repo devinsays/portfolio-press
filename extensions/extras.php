@@ -106,3 +106,19 @@ function portfoliopress_upgrade_notice_ignore() {
 }
 
 add_action( 'admin_init', 'portfoliopress_upgrade_notice_ignore' );
+
+/**
+ * Removes page templates that require the Portfolio Post Type
+ * if that plugin is not installed.
+ *
+ * This is an ugly hack until post template filters appear in core:
+ * https://core.trac.wordpress.org/ticket/13265
+ */
+function portfoliopress_page_template_mod( $hook ) {
+	if ( class_exists( 'Portfolio_Post_Type' ) )
+        return;
+    if ( 'post.php' != $hook )
+        return;
+    wp_enqueue_script( 'portfoliopress_page_template_mod', esc_url( get_template_directory_uri() . '/js/admin-page-template-mod.js' ) );
+}
+add_action( 'admin_enqueue_scripts', 'portfoliopress_page_template_mod' );
