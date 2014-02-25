@@ -911,9 +911,6 @@ object {
 #comments .comment-entry p {
 	margin: 0 0 10px 0;
 }
-#comments .reply {
-	padding-top:10px;
-}
 #comments ul.children {
 	margin:10px 10px 0 25px;
 	padding:0;
@@ -932,6 +929,12 @@ object {
 }
 #comments .pingbacks li.pingback .reply {
 	display:none;
+}
+#comments .reply {
+	font-size:12px;
+}
+#comments .comment #respond {
+	padding: 0 20px 20px;
 }
 
 /* Comments Form */
@@ -1003,6 +1006,7 @@ object {
 	color: #666;
 	margin-left: 10px;
 	text-decoration: none;
+	font-size:14px;
 }
 #respond .logged-in-as a:hover,
 #respond #cancel-comment-reply-link:hover {
@@ -1042,7 +1046,7 @@ object {
 	font-size:12px;
 	color:#666;
 }
-#commentform #submit, .reply a, #searchsubmit {
+#commentform #submit, #searchsubmit {
 	border: 1px solid #ccc;
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
@@ -1061,10 +1065,6 @@ object {
 	font-size: 12px;
 	padding:4px 8px;
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
-}
-.reply a {
-	font-size:11px;
-	padding: 2px 6px;
 }
 
 /* Pingbacks / Trackbacks */
