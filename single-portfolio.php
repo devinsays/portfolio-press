@@ -31,11 +31,7 @@ get_header(); ?>
 
 			</article><!-- #post-<?php the_ID(); ?> -->
 
-			<nav id="nav-below">
-				<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>
-				<div class="nav-previous"><?php previous_post_link( '%link', '%title <span class="meta-nav">' . _e( '&rarr;', 'Previous post link', 'portfoliopress' ) . '</span>' ); ?></div>
-				<div class="nav-next"><?php next_post_link( '%link', '<span class="meta-nav">' . _e( '&larr;', 'Next post link', 'portfoliopress' ) . '</span> %title' ); ?></div>
-			</nav><!-- #nav-below -->
+			<?php portfoliopress_post_nav(); ?>
 
 			<?php if ( comments_open() ) {
 				comments_template( '', true );

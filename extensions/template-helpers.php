@@ -76,30 +76,78 @@ function portfoliopress_footer_meta( $post ) {
 <?php }
 endif;
 
+if ( ! function_exists( 'portfoliopress_paging_nav' ) ) :
 /**
- * Reusable navigation code for navigation
- * Display navigation to next/previous pages when applicable
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ * @return void
  */
-if ( ! function_exists( 'portfoliopress_content_nav' ) ):
-function portfoliopress_content_nav( $query = false ) {
+function portfoliopress_paging_nav( $query = false ) {
 	global $wp_query;
 	if ( $query ) {
 		$temp_query = $wp_query;
 		$wp_query = $query;
 	}
-	if (  $wp_query->max_num_pages > 1 ) :
-		if (function_exists('wp_pagenavi') ) {
-			wp_pagenavi();
-		} else { ?>
-        	<nav id="nav-below">
-			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>
+	// Don't print empty markup if there's only one page.
+	if ( $wp_query->max_num_pages < 2 ) {
+		return;
+	}
+
+	if (function_exists('wp_pagenavi') ) {
+		wp_pagenavi();
+	} else {
+	?>
+	<nav id="nav-below" class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'portfoliopress' ); ?></h1>
+		<div class="nav-links">
+
+			<?php if ( get_next_posts_link() ) : ?>
 			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'portfoliopress' ) ); ?></div>
+			<?php endif; ?>
+
+			<?php if ( get_previous_posts_link() ) : ?>
 			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) ); ?></div>
-			</nav><!-- #nav-below -->
-    	<?php }
-	endif;
+			<?php endif; ?>
+
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+	}
 	if ( isset( $temp_query ) ) {
 		$wp_query = $temp_query;
 	}
+}
+endif;
+
+if ( ! function_exists( 'portfoliopress_post_nav' ) ) :
+/**
+ * Display navigation to next/previous post when applicable.
+ *
+ * @return void
+ */
+function portfoliopress_post_nav() {
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next = get_adjacent_post( false, '', false );
+
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav id="nav-below" class="navigation post-navigation clearfix" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'portfoliopress' ); ?></h1>
+		<div class="nav-links">
+			<?php
+			if ( 'portfolio' ==  get_post_type() ) {
+				// Links reversed for portfolio posts
+				previous_post_link( '<div class="nav-next">%link</div>', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'portfoliopress' ) );
+				next_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'portfoliopress' ) );
+			} else {
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'portfoliopress' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'portfoliopress' ) );
+			} ?>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
 }
 endif;

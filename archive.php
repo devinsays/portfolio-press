@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
-		
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -25,8 +25,8 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php portfoliopress_content_nav(); ?>
-			
+			<?php portfoliopress_paging_nav(); ?>
+
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>

@@ -41,7 +41,7 @@ query_posts( $args );
 
 				<?php endwhile; ?>
 
-				<?php portfoliopress_content_nav(); ?>
+				<?php portfoliopress_paging_nav(); ?>
 
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
