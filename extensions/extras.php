@@ -114,13 +114,34 @@ add_action( 'admin_init', 'portfoliopress_upgrade_notice_ignore' );
  * https://core.trac.wordpress.org/ticket/13265
  */
 function portfoliopress_page_template_mod( $hook ) {
+	global $wp_version;
 	if ( class_exists( 'Portfolio_Post_Type' ) )
         return;
+    if ( version_compare( $wp_version, '3.8.2', '>' ) ) {
+    	return;
+    }
     if ( 'post.php' != $hook )
         return;
     wp_enqueue_script( 'portfoliopress_page_template_mod', esc_url( get_template_directory_uri() . '/js/admin-page-template-mod.js' ) );
 }
 add_action( 'admin_enqueue_scripts', 'portfoliopress_page_template_mod' );
+
+/**
+ * Filter Page Templates if Portfolio Post Type Plugin
+ * is not active.
+ *
+ * @param array $templates Array of templates.
+ * @return array $templates Modified Array of templates.
+ */
+
+function portfoliopress_page_templates_mod( $templates ) {
+	if ( !class_exists( 'Portfolio_Post_Type' ) ) {
+		unset( $templates['templates/portfolio.php'] );
+		unset( $templates['templates/full-width-portfolio.php'] );
+	}
+	return $templates;
+}
+add_filter( 'page_templates', 'portfoliopress_page_templates_mod' );
 
 /**
  * WP PageNavi Support
