@@ -8,10 +8,12 @@
  * http://www.billerickson.net/reusing-wordpress-theme-files/
  */
 function portfoliopress_template_chooser( $template ) {
-	if ( is_tax( 'portfolio_tag' ) ||  is_tax( 'portfolio_category' ) )
+
+	// The 'portfolio_view' query var is set in portfoliopress_portfolio_posts.
+	if ( get_query_var( 'portfolio_view' ) ) {
 		$template = get_query_template( 'archive-portfolio' );
-	if ( is_tax( 'post_format', 'post-format-image' ) || is_tax( 'post_format', 'post-format-gallery' ) )
-		$template = get_query_template( 'archive-portfolio' );
+	}
+
 	return $template;
 }
 add_filter( 'template_include', 'portfoliopress_template_chooser' );
@@ -24,22 +26,50 @@ function portfoliopress_portfolio_posts( $query ) {
 	if ( !$query->is_main_query() )
         return;
 
-
+	$portfolio = false;
 
 	if (
 		is_post_type_archive( 'portfolio' ) ||
 		is_tax( 'post_format', 'post-format-image' ) ||
 		is_tax( 'post_format', 'post-format-gallery' ) ||
 		is_tax( 'portfolio_category' ) ||
-		is_tax( 'portfolio_tag' ) ||
-		// Check for $post to avoid notices on 404 page
-		( isset( $post) ) && (
+		is_tax( 'portfolio_tag' )
+	) {
+		$portfolio = true;
+		$query->set( 'portfolio_view', true );
+	}
+
+	// Check for $post to avoid notices on 404 page
+	if ( isset( $post) && (
 			is_page_template( 'templates/portfolio.php' ) ||
 			is_page_template( 'templates/full-width-portfolio.php' ) ||
 			is_page_template( 'templates/post-format-gallery-image.php' )
 		)
 	) {
-		$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', of_get_option('portfolio_num','9') );
+		$portfolio = true;
+	}
+
+	// Check if the taxonomy query contains only image or gallery post formats
+	if ( is_category() || is_tag() ) {
+		$portfolio_view = true;
+		global $wp_query;
+		if ( $wp_query->have_posts() ) :
+			while ( $wp_query->have_posts() ) : $wp_query->the_post();
+				$format = get_post_format();
+				if ( ( $format != 'image' ) && ( $format != 'gallery' ) ) {
+					$portfolio_view = false;
+				}
+			endwhile;
+		endif;
+		if ( $portfolio_view ) {
+			$portfolio = true;
+			$query->set( 'portfolio_view', true );
+		}
+	}
+
+	// If this is a portfolio display, alter posts_per_page
+	if ( $portfolio ) {
+		$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', of_get_option( 'portfolio_num', '9' ) );
 		$query->set( 'posts_per_page', $posts_per_page );
 	}
 
@@ -52,14 +82,10 @@ add_action( 'pre_get_posts', 'portfoliopress_portfolio_posts' );
 function portfoliopress_body_class( $classes ) {
 
 	if (
-		is_post_type_archive( 'portfolio' ) ||
 		is_page_template( 'templates/portfolio.php' ) ||
 		is_page_template( 'templates/full-width-portfolio.php' ) ||
 		is_page_template( 'templates/post-format-gallery-image.php' ) ||
-		is_tax( 'post_format', 'post-format-image' ) ||
-		is_tax( 'post_format', 'post-format-gallery' ) ||
-		is_tax( 'portfolio_category' ) ||
-		is_tax( 'portfolio_tag' )
+		get_query_var( 'portfolio_view' )
 	) {
 		$classes[] = 'portfolio-view';
 		if ( of_get_option( 'portfolio_sidebar', false ) ) {
@@ -75,6 +101,7 @@ function portfoliopress_body_class( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'body_class','portfoliopress_body_class' );
 
 /**
