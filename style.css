@@ -914,7 +914,7 @@ object {
 	display: block;
 }
 #comments .commentlist {
-	padding-left:0px;
+	padding:0;
 }
 #comments h3 {
 	color:#333;
@@ -928,16 +928,16 @@ object {
 	border-bottom:1px solid rgba(0, 0, 0, 0.07);
 }
 #comments .comment {
-	margin-top:10px;
 	width:100%;
 	list-style-type:none;
 }
 #comments .comment .comment-body {
 	position:relative;
 	padding: 20px;
+	margin:0;
 }
 #comments .comment-head {
-	margin: 0 0 15px 0;
+	margin: 0 0 15px;
 }
 #comments .comment-author img {
 	margin: 0;
@@ -955,7 +955,7 @@ object {
 	font-size: 12px;
 }
 #comments .comment-entry p {
-	margin: 0 0 10px 0;
+	margin: 0 0 10px;
 }
 #comments ul.children {
 	margin:10px 10px 0 25px;
@@ -993,17 +993,25 @@ object {
 	font-weight:normal;
 	padding-bottom:0;
 }
-#respond label {
-	font-size:13px;
-	color:#777;
-}
 #respond input[type="text"],
+#respond input[type="email"],
+#respond input[type="url"],
 #respond textarea {
 	background: #fff;
+	margin:0;
+	padding:5px;
 	position: relative;
-	padding: 5px;
-	text-indent: 95px;
-	top:0;
+	text-indent: 85px;
+	border-color: #ccc #efefef #efefef #ccc;
+	border-width:1px;
+	border-style:solid;
+	font-size:13px;
+	line-height:20px;
+}
+#respond input[type="text"],
+#respond input[type="email"],
+#respond input[type="url"] {
+	width:70%;
 }
 #respond .comment-form-author,
 #respond .comment-form-email,
@@ -1015,34 +1023,24 @@ object {
 #respond .comment-form-email label,
 #respond .comment-form-url label,
 #respond .comment-form-comment label {
+	position: absolute;
+	display: inline-block;
 	background:#eee;
 	color: #555;
-	display: inline-block;
-	padding:5px 15px;
-	font-size: 12px;
-	position: absolute;
-	left: 1px;
-	top: 1px;
+	padding:6px;
+	top:1px;
+	left:1px;
 	z-index: 1;
-	min-width:60px;
+	min-width:80px;
+	line-height:1;
 }
 #respond textarea {
 	width: 95%;
 	height:160px;
 }
-#respond .comment-form-author .required,
-#respond .comment-form-email .required {
-	color: #3f98db;
-	font-weight: bold;
-	left: 67%;
-	position: absolute;
-	top: 5px;
-	z-index: 1;
-}
-#respond input[type="text"]:focus,
 #respond textarea:focus {
 	z-index: 1;
-	text-indent:5px;
+	text-indent: 0;
 }
 #respond .comment-notes,
 #respond .logged-in-as {
@@ -1058,41 +1056,14 @@ object {
 #respond #cancel-comment-reply-link:hover {
 	text-decoration: underline;
 }
-#respond input[type=text] {
-	display: block;
-	width: 68%;
-	height:20px;
-}
 #respond p {
 	font-size: 12px;
 }
-#commentform {
-	margin: 15px 0 0 0;
-}
-#commentform input.txt, #commentform textarea {
-	font:14px/14px Arial, Helvetica, sans-serif;
-	border-color: #ccc #efefef #efefef #ccc;
-	border-width:1px;
-	border-style:solid;
-}
-#commentform input.txt {
-	color:#666;
-	background: #fcfcfc;
-	width: 170px;
-	margin: 0 5px 10px 0;
-	padding: 5px 7px;
-}
-#commentform textarea {
-	color:#666;
-	background: #fff;
-	width: 95%;
-	padding: 5px 7px;
-}
-#commentform .form-allowed-tags {
+#respond .form-allowed-tags {
 	font-size:12px;
 	color:#666;
 }
-#commentform #submit, #searchsubmit {
+#respond #submit, #searchsubmit {
 	border: 1px solid #ccc;
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;

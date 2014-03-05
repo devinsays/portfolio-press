@@ -52,7 +52,6 @@ function portfoliopress_setup() {
 	// Enable support for HTML5 markup
 	add_theme_support( 'html5', array(
 		'comment-list',
-		'search-form',
 		'comment-form',
 		'gallery',
 	) );
