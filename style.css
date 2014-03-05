@@ -712,6 +712,7 @@ object {
 .portfolio-view .hentry h3 {
 	font-family: 'Open Sans', sans-serif;
 	font-size:16px;
+	color:#fff;
 	font-weight:bold;
 	position: absolute;
 	top: 45%;
@@ -722,8 +723,9 @@ object {
 	display: none;
 	pointer-events: none;
 }
-.portfolio-view .hentry h3 a {
+.portfolio-view .hentry a {
 	color:#fff;
+	text-decoration: none;
 }
 .portfolio-view .portfolio-format-meta {
 	height:18px;

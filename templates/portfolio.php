@@ -43,13 +43,13 @@ if ( $fullwidth )
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
-							<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
-							<?php if ( has_post_format() ) :
-								$format = get_post_format();
-							?>
-							<div class="portfolio-format-meta icon-format-<?php echo $format; ?>"></div>
-							<?php endif; ?>
 							<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
+								<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
+								<?php if ( has_post_format() ) :
+									$format = get_post_format();
+								?>
+								<div class="portfolio-format-meta icon-format-<?php echo $format; ?>"></div>
+								<?php endif; ?>
 								<?php if ( post_password_required() ) { ?>
 									<img src="<?php echo esc_url( get_template_directory_uri() . '/images/protected-' . $thumbnail . '.gif' ); ?>">
 								<?php }
