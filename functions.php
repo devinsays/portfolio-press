@@ -49,6 +49,14 @@ function portfoliopress_setup() {
 	// Add support for featured images
 	add_theme_support( 'post-thumbnails' );
 
+	// Enable support for HTML5 markup
+	add_theme_support( 'html5', array(
+		'comment-list',
+		'search-form',
+		'comment-form',
+		'gallery',
+	) );
+
 	// Add images sizes for the various thumbnails
 	add_image_size( 'portfolio-thumbnail', 280, 225, true );
 	add_image_size( 'portfolio-thumbnail-fullwidth', 314, 224, true );

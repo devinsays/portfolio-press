@@ -59,6 +59,16 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 	visibility: hidden;
 }
 
+/* Box Styling */
+
+*,
+*:before,
+*:after {
+	/* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
+}
+
 /* Base Styles */
 
 body {
@@ -201,9 +211,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	line-height:1;
 	padding-right:75px;
 	word-wrap: break-word;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 #logo #site-title {
 	font-family: 'Rokkitt', sans-serif;
@@ -545,9 +552,6 @@ p img, .wp-caption {
 	margin-top: 0.4em;
 }
 .wp-caption {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
 	background: #eee;
 	background:rgba(200,200,200,.2);
 	margin-bottom: 15px;
@@ -559,7 +563,7 @@ p img, .wp-caption {
 	margin: 0 auto;
 	max-width: 98%;
 }
-.wp-caption .wp-caption-text, .gallery-caption {
+.wp-caption .wp-caption-text {
 	color: #666;
 	font-size: 12px;
 }
@@ -571,27 +575,11 @@ p img, .wp-caption {
 #content .gallery {
 	margin: 0 auto 15px;
 }
-#content .gallery a img {
-	border: none;
-}
-img#wpstats {
-	display: block;
-	margin: 0 auto 15px;
-}
-#content .gallery-columns-4 .gallery-item {
-	width: 23%;
-	padding-right: 2%;
-}
-#content .gallery-columns-4 .gallery-item img {
-	width: 100%;
-	height: auto;
-}
 
 /* Image borders */
 
 img[class*="align"],
-img[class*="wp-image-"],
-#content .gallery .gallery-icon img {
+img[class*="wp-image-"] {
 	border: 1px solid #ddd;
 	padding: 6px;
 }
@@ -617,7 +605,91 @@ a:active img[class*="wp-image-"],
 	border-color: #ddd;
 }
 
+/* Gallery */
+
+.gallery .gallery-item  {
+	margin: 0;
+	float: left;
+}
+.gallery img {
+	border: 1px solid #ddd;
+	padding: 6px;
+}
+.gallery-caption {
+	color: #666;
+	font-size: 12px;
+}
+.gallery-columns-1 .gallery-item {
+	float:none;
+	margin-bottom:15px;
+}
+.gallery-columns-2 .gallery-item {
+	width: 49%;
+	margin: 0 2% 3% 0;
+}
+.gallery-columns-2 .gallery-item:nth-of-type(2n) {
+	margin-right: 0;
+}
+.gallery-columns-3 .gallery-item {
+	width: 32%;
+	margin: 0 2% 3% 0;
+}
+.gallery-columns-3 .gallery-item:nth-of-type(3n) {
+	margin-right: 0;
+}
+.gallery-columns-4 .gallery-item {
+	width: 23.5%;
+	margin: 0 2% 3% 0;
+}
+.gallery-columns-4 .gallery-item:nth-of-type(4n) {
+	margin-right: 0;
+}
+.gallery-columns-5 .gallery-item {
+	width: 18.7%;
+	margin: 0 1.6% 3% 0;
+}
+.gallery-columns-5 .gallery-item:nth-of-type(5n) {
+	margin-right: 0;
+}
+.gallery-columns-6 .gallery-item {
+	width: 15.4%;
+	margin: 0 1.5% 3% 0;
+}
+.gallery-columns-6 .gallery-item:nth-of-type(6n) {
+	margin-right: 0;
+}
+.gallery-columns-7 .gallery-item {
+	width: 12.28%;
+	margin: 0 2% 3% 0;
+}
+.gallery-columns-8 .gallery-item {
+	width: 10.5%;
+	margin: 0 2% 3% 0;
+}
+.gallery-columns-9 .gallery-item {
+	width: 9.1%;
+	margin: 0 2% 3% 0;
+}
+
+/* Remove image borders on all galleries that are >= 6 columns */
+
+.gallery-columns-6 .gallery-item img,
+.gallery-columns-7 .gallery-item img,
+.gallery-columns-8 .gallery-item img,
+.gallery-columns-9 .gallery-item img {
+	border: none;
+	padding: 0;
+}
+
+/* Misc */
+
+img#wpstats {
+	display: block;
+	margin: 0 auto 15px;
+}
+
 /* Make sure embeds and iframes fit their containers */
+
 embed,
 iframe,
 object {

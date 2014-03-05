@@ -153,3 +153,21 @@ function portfoliopress_deregister_styles() {
     wp_deregister_style( 'wp-pagenavi' );
 }
 add_action( 'wp_print_styles', 'portfoliopress_deregister_styles', 100 );
+
+/**
+ * Replaces definition list elements with their appropriate HTML5 counterparts.
+ *
+ * @param array $atts The output array of shortcode attributes.
+ * @return array HTML5-ified gallery attributes.
+ */
+function portfoliopress_gallery_atts( $atts ) {
+    $atts['itemtag']    = 'figure';
+    $atts['icontag']    = 'div';
+    $atts['captiontag'] = 'figcaption';
+
+    return $atts;
+}
+add_filter( 'shortcode_atts_gallery', 'portfoliopress_gallery_atts' );
+
+// Removes the default gallery styling
+add_filter( 'use_default_gallery_style', '__return_false' );
