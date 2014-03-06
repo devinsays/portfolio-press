@@ -5,6 +5,8 @@
 
 /**
  * Outputs author information
+ *
+ * @return void
  */
 if ( ! function_exists( 'portfoliopress_postby_meta' ) ):
 function portfoliopress_postby_meta() {
@@ -23,6 +25,9 @@ endif;
 
 /**
  * Displays footer text
+ *
+ * @param object post
+ * @return void
  */
 if ( ! function_exists( 'portfoliopress_footer_meta' ) ):
 function portfoliopress_footer_meta( $post ) {
@@ -80,6 +85,7 @@ if ( ! function_exists( 'portfoliopress_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
+ * @param object query
  * @return void
  */
 function portfoliopress_paging_nav( $query = false ) {

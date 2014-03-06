@@ -6,6 +6,8 @@
 /**
  * Overrides the default behavior of portfolio taxonomies to use the archive-portfolio template
  * http://www.billerickson.net/reusing-wordpress-theme-files/
+ *
+ * @param string template path
  */
 function portfoliopress_template_chooser( $template ) {
 
@@ -20,6 +22,8 @@ add_filter( 'template_include', 'portfoliopress_template_chooser' );
 
 /**
  * Sets posts displayed per portfolio to 9
+ *
+ * @param object query
  */
 function portfoliopress_portfolio_posts( $query ) {
 
@@ -78,6 +82,9 @@ add_action( 'pre_get_posts', 'portfoliopress_portfolio_posts' );
 
 /**
  * Adds a body class to archives that display as a portfolio view
+ *
+ * @param array classes applied to post
+ * @return array modified classes
  */
 function portfoliopress_body_class( $classes ) {
 
