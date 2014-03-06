@@ -21,16 +21,18 @@ $portfolio = new WP_Query( $args );
 
 <?php
 // Set the size of the thumbnails and content width
-$fullwidth = of_get_option( 'portfolio_sidebar', false )
+$fullwidth = of_get_option( 'portfolio_sidebar', false );
 
 // If portfolio is a 1-column layout
-if ( of_get_option( 'layout','layout-2cr' ) ==  'layout-1col' )
+if ( of_get_option( 'layout','layout-2cr' ) ==  'layout-1col' ) {
 	$fullwidth = true;
+}
 
 $thumbnail = 'thumbnail';
 
-if ( $fullwidth )
+if ( $fullwidth ) {
 	$thumbnail = 'thumbnail-fullwidth';
+}
 ?>
 
 	<div id="primary">
@@ -44,7 +46,7 @@ if ( $fullwidth )
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
 							<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
-								<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
+								<h3><?php the_title() ?></h3>
 								<?php if ( has_post_format() ) :
 									$format = get_post_format();
 								?>
@@ -56,7 +58,7 @@ if ( $fullwidth )
 								elseif ( has_post_thumbnail() ) {
 									the_post_thumbnail( 'portfolio-' . $thumbnail );
 								} else { ?>
-									<img src="<?php esc_url( echo get_template_directory_uri() . '/images/placeholder-' . $thumbnail . '.gif' ); ?>">
+									<img src="<?php echo esc_url( get_template_directory_uri() . '/images/placeholder-' . $thumbnail . '.gif' ); ?>">
 								<?php } ?>
 							</a>
 						</div><!-- .entry-content -->
