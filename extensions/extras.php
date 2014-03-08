@@ -62,6 +62,9 @@ function portfoliopress_upgrade_routine() {
 		delete_user_meta( $current_user->ID, 'portfolio_ignore_notice' );
 	}
 
+	// Page template paths need to be updated
+	portfoliopress_update_page_templates();
+
 	// New version number
 	$options['version'] = '1.9';
 
@@ -70,6 +73,47 @@ function portfoliopress_upgrade_routine() {
 
 
 add_action( 'admin_init', 'portfoliopress_upgrade_routine' );
+
+/**
+ * Part of the Portfolio Press upgrade routine.
+ * The page template paths have changed, so let's update the template meta for the user.
+ */
+function portfoliopress_update_page_templates() {
+
+	$args = array(
+		'post_type' => 'page',
+		'post_status' => 'publish',
+		'meta_query' => array(
+		    array(
+		        'key' => '_wp_page_template',
+		        'value' => 'default',
+		        'compare' => '!='
+		    )
+		)
+	);
+
+	$query = new WP_Query( $args );
+	if ( $query->have_posts() ) :
+		while ( $query->have_posts() ) : $query->the_post();
+			$current_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
+			$new_template = false;
+			switch ( $current_template ) {
+				case 'archive-portfolio.php':
+					$new_template = 'templates/portfolio.php';
+					break;
+				case 'full-width-page.php':
+					$new_template = 'templates/full-width-page.php';
+					break;
+				case 'full-width-portfolio.php':
+					$new_template = 'templates/full-width-portfolio.php';
+					break;
+			}
+			if ( $new_template ) {
+				update_post_meta( get_the_ID(), '_wp_page_template', true );
+			}
+		endwhile;
+	endif;
+}
 
 /**
  * Displays notice if user has upgraded theme
