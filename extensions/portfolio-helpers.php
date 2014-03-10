@@ -72,6 +72,31 @@ function portfoliopress_portfolio_posts( $query ) {
 		}
 	}
 
+	// Remove the term "templates" from the page template body class
+	// Primarily for backwards compatibility
+	if (
+		is_page_template( 'templates/full-width-page.php' ) ||
+		is_page_template( 'templates/portfolio.php' ) ||
+		is_page_template( 'templates/full-width-portfolio.php' ) ||
+		is_page_template( 'templates/post-format-gallery-image.php' ) ||
+		is_page_template( 'templates/portfolio-categories.php' )
+	) {
+		foreach( $classes as $key => $value) {
+			if ( $value == 'page-template-templatesfull-width-php') {
+				$classes[$key] = 'page-template-full-width-php';
+			}
+			if ( $value == 'page-template-templatesportfolio-php') {
+				$classes[$key] = 'page-template-portfolio-php';
+			}
+			if ( $value == 'page-template-templatesfull-width-portfolio-php') {
+				$classes[$key] = 'page-template-full-width-portfolio-php';
+			}
+			if ( $value == 'page-template-templatespost-format-gallery-image-php') {
+				$classes[$key] = 'page-template-post-format-gallery-image-php';
+			}
+		}
+	}
+
 	// If this is a portfolio display, alter posts_per_page
 	if ( $portfolio ) {
 		$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', of_get_option( 'portfolio_num', '9' ) );

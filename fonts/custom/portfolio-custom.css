@@ -39,6 +39,8 @@
 .icon-facebook-squared:before { content: '\e807'; }
 .icon-github-squared:before { content: '\e808'; }
 .icon-down-dir:before { content: '\e806'; }
+.icon-left-dir:before { content: '\e814'; }
+.icon-right-dir:before { content: '\e813'; }
 .icon-twitter-squared:before { content: '\e80a'; }
 .icon-quote-left:before { content: '\e802'; }
 .icon-quote-right:before { content: '\e80b'; }

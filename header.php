@@ -43,7 +43,7 @@
 			<nav id="navigation" class="site-navigation primary-navigation" role="navigation">
 				<h1 class="menu-toggle"><?php _e( 'Menu', 'portfoliopress' ); ?></h1>
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'portfoliopress' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'depth' => '2' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
 		</div>
 	</header><!-- #branding -->
