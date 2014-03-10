@@ -1,4 +1,4 @@
-Portfolio Press 1.9.0
+Portfolio Press 2.0.0
 
 - New menu styling
 - Portfolio templates and styles rebuilt

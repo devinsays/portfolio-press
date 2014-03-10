@@ -65,7 +65,8 @@ function portfoliopress_portfolio_posts( $query ) {
 				}
 			endwhile;
 		endif;
-		if ( $portfolio_view ) {
+		// If $portfolio_view false, not all posts were image or gallery
+		if ( ! $portfolio_view ) {
 			$portfolio = true;
 			$query->set( 'portfolio_view', true );
 		}

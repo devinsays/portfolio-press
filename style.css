@@ -466,23 +466,29 @@ footer.entry-meta:before, footer.entry-meta:after {
 	margin-right:5px;
 	font-size:14px;
 }
+#content .archive-title {
+	font-size: 34px;
+	line-height: 48px;
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+}
 .archive-meta {
 	font-family: 'Rokkitt', sans-serif;
 	font-size:18px;
 	color:#333;
-	padding-bottom: 10px;
-	margin-bottom: 20px;
-	margin-top:-5px;
+	margin-bottom: 30px;
 }
-.archive-meta:after, .author .page-title:after, .author-info:after {
+#content .archive-meta p {
+	margin-bottom:10px;
+}
+.archive-title:after, .archive-meta:after {
 	content: '';
 	width: 100%;
 	height: 1px;
-	background: #ddd;
-	-webkit-box-shadow: 0 1px 0 0 #fff;
-	box-shadow: 0 1px 0 0 #fff;
+	background: #DDD;
+	-webkit-box-shadow: 0 1px 0 0 #FFF;
+	box-shadow: 0 1px 0 0 #FFF;
 	display: block;
-	margin-top:10px;
 }
 
 /* Author Template */

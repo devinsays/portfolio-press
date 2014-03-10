@@ -10,11 +10,13 @@ get_header(); ?>
 	<div id="primary">
 		<div id="content" role="main">
 
-			<h2 class="page-title"><?php
-				printf( __( 'Category Archives: %s', 'portfoliopress' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-			?></h2>
-
-			<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
+			<header class="archive-header">
+				<h1 class="archive-title"><?php echo single_cat_title( '', false ); ?></h1>
+				<?php $categorydesc = category_description();
+					if ( ! empty( $categorydesc ) ) {
+						echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' );
+				} ?>
+			</header>
 
 			<?php if ( have_posts() ) : ?>
 
@@ -32,6 +34,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content -->
+		</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -10,9 +10,13 @@ get_header(); ?>
 	<div id="primary">
 		<div id="content" role="main">
 
-			<h2 class="page-title"><?php
-				printf( __( 'Tag Archives: %s', 'portfoliopress' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-			?></h2>
+			<header class="archive-header">
+				<h1 class="archive-title"><?php echo single_tag_title( '', false ); ?></h1>
+				<?php $tagdesc = tag_description();
+					if ( ! empty( $tagdesc ) ) {
+						echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $tagdesc . '</div>' );
+				} ?>
+			</header>
 
 			<?php if ( have_posts() ) : ?>
 
@@ -30,6 +34,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content -->
+		</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
