@@ -1587,7 +1587,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
  *
  * @since 2.2.0
  */
-if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET['page'] ) && TGM_Plugin_Activation::$instance->menu === $_GET['page'] ) ) {
+
+if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET['page'] ) && 'install-recommended-plugins' === $_GET['page'] ) ) {
 	require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 
 	if ( ! class_exists( 'TGM_Bulk_Installer' ) ) {

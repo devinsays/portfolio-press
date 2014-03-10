@@ -54,7 +54,7 @@ function portfoliopress_portfolio_posts( $query ) {
 	}
 
 	// Check if the taxonomy query contains only image or gallery post formats
-	if ( is_category() || is_tag() ) {
+	if ( is_category() || is_tag() || is_home() ) {
 		$portfolio_view = true;
 		global $wp_query;
 		if ( $wp_query->have_posts() ) :
@@ -66,7 +66,7 @@ function portfoliopress_portfolio_posts( $query ) {
 			endwhile;
 		endif;
 		// If $portfolio_view false, not all posts were image or gallery
-		if ( ! $portfolio_view ) {
+		if ( $portfolio_view ) {
 			$portfolio = true;
 			$query->set( 'portfolio_view', true );
 		}
@@ -74,12 +74,13 @@ function portfoliopress_portfolio_posts( $query ) {
 
 	// Remove the term "templates" from the page template body class
 	// Primarily for backwards compatibility
-	if (
+	if ( isset( $post) && (
 		is_page_template( 'templates/full-width-page.php' ) ||
 		is_page_template( 'templates/portfolio.php' ) ||
 		is_page_template( 'templates/full-width-portfolio.php' ) ||
 		is_page_template( 'templates/post-format-gallery-image.php' ) ||
 		is_page_template( 'templates/portfolio-categories.php' )
+		)
 	) {
 		foreach( $classes as $key => $value) {
 			if ( $value == 'page-template-templatesfull-width-php') {
