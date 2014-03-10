@@ -117,25 +117,41 @@ add_filter( 'body_class','portfoliopress_body_class' );
  */
 function portfoliopress_display_image() {
 
-	if (
-		!post_password_required() &&
-		has_post_thumbnail() &&
-		of_get_option( 'portfolio_images', '1' )
-	) :
+	// Don't display images on single post if the option is turned off
+	if ( is_single() && !of_get_option( 'portfolio_images', '1' ) ) {
+		return;
+	}
+
+	if ( !post_password_required() && has_post_thumbnail() ) :
+
 	if ( ( 'image' == get_post_format() ) || 'portfolio' == get_post_type() ) { ?>
 	<div class="portfolio-image">
-		<?php if ( is_search() || is_archive() ) { ?>
+		<?php if ( !is_single() ) { ?>
 			<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
 		<?php } ?>
-		<?php if ( of_get_option( 'layout') == 'layout-1col' ) {
+		<?php if ( of_get_option( 'layout' ) == 'layout-1col' ) {
 			the_post_thumbnail( 'portfolio-fullwidth' );
 		} else {
 			the_post_thumbnail( 'portfolio-large' );
 		} ?>
-		<?php if ( is_search() || is_archive() ) { ?>
+		<?php if ( !is_single() ) { ?>
 			</a>
 		<?php } ?>
 	</div>
 	<?php  }
 	endif;
+}
+
+/**
+ * Helper function to display a gallery.
+ *
+ * @param object $post
+ */
+function portfoliopress_display_gallery( $post ) {
+	$pattern = get_shortcode_regex();
+	preg_match('/'.$pattern.'/s', $post->post_content, $matches);
+	if ( is_array( $matches ) && $matches[2] == 'gallery' ) {
+		$shortcode = $matches[0];
+		echo do_shortcode( $shortcode );
+	}
 }

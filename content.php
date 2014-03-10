@@ -18,15 +18,21 @@
 	</header><!-- .entry-header -->
 
 	<?php // Display excerpts for archives and search ?>
-	<?php if ( is_archive() || is_search() ) :?>
+	<?php if ( is_archive() || is_search() || is_author() ) :?>
 	<div class="entry-summary">
-		<?php portfoliopress_display_image(); ?>
-		<?php $excerpt = get_the_excerpt(); ?>
-		<?php if ( ( !$excerpt ) && !has_post_thumbnail() ) {
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'portfoliopress' ) );
-		} else {
-			echo '<p>' . $excerpt . '</p>';
-		} ?>
+	<?php
+		// Display an image if post format image
+		portfoliopress_display_image();
+
+		// Display the gallery shortcode if post format gallery
+		$gallery = ( 'gallery' == get_post_format() );
+		if ( $gallery ) {
+			portfoliopress_display_gallery( $post );
+		}
+
+		// Display the excerpt
+		the_excerpt();
+	?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 
