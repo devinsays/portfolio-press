@@ -49,25 +49,6 @@ function portfoliopress_template_chooser( $template ) {
 add_filter( 'template_include', 'portfoliopress_template_chooser' );
 
 /**
- * Default to 9 items displayed per page
- *
- * @param object query
- */
-function portfoliopress_portfolio_posts( $wp_query ) {
-
-	$posts_per_page = get_option( 'posts_per_page', '10' );
-
-	// If user has intentionally set $posts_per_page to something
-	// other than default, we won't override.
-	if ( $posts_per_page == '10' ) {
-		$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );
-		$wp_query->set( 'posts_per_page', $posts_per_page );
-	}
-
-}
-add_action( 'pre_get_posts', 'portfoliopress_portfolio_posts' );
-
-/**
  * Adds a body class to archives that display as a portfolio view
  *
  * @param array classes applied to post
@@ -132,6 +113,18 @@ function portfoliopress_body_class( $classes ) {
 }
 
 add_filter( 'body_class','portfoliopress_body_class' );
+
+/**
+ * Default to 9 items displayed per page
+ *
+ * @param int $posts_per_page
+ */
+if ( !function_exists( 'portfoliopress_posts_per_page') && ( get_option( 'posts_per_page', 10 ) == 10 ) ) :
+function portfolioplus_posts_per_page() {
+	return 9;
+}
+add_filter( 'pre_option_posts_per_page', 'portfoliopress_posts_per_page' );
+endif;
 
 /**
  * Helper function for displaying image

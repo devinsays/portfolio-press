@@ -104,6 +104,17 @@ function optionsframework_options() {
 		"type" => "checkbox"
 	);
 
+	$options[] = array(
+		'name' => __( 'Posts Per Page', 'portfoliopress' ),
+		'desc' => sprintf( '<p>%s</p>',
+			sprintf(
+				__( 'Posts per page can be set in the <a href="%s">reading options</a>.', 'portfolioplus' ),
+				admin_url( 'options-reading.php', false )
+				)
+			),
+		'type' => 'info'
+	);
+
 	/* Style and Layout */
 
 	$options[] = array(
@@ -152,7 +163,7 @@ function optionsframework_options() {
 		"type" => "textarea"
 	);
 
-	/* Upsell */
+	/* More Information */
 
 	$options[] = array(
 		"name" => __( 'More', 'portfoliopress' ),
