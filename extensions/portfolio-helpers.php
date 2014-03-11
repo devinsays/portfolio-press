@@ -80,8 +80,7 @@ function portfoliopress_portfolio_posts( $query ) {
 			is_page_template( 'templates/portfolio.php' ) ||
 			is_page_template( 'templates/full-width-portfolio.php' ) ||
 			is_page_template( 'templates/image-gallery-formats.php' ) ||
-			is_page_template( 'templates/full-width-image-gallery-formats.php' ) ||
-			is_page_template( 'templates/portfolio-categories.php' )
+			is_page_template( 'templates/full-width-image-gallery-formats.php' )
 		)
 	) {
 		foreach( $classes as $key => $value) {
