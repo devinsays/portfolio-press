@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Image and Gallery Posts
- * Descriptions: Displays all image post formats.
+ * Descriptions: Displays all image and gallery post formats.
  *
  * @package Portfolio Press
  */
@@ -9,7 +9,13 @@
 get_header(); ?>
 
 <?php
-global $paged;
+if ( get_query_var('paged') ) {
+  $paged = get_query_var('paged');
+} elseif ( get_query_var('page') ) {
+  $paged = get_query_var('page');
+} else {
+  $paged = 1;
+}
 $posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );
 $args = array(
 	'tax_query' => array(

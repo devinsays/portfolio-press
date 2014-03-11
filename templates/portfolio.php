@@ -9,7 +9,13 @@
 get_header(); ?>
 
 <?php
-global $paged;
+if ( get_query_var('paged') ) {
+  $paged = get_query_var('paged');
+} elseif ( get_query_var('page') ) {
+  $paged = get_query_var('page');
+} else {
+  $paged = 1;
+}
 $posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );
 $args = array(
 	'post_type' => 'portfolio',

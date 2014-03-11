@@ -52,53 +52,57 @@ function optionsframework_options() {
 		"type" => "upload"
 	);
 
-	if ( class_exists( 'Portfolio_Post_Type' ) ) :
+	if ( class_exists( 'Portfolio_Post_Type' ) ) {
+
+		$options[] = array(
+			"name" => __( 'Display Images on Portfolio / Image Posts', 'portfoliopress' ),
+			"desc" => __( 'Uncheck this if you wish to manually display images on single posts.', 'portfoliopress' ),
+			"id" => "portfolio_images",
+			"std" => "1",
+			"type" => "checkbox"
+		);
+
+	} else {
+
+		$options[] = array(
+			"name" => __( 'Display Images Automatically on Image Post Formats', 'portfoliopress' ),
+			"desc" => __( 'Uncheck this if you wish to manually control images on image format single posts.', 'portfoliopress' ),
+			"id" => "portfolio_images",
+			"std" => "1",
+			"type" => "checkbox"
+		);
+
+	}
+
+	if ( class_exists( 'Portfolio_Post_Type' ) ) {
+
+		$options[] = array(
+			"name" => __( 'Display Portfolio / Image / Galleries Full Width', 'portfoliopress' ),
+			"desc" => __( 'Check this to display all image based archives full width.', 'portfoliopress' ),
+			"id" => "portfolio_sidebar",
+			"std" => "0",
+			"type" => "checkbox"
+		);
+
+	} else {
+
+		$options[] = array(
+			"name" => __( 'Display Image and Gallery Post Format Archives Full Width', 'portfoliopress' ),
+			"desc" => __( 'Check this to display all image/gallery archives full width.', 'portfoliopress' ),
+			"id" => "portfolio_sidebar",
+			"std" => "0",
+			"type" => "checkbox"
+		);
+
+	}
 
 	$options[] = array(
-		"name" => __( 'Display Images on Portfolio Posts', 'portfoliopress' ),
-		"desc" => __( 'Uncheck this if you wish to manually display portfolio images on single posts.', 'portfoliopress' ),
-		"id" => "portfolio_images",
-		"std" => "1",
-		"type" => "checkbox"
-	);
-
-	$options[] = array(
-		"name" => __( 'Display Portfolio Archives Full Width', 'portfoliopress' ),
-		"desc" => __( 'Check this to display all portfolio archives full width.', 'portfoliopress' ),
-		"id" => "portfolio_sidebar",
-		"std" => "0",
-		"type" => "checkbox"
-	);
-
-	endif;
-
-	if ( !class_exists( 'Portfolio_Post_Type' ) ) :
-
-	$options[] = array(
-		"name" => __( 'Hide Image and Gallery Formats on Posts Page', 'portfoliopress' ),
+		"name" => __( 'Display Image and Gallery Formats on Posts Page', 'portfoliopress' ),
 		"desc" => __( 'Check this to remove image and gallery posts from your standard posts page.' ),
 		"id" => "display_image_gallery_post_formats",
-		"std" => "0",
-		"type" => "checkbox"
-	);
-
-	$options[] = array(
-		"name" => __( 'Display Images Automatically on Image Post Formats', 'portfoliopress' ),
-		"desc" => __( 'Uncheck this if you wish to manually control images on image format posts.', 'portfoliopress' ),
-		"id" => "portfolio_images",
 		"std" => "1",
 		"type" => "checkbox"
 	);
-
-	$options[] = array(
-		"name" => __( 'Display Image and Gallery Post Format Archives Full Width', 'portfoliopress' ),
-		"desc" => __( 'Check this to display all image/gallery archives full width.', 'portfoliopress' ),
-		"id" => "portfolio_sidebar",
-		"std" => "0",
-		"type" => "checkbox"
-	);
-
-	endif;
 
 	/* Style and Layout */
 
@@ -138,13 +142,53 @@ function optionsframework_options() {
 
 	$options[] = array(
 		"name" => __( 'Footer Settings', 'portfoliopress' ),
-		"type" => "heading");
+		"type" => "heading"
+	);
 
 	$options[] = array(
 		"name" => __( 'Custom Footer Text', 'portfoliopress' ),
 		"desc" => __( 'Custom text that will appear in the footer of your theme.','portfoliopress' ),
 		"id" => "footer_text",
 		"type" => "textarea"
+	);
+
+	/* Upsell */
+
+	$options[] = array(
+		"name" => __( 'More', 'portfoliopress' ),
+		"type" => "heading"
+	);
+
+	$options[] = array(
+		'name' => __( 'Theme Support', 'portfoliopress' ),
+		'desc' => sprintf(
+				'<p>%s</p>',
+				sprintf(
+					__( 'If you need help with Portfolio Press, check if your question has been answered in the <a href="%s">theme FAQ</a>.', 'portfoliopress' ),
+					esc_url( 'http://wptheming.com/portfolio-theme' )
+				)
+			),
+		'type' => 'info'
+	);
+
+	$options[] = array(
+		'name' => __( 'Additional Options in Portfolio+', 'portfoliopress' ),
+		'desc' => sprintf(
+				'<p>%s</p><p>%s</p><ul><li>-- %s</li><li>-- %s</li><li>-- %s</li></ul><p>%s</p>',
+				sprintf(
+					__( 'If you like this theme and would like to support further development, consider purchasing <a href="%s">Portfolio+</a>.', 'portfoliopress' ),
+					esc_url( 'http://wptheming.com/portfolio-plus' )
+				),
+				__( 'You will also get these additional features:', 'portfoliopress' ),
+				__( 'Color and Background Style Options', 'portfoliopress' ),
+				__( 'Infinite Scroll', 'portfoliopress' ),
+				__( 'Additional Page Templates', 'portfoliopress' ),
+				sprintf(
+					__( '<a href="%s">Read More</a>', 'portfoliopress' ),
+					esc_url( 'http://wptheming.com/portfolio-plus' )
+				)
+			),
+		'type' => 'info'
 	);
 
 	/* Utility Options (Not Displayed) */
@@ -166,3 +210,19 @@ function optionsframework_options() {
 
 	return $options;
 }
+
+/**
+ * Additional content to display after the options panel
+ */
+function portfoliopress_panel_info() { ?>
+    <p style="color: #777;">
+    <?php printf(
+    	'Theme <a href="%s">documentation</a>.  For additional options, see <a href="%s">Portfolio+</a>.',
+    	esc_url( 'http://wptheming.com/portfolio-theme' ),
+    	esc_url( 'http://wptheming.com/portfolio-plus' )
+    );
+    ?>
+    </p>
+<?php }
+
+add_action( 'optionsframework_after', 'portfoliopress_panel_info', 100 );

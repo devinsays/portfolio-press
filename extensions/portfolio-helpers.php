@@ -47,14 +47,15 @@ function portfoliopress_portfolio_posts( $query ) {
 	if ( isset( $post) && (
 			is_page_template( 'templates/portfolio.php' ) ||
 			is_page_template( 'templates/full-width-portfolio.php' ) ||
-			is_page_template( 'templates/post-format-gallery-image.php' )
+			is_page_template( 'templates/image-gallery-formats.php' ) ||
+			is_page_template( 'templates/full-width-image-gallery-formats.php' )
 		)
 	) {
 		$portfolio = true;
 	}
 
 	// Check if the taxonomy query contains only image or gallery post formats
-	if ( is_category() || is_tag() ) {
+	if ( is_category() || is_tag() || is_home() ) {
 		$portfolio_view = true;
 		global $wp_query;
 		if ( $wp_query->have_posts() ) :
@@ -66,7 +67,7 @@ function portfoliopress_portfolio_posts( $query ) {
 			endwhile;
 		endif;
 		// If $portfolio_view false, not all posts were image or gallery
-		if ( ! $portfolio_view ) {
+		if ( $portfolio_view ) {
 			$portfolio = true;
 			$query->set( 'portfolio_view', true );
 		}
@@ -74,12 +75,14 @@ function portfoliopress_portfolio_posts( $query ) {
 
 	// Remove the term "templates" from the page template body class
 	// Primarily for backwards compatibility
-	if (
-		is_page_template( 'templates/full-width-page.php' ) ||
-		is_page_template( 'templates/portfolio.php' ) ||
-		is_page_template( 'templates/full-width-portfolio.php' ) ||
-		is_page_template( 'templates/post-format-gallery-image.php' ) ||
-		is_page_template( 'templates/portfolio-categories.php' )
+	if ( isset( $post) && (
+			is_page_template( 'templates/full-width-page.php' ) ||
+			is_page_template( 'templates/portfolio.php' ) ||
+			is_page_template( 'templates/full-width-portfolio.php' ) ||
+			is_page_template( 'templates/image-gallery-formats.php' ) ||
+			is_page_template( 'templates/full-width-image-gallery-formats.php' ) ||
+			is_page_template( 'templates/portfolio-categories.php' )
+		)
 	) {
 		foreach( $classes as $key => $value) {
 			if ( $value == 'page-template-templatesfull-width-php') {
@@ -91,8 +94,11 @@ function portfoliopress_portfolio_posts( $query ) {
 			if ( $value == 'page-template-templatesfull-width-portfolio-php') {
 				$classes[$key] = 'page-template-full-width-portfolio-php';
 			}
-			if ( $value == 'page-template-templatespost-format-gallery-image-php') {
-				$classes[$key] = 'page-template-post-format-gallery-image-php';
+			if ( $value == 'page-template-templatesimage-gallery-formats-php') {
+				$classes[$key] = 'page-template-image-gallery-formats-php';
+			}
+			if ( $value == 'page-template-templatesfull-width-image-gallery-formats-php') {
+				$classes[$key] = 'page-template-full-width-image-gallery-formats-php';
 			}
 		}
 	}
@@ -117,7 +123,8 @@ function portfoliopress_body_class( $classes ) {
 	if (
 		is_page_template( 'templates/portfolio.php' ) ||
 		is_page_template( 'templates/full-width-portfolio.php' ) ||
-		is_page_template( 'templates/post-format-gallery-image.php' ) ||
+		is_page_template( 'templates/image-gallery-formats.php' ) ||
+		is_page_template( 'templates/full-width-image-gallery-formats.php' ) ||
 		get_query_var( 'portfolio_view' )
 	) {
 		$classes[] = 'portfolio-view';
@@ -127,7 +134,10 @@ function portfoliopress_body_class( $classes ) {
 	}
 
 	if ( !of_get_option( 'portfolio_sidebar', false ) ) {
-		if ( is_page_template( 'templates/full-width-portfolio.php' ) ) {
+		if (
+			is_page_template( 'templates/full-width-portfolio.php' ) ||
+			is_page_template( 'templates/full-width-image-gallery-formats.php' )
+		) {
 			$classes[] = 'full-width-portfolio';
 		}
 	}

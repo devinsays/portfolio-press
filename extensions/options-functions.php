@@ -27,22 +27,6 @@ function of_get_option( $name, $default = false ) {
 endif;
 
 /**
- * Additional content to display after the options panel
- */
-function portfoliopress_panel_info() { ?>
-    <p style="color: #777;">
-    <?php printf(
-    	'Theme <a href="%s">documentation</a>.  For additional options, see <a href="%s">Portfolio+</a>.',
-    	esc_url( 'http://wptheming.com/portfolio-theme' ),
-    	esc_url( 'http://wptheming.com/portfolio-plus' )
-    );
-    ?>
-    </p>
-<?php }
-
-add_action( 'optionsframework_after', 'portfoliopress_panel_info', 100 );
-
-/**
  * Adds a body class to indicate sidebar position
  */
 function portfoliopress_body_class_options( $classes ) {
