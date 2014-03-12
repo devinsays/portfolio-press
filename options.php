@@ -98,7 +98,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		"name" => __( 'Display Image and Gallery Formats on Posts Page', 'portfoliopress' ),
-		"desc" => __( 'Check this to remove image and gallery posts from your standard posts page.' ),
+		"desc" => __( 'Uncheck this to remove image and gallery posts from your standard posts page.' ),
 		"id" => "display_image_gallery_post_formats",
 		"std" => "1",
 		"type" => "checkbox"
