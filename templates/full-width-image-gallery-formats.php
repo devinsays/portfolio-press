@@ -9,14 +9,13 @@
 get_header(); ?>
 
 <?php
-if ( get_query_var('paged') ) {
-  $paged = get_query_var('paged');
-} elseif ( get_query_var('page') ) {
-  $paged = get_query_var('page');
+if ( get_query_var( 'paged' ) ) {
+	$paged = get_query_var( 'paged' );
+} elseif ( get_query_var( 'page' ) ) {
+	$paged = get_query_var( 'page' );
 } else {
-  $paged = 1;
+	$paged = 1;
 }
-$posts_per_page = apply_filters( 'portfoliopress_posts_per_page', '9' );
 $args = array(
 	'tax_query' => array(
 		array(
@@ -25,7 +24,6 @@ $args = array(
 		    'terms' => array( 'post-format-image', 'post-format-gallery' ),
 		)
 	),
-	'posts_per_page' => $posts_per_page,
 	'paged' => $paged
 );
 // Override the primary post loop

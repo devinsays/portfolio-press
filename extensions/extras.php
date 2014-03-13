@@ -38,7 +38,7 @@ add_filter( 'wp_title', 'portfoliopress_wp_title', 10, 2 );
 
 /**
  * Upgrade routine for Portfolio Press.
- * Sets $options['upgrade'] to true if user is updating
+ * Sets $options['upgrade-1-9'] to true if user is updating
  */
 function portfoliopress_upgrade_routine() {
 
@@ -51,14 +51,14 @@ function portfoliopress_upgrade_routine() {
 
 	// If $options exist, user is upgrading
 	if ( $options ) {
-		$options['upgrade'] = true;
+		$options['upgrade-1-9'] = true;
 	}
 
 	// If 'portfolio_ignore_notice' exists, user is upgrading
 	// We'll also delete that data since it's no longer used
 	global $current_user;
 	if ( get_user_meta( $current_user->ID, 'portfolio_ignore_notice' ) ) {
-		$options['upgrade'] = true;
+		$options['upgrade-1-9'] = true;
 		delete_user_meta( $current_user->ID, 'portfolio_ignore_notice' );
 	}
 
@@ -70,8 +70,6 @@ function portfoliopress_upgrade_routine() {
 
 	update_option( 'portfoliopress', $options );
 }
-
-
 add_action( 'admin_init', 'portfoliopress_upgrade_routine' );
 
 /**
@@ -121,35 +119,70 @@ function portfoliopress_update_page_templates() {
 function portfoliopress_upgrade_notice() {
 
 	if ( current_user_can( 'edit_theme_options' ) ) {
-
 		$options = get_option( 'portfoliopress', false );
 
-		if ( !empty( $options['upgrade'] ) ) {
+		if ( !empty( $options['upgrade-1-9'] ) ) {
 			echo '<div class="updated"><p>';
 				printf( __(
-					'Thanks for updating Portfolio Press to version 1.9.  Please <b><a href="%1$s">read about the changes</a></b> in this version. <b><a href="%2$s">Dismiss this Notice</a></b>.' ),
+					'Thanks for updating Portfolio Press to version 1.9.  Please <a href="%1$s">read about the changes</a> in this version. <a href="%2$s">Dismiss Notice</a>.' ),
 					'http://wptheming.com',
 					'?portfolio_upgrade_notice_ignore=1' );
 			echo '</p></div>';
 		}
+	}
 
+}
+add_action( 'admin_notices', 'portfoliopress_upgrade_notice', 100 );
+
+function portfoliopress_posts_per_page_notice() {
+
+	$posts_per_page = get_option( 'posts_per_page', 10 );
+
+	if ( ( $posts_per_page % 3 ) == 0 ) {
+		return;
+	}
+
+	$options = get_option( 'portfoliopress', false );
+
+	if ( isset( $options['post_per_page_ignore'] ) ) {
+		return;
+	}
+
+	if ( current_user_can( 'manage_options' ) ) {
+		echo '<div class="updated"><p>';
+			printf( __(
+				'Portfolio Press recommends setting posts per page to 9. This can be changed under <a href="%3$s">Settings > Reading Options</a>.<br><a href="%1$s">Update It</a> | <a href="%2$s">Dismiss Notice</a>.' ),
+				'?portfolio_update_posts_per_page=1',
+				'?portfolio_post_per_page_ignore=1',
+				admin_url( 'options-reading.php', false ) );
+		echo '</p></div>';
 	}
 }
-
-add_action( 'admin_notices', 'portfoliopress_upgrade_notice', 100 );
+add_action( 'admin_notices', 'portfoliopress_posts_per_page_notice', 120 );
 
 /**
  * Hides update notice if user chooses to dismiss it
  */
-function portfoliopress_upgrade_notice_ignore() {
+function portfoliopress_notice_ignores() {
+
+	$options = get_option( 'portfoliopress' );
+
 	if ( isset( $_GET['portfolio_upgrade_notice_ignore'] ) && '1' == $_GET['portfolio_upgrade_notice_ignore'] ) {
-		$options = get_option( 'portfoliopress' );
-		$options['upgrade'] = false;
+		$options['upgrade-1-9-1'] = false;
 		update_option( 'portfoliopress', $options );
 	}
-}
 
-add_action( 'admin_init', 'portfoliopress_upgrade_notice_ignore' );
+	if ( isset( $_GET['portfolio_post_per_page_ignore'] ) && '1' == $_GET['portfolio_post_per_page_ignore'] ) {
+		$options['post_per_page_ignore'] = false;
+		update_option( 'portfoliopress', $options );
+	}
+
+	if ( isset( $_GET['portfolio_update_posts_per_page'] ) && '1' == $_GET['portfolio_update_posts_per_page'] ) {
+		update_option( 'posts_per_page', 9 );
+	}
+
+}
+add_action( 'admin_init', 'portfoliopress_notice_ignores' );
 
 /**
  * Removes page templates that require the Portfolio Post Type.

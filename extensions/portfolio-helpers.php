@@ -111,20 +111,7 @@ function portfoliopress_body_class( $classes ) {
 
 	return $classes;
 }
-
 add_filter( 'body_class','portfoliopress_body_class' );
-
-/**
- * Default to 9 items displayed per page
- *
- * @param int $posts_per_page
- */
-if ( !function_exists( 'portfoliopress_posts_per_page') && ( get_option( 'posts_per_page', 10 ) == 10 ) ) :
-function portfolioplus_posts_per_page() {
-	return 9;
-}
-add_filter( 'pre_option_posts_per_page', 'portfoliopress_posts_per_page' );
-endif;
 
 /**
  * Helper function for displaying image
