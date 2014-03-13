@@ -134,6 +134,9 @@ function portfoliopress_upgrade_notice() {
 }
 add_action( 'admin_notices', 'portfoliopress_upgrade_notice', 100 );
 
+/**
+ * Displays notice if post_per_page is not divisible by 3
+ */
 function portfoliopress_posts_per_page_notice() {
 
 	$posts_per_page = get_option( 'posts_per_page', 10 );
@@ -161,7 +164,7 @@ function portfoliopress_posts_per_page_notice() {
 add_action( 'admin_notices', 'portfoliopress_posts_per_page_notice', 120 );
 
 /**
- * Hides update notice if user chooses to dismiss it
+ * Hides notices if user chooses to dismiss it
  */
 function portfoliopress_notice_ignores() {
 
@@ -187,8 +190,11 @@ add_action( 'admin_init', 'portfoliopress_notice_ignores' );
 /**
  * Removes page templates that require the Portfolio Post Type.
  *
- * This is an ugly hack until post template filters appear in core:
- * https://core.trac.wordpress.org/ticket/13265
+ * This is a backwards compatible hack for removing un-necessary
+ * page templates.  Will be removed in next version of theme.
+ * See: https://core.trac.wordpress.org/ticket/13265
+ *
+ * @param string $hook
  */
 function portfoliopress_page_template_mod( $hook ) {
 	global $wp_version;
@@ -218,7 +224,7 @@ function portfoliopress_page_templates_mod( $templates ) {
 	}
 	return $templates;
 }
-add_filter( 'page_templates', 'portfoliopress_page_templates_mod' );
+add_filter( 'theme_page_templates', 'portfoliopress_page_templates_mod' );
 
 /**
  * WP PageNavi Support
