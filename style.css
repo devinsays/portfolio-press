@@ -221,9 +221,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	font-size:44px;
 	text-decoration:none;
 }
-#logo #site-title img {
-	max-width:100%;
-}
 #logo #site-description {
 	font-family: 'Rokkitt', sans-serif;
 	font-style: italic;
@@ -540,11 +537,6 @@ footer.entry-meta:before, footer.entry-meta:after {
 
 .entry-content img {
 	background:#fff;
-}
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"] {
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 img.size-full,
 img.size-large {
