@@ -254,3 +254,14 @@ add_filter( 'shortcode_atts_gallery', 'portfoliopress_gallery_atts' );
 
 // Removes the default gallery styling
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+/**
+ * Remove WordPress's default padding on images with captions
+ *
+ * @param int $width Default WP .wp-caption width (image width + 10px)
+ * @return int Updated width to remove 10px padding
+ */
+function portfoliopress_remove_caption_padding( $width ) {
+    return $width - 10;
+}
+add_filter( 'img_caption_shortcode_width', 'portfoliopress_remove_caption_padding' );

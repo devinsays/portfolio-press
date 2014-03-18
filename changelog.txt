@@ -7,6 +7,7 @@ Portfolio Press 2.0.0
 - Single column is now 980px
 - Support Jetpack Carousel Module
 - Update gallery shortcode to HTML5 markup
+- Update styling for image captions
 
 Portfolio Press 1.8.0
 
