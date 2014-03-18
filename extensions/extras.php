@@ -38,7 +38,7 @@ add_filter( 'wp_title', 'portfoliopress_wp_title', 10, 2 );
 
 /**
  * Upgrade routine for Portfolio Press.
- * Sets $options['upgrade-1-9'] to true if user is updating
+ * Sets $options['upgrade-2-0'] to true if user is updating
  */
 function portfoliopress_upgrade_routine() {
 
@@ -51,22 +51,24 @@ function portfoliopress_upgrade_routine() {
 
 	// If $options exist, user is upgrading
 	if ( $options ) {
-		$options['upgrade-1-9'] = true;
+		$options['upgrade-2-0'] = true;
 	}
 
 	// If 'portfolio_ignore_notice' exists, user is upgrading
 	// We'll also delete that data since it's no longer used
 	global $current_user;
 	if ( get_user_meta( $current_user->ID, 'portfolio_ignore_notice' ) ) {
-		$options['upgrade-1-9'] = true;
+		$options['upgrade-2-0'] = true;
 		delete_user_meta( $current_user->ID, 'portfolio_ignore_notice' );
 	}
 
 	// Page template paths need to be updated
-	portfoliopress_update_page_templates();
+	if ( isset( $options['upgrade-2-0'] ) && $options['upgrade-2-0'] ) {
+		portfoliopress_update_page_templates();
+	}
 
 	// New version number
-	$options['version'] = '1.9';
+	$options['version'] = '2.0';
 
 	update_option( 'portfoliopress', $options );
 }
@@ -121,7 +123,7 @@ function portfoliopress_upgrade_notice() {
 	if ( current_user_can( 'edit_theme_options' ) ) {
 		$options = get_option( 'portfoliopress', false );
 
-		if ( !empty( $options['upgrade-1-9'] ) && $options['upgrade-1-9'] ) {
+		if ( !empty( $options['upgrade-2-0'] ) && $options['upgrade-2-0'] ) {
 			echo '<div class="updated"><p>';
 				printf( __(
 					'Thanks for updating Portfolio Press to version 1.9.  Please <a href="%1$s">read about the changes</a> in this version. <a href="%2$s">Dismiss notice</a>.' ),
@@ -171,7 +173,7 @@ function portfoliopress_notice_ignores() {
 	$options = get_option( 'portfoliopress' );
 
 	if ( isset( $_GET['portfolio_upgrade_notice_ignore'] ) && '1' == $_GET['portfolio_upgrade_notice_ignore'] ) {
-		$options['upgrade-1-9'] = false;
+		$options['upgrade-2-0'] = false;
 		update_option( 'portfoliopress', $options );
 	}
 

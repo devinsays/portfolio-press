@@ -1,0 +1,89 @@
+/*
+Theme Name: Portfolio Press
+
+Built in RTL support.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+.screen-reader-text {
+	position: absolute;
+	left:0;
+	right:-999em;
+}
+#logo {
+	float:right;
+	padding-right:0;
+	padding-left:75px;
+}
+#content {
+	float:right;
+}
+#sidebar {
+	float:left;
+}
+#footer-widgets .block {
+	padding:0 0 0 2%;
+	float:right;
+}
+.author-avatar {
+	float:right;
+	margin-right:0;
+	margin-left:20px;
+}
+.portfolio-view .hentry {
+	float:right;
+	margin:0 0 2% 2%;
+}
+.portfolio-view .hentry:nth-of-type(3n) {
+	margin-right:0;
+}
+.portfolio-view .hentry:nth-of-type(3n - 3) {
+	margin-left:0;
+}
+#content nav .nav-previous {
+	position: relative;
+	float: right;
+	text-align: right;
+}
+#content nav .nav-next {
+	position: relative;
+	float: left;
+	text-align: left;
+}
+#footer-widgets .block {
+	padding:0 0 0 2%;
+	float:right;
+}
+#footer-widgets .footer-widget-4 {
+	padding:0;
+}
+#comments .comment-author img {
+	float:right;
+	margin: 0 0 5px 15px;
+}
+@media screen and (min-width: 780px) {
+	.primary-navigation {
+		float: left;
+	}
+}
+@media (max-width: 680px) {
+	.portfolio-view .hentry {
+		margin-right:0;
+		margin-left:4%;
+	}
+	.portfolio-view .hentry:nth-of-type(odd) {
+		clear:both;
+		margin-right:0;
+		margin-left:4%;
+	}
+	.portfolio-view .hentry:nth-of-type(2n) {
+		margin-right:0;
+		margin-left:0;
+	}
+}
