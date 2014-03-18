@@ -176,7 +176,7 @@ function optionsframework_options() {
 				'<p>%s</p>',
 				sprintf(
 					__( 'If you need help with Portfolio Press, check if your question has been answered in the <a href="%s">theme FAQ</a>.', 'portfoliopress' ),
-					esc_url( 'http://wptheming.com/portfolio-theme' )
+					esc_url( 'http://wptheming.com/portfolio-press' )
 				)
 			),
 		'type' => 'info'
@@ -229,7 +229,7 @@ function portfoliopress_panel_info() { ?>
     <p style="color: #777;">
     <?php printf(
     	'Theme <a href="%s">documentation</a>.  For additional options, see <a href="%s">Portfolio+</a>.',
-    	esc_url( 'http://wptheming.com/portfolio-theme' ),
+    	esc_url( 'http://wptheming.com/portfolio-press' ),
     	esc_url( 'http://wptheming.com/portfolio-plus' )
     );
     ?>

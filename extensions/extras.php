@@ -126,8 +126,8 @@ function portfoliopress_upgrade_notice() {
 		if ( !empty( $options['upgrade-2-0'] ) && $options['upgrade-2-0'] ) {
 			echo '<div class="updated"><p>';
 				printf( __(
-					'Thanks for updating Portfolio Press to version 1.9.  Please <a href="%1$s">read about the changes</a> in this version. <a href="%2$s">Dismiss notice</a>.' ),
-					'http://wptheming.com',
+					'Thanks for updating Portfolio Press to version 2.0.  Please <a href="%1$s">read about the changes</a> in this version. <a href="%2$s">Dismiss notice</a>.' ),
+					'http://wptheming.com/2014/03/portfolio-theme-updates/',
 					'?portfolio_upgrade_notice_ignore=1' );
 			echo '</p></div>';
 		}
