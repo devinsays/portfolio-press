@@ -149,24 +149,24 @@ add_action( 'init', 'portfoliopress_widgets_init' );
 /**
  * Sets up the options panel and default functions
  */
-require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
+require_once( get_template_directory() . '/extensions/options-functions.php' );
 
 /**
  * Adds general template functions
  */
-require_once( TEMPLATEPATH . '/extensions/template-helpers.php' );
+require_once( get_template_directory() . '/extensions/template-helpers.php' );
 
 /**
  * Adds general portfolio functions
  */
-require_once( TEMPLATEPATH . '/extensions/portfolio-helpers.php' );
+require_once( get_template_directory() . '/extensions/portfolio-helpers.php' );
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require_once( TEMPLATEPATH . '/extensions/extras.php' );
+require_once( get_template_directory() . '/extensions/extras.php' );
 
 /**
  * Displays notices for recommended plugins
  */
-require_once( TEMPLATEPATH . '/extensions/recommended-plugins.php' );
+require_once( get_template_directory() . '/extensions/recommended-plugins.php' );
