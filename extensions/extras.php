@@ -62,10 +62,8 @@ function portfoliopress_upgrade_routine() {
 		delete_user_meta( $current_user->ID, 'portfolio_ignore_notice' );
 	}
 
-	// Page template paths need to be updated
-	if ( isset( $options['upgrade-2-0'] ) && $options['upgrade-2-0'] ) {
-		portfoliopress_update_page_templates();
-	}
+	// Update page templates
+	portfoliopress_update_page_templates();
 
 	// New version number
 	$options['version'] = '2.0';
