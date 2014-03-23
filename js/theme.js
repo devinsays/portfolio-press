@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
 	}
 
 	// If the site title and menu don't fit on the same line, clear the menu
-	if ( $('#branding .col-width').width() < ( $('#logo').width() + PortfolioPressJS.nav.width() ) ) {
+	if ( $('#branding .col-width').width() < ( $('#logo').outerWidth() + PortfolioPressJS.nav.outerWidth() ) ) {
 		$('body').addClass('clear-menu');
 	}
 
