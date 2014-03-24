@@ -26,8 +26,7 @@ if ( $fullwidth )
 		<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
 			<h3><?php the_title() ?></h3>
 			<?php
-			$format = 'standard';
-			if ( has_post_format() ) :
+			if ( has_post_format( array( 'gallery', 'image' ) ) ) :
 				$format = get_post_format();
 			?>
 			<div class="portfolio-format-meta icon-format-<?php echo $format; ?>"></div>
