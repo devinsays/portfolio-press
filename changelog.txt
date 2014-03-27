@@ -1,4 +1,8 @@
-Portfolio Press 2.0.0
+Portfolio Press 2.1
+
+- Fixes for 3 tier menus
+
+Portfolio Press 2.0
 
 - New menu styling
 - Portfolio templates and styles rebuilt
@@ -9,26 +13,26 @@ Portfolio Press 2.0.0
 - Update gallery shortcode to HTML5 markup
 - Update styling for image captions
 
-Portfolio Press 1.8.0
+Portfolio Press 1.8
 
 - Larger screenshot for WordPress 3.8
 - Compatibility update for Options Framework 1.7
 
-Portfolio Press 1.7.0
+Portfolio Press 1.7
 
 - Show larger thumbnails on one-column layouts
 - Increase thumbnail sizes on regular layouts
 - Fix for max-width logo in Firefox
 - Show thumbnails on search pages
 
-Portfolio Press 1.6.0
+Portfolio Press 1.6
 
 - Update $content_width on full page templates
 - Improvements for password protected portfolio posts
 - Normalize post meta
 - New portfoliopress_posts_per_page filter
 
-Portfolio Press 1.5.0
+Portfolio Press 1.5
 
 - Add single portfolio post navigation back
 - Add fullwidth portfolio thumnail size
@@ -41,7 +45,7 @@ Portfolio Press 1.4.1
 - Fixed theme dependency on Options Framework plugin
 - Updated inline theme documentation
 
-Portfolio Press 1.4.0
+Portfolio Press 1.4
 
 - Added box shadows to borders
 - Max-width for logo image
@@ -80,7 +84,7 @@ Portfolio Press 1.1.0
 - Responsive design
 - Updated styling
 
-Portfolio Press 1.0.0
+Portfolio Press 1.0
 
 - Fix for search.php template
 - Fix for pagination in portfolio page template
@@ -182,7 +186,7 @@ Portfolio Press 0.5.1
 - Updated the text domain for translations
 - Made the name change to "Portfolio Press" to comply with repo guidelines
 
-Portfolio Press 0.5.0
+Portfolio Press 0.5
 
 - Added templates for full-width portfolio, and taxonomy portfolio-tags
 - Updated style.css for new templates and for full-width page template
@@ -209,7 +213,7 @@ Portfolio Press 0.4.1
 - Updated style.css to properly clear images when they are floated at the bottom of a post
 - Updated styles.css to apply a max-width of 640px to images in #content
 
-Portfolio Press 0.4.0
+Portfolio Press 0.4
 
 - Changed title filter priority in simple-custom-post-type-archives.php
 - Added better handling for the Simple Custom Post Type Archives plugin
