@@ -1,6 +1,7 @@
 Portfolio Press 2.1
 
-- Fixes for 3 tier menus
+- Fix for three tier menus
+- Fix for Google font loading from https
 
 Portfolio Press 2.0
 
