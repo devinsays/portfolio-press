@@ -2,6 +2,7 @@ Portfolio Press 2.1
 
 - Fix for three tier menus
 - Fix for Google font loading from https
+- Remove padding on logo for small screen
 
 Portfolio Press 2.0
 
