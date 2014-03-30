@@ -56,7 +56,7 @@ function optionsframework_options() {
 
 		$options[] = array(
 			"name" => __( 'Display Images on Portfolio / Image Posts', 'portfoliopress' ),
-			"desc" => __( 'Uncheck this if you wish to manually display images on single posts.', 'portfoliopress' ),
+			"desc" => __( 'Uncheck this if you wish to manually display featured images.', 'portfoliopress' ),
 			"id" => "portfolio_images",
 			"std" => "1",
 			"type" => "checkbox"
