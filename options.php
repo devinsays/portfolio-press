@@ -66,7 +66,7 @@ function optionsframework_options() {
 
 		$options[] = array(
 			"name" => __( 'Display Images Automatically on Image Post Formats', 'portfoliopress' ),
-			"desc" => __( 'Uncheck this if you wish to manually control images on image format single posts.', 'portfoliopress' ),
+			"desc" => __( 'Uncheck this if you wish to manually display featured images.', 'portfoliopress' ),
 			"id" => "portfolio_images",
 			"std" => "1",
 			"type" => "checkbox"
