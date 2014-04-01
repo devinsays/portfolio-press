@@ -474,6 +474,9 @@ footer.entry-meta:before, footer.entry-meta:after {
 	margin-right:5px;
 	font-size:14px;
 }
+.archive-header {
+	margin-bottom: 30px;
+}
 #content .archive-title {
 	font-size: 34px;
 	line-height: 48px;
@@ -484,7 +487,6 @@ footer.entry-meta:before, footer.entry-meta:after {
 	font-family: 'Rokkitt', sans-serif;
 	font-size:18px;
 	color:#333;
-	margin-bottom: 30px;
 }
 #content .archive-meta p {
 	margin-bottom:10px;

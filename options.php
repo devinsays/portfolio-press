@@ -104,6 +104,14 @@ function optionsframework_options() {
 		"type" => "checkbox"
 	);
 
+	$options['archive_titles'] = array(
+		'name' => __( 'Archive Titles', 'portfoliopress' ),
+		'desc' => __( 'Display archive titles and descriptions.', 'portfoliopress' ),
+		'id' => 'archive_titles',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+
 	$options[] = array(
 		'name' => __( 'Posts Per Page', 'portfoliopress' ),
 		'desc' => sprintf( '<p>%s</p>',

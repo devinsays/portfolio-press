@@ -4,6 +4,7 @@ Portfolio Press 2.1
 - Fix for Google font loading from https
 - Remove padding on logo for small screen
 - Hide featured images in blog layout if option is unchecked
+- Display archive titles and descriptions
 
 Portfolio Press 2.0
 
