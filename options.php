@@ -56,7 +56,7 @@ function optionsframework_options() {
 
 		$options[] = array(
 			"name" => __( 'Display Images on Portfolio / Image Posts', 'portfoliopress' ),
-			"desc" => __( 'Uncheck this if you wish to manually display featured images.', 'portfoliopress' ),
+			"desc" => __( 'Display featured images automatically on posts.', 'portfoliopress' ),
 			"id" => "portfolio_images",
 			"std" => "1",
 			"type" => "checkbox"
@@ -66,7 +66,7 @@ function optionsframework_options() {
 
 		$options[] = array(
 			"name" => __( 'Display Images Automatically on Image Post Formats', 'portfoliopress' ),
-			"desc" => __( 'Uncheck this if you wish to manually display featured images.', 'portfoliopress' ),
+			"desc" => __( 'Display featured images automatically on posts.', 'portfoliopress' ),
 			"id" => "portfolio_images",
 			"std" => "1",
 			"type" => "checkbox"
@@ -78,7 +78,7 @@ function optionsframework_options() {
 
 		$options[] = array(
 			"name" => __( 'Display Portfolio / Image / Galleries Full Width', 'portfoliopress' ),
-			"desc" => __( 'Check this to display all image based archives full width.', 'portfoliopress' ),
+			"desc" => __( 'Display all image based archives full width.', 'portfoliopress' ),
 			"id" => "portfolio_sidebar",
 			"std" => "0",
 			"type" => "checkbox"
@@ -88,7 +88,7 @@ function optionsframework_options() {
 
 		$options[] = array(
 			"name" => __( 'Display Image and Gallery Post Format Archives Full Width', 'portfoliopress' ),
-			"desc" => __( 'Check this to display all image/gallery archives full width.', 'portfoliopress' ),
+			"desc" => __( 'Display all image/gallery archives full width.', 'portfoliopress' ),
 			"id" => "portfolio_sidebar",
 			"std" => "0",
 			"type" => "checkbox"
@@ -98,7 +98,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		"name" => __( 'Display Image and Gallery Formats on Posts Page', 'portfoliopress' ),
-		"desc" => __( 'Uncheck this to remove image and gallery posts from your standard posts page.', 'portfoliopress' ),
+		"desc" => __( 'Display all post formats on posts page.', 'portfoliopress' ),
 		"id" => "display_image_gallery_post_formats",
 		"std" => "1",
 		"type" => "checkbox"
