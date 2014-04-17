@@ -470,6 +470,7 @@ footer.entry-meta:before, footer.entry-meta:after {
 	display: block;
 }
 .entry-meta-icon {
+	color:#333;
 	display: inline-block;
 	margin-right:5px;
 	font-size:14px;

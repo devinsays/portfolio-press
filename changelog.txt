@@ -1,3 +1,7 @@
+Portfolio Press 2.2
+
+- Make post format icon a link
+
 Portfolio Press 2.1
 
 - Fix for three tier menus

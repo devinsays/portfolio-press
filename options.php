@@ -193,7 +193,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __( 'Additional Options in Portfolio+', 'portfoliopress' ),
 		'desc' => sprintf(
-				'<p>%s</p><p>%s</p><ul><li>-- %s</li><li>-- %s</li><li>-- %s</li></ul><p>%s</p>',
+				'<p>%s</p><p>%s</p><ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul><p>%s</p>',
 				sprintf(
 					__( 'If you like this theme and would like to support further development, consider purchasing <a href="%s">Portfolio+</a>.', 'portfoliopress' ),
 					esc_url( 'http://wptheming.com/portfolio-plus' )
@@ -202,6 +202,7 @@ function optionsframework_options() {
 				__( 'Color and Background Style Options', 'portfoliopress' ),
 				__( 'Infinite Scroll', 'portfoliopress' ),
 				__( 'Additional Page Templates', 'portfoliopress' ),
+				__( 'Option to Hide Post Dates', 'portfoliopress' ),
 				sprintf(
 					__( '<a href="%s">Read More</a>', 'portfoliopress' ),
 					esc_url( 'http://wptheming.com/portfolio-plus' )

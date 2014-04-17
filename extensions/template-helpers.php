@@ -44,6 +44,7 @@ function portfoliopress_footer_meta( $post ) {
 		$format = 'image';
 		$cat_list = get_the_term_list( $post->ID, 'portfolio_category', '', ', ', '' );
 		$tag_list = get_the_term_list( $post->ID, 'portfolio_tag', '', ', ', '' );
+		$format_link = get_post_type_archive_link( $post_type );
 
 	} else {
 
@@ -51,11 +52,14 @@ function portfoliopress_footer_meta( $post ) {
 		if ( false === $format ) {
 			$format = 'standard';
 		}
+		$format_link = get_post_format_link( $format);
 		$cat_list = get_the_term_list( $post->ID, 'category', '', ', ', '' );
 		$tag_list = get_the_term_list( $post->ID, 'post_tag', '', ', ', '' );
 	} ?>
 
-	<span class="entry-meta-icon icon-format-<?php echo esc_attr( $format ); ?>"></span>
+	<a href="<?php echo $format_link; ?>">
+		<span class="entry-meta-icon icon-format-<?php echo esc_attr( $format ); ?>"></span>
+	</a>
 
 	<?php if ( $cat_list ) : ?>
 	<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in: ', 'portfoliopress' ); ?></span><?php echo $cat_list; ?></span>
