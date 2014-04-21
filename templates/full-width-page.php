@@ -20,8 +20,8 @@ get_header(); ?>
 
 				<div class="entry-content">
 					<?php the_content(); ?>
-					<?php wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'portfoliopress' ) . '&after=</div>' ); ?>
-					<?php edit_post_link( __( 'Edit', 'portfoliopress' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'portfolio-press' ) . '&after=</div>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'portfolio-press' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-<?php the_ID(); ?> -->
 
