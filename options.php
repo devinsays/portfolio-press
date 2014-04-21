@@ -3,7 +3,7 @@
  * This file only gets loaded if the Options Framework plugin is installed
  *
  * A unique identifier is defined to store the options in the database
- * and reference them from the theme.  By default it uses 'portfoliopress'.
+ * and reference them from the theme.  By default it uses 'portfolio-press'.
  * If the identifier changes, it'll appear as if the options have been reset.
  *
  * @package Portfolio Press
@@ -35,19 +35,19 @@ function optionsframework_options() {
 	/* General Settings */
 
 	$options[] = array(
-		"name" => __( 'General Settings', 'portfoliopress' ),
+		"name" => __( 'General Settings', 'portfolio-press' ),
 		"type" => "heading"
 	);
 
 	$options['logo'] = array(
-		"name" => __( 'Custom Logo', 'portfoliopress' ),
-		"desc" => __( 'Upload a logo for your theme if you would like to use one.','portfoliopress' ),
+		"name" => __( 'Custom Logo', 'portfolio-press' ),
+		"desc" => __( 'Upload a logo for your theme if you would like to use one.','portfolio-press' ),
 		"id" => "logo",
 		"type" => "upload");
 
 	$options[] = array(
-		"name" => __( 'Custom Favicon', 'portfoliopress' ),
-		"desc" => __( 'Upload a 16px x 16px png/gif image to represent your website.' , 'portfoliopress' ),
+		"name" => __( 'Custom Favicon', 'portfolio-press' ),
+		"desc" => __( 'Upload a 16px x 16px png/gif image to represent your website.' , 'portfolio-press' ),
 		"id" => "custom_favicon",
 		"type" => "upload"
 	);
@@ -55,8 +55,8 @@ function optionsframework_options() {
 	if ( class_exists( 'Portfolio_Post_Type' ) ) {
 
 		$options[] = array(
-			"name" => __( 'Display Images on Portfolio / Image Posts', 'portfoliopress' ),
-			"desc" => __( 'Display featured images automatically on posts.', 'portfoliopress' ),
+			"name" => __( 'Display Images on Portfolio / Image Posts', 'portfolio-press' ),
+			"desc" => __( 'Display featured images automatically on posts.', 'portfolio-press' ),
 			"id" => "portfolio_images",
 			"std" => "1",
 			"type" => "checkbox"
@@ -65,8 +65,8 @@ function optionsframework_options() {
 	} else {
 
 		$options[] = array(
-			"name" => __( 'Display Images Automatically on Image Post Formats', 'portfoliopress' ),
-			"desc" => __( 'Display featured images automatically on posts.', 'portfoliopress' ),
+			"name" => __( 'Display Images Automatically on Image Post Formats', 'portfolio-press' ),
+			"desc" => __( 'Display featured images automatically on posts.', 'portfolio-press' ),
 			"id" => "portfolio_images",
 			"std" => "1",
 			"type" => "checkbox"
@@ -77,8 +77,8 @@ function optionsframework_options() {
 	if ( class_exists( 'Portfolio_Post_Type' ) ) {
 
 		$options[] = array(
-			"name" => __( 'Display Portfolio / Image / Galleries Full Width', 'portfoliopress' ),
-			"desc" => __( 'Display all image based archives full width.', 'portfoliopress' ),
+			"name" => __( 'Display Portfolio / Image / Galleries Full Width', 'portfolio-press' ),
+			"desc" => __( 'Display all image based archives full width.', 'portfolio-press' ),
 			"id" => "portfolio_sidebar",
 			"std" => "0",
 			"type" => "checkbox"
@@ -87,8 +87,8 @@ function optionsframework_options() {
 	} else {
 
 		$options[] = array(
-			"name" => __( 'Display Image and Gallery Post Format Archives Full Width', 'portfoliopress' ),
-			"desc" => __( 'Display all image/gallery archives full width.', 'portfoliopress' ),
+			"name" => __( 'Display Image and Gallery Post Format Archives Full Width', 'portfolio-press' ),
+			"desc" => __( 'Display all image/gallery archives full width.', 'portfolio-press' ),
 			"id" => "portfolio_sidebar",
 			"std" => "0",
 			"type" => "checkbox"
@@ -97,26 +97,26 @@ function optionsframework_options() {
 	}
 
 	$options[] = array(
-		"name" => __( 'Display Image and Gallery Formats on Posts Page', 'portfoliopress' ),
-		"desc" => __( 'Display all post formats on posts page.', 'portfoliopress' ),
+		"name" => __( 'Display Image and Gallery Formats on Posts Page', 'portfolio-press' ),
+		"desc" => __( 'Display all post formats on posts page.', 'portfolio-press' ),
 		"id" => "display_image_gallery_post_formats",
 		"std" => "1",
 		"type" => "checkbox"
 	);
 
 	$options['archive_titles'] = array(
-		'name' => __( 'Archive Titles', 'portfoliopress' ),
-		'desc' => __( 'Display archive titles and descriptions.', 'portfoliopress' ),
+		'name' => __( 'Archive Titles', 'portfolio-press' ),
+		'desc' => __( 'Display archive titles and descriptions.', 'portfolio-press' ),
 		'id' => 'archive_titles',
 		'std' => '1',
 		'type' => 'checkbox'
 	);
 
 	$options[] = array(
-		'name' => __( 'Posts Per Page', 'portfoliopress' ),
+		'name' => __( 'Posts Per Page', 'portfolio-press' ),
 		'desc' => sprintf( '<p>%s</p>',
 			sprintf(
-				__( 'Posts per page can be set in the <a href="%s">reading options</a>.', 'portfoliopress' ),
+				__( 'Posts per page can be set in the <a href="%s">reading options</a>.', 'portfolio-press' ),
 				admin_url( 'options-reading.php', false )
 				)
 			),
@@ -126,12 +126,12 @@ function optionsframework_options() {
 	/* Style and Layout */
 
 	$options[] = array(
-		"name" => __( 'Style and Layout','portfoliopress' ),
+		"name" => __( 'Style and Layout','portfolio-press' ),
 		"type" => "heading");
 
 	$options['layout'] = array(
-		'name' => __( 'Main Layout','portfoliopress' ),
-		'desc' => __( 'Select main content and sidebar alignment.','portfoliopress' ),
+		'name' => __( 'Main Layout','portfolio-press' ),
+		'desc' => __( 'Select main content and sidebar alignment.','portfolio-press' ),
 		'id' => 'layout',
 		'std' => 'layout-2cr',
 		'type' => 'images',
@@ -149,8 +149,8 @@ function optionsframework_options() {
 	);
 
 	$options['menu_position'] = array(
-		"name" => __( 'Menu Position', 'portfoliopress' ),
-		"desc" => __( 'Select where the main menu should go in the header.  Long menus should go underneath.','portfoliopress' ),
+		"name" => __( 'Menu Position', 'portfolio-press' ),
+		"desc" => __( 'Select where the main menu should go in the header.  Long menus should go underneath.','portfolio-press' ),
 		"id" => "menu_position",
 		"std" => "right",
 		"type" => "radio",
@@ -160,13 +160,13 @@ function optionsframework_options() {
 	/* Footer Settings */
 
 	$options[] = array(
-		"name" => __( 'Footer Settings', 'portfoliopress' ),
+		"name" => __( 'Footer Settings', 'portfolio-press' ),
 		"type" => "heading"
 	);
 
 	$options[] = array(
-		"name" => __( 'Custom Footer Text', 'portfoliopress' ),
-		"desc" => __( 'Custom text that will appear in the footer of your theme.','portfoliopress' ),
+		"name" => __( 'Custom Footer Text', 'portfolio-press' ),
+		"desc" => __( 'Custom text that will appear in the footer of your theme.','portfolio-press' ),
 		"id" => "footer_text",
 		"type" => "textarea"
 	);
@@ -174,16 +174,16 @@ function optionsframework_options() {
 	/* More Information */
 
 	$options[] = array(
-		"name" => __( 'More', 'portfoliopress' ),
+		"name" => __( 'More', 'portfolio-press' ),
 		"type" => "heading"
 	);
 
 	$options[] = array(
-		'name' => __( 'Theme Support', 'portfoliopress' ),
+		'name' => __( 'Theme Support', 'portfolio-press' ),
 		'desc' => sprintf(
 				'<p>%s</p>',
 				sprintf(
-					__( 'If you need help with Portfolio Press, check if your question has been answered in the <a href="%s">theme FAQ</a>.', 'portfoliopress' ),
+					__( 'If you need help with Portfolio Press, check if your question has been answered in the <a href="%s">theme FAQ</a>.', 'portfolio-press' ),
 					esc_url( 'http://wptheming.com/portfolio-press' )
 				)
 			),
@@ -191,20 +191,20 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => __( 'Additional Options in Portfolio+', 'portfoliopress' ),
+		'name' => __( 'Additional Options in Portfolio+', 'portfolio-press' ),
 		'desc' => sprintf(
 				'<p>%s</p><p>%s</p><ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul><p>%s</p>',
 				sprintf(
-					__( 'If you like this theme and would like to support further development, consider purchasing <a href="%s">Portfolio+</a>.', 'portfoliopress' ),
+					__( 'If you like this theme and would like to support further development, consider purchasing <a href="%s">Portfolio+</a>.', 'portfolio-press' ),
 					esc_url( 'http://wptheming.com/portfolio-plus' )
 				),
-				__( 'You will also get these additional features:', 'portfoliopress' ),
-				__( 'Color and Background Style Options', 'portfoliopress' ),
-				__( 'Infinite Scroll', 'portfoliopress' ),
-				__( 'Additional Page Templates', 'portfoliopress' ),
-				__( 'Option to Hide Post Dates', 'portfoliopress' ),
+				__( 'You will also get these additional features:', 'portfolio-press' ),
+				__( 'Color and Background Style Options', 'portfolio-press' ),
+				__( 'Infinite Scroll', 'portfolio-press' ),
+				__( 'Additional Page Templates', 'portfolio-press' ),
+				__( 'Option to Hide Post Dates', 'portfolio-press' ),
 				sprintf(
-					__( '<a href="%s">Read More</a>', 'portfoliopress' ),
+					__( '<a href="%s">Read More</a>', 'portfolio-press' ),
 					esc_url( 'http://wptheming.com/portfolio-plus' )
 				)
 			),
@@ -214,14 +214,14 @@ function optionsframework_options() {
 	/* Utility Options (Not Displayed) */
 
 	$options[] = array(
-		"name" => __( 'Upgrade', 'portfoliopress' ),
+		"name" => __( 'Upgrade', 'portfolio-press' ),
 		"id" => "upgrade",
 		"std" => '0',
 		"class" => "hidden",
 		"type" => "text" );
 
 	$options[] = array(
-		"name" => __( 'Version', 'portfoliopress' ),
+		"name" => __( 'Version', 'portfolio-press' ),
 		"id" => "version",
 		"std" => '1.9',
 		"class" => "hidden",

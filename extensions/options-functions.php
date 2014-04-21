@@ -128,7 +128,7 @@ function portfoliopress_customize_register( $wp_customize ) {
 	/* Layout */
 
 	$wp_customize->add_section( 'portfoliopress_layout', array(
-		'title' => __( 'Layout', 'portfoliopress' ),
+		'title' => __( 'Layout', 'portfolio-press' ),
 		'priority' => 100,
 	) );
 
@@ -164,7 +164,7 @@ function portfoliopress_customize_register( $wp_customize ) {
 	/* Header Styles */
 
 	$wp_customize->add_section( 'portfoliopress_header_styles', array(
-		'title' => __( 'Header Style', 'portfoliopress' ),
+		'title' => __( 'Header Style', 'portfolio-press' ),
 		'priority' => 105,
 	) );
 
@@ -174,7 +174,7 @@ function portfoliopress_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_color', array(
-		'label' => __( 'Background Color', 'portfoliopress' ),
+		'label' => __( 'Background Color', 'portfolio-press' ),
 		'section' => 'portfoliopress_header_styles',
 		'settings' => 'portfoliopress[header_color]'
 	) ) );

@@ -28,7 +28,7 @@ function portfoliopress_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'portfoliopress' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'portfolio-press' ), max( $paged, $page ) );
 	}
 
 	return $title;
@@ -157,7 +157,7 @@ function portfoliopress_posts_per_page_notice() {
 				'Portfolio Press recommends setting posts per page to 9. This can be changed under <a href="%3$s">Settings > Reading Options</a>.<br><a href="%1$s">Update It</a> | <a href="%2$s">Dismiss Notice</a>.' ),
 				'?portfolio_update_posts_per_page=1',
 				'?portfolio_post_per_page_ignore=1',
-				admin_url( 'options-reading.php', false ) );
+				admin_url( 'options-reading.php', false ), 'portfolio-press' );
 		echo '</p></div>';
 	}
 }

@@ -30,14 +30,14 @@ function portfoliopress_setup() {
 	 * If you're building a theme based on _s, use a find and replace
 	 * to change '_s' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'portfoliopress', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'portfolio-press', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style
 	add_editor_style();
 
 	// This theme uses wp_nav_menu() in one location
 	register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'portfoliopress' ),
+			'primary' => __( 'Primary Menu', 'portfolio-press' ),
 		) );
 
 	// Add default posts and comments RSS feed links to head
@@ -96,7 +96,7 @@ add_action( 'wp_enqueue_scripts', 'portfoliopress_fonts', 10 );
 function portfoliopress_widgets_init() {
 
 	register_sidebar( array (
-		'name' => __( 'Sidebar', 'portfoliopress' ),
+		'name' => __( 'Sidebar', 'portfolio-press' ),
 		'id' => 'sidebar',
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => "</li>",
@@ -105,9 +105,9 @@ function portfoliopress_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer 1', 'portfoliopress' ),
+		'name' => __( 'Footer 1', 'portfolio-press' ),
 		'id' => 'footer-1',
-		'description' => __( "Widetized footer", 'portfoliopress' ),
+		'description' => __( "Widetized footer", 'portfolio-press' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -115,9 +115,9 @@ function portfoliopress_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer 2', 'portfoliopress' ),
+		'name' => __( 'Footer 2', 'portfolio-press' ),
 		'id' => 'footer-2',
-		'description' => __( "Widetized footer", 'portfoliopress' ),
+		'description' => __( "Widetized footer", 'portfolio-press' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -125,9 +125,9 @@ function portfoliopress_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer 3', 'portfoliopress' ),
+		'name' => __( 'Footer 3', 'portfolio-press' ),
 		'id' => 'footer-3',
-		'description' => __( "Widetized footer", 'portfoliopress' ),
+		'description' => __( "Widetized footer", 'portfolio-press' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -135,9 +135,9 @@ function portfoliopress_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Footer 4', 'portfoliopress' ),
+		'name' => __( 'Footer 4', 'portfolio-press' ),
 		'id' => 'footer-4',
-		'description' => __( "Widetized footer", 'portfoliopress' ),
+		'description' => __( "Widetized footer", 'portfolio-press' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',

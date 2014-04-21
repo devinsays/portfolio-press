@@ -66,7 +66,7 @@ function portfoliopress_recommended_plugins() {
 	 * end of each line for what each argument will be.
 	 */
 	$config = array(
-		'domain'       		=> 'portfoliopress',         	// Text domain - likely want to be the same as your theme.
+		'domain'       		=> 'portfolio-press',         	// Text domain - likely want to be the same as your theme.
 		'default_path' 		=> '',                         	// Default absolute path to pre-packaged plugins
 		'parent_menu_slug' 	=> 'themes.php', 				// Default parent menu slug
 		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
@@ -75,10 +75,10 @@ function portfoliopress_recommended_plugins() {
 		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
 		'message' 			=> '',							// Message to output right before the plugins table
 		'strings'      		=> array(
-			'page_title'                       			=> __( 'Install Recommended Plugins', 'portfoliopress' ),
-			'menu_title'                       			=> __( 'Install Plugins', 'portfoliopress' ),
-			'installing'                       			=> __( 'Installing Plugin: %s', 'portfoliopress' ), // %1$s = plugin name
-			'oops'                             			=> __( 'Something went wrong with the plugin API.', 'portfoliopress' ),
+			'page_title'                       			=> __( 'Install Recommended Plugins', 'portfolio-press' ),
+			'menu_title'                       			=> __( 'Install Plugins', 'portfolio-press' ),
+			'installing'                       			=> __( 'Installing Plugin: %s', 'portfolio-press' ), // %1$s = plugin name
+			'oops'                             			=> __( 'Something went wrong with the plugin API.', 'portfolio-press' ),
 			'notice_can_install_required'     			=> _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ), // %1$s = plugin name(s)
 			'notice_can_install_recommended'			=> _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.' ), // %1$s = plugin name(s)
 			'notice_cannot_install'  					=> _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ), // %1$s = plugin name(s)
@@ -89,9 +89,9 @@ function portfoliopress_recommended_plugins() {
 			'notice_cannot_update' 						=> _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ), // %1$s = plugin name(s)
 			'install_link' 					  			=> _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
 			'activate_link' 				  			=> _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
-			'return'                           			=> __( 'Return to Required Plugins Installer', 'portfoliopress' ),
-			'plugin_activated'                 			=> __( 'Plugin activated successfully.', 'portfoliopress' ),
-			'complete' 									=> __( 'All plugins installed and activated successfully. %s', 'portfoliopress' ), // %1$s = dashboard link
+			'return'                           			=> __( 'Return to Required Plugins Installer', 'portfolio-press' ),
+			'plugin_activated'                 			=> __( 'Plugin activated successfully.', 'portfolio-press' ),
+			'complete' 									=> __( 'All plugins installed and activated successfully. %s', 'portfolio-press' ), // %1$s = dashboard link
 			'nag_type'									=> 'updated' // Determines admin notice type - can only be 'updated' or 'error'
 		)
 	);
