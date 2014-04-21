@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	        target: {
 	            options: {
 	                domainPath: '/languages/',    // Where to save the POT file.
-	                potFilename: 'theme.pot',   // Name of the POT file.
+	                potFilename: 'portfolio-press.pot',   // Name of the POT file.
 	                type: 'wp-theme'  // Type of project (wp-plugin or wp-theme).
 	            }
 	        }
