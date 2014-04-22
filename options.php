@@ -142,7 +142,7 @@ function optionsframework_options() {
 		);
 
 	$options[] = array(
-		"name" => "Header Color",
+		"name" => __( 'Header Color','portfolio-press' ),
 		"id" => "header_color",
 		"std" => "#000000",
 		"type" => "color"
@@ -154,7 +154,10 @@ function optionsframework_options() {
 		"id" => "menu_position",
 		"std" => "right",
 		"type" => "radio",
-		"options" => array("right" => "Right of logo.","clear" => "Underneath logo.")
+		"options" => array(
+			"right" => __( 'Right of logo.', 'portfolio-press' ),
+			"clear" => __( 'Underneath logo', 'portfolio-press' )
+		)
 	);
 
 	/* Footer Settings */
@@ -237,7 +240,7 @@ function optionsframework_options() {
 function portfoliopress_panel_info() { ?>
     <p style="color: #777;">
     <?php printf(
-    	'Theme <a href="%s">documentation</a>.  For additional options, see <a href="%s">Portfolio+</a>.',
+    	__( 'Theme <a href="%s">documentation</a>.  For additional options, see <a href="%s">Portfolio+</a>.', 'portfolio-press' ),
     	esc_url( 'http://wptheming.com/portfolio-press' ),
     	esc_url( 'http://wptheming.com/portfolio-plus' )
     );

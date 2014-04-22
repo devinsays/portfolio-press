@@ -143,9 +143,10 @@ function portfoliopress_customize_register( $wp_customize ) {
 		'settings' => 'portfoliopress[layout]',
 		'type' => 'radio',
 		'choices' => array(
-			'layout-2cr' => 'Sidebar Right',
-			'layout-2cl' => 'Sidebar Left',
-			'layout-1col' => 'Single Column')
+			'layout-2cr' => __( 'Sidebar Right', 'portfolio-press' ),
+			'layout-2cl' => __( 'Sidebar Left', 'portfolio-press' ),
+			'layout-1col' => __( 'Single Column', 'portfolio-press' )
+		)
 	) );
 
 	$wp_customize->add_setting( 'portfoliopress[menu_position]', array(
