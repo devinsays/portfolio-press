@@ -1,6 +1,7 @@
 Portfolio Press 2.2
 
 - Make post format icon a link
+- Portuguese translations by Pedro Mendonca
 
 Portfolio Press 2.1
 
