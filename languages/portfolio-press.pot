@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Press 2.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-04-21 22:42:38+00:00\n"
+"POT-Creation-Date: 2014-04-22 14:57:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -383,11 +383,23 @@ msgstr ""
 msgid "Layout"
 msgstr ""
 
-#: extensions/options-functions.php:167
+#: extensions/options-functions.php:146
+msgid "Sidebar Right"
+msgstr ""
+
+#: extensions/options-functions.php:147
+msgid "Sidebar Left"
+msgstr ""
+
+#: extensions/options-functions.php:148
+msgid "Single Column"
+msgstr ""
+
+#: extensions/options-functions.php:168
 msgid "Header Style"
 msgstr ""
 
-#: extensions/options-functions.php:177
+#: extensions/options-functions.php:178
 msgid "Background Color"
 msgstr ""
 
@@ -593,6 +605,10 @@ msgstr ""
 msgid "Select main content and sidebar alignment."
 msgstr ""
 
+#: options.php:145
+msgid "Header Color"
+msgstr ""
+
 #: options.php:152
 msgid "Menu Position"
 msgstr ""
@@ -603,72 +619,86 @@ msgid ""
 "underneath."
 msgstr ""
 
-#: options.php:163
+#: options.php:158
+msgid "Right of logo."
+msgstr ""
+
+#: options.php:159
+msgid "Underneath logo"
+msgstr ""
+
+#: options.php:166
 msgid "Footer Settings"
 msgstr ""
 
-#: options.php:168
+#: options.php:171
 msgid "Custom Footer Text"
 msgstr ""
 
-#: options.php:169
+#: options.php:172
 msgid "Custom text that will appear in the footer of your theme."
 msgstr ""
 
-#: options.php:177
+#: options.php:180
 msgid "More"
 msgstr ""
 
-#: options.php:182
+#: options.php:185
 msgid "Theme Support"
 msgstr ""
 
-#: options.php:186
+#: options.php:189
 msgid ""
 "If you need help with Portfolio Press, check if your question has been "
 "answered in the <a href=\"%s\">theme FAQ</a>."
 msgstr ""
 
-#: options.php:194
+#: options.php:197
 msgid "Additional Options in Portfolio+"
 msgstr ""
 
-#: options.php:198
+#: options.php:201
 msgid ""
 "If you like this theme and would like to support further development, "
 "consider purchasing <a href=\"%s\">Portfolio+</a>."
 msgstr ""
 
-#: options.php:201
+#: options.php:204
 msgid "You will also get these additional features:"
 msgstr ""
 
-#: options.php:202
+#: options.php:205
 msgid "Color and Background Style Options"
 msgstr ""
 
-#: options.php:203
+#: options.php:206
 msgid "Infinite Scroll"
 msgstr ""
 
-#: options.php:204
+#: options.php:207
 msgid "Additional Page Templates"
 msgstr ""
 
-#: options.php:205
+#: options.php:208
 msgid "Option to Hide Post Dates"
 msgstr ""
 
-#: options.php:207
+#: options.php:210
 msgid "<a href=\"%s\">Read More</a>"
 msgstr ""
 
-#: options.php:217
+#: options.php:220
 msgid "Upgrade"
 msgstr ""
 
-#: options.php:224
+#: options.php:227
 msgid "Version"
+msgstr ""
+
+#: options.php:243
+msgid ""
+"Theme <a href=\"%s\">documentation</a>.  For additional options, see <a "
+"href=\"%s\">Portfolio+</a>."
 msgstr ""
 
 #: search.php:16
