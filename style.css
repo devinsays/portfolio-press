@@ -107,9 +107,18 @@ hr {
 	height: 1px;
 	margin-bottom: 20px;
 }
-input[type=text], textarea {
-	padding: 5px;
-	border-color: #ccc #efefef #efefef #ccc;
+input, textarea {
+	font-family:'Open Sans', sans-serif;
+	font-size:14px;
+	line-height:1.5;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+	background:#fff;
+	padding:5px;
+	border-color:#ccc #efefef #efefef #ccc;
 	border-width:1px;
 	border-style:solid;
 }
@@ -969,16 +978,9 @@ object {
 #respond input[type="email"],
 #respond input[type="url"],
 #respond textarea {
-	background: #fff;
 	margin:0;
-	padding:5px;
-	position: relative;
-	text-indent: 85px;
-	border-color: #ccc #efefef #efefef #ccc;
-	border-width:1px;
-	border-style:solid;
-	font-size:13px;
-	line-height:20px;
+	position:relative;
+	text-indent:85px;
 }
 #respond input[type="text"],
 #respond input[type="email"],
@@ -1234,7 +1236,9 @@ h3#pings {
 	#main {
 		padding-top:35px;
 	}
-	#respond input[type=text] {
+	#respond input[type="text"],
+	#respond input[type="email"],
+	#respond input[type="url"] {
 		width: 90%;
 	}
 	#content {
