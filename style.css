@@ -1034,7 +1034,11 @@ object {
 	font-size:12px;
 	color:#666;
 }
-#respond #submit, #searchsubmit {
+#respond #submit,
+#searchsubmit,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	border: 1px solid #ccc;
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
