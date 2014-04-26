@@ -115,6 +115,8 @@ input, textarea {
 input[type="text"],
 input[type="email"],
 input[type="url"],
+input[type="search"],
+input[type="tel"],
 textarea {
 	background:#fff;
 	padding:5px;
