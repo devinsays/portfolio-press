@@ -938,6 +938,10 @@ object {
 #comments .comment-meta {
 	font-size: 12px;
 }
+#comments .comment-content {
+	padding-top:0.5em;
+	clear:both;
+}
 #comments .comment-entry p {
 	margin: 0 0 10px;
 }
