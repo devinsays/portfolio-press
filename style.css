@@ -902,17 +902,20 @@ object {
 	font-weight:normal;
 	margin-bottom:20px;
 }
-#comments .comment.thread-even {
+#comments .comment.thread-even,
+#comments .pingback.thread-even {
 	background: #fafafa;
 	background: rgba(0, 0, 0, 0.02);
 	border-bottom:1px solid #ddd;
 	border-bottom:1px solid rgba(0, 0, 0, 0.07);
 }
-#comments .comment {
+#comments .comment,
+#comments .pingback {
 	width:100%;
 	list-style-type:none;
 }
-#comments .comment .comment-body {
+#comments .comment .comment-body,
+#comments .pingback .comment-body {
 	position:relative;
 	padding: 20px;
 	margin:0;
@@ -948,13 +951,7 @@ object {
 #comments .cancel-comment-reply {
 	margin:10px 0;
 }
-#comments h3#pings {
-	margin-top:25px;
-}
-#comments .pingbacks li.pingback {
-	margin:10px 0;
-}
-#comments .pingbacks li.pingback .reply {
+#comments li.pingback .reply {
 	display:none;
 }
 #comments .reply {
@@ -1056,27 +1053,6 @@ object {
 	font-size: 12px;
 	padding:4px 8px;
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
-}
-
-/* Pingbacks / Trackbacks */
-
-h3#pings {
-	margin: 25px 0 10px 0;
-}
-.pinglist li {
-	margin: 0 0 0 20px;
-	list-style-type: decimal;
-}
-.pinglist li .author {
-	font-weight: bold;
-	font-size: 15px;
-}
-.pinglist li .date {
-	font-size: 11px;
-}
-.pinglist li .pingcontent {
-	display: block;
-	margin: 10px 0;
 }
 
 /* Search Form */
