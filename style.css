@@ -1314,7 +1314,7 @@ input[type="submit"] {
 	.entry-content .gallery-thumb  a:after, .entry-content .image-wrap a:after {
 		content:'';
 	}
-	#navigation, #sidebar, #nav-below, #footer-widgets {
+	#navigation, #sidebar, #nav-below, #comments .reply, #comments #respond, #footer-widgets {
 		display:none;
 	}
 	#comments {
