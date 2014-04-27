@@ -1305,6 +1305,9 @@ input[type="submit"] {
 	#logo #site-title a, #logo #site-description {
 		color: #000;
 	}
+	#content {
+		width:auto;
+	}
 	.entry-content a:after {
 		content: " [" attr(href) "] ";
 	}
