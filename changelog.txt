@@ -2,6 +2,11 @@ Portfolio Press 2.2
 
 - Make post format icon a link
 - Portuguese translations by Pedro Mendonca
+- Update for gallery styles
+- Update for table, list and definition styles
+- Enhancements for input styles (props @TomLany)
+- Update to enqueue base stylesheet
+- Remove javascript mod to hide page templates
 
 Portfolio Press 2.1
 

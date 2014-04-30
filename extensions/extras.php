@@ -66,7 +66,7 @@ function portfoliopress_upgrade_routine() {
 	portfoliopress_update_page_templates();
 
 	// New version number
-	$options['version'] = '2.0';
+	$options['version'] = '2.2';
 
 	update_option( 'portfoliopress', $options );
 }
@@ -186,28 +186,6 @@ function portfoliopress_notice_ignores() {
 
 }
 add_action( 'admin_init', 'portfoliopress_notice_ignores' );
-
-/**
- * Removes page templates that require the Portfolio Post Type.
- *
- * This is a backwards compatible hack for removing un-necessary
- * page templates.  Will be removed in next version of theme.
- * See: https://core.trac.wordpress.org/ticket/13265
- *
- * @param string $hook
- */
-function portfoliopress_page_template_mod( $hook ) {
-	global $wp_version;
-	if ( class_exists( 'Portfolio_Post_Type' ) )
-        return;
-    if ( version_compare( $wp_version, '3.8.2', '>' ) ) {
-    	return;
-    }
-    if ( 'post.php' != $hook )
-        return;
-    wp_enqueue_script( 'portfoliopress_page_template_mod', esc_url( get_template_directory_uri() . '/js/admin-page-template-mod.js' ) );
-}
-add_action( 'admin_enqueue_scripts', 'portfoliopress_page_template_mod' );
 
 /**
  * Filter Page Templates if Portfolio Post Type Plugin

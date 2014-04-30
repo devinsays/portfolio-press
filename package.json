@@ -1,6 +1,6 @@
 {
 	"name": "portfolio-press",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"devDependencies": {
 		"grunt": "~0.4.2",
 		"grunt-wp-i18n": "0.4.3"
