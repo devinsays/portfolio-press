@@ -106,11 +106,9 @@ ol {
 	list-style: none;
 	margin: 0 0 20px 20px;
 }
-
 ul {
 	list-style: disc;
 }
-
 ol {
 	list-style: decimal;
 }
@@ -375,7 +373,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	float:right;
 	width:24%;
 }
-
 #sidebar ul, #sidebar ol {
 	list-style: none;
 	margin: 0 0 20px;
@@ -604,9 +601,6 @@ img.aligncenter {
 	padding:10px 0;
 	text-align: center;
 }
-.gallery {
-	margin: 0 auto 5px;
-}
 
 /* Gallery */
 
@@ -646,16 +640,6 @@ img.aligncenter {
 .gallery-caption {
 	font-size:12px;
 	max-width:90%;
-}
-
-/* Remove image borders on all galleries that are >= 6 columns */
-
-.gallery-columns-6 .gallery-item img,
-.gallery-columns-7 .gallery-item img,
-.gallery-columns-8 .gallery-item img,
-.gallery-columns-9 .gallery-item img {
-	border: none;
-	padding: 0;
 }
 
 /* Misc */
