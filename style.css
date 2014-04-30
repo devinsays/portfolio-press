@@ -107,9 +107,20 @@ hr {
 	height: 1px;
 	margin-bottom: 20px;
 }
-input[type=text], textarea {
-	padding: 5px;
-	border-color: #ccc #efefef #efefef #ccc;
+input, textarea {
+	font-family:'Open Sans', sans-serif;
+	font-size:14px;
+	line-height:1.5;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+textarea {
+	background:#fff;
+	padding:5px;
+	border-color:#ccc #efefef #efefef #ccc;
 	border-width:1px;
 	border-style:solid;
 }
@@ -893,17 +904,20 @@ object {
 	font-weight:normal;
 	margin-bottom:20px;
 }
-#comments .comment.thread-even {
+#comments .comment.thread-even,
+#comments .pingback.thread-even {
 	background: #fafafa;
 	background: rgba(0, 0, 0, 0.02);
 	border-bottom:1px solid #ddd;
 	border-bottom:1px solid rgba(0, 0, 0, 0.07);
 }
-#comments .comment {
+#comments .comment,
+#comments .pingback {
 	width:100%;
 	list-style-type:none;
 }
-#comments .comment .comment-body {
+#comments .comment .comment-body,
+#comments .pingback .comment-body {
 	position:relative;
 	padding: 20px;
 	margin:0;
@@ -926,6 +940,10 @@ object {
 #comments .comment-meta {
 	font-size: 12px;
 }
+#comments .comment-content {
+	padding-top:0.5em;
+	clear:both;
+}
 #comments .comment-entry p {
 	margin: 0 0 10px;
 }
@@ -939,13 +957,7 @@ object {
 #comments .cancel-comment-reply {
 	margin:10px 0;
 }
-#comments h3#pings {
-	margin-top:25px;
-}
-#comments .pingbacks li.pingback {
-	margin:10px 0;
-}
-#comments .pingbacks li.pingback .reply {
+#comments li.pingback .reply {
 	display:none;
 }
 #comments .reply {
@@ -969,16 +981,9 @@ object {
 #respond input[type="email"],
 #respond input[type="url"],
 #respond textarea {
-	background: #fff;
 	margin:0;
-	padding:5px;
-	position: relative;
-	text-indent: 85px;
-	border-color: #ccc #efefef #efefef #ccc;
-	border-width:1px;
-	border-style:solid;
-	font-size:13px;
-	line-height:20px;
+	position:relative;
+	text-indent:85px;
 }
 #respond input[type="text"],
 #respond input[type="email"],
@@ -1035,7 +1040,11 @@ object {
 	font-size:12px;
 	color:#666;
 }
-#respond #submit, #searchsubmit {
+#respond #submit,
+#searchsubmit,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	border: 1px solid #ccc;
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
@@ -1054,27 +1063,6 @@ object {
 	font-size: 12px;
 	padding:4px 8px;
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
-}
-
-/* Pingbacks / Trackbacks */
-
-h3#pings {
-	margin: 25px 0 10px 0;
-}
-.pinglist li {
-	margin: 0 0 0 20px;
-	list-style-type: decimal;
-}
-.pinglist li .author {
-	font-weight: bold;
-	font-size: 15px;
-}
-.pinglist li .date {
-	font-size: 11px;
-}
-.pinglist li .pingcontent {
-	display: block;
-	margin: 10px 0;
 }
 
 /* Search Form */
@@ -1234,7 +1222,9 @@ h3#pings {
 	#main {
 		padding-top:35px;
 	}
-	#respond input[type=text] {
+	#respond input[type="text"],
+	#respond input[type="email"],
+	#respond input[type="url"] {
 		width: 90%;
 	}
 	#content {
@@ -1315,13 +1305,16 @@ h3#pings {
 	#logo #site-title a, #logo #site-description {
 		color: #000;
 	}
+	#content {
+		width:auto;
+	}
 	.entry-content a:after {
 		content: " [" attr(href) "] ";
 	}
 	.entry-content .gallery-thumb  a:after, .entry-content .image-wrap a:after {
 		content:'';
 	}
-	#navigation, #sidebar, #nav-below, #footer-widgets {
+	#navigation, #sidebar, #nav-below, #comments .reply, #comments #respond, #footer-widgets {
 		display:none;
 	}
 	#comments {
