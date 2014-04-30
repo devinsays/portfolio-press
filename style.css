@@ -101,6 +101,34 @@ h4, h5, h6 {
 p {
 	margin:0;
 }
+ul,
+ol {
+	list-style: none;
+	margin: 0 0 20px 20px;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin: 0 0 0 20px;
+}
+dl {
+	margin-bottom: 20px;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 20px;
+}
 hr {
 	background-color: #ddd;
 	border:0;
@@ -142,9 +170,17 @@ ins {
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-width: 1px 0 0 1px;
+	text-align: left;
 }
 th {
 	font-weight: bold;
+}
+th, td {
+	padding: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-width: 0 1px 1px 0;
 }
 img {
 	height: auto; /* Make sure images are scaled correctly. */
@@ -314,7 +350,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 /* Structure */
 
 #main {
-	background:#f3f3f3;
+	background:#f6f6f6;
 	padding:40px 0 20px 0;
 }
 .col-width {
@@ -338,6 +374,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	overflow:hidden;
 	float:right;
 	width:24%;
+}
+
+#sidebar ul, #sidebar ol {
+	list-style: none;
+	margin: 0 0 20px;
 }
 
 /* Layouts */
@@ -440,32 +481,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .entry-content blockquote cite:before {
 	content:'\2014';
 	margin-right:2px;
-}
-#content ul {
-	margin: 0 0 15px 0;
-	padding: 0 0 0 30px;
-}
-#content ul ul {
-	margin: 0;
-}
-#content ul li {
-	list-style-type: circle;
-}
-#content ul ul li {
-	list-style-type: disc;
-}
-#content ol {
-	margin: 0 0 15px 0;
-	padding: 0 0 0 30px;
-}
-#content ol ol {
-	margin: 0;
-}
-#content ol li {
-	list-style-type: upper-latin;
-}
-#content ol li ol li {
-	list-style-type: lower-latin;
 }
 footer.entry-meta:before {
 	margin-bottom:8px;
@@ -803,7 +818,7 @@ object {
 	clear:both;
 	font-family: 'Rokkitt', sans-serif;
 	font-size:16px;
-	margin-bottom:30px;
+	margin:30px 0;
 }
 .page-link {
 	margin: 0 0 15px 0;
@@ -873,9 +888,25 @@ object {
 /* =Search
 ----------------------------------------------- */
 
-.widget-container input.submit {
-	margin-left:5px;
+.widget_search input[type="text"] {
+	width:66%;
+	float: left;
+}
+.widget_search #searchsubmit {
+	width:30%;
+	margin-left:2%;
+	padding: 6px 8px;
 	float:left;
+}
+.widget_search #searchsubmit:after {
+	display: block;
+	content: "";
+	clear:both;
+}
+.widget_search:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    clear: both;
 }
 
 /* =Comments
