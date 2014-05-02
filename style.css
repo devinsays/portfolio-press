@@ -681,11 +681,13 @@ object {
 	position: absolute;
 	top: 45%;
 	left: 0;
-	padding: 1em 5%;
-	width: 90%;
 	text-align: center;
 	display: none;
 	pointer-events: none;
+}
+.portfolio-view #content .hentry h3 {
+	width:100%;
+	padding: 0 5%;
 }
 .portfolio-view .hentry a {
 	color:#fff;

@@ -1,3 +1,7 @@
+Portfolio Press 2.3
+
+- Minor style update for portfolio title overlays
+
 Portfolio Press 2.2
 
 - Make post format icon a link
