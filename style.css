@@ -143,6 +143,7 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
+input[type="password"],
 textarea {
 	background:#fff;
 	padding:5px;
