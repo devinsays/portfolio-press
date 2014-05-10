@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: Portfolio Press 2.1\n"
+"Project-Id-Version: Portfolio Press 2.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-04-30 17:34:58+00:00\n"
+"POT-Creation-Date: 2014-05-10 19:13:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -489,35 +489,35 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:103
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:112
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:110 functions.php:120 functions.php:130 functions.php:140
+#: functions.php:114 functions.php:124 functions.php:134 functions.php:144
 msgid "Widetized footer"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:122
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:132
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:142
 msgid "Footer 4"
 msgstr ""
 
-#: header.php:44
+#: header.php:43
 msgid "Menu"
 msgstr ""
 
-#: header.php:45
+#: header.php:44
 msgid "Skip to content"
 msgstr ""
 
@@ -668,11 +668,11 @@ msgid "You will also get these additional features:"
 msgstr ""
 
 #: options.php:205
-msgid "Color and Background Style Options"
+msgid "Text Color Options"
 msgstr ""
 
 #: options.php:206
-msgid "Infinite Scroll"
+msgid "Background Stye Options"
 msgstr ""
 
 #: options.php:207
@@ -683,19 +683,27 @@ msgstr ""
 msgid "Option to Hide Post Dates"
 msgstr ""
 
+#: options.php:209
+msgid "Infinite Scroll"
+msgstr ""
+
 #: options.php:210
+msgid "Priority Support"
+msgstr ""
+
+#: options.php:212
 msgid "<a href=\"%s\">Read More</a>"
 msgstr ""
 
-#: options.php:220
+#: options.php:222
 msgid "Upgrade"
 msgstr ""
 
-#: options.php:227
+#: options.php:229
 msgid "Version"
 msgstr ""
 
-#: options.php:243
+#: options.php:245
 msgid ""
 "Theme <a href=\"%s\">documentation</a>.  For additional options, see <a "
 "href=\"%s\">Portfolio+</a>."
