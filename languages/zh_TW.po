@@ -1,0 +1,365 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 中文版 Portfolio Press\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-25 22:51-0600\n"
+"PO-Revision-Date: 2011-04-10 16:20+0800\n"
+"Last-Translator: Sunny Lau <sunnylau0603@yahoo.com.hk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: HONG KONG\n"
+"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:14
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Error 404 - 找不到網頁"
+
+#: 404.php:18
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "我們似乎無法找到您正在尋找的東西，或許以下其中一個連結或搜尋可以幫助您。"
+
+#: 404.php:25
+msgid "Most Used Categories"
+msgstr "最常用的分類"
+
+#: archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "每日彙整：<span>%s</span>"
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "每月彙整：<span>%s</span>"
+
+#: archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "每年彙整：<span>%s</span>"
+
+#: archive.php:22
+msgid "Blog Archives"
+msgstr "博客彙整"
+
+#: author.php:14
+#, php-format
+msgid "Author Archives: <span class=\"vcard\">%s</span>"
+msgstr "作者彙整：<span class=\"vcard\">%s</span>"
+
+#: category.php:13
+#, php-format
+msgid "Category Archives: %s"
+msgstr "分類彙整：'%s'"
+
+#: comments.php:10
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "這文章受密碼保護，請輸入密碼查看迴響。"
+
+#: comments.php:21
+#, php-format
+msgid "One Response to %2$s"
+msgstr "%2$s 有一個回應"
+
+#: comments.php:28
+#: comments.php:40
+msgid "Comment navigation"
+msgstr "迴響導覽"
+
+#: comments.php:29
+#: comments.php:41
+msgid "&larr; Older Comments"
+msgstr "&larr; 舊迴響"
+
+#: comments.php:30
+#: comments.php:42
+msgid "Newer Comments &rarr;"
+msgstr "新迴響 &rarr;"
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr "迴響功能已關閉"
+
+#: footer.php:38
+msgid "Powered by"
+msgstr "Powered by"
+
+#: footer.php:38
+msgid "A Semantic Personal Publishing Platform"
+msgstr "語義的個人出版平台"
+
+#: footer.php:38
+msgid "WordPress"
+msgstr "WordPress"
+
+#: footer.php:38
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: full-width-page.php:24
+#: image.php:82
+#: loop.php:36
+#: page.php:21
+msgid "Pages:"
+msgstr "分頁："
+
+#: full-width-page.php:25
+#: image.php:31
+#: image.php:96
+#: loop.php:45
+#: page.php:22
+msgid "Edit"
+msgstr "編輯"
+
+#: full-width-portfolio.php:45
+#: loop.php:63
+msgid "Post navigation"
+msgstr "文章導覽"
+
+#: full-width-portfolio.php:46
+#: loop.php:64
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 舊文章"
+
+#: full-width-portfolio.php:47
+#: loop.php:65
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "新文章 <span class=\"meta-nav\">&rarr;</span>"
+
+#: full-width-portfolio.php:55
+msgid "Sorry, no posts matched your criteria."
+msgstr "抱歉，沒有文章符合您的準則。"
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr "首要選單"
+
+#: functions.php:92
+#, php-format
+msgid "Search results for %s"
+msgstr "%s 的搜尋結果"
+
+#: functions.php:95
+#: functions.php:120
+#, php-format
+msgid "Page %s"
+msgstr "分頁 %s"
+
+#: functions.php:156
+msgid "Sidebar"
+msgstr "邊欄"
+
+#: header.php:32
+msgid "Main menu"
+msgstr "主選單"
+
+#: header.php:33
+msgid "Skip to content"
+msgstr "跳至內容"
+
+#: image.php:21
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>  at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">已發表 </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> 於 <a href=\"%3$s\" title=\"連結至原大小圖片\">%4$s &times; %5$s</a> 在 <a href=\"%6$s\" title=\"回到 %7$s\" rel=\"gallery\">%7$s</a>"
+
+#: image.php:35
+msgid "&larr; Previous"
+msgstr "&larr; 上一個"
+
+#: image.php:36
+msgid "Next &rarr;"
+msgstr "下一個 &rarr;"
+
+#: image.php:88
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"發表迴響\">發表迴響</a> 或留下 trackback: <a class=\"trackback-link\" href=\"%s\" title=\"為你的文章 trackback URL\" rel=\"trackback\">Trackback URL</a>."
+
+#: image.php:90
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "迴響功能已關閉，但你可以留下 trackback: <a class=\"trackback-link\" href=\"%s\" title=\"為你的文章 Trackback URL\" rel=\"trackback\">Trackback URL</a>."
+
+#: image.php:92
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Trackbacks 已關閉，但你可以 <a class=\"comment-link\" href=\"#respond\" title=\"發表迴響\">發表迴響</a>."
+
+#: image.php:94
+msgid "Both comments and trackbacks are currently closed."
+msgstr "迴響功能及 trackbacks 現在都已關閉"
+
+#: loop.php:17
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-author\">Posted on </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+msgstr "<span class=\"meta-prep meta-prep-author\">發表於 </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a>, <span class=\"meta-sep\"> 由 </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+
+#: loop.php:31
+#: loop.php:35
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "閱讀全文 <span class=\"meta-nav\">&rarr;</span>"
+
+#: loop.php:41
+msgid "Posted in "
+msgstr "發表在 "
+
+#: loop.php:43
+msgid "Tagged "
+msgstr "已標籤 "
+
+#: loop.php:44
+msgid "Leave a comment"
+msgstr "留下迴響"
+
+#: loop.php:44
+msgid "1 Comment"
+msgstr "1 個迴響"
+
+#: loop.php:44
+msgid "% Comments"
+msgstr "% 個迴響"
+
+#: search.php:14
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s 的搜尋結果"
+
+#: search.php:21
+msgid "Nothing Found"
+msgstr "找不到任何東西"
+
+#: search.php:25
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "抱歉，但沒有符合你的搜查條件。請嘗試用其他關鍵字。"
+
+#: sidebar.php:16
+msgid "Archives"
+msgstr "彙整"
+
+#: sidebar.php:23
+msgid "Meta"
+msgstr "其它"
+
+#: single-portfolio.php:48
+#, php-format
+msgid "TAGS: %1$s. Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "標籤：%1$s. 將 <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a> 加入書籤。"
+
+#: single-portfolio.php:50
+#, php-format
+msgid "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "將 <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a> 加入書籤。"
+
+#: single.php:41
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "這個輸入被發表在 %1$s 及被標籤 %2$s. 將 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a> 加入書籤。"
+
+#: single.php:43
+#, php-format
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "這個輸入被發表在 %1$s. 將 <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a> 加入書籤。"
+
+#: tag.php:17
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "標籤彙整：%s"
+
+#: extensions/portfolio-post-type.php:14
+msgid "Portfolio Item"
+msgstr "作品項目"
+
+#: extensions/portfolio-post-type.php:15
+msgid "Add New Item"
+msgstr "新增項目"
+
+#: extensions/portfolio-post-type.php:16
+#: extensions/portfolio-post-type.php:18
+msgid "Add New Portfolio Item"
+msgstr "新增作品項目"
+
+#: extensions/portfolio-post-type.php:17
+msgid "Edit Portfolio Item"
+msgstr "編輯作品項目"
+
+#: extensions/portfolio-post-type.php:19
+msgid "View Item"
+msgstr "檢視項目"
+
+#: extensions/portfolio-post-type.php:20
+msgid "Search Portfolio"
+msgstr "搜尋作品"
+
+#: extensions/portfolio-post-type.php:21
+msgid "No portfolio items found"
+msgstr "找不到作品項目"
+
+#: extensions/portfolio-post-type.php:22
+msgid "No portfolio items found in trash"
+msgstr "在回收桶內找不到作品項目"
+
+#: extensions/portfolio-post-type.php:36
+#: extensions/portfolio-post-type.php:38
+msgid "Portfolio Tags"
+msgstr "作品標籤"
+
+#: extensions/portfolio-post-type.php:39
+msgid "Portfolio Tag"
+msgstr "作品標籤"
+
+#: extensions/portfolio-post-type.php:66
+msgid "Thumbnail"
+msgstr "縮略圖"
+
+#: extensions/portfolio-post-type.php:67
+msgid "Tags"
+msgstr "標籤"
+
+#: extensions/portfolio-post-type.php:68
+msgid "Author"
+msgstr "作者"
+
+#: extensions/portfolio-post-type.php:69
+msgid "Comments"
+msgstr "迴響"
+
+#: extensions/portfolio-post-type.php:70
+msgid "Date"
+msgstr "日期"
+
+#: extensions/portfolio-post-type.php:97
+#: extensions/portfolio-post-type.php:104
+msgid "None"
+msgstr "無"
+
+#~ msgid "F Y"
+#~ msgstr "F \\d\\e Y"
+
+#~ msgid "Permanent Link to"
+#~ msgstr "永久連結至"
+
+#~ msgid "Footer 1"
+#~ msgstr "頁尾 1"
+
+#~ msgid "Widetized footer"
+#~ msgstr "Widetized 頁尾"
+
+#~ msgid "Footer 2"
+#~ msgstr "頁尾 2"
+
+#~ msgid "Footer 3"
+#~ msgstr "頁尾 3"
+
+#~ msgid "Footer 4"
+#~ msgstr "頁尾 4"
+
+#~ msgid "Portfolio theme"
+#~ msgstr "Portfolio theme"
+
+#~ msgid "translated by"
+#~ msgstr ""
+#~ "Sunny Lau"

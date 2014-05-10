@@ -1,0 +1,498 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Portfolio Press Russian Translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-06 12:52+0300\n"
+"PO-Revision-Date: 2011-11-06 14:04+0300\n"
+"Last-Translator: Alexander <admin@k-notes.ru>\n"
+"Language-Team: Alexaner <admin@k-notes.ru>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_n;_x\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: /var/www/work.ru/wp-content/themes/portfolio-press\n"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:30
+msgid "General Settings"
+msgstr "Общие настройки"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:33
+msgid "Custom Logo"
+msgstr "Произвольный логотип"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:34
+msgid "Upload a logo for your theme if you would like to use one."
+msgstr "Если вы хотите использовать логотип для вашей темы, загрузите его здесь."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:38
+msgid "Custom Favicon"
+msgstr "Произвольный Favicon"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:39
+msgid "Upload a 16px x 16px Png/Gif image to represent your website."
+msgstr "Загрузите изображение размером 16 x 16 пикселей в формате Png/Gif."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:43
+msgid "Display Images on Portfolio Posts"
+msgstr "Отображать изображения в записях портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:44
+msgid "Uncheck this if you wish to manually display portfolio images on single posts."
+msgstr "Отключите опцию, если вы хотите добавлять портфолио изображения в одиночные записи вручную."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:49
+msgid "Display Portfolio Archives Full Width"
+msgstr "Отображать архивы портфолио на всю ширину"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:50
+msgid "Check this to display all portfolio archives full width."
+msgstr "Включите опцию, чтобы отображать все архивы портфолио на всю ширину."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:56
+msgid "Disable Portfolio"
+msgstr "Отключить портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:57
+msgid "Check this if you are not planning to use the portfolio post type.  You can always re-enable it."
+msgstr "Включите опцию, если вы не хотите использовать портфолио."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:62
+msgid "Style and Layout"
+msgstr "Стиль и разметка"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:65
+msgid "Main Layout"
+msgstr "Основная разметка"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:66
+msgid "Select main content and sidebar alignment."
+msgstr "Выберите расположение основного содержимого и боковой колонки."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:80
+msgid "Menu Position"
+msgstr "Расположение меню"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:81
+msgid "Select where the main menu should go in the header.  Long menus should go underneath."
+msgstr "Укажите место расположения меню в заголовке. Большие меню следует располагать под логотипом."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:88
+msgid "Footer Settings"
+msgstr "Настройки подвала"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:91
+msgid "Custom Footer Text"
+msgstr "Произвольный текст подвала"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/options.php:92
+msgid "Custom text that will appear in the footer of your theme."
+msgstr "Произвольный текст, который будет отображаться в подвале вашей темы."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/search.php:14
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска: %s"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/search.php:21
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/search.php:25
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Извините, по вашему запросу ничего не найдено. Попробуйте другие ключевые слова."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/404.php:14
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Ошибка 404 - Страница не найдена"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/404.php:18
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Кажется, мы не можем найти то, что вы ищете. Возможно, повторный поиск или одна из ссылок ниже вам поможет."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/404.php:25
+msgid "Most Used Categories"
+msgstr "Часто используемые рубрики"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/page.php:21
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single-portfolio.php:41
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single.php:34
+#: /var/www/work.ru/wp-content/themes/portfolio-press/full-width-page.php:24
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:36
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/page.php:22
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single-portfolio.php:60
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single.php:54
+#: /var/www/work.ru/wp-content/themes/portfolio-press/full-width-page.php:25
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:45
+msgid "Edit"
+msgstr "Изменить"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/category.php:13
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Архив рубрики: %s"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/tag.php:17
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Архив метки: %s"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single-portfolio.php:20
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single.php:20
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:17
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-author\">Posted on </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+msgstr "<span class=\"meta-prep meta-prep-author\">Опубликовано </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> автор </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single-portfolio.php:48
+#, php-format
+msgid "TAGS: %1$s. Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "МЕТКИ: %1$s. Добавьте в закладки <a href=\"%2$s\" title=\"Постоянная ссылка: %3$s\" rel=\"bookmark\">постоянную ссылку</a>."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single-portfolio.php:50
+#, php-format
+msgid "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Добавьте в закладки <a href=\"%2$s\" title=\"Постоянная ссылка: %3$s\" rel=\"bookmark\">постоянную ссылку</a>."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single-portfolio.php:65
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single.php:59
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive-portfolio.php:63
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:63
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single-portfolio.php:66
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single.php:61
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single-portfolio.php:67
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single.php:60
+msgid "&larr;"
+msgstr "&larr;"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single.php:41
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Запись опубликована в рубрике %1$s с метками %2$s. Добавьте в закладки <a href=\"%3$s\" title=\"Постоянная ссылка: %4$s\" rel=\"bookmark\">постоянную ссылку</a>."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/single.php:43
+#, php-format
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Запись опубликована в рубрике %1$s. Добавьте в закладки <a href=\"%3$s\" title=\"Постоянная ссылка: %4$s\" rel=\"bookmark\">постоянную ссылку</a>."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/author.php:14
+#, php-format
+msgid "Author Archives: <span class=\"vcard\">%s</span>"
+msgstr "Архив автора: <span class=\"vcard\">%s</span>"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive-portfolio.php:36
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive-portfolio.php:40
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive-portfolio.php:44
+msgid "Permanent Link to"
+msgstr "Постоянная ссылка"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive-portfolio.php:64
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:64
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущие записи"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive-portfolio.php:65
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:65
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Следующие записи <span class=\"meta-nav\">&rarr;</span>"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive-portfolio.php:73
+msgid "Sorry, no posts matched your criteria."
+msgstr "Извините, по вашему запросу ничего не найдено."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:65
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:109
+#, php-format
+msgid "Search results for %s"
+msgstr "Результаты поиска: %s"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:112
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:129
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:166
+msgid "Sidebar"
+msgstr "Боковая колонка"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:174
+msgid "Footer 1"
+msgstr "Область подвала 1"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:174
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:175
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:176
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:177
+msgid "Widetized footer"
+msgstr "Виджет подвала"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:175
+msgid "Footer 2"
+msgstr "Область подвала 2"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:176
+msgid "Footer 3"
+msgstr "Область подвала 3"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/functions.php:177
+msgid "Footer 4"
+msgstr "Область подвала 4"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:31
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:35
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:41
+msgid "Posted in "
+msgstr "Опубликовано в "
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:43
+msgid "Tagged "
+msgstr "Метки "
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:44
+msgid "Leave a comment"
+msgstr "Добавить комментарий"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:44
+msgid "1 Comment"
+msgstr "1 комментарий"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/loop.php:44
+msgid "% Comments"
+msgstr "Комментарии (%)"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/header.php:42
+msgid "Main menu"
+msgstr "Главное меню"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/header.php:43
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/comments.php:10
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Эта запись защищена паролем. Введите пароль, чтобы посмотреть комментарии."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/comments.php:21
+#, php-format
+msgid "One Response to %2$s"
+msgstr "Один комментарий: %2$s"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/comments.php:28
+#: /var/www/work.ru/wp-content/themes/portfolio-press/comments.php:40
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/comments.php:29
+#: /var/www/work.ru/wp-content/themes/portfolio-press/comments.php:41
+msgid "&larr; Older Comments"
+msgstr "&larr; Предыдущие комментарии"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/comments.php:30
+#: /var/www/work.ru/wp-content/themes/portfolio-press/comments.php:42
+msgid "Newer Comments &rarr;"
+msgstr "Следующие комментарии &rarr;"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/footer.php:39
+msgid "Powered by"
+msgstr "Перевод темы - <a href=\"http://k-notes.ru/\">k-notes.ru</a>. Работает на"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/footer.php:39
+msgid "WordPress"
+msgstr "WordPress"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/footer.php:39
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:12
+msgid "Portfolio"
+msgstr "Портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Архив за день: <span>%s</span>"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Архив за месяц: <span>%s</span>"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive.php:18
+msgid "F Y"
+msgstr "F Y"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Архив за год: <span>%s</span>"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/archive.php:22
+msgid "Blog Archives"
+msgstr "Архив блога"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/sidebar.php:16
+msgid "Archives"
+msgstr "Архивы"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/sidebar.php:23
+msgid "Meta"
+msgstr "Прочее"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/image.php:21
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>  at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">Опубликовано </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> <a href=\"%3$s\" title=\"Ссылка на полноразмерное изображение\">%4$s &times; %5$s</a> в <a href=\"%6$s\" title=\"Вернуться к %7$s\" rel=\"gallery\">%7$s</a>"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/image.php:35
+msgid "&larr; Previous"
+msgstr "&larr; Ранее"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/image.php:36
+msgid "Next &rarr;"
+msgstr "Далее &rarr;"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/image.php:88
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Добавить комментарий\">Добавить комментарий</a> или оставить обратную ссылку: <a class=\"trackback-link\" href=\"%s\" title=\"Обратная ссылка\" rel=\"trackback\">Адрес обратной ссылки</a>."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/image.php:90
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Комментарии запрещены, но вы можете оставить обратную ссылку: <a class=\"trackback-link\" href=\"%s\" title=\"Обратная ссылка\" rel=\"trackback\">Адрес обратной ссылки</a>."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/image.php:92
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Обратные ссылки запрещены, но вы можете <a class=\"comment-link\" href=\"#respond\" title=\"Добавить комментарий\">добавить комментарий</a>."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/image.php:94
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Комментарии и обратные ссылки запрещены."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:30
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:44
+msgid "Theme Options"
+msgstr "Опции темы"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:45
+msgid "If you would like to use the Portfolio Press theme options, please install the <a href=\"https://github.com/devinsays/options-framework-plugin\">Options Framework</a> plugin."
+msgstr "Если вы хотите использовать настройки Portfolio Press, установите плагин <a href=\"https://github.com/devinsays/options-framework-plugin\">Options Framework</a>."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:46
+msgid "Once the plugin is activated you will have option to:"
+msgstr "После активации плагина вы сможете:"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:48
+msgid "Upload a logo image"
+msgstr "Загрузить изображение заголовка"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:49
+msgid "Change the sidebar position"
+msgstr "Изменить расположение боковой колонки"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:50
+msgid "Change the menu position"
+msgstr "Изменить расположение меню"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:51
+msgid "Hide the portfolio image on the single post"
+msgstr "Скрыть портфолио изображения из одиночных записей"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:52
+msgid "Update the footer text"
+msgstr "Изменить текст в подвале"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/options-functions.php:55
+msgid "If you don't need these options, the plugin is not required default settings will be used."
+msgstr "Если вам не требуются данные опции, то установка плагина вам не нужна."
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:13
+msgid "Portfolio Item"
+msgstr "Элемент портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:14
+msgid "Add New Item"
+msgstr "Добавить элемент"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:15
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:17
+msgid "Add New Portfolio Item"
+msgstr "Добавить новый элемент портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:16
+msgid "Edit Portfolio Item"
+msgstr "Изменить элемент портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:18
+msgid "View Item"
+msgstr "Посмотреть элемент"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:19
+msgid "Search Portfolio"
+msgstr "Поиск по портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:20
+msgid "No portfolio items found"
+msgstr "Элементов портфолио не найдено"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:21
+msgid "No portfolio items found in trash"
+msgstr "Элементов портфолио в корзине не найдено"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:38
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:40
+msgid "Portfolio Tags"
+msgstr "Метки портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:41
+msgid "Portfolio Tag"
+msgstr "Метка портфолио"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:69
+msgid "Title"
+msgstr "Заголовок"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:70
+msgid "Thumbnail"
+msgstr "Миниатюра"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:71
+msgid "Tags"
+msgstr "Метки"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:72
+msgid "Author"
+msgstr "Автор"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:73
+msgid "Comments"
+msgstr "Комментарии"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:74
+msgid "Date"
+msgstr "Дата"
+
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:99
+#: /var/www/work.ru/wp-content/themes/portfolio-press/extensions/portfolio-post-type.php:109
+msgid "None"
+msgstr "Нет"
+

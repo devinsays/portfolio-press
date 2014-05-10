@@ -1,0 +1,337 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Portfolio-Theme auf Deutsch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-25 22:51-0600\n"
+"PO-Revision-Date: 2010-10-04 11:11+0100\n"
+"Last-Translator: Sandro Bauer <wen87@gmx.de>\n"
+"Language-Team: Sandro Bauer <wen87@gmx.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:14
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "HTTP-Fehler 404 – Seite nicht gefunden"
+
+#: 404.php:18
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Offenbar können wir das, was du aufrufen willst, gerade nicht finden. Vielleicht hilft es, ausdrücklich danach zu suchen oder einen der Links weiter unten auszuprobieren."
+
+#: 404.php:25
+msgid "Most Used Categories"
+msgstr "Am häufigsten benutzte Kategorien"
+
+#: archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Tagesarchiv: <span>%s</span>"
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Monatsarchiv: <span>%s</span>"
+
+#: archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Jahresarchiv: <span>%s</span>"
+
+#: archive.php:22
+msgid "Blog Archives"
+msgstr "Archiv"
+
+#: author.php:14
+#, php-format
+msgid "Author Archives: <span class=\"vcard\">%s</span>"
+msgstr "Autorenarchiv: <span class=\"vcard\">%s</span>"
+
+#: category.php:13
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Kategorienarchiv: %s"
+
+#: comments.php:10
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Dieser Artikel ist passwortgeschützt. Gib das Passwort ein, um die Kommentare anzuzeigen."
+
+#: comments.php:21
+#, php-format
+msgid "One Response to %2$s"
+msgstr "Eine Antwort auf %2$s"
+
+#: comments.php:28
+#: comments.php:40
+msgid "Comment navigation"
+msgstr "Navigation in Kommentaren"
+
+#: comments.php:29
+#: comments.php:41
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: comments.php:30
+#: comments.php:42
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr "Die Kommentarfunktion ist deaktiviert."
+
+#: footer.php:38
+msgid "Powered by"
+msgstr "Unterstützt durch"
+
+#: footer.php:38
+msgid "A Semantic Personal Publishing Platform"
+msgstr "Eine semantische, persönliche Publikationsplattform"
+
+#: footer.php:38
+msgid "WordPress"
+msgstr "WordPress"
+
+#: footer.php:38
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: full-width-page.php:24
+#: image.php:82
+#: loop.php:36
+#: page.php:21
+msgid "Pages:"
+msgstr "Pages:"
+
+#: full-width-page.php:25
+#: image.php:31
+#: image.php:96
+#: loop.php:45
+#: page.php:22
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: full-width-portfolio.php:45
+#: loop.php:63
+msgid "Post navigation"
+msgstr "Navigation in Artikeln"
+
+#: full-width-portfolio.php:46
+#: loop.php:64
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Artikel"
+
+#: full-width-portfolio.php:47
+#: loop.php:65
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Neuere Artikel <span class=\"meta-nav\">&rarr;</span>"
+
+#: full-width-portfolio.php:55
+msgid "Sorry, no posts matched your criteria."
+msgstr "Leider entspricht kein Artikel deinen Suchkriterien."
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr "Primäres Menü"
+
+#: functions.php:92
+#, php-format
+msgid "Search results for %s"
+msgstr "Suchergebnisse zu %s"
+
+#: functions.php:95
+#: functions.php:120
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: functions.php:156
+msgid "Sidebar"
+msgstr "Seitenleiste"
+
+#: header.php:32
+msgid "Main menu"
+msgstr "Hauptmenü"
+
+#: header.php:33
+msgid "Skip to content"
+msgstr "Zum Inhalt"
+
+#: image.php:21
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span>  at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">Veröffentlicht am</span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> um <a href=\"%3$s\" title=\"Link zum Bild in Originalgröße\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Zurück zur %7$s\" rel=\"Bildergalerie\">%7$s</a>"
+
+#: image.php:35
+msgid "&larr; Previous"
+msgstr "&larr; Vorheriges"
+
+#: image.php:36
+msgid "Next &rarr;"
+msgstr "Nächstes &rarr;"
+
+#: image.php:88
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Einen Kommentar schreiben\">Einen Kommentar schreiben</a> oder einen Trackback hinterlassen: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback-URL für Ihren Beitrag\" rel=\"trackback\">Trackback-URL</a>."
+
+#: image.php:90
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Kommentare sind nicht erlaubt, aber Sie können einen Trackback hinterlassen: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback-URL\" rel=\"trackback\">Trackback-URL</a>."
+
+#: image.php:92
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Trackbacks sind nicht erlaubt, aber Sie können <a class=\"comment-link\" href=\"#respond\" title=\"Einen Kommentar hinterlassen\">einen Kommentar hinterlassen</a>."
+
+#: image.php:94
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Derzeit sind weder Kommentare noch Trackbacks erlaubt."
+
+#: loop.php:17
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-author\">Posted on </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+msgstr "<span class=\"meta-prep meta-prep-author\">Veröffentlicht am </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a>, <span class=\"meta-sep\"> von </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+
+#: loop.php:31
+#: loop.php:35
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
+
+#: loop.php:41
+msgid "Posted in "
+msgstr "Veröffentlicht in der Kategorie "
+
+#: loop.php:43
+msgid "Tagged "
+msgstr "Tags: "
+
+#: loop.php:44
+msgid "Leave a comment"
+msgstr "Einen Kommentar hinterlassen"
+
+#: loop.php:44
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: loop.php:44
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: search.php:14
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: search.php:21
+msgid "Nothing Found"
+msgstr "Keine Treffer"
+
+#: search.php:25
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Leider gab es keine Treffer. Bitte versuchen Sie es nochmals mit anderen Suchkriterien."
+
+#: sidebar.php:16
+msgid "Archives"
+msgstr "Archiv"
+
+#: sidebar.php:23
+msgid "Meta"
+msgstr "Meta"
+
+#: single-portfolio.php:48
+#, php-format
+msgid "TAGS: %1$s. Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Tags: %1$s. Den <a href=\"%2$s\" title=\"Permalink zu %3$s\" rel=\"bookmark\">Permalink</a> als Lesezeichen speichern."
+
+#: single-portfolio.php:50
+#, php-format
+msgid "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Den <a href=\"%2$s\" title=\"Permalink zu %3$s\" rel=\"bookmark\">Permalink</a> als Lesezeichen speichern."
+
+#: single.php:41
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Dieser Artikel wurde in der Kategorie %1$s mit den Schlüsselwörtern %2$s veröffentlicht. Den <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Permalink</a> als Lesezeichen speichern."
+
+#: single.php:43
+#, php-format
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Dieser Artikel wurde in der Kategorie %1$s veröffentlicht. Den <a href=\"%3$s\" title=\"Permalink zu %4$s\" rel=\"bookmark\">Permalink</a> als Lesezeichen speichern."
+
+#: tag.php:17
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Tag-Archiv zu: %s"
+
+#: extensions/portfolio-post-type.php:14
+msgid "Portfolio Item"
+msgstr "Portfolioelement"
+
+#: extensions/portfolio-post-type.php:15
+msgid "Add New Item"
+msgstr "Ein neues Element hinzufügen"
+
+#: extensions/portfolio-post-type.php:16
+#: extensions/portfolio-post-type.php:18
+msgid "Add New Portfolio Item"
+msgstr "Ein neues Portfolioelement hinzufügen"
+
+#: extensions/portfolio-post-type.php:17
+msgid "Edit Portfolio Item"
+msgstr "Ein Portfolioelement bearbeiten"
+
+#: extensions/portfolio-post-type.php:19
+msgid "View Item"
+msgstr "Element ansehen"
+
+#: extensions/portfolio-post-type.php:20
+msgid "Search Portfolio"
+msgstr "Im Portfolio suchen"
+
+#: extensions/portfolio-post-type.php:21
+msgid "No portfolio items found"
+msgstr "Keine Portfolioelemente gefunden"
+
+#: extensions/portfolio-post-type.php:22
+msgid "No portfolio items found in trash"
+msgstr "Keine Portfolioelemente im Papierkorb gefunden"
+
+#: extensions/portfolio-post-type.php:36
+#: extensions/portfolio-post-type.php:38
+msgid "Portfolio Tags"
+msgstr "Portfolio-Tags"
+
+#: extensions/portfolio-post-type.php:39
+msgid "Portfolio Tag"
+msgstr "Portfolio-Tag"
+
+#: extensions/portfolio-post-type.php:66
+msgid "Thumbnail"
+msgstr "Miniaturbild"
+
+#: extensions/portfolio-post-type.php:67
+msgid "Tags"
+msgstr "Tags"
+
+#: extensions/portfolio-post-type.php:68
+msgid "Author"
+msgstr "Autor"
+
+#: extensions/portfolio-post-type.php:69
+msgid "Comments"
+msgstr "Kommentare"
+
+#: extensions/portfolio-post-type.php:70
+msgid "Date"
+msgstr "Datum"
+
+#: extensions/portfolio-post-type.php:97
+#: extensions/portfolio-post-type.php:104
+msgid "None"
+msgstr "Keines"
