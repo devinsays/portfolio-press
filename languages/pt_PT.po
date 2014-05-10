@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Press 2.1 em português\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-04-22 14:57:00+00:00\n"
-"PO-Revision-Date: 2014-04-22 16:10-0000\n"
+"POT-Creation-Date: 2014-05-10 19:13:22+00:00\n"
+"PO-Revision-Date: 2014-05-10 21:03-0000\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language: pt_PT\n"
@@ -530,35 +530,35 @@ msgstr "Portfólio"
 msgid "Primary Menu"
 msgstr "Menu primário"
 
-#: functions.php:99
+#: functions.php:103
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: functions.php:108
+#: functions.php:112
 msgid "Footer 1"
 msgstr "Rodapé 1"
 
-#: functions.php:110 functions.php:120 functions.php:130 functions.php:140
+#: functions.php:114 functions.php:124 functions.php:134 functions.php:144
 msgid "Widetized footer"
 msgstr "Zona do rodapé para widgets"
 
-#: functions.php:118
+#: functions.php:122
 msgid "Footer 2"
 msgstr "Rodapé 2"
 
-#: functions.php:128
+#: functions.php:132
 msgid "Footer 3"
 msgstr "Rodapé 3"
 
-#: functions.php:138
+#: functions.php:142
 msgid "Footer 4"
 msgstr "Rodapé 4"
 
-#: header.php:44
+#: header.php:43
 msgid "Menu"
 msgstr "Menu"
 
-#: header.php:45
+#: header.php:44
 msgid "Skip to content"
 msgstr "Saltar para o conteúdo"
 
@@ -719,12 +719,12 @@ msgid "You will also get these additional features:"
 msgstr "Pode ainda obter as seguintes capacidades:"
 
 #: options.php:205
-msgid "Color and Background Style Options"
-msgstr "Opções de cor e estilo de fundo"
+msgid "Text Color Options"
+msgstr "Opções de cor do texto"
 
 #: options.php:206
-msgid "Infinite Scroll"
-msgstr "Scroll infinito"
+msgid "Background Stye Options"
+msgstr "Opções de estilo do fundo"
 
 #: options.php:207
 msgid "Additional Page Templates"
@@ -734,19 +734,27 @@ msgstr "Modelos de página adicionais"
 msgid "Option to Hide Post Dates"
 msgstr "Opção para esconder a data dos artigos"
 
+#: options.php:209
+msgid "Infinite Scroll"
+msgstr "Scroll infinito"
+
 #: options.php:210
+msgid "Priority Support"
+msgstr "Suporte prioritário"
+
+#: options.php:212
 msgid "<a href=\"%s\">Read More</a>"
 msgstr "<a href=\"%s\">Ler mais</a>"
 
-#: options.php:220
+#: options.php:222
 msgid "Upgrade"
 msgstr "Actualizar"
 
-#: options.php:227
+#: options.php:229
 msgid "Version"
 msgstr "Versão"
 
-#: options.php:243
+#: options.php:245
 msgid ""
 "Theme <a href=\"%s\">documentation</a>.  For additional options, see <a href="
 "\"%s\">Portfolio+</a>."
