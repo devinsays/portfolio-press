@@ -1,6 +1,7 @@
 Portfolio Press 2.3
 
 - Minor style update for portfolio title overlays
+- Update for translation files
 
 Portfolio Press 2.2
 
