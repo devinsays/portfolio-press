@@ -71,7 +71,7 @@ add_action( 'after_setup_theme', 'portfoliopress_setup' );
  */
 function portfoliopress_scripts() {
 
-	wp_enqueue_style( 'portfolio-press-style', get_stylesheet_uri(), '', '2.2.0' );
+	wp_enqueue_style( 'portfolio-press-style', get_stylesheet_uri(), '', '2.3.0' );
 
 	wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
 
