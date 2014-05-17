@@ -1,6 +1,6 @@
 /*
 Theme Name: Portfolio Press
-Description: Portfolio Press is a responsive theme for showcasing your photography, art, web sites, or other projects.  It also works nicely as a regular blog site.  An options panel is included for uploading logos and and changing the layout.  There's also support for the image, gallery and quote post formats.  Visit the <a href="http://themes.wptheming.com/portfolio/">demo site</a> or watch the <a href="http://wptheming.com/portfolio-theme">video screencast</a> for set up instructions (http://wptheming.com/portfolio-press).
+Description: Portfolio Press is a responsive theme for showcasing your photography, art, web sites, or other projects.  It also works nicely as a regular blog site.  An options panel is included for uploading logos and and changing the layout.  There's also support for the image, gallery and quote post formats.  Visit the <a href="http://themes.wptheming.com/portfolio/">demo site</a> or watch the <a href="http://wptheming.com/portfolio-press">video screencast</a> for set up instructions (http://wptheming.com/portfolio-press).
 Author: Devin Price
 Author URI: http://wptheming.com/
 Theme URI: http://wptheming.com/portfolio-press/
@@ -1133,7 +1133,7 @@ input[type="submit"] {
 	    top: 45px;
 	    left: 0;
 	    width: 200px;
-	    z-index: 75;
+	    z-index: 200;
 	    text-align: center;
 	    background: #333;
 	    border-radius: 3px;
