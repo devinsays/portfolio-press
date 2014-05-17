@@ -66,8 +66,8 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 *,
 *:before,
 *:after {
-	/* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	-webkit-box-sizing:         border-box;
 	box-sizing:         border-box;
 }
 
@@ -712,7 +712,6 @@ object {
 	opacity: 1;
 	-webkit-filter: none;
 	-webkit-transition: opacity .3s ease-in-out;
-	-moz-transition: opacity .3s ease-in-out;
 	transition: .opacity 3s ease-in-out;
 	-webkit-backface-visibility: hidden;
 }
@@ -1044,14 +1043,14 @@ input[type="submit"] {
 	border: 1px solid #ccc;
 	border-color: #ccc #ccc #bbb #ccc;
 	border-radius: 3px;
-	background: #fafafa; /* Old browsers */
-	background: -moz-linear-gradient(top,  #fafafa 60%, #e6e6e6 100%); /* FF3.6+ */
+	background: #fafafa; /* Old browsers */ /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#fafafa), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* IE10+ */
+	background: -webkit-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #fafafa), to(#e6e6e6));
+	background: -webkit-linear-gradient(top, #fafafa 60%, #e6e6e6 100%);
 	background: linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-9 */
+	-webkit-box-shadow: inset 0 2px 1px #fff;
 	box-shadow: inset 0 2px 1px #fff;
 	color: rgba(0,0,0,.8);
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -1230,14 +1229,8 @@ input[type="submit"] {
 	}
 	.portfolio-view .hentry {
 		-webkit-transition-duration: 0.6s;
-     	-moz-transition-duration: 0.6s;
-      	-ms-transition-duration: 0.6s;
-       	-o-transition-duration: 0.6s;
         transition-duration: 0.6s;
         -webkit-transition-property: height, width;
-     	-moz-transition-property: height, width;
-      	-ms-transition-property: height, width;
-       	-o-transition-property: height, width;
         transition-property: height, width;
         min-width:46%;
 		width:46%;

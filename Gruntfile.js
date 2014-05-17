@@ -1,8 +1,28 @@
 'use strict';
 module.exports = function(grunt) {
 
-    grunt.initConfig({
+	// load all tasks
+	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
+    grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
+		autoprefixer: {
+            options: {
+				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie 9']
+			},
+			single_file: {
+				src: 'style.css',
+				dest: 'style.css'
+			}
+		},
+		csscomb: {
+			options: {
+                config: '.csscomb.json'
+            },
+            files: {
+                'style.css': ['style.css'],
+            }
+		},
     	// https://www.npmjs.org/package/grunt-wp-i18n
 	    makepot: {
 	        target: {
@@ -16,12 +36,10 @@ module.exports = function(grunt) {
 
 	});
 
-	// load tasks
-	grunt.loadNpmTasks( 'grunt-wp-i18n' );
-
-	// register tasks
-    grunt.registerTask('default', [
-        'makepot'
-    ]);
+    grunt.registerTask( 'release', [
+		'autoprefixer',
+		'csscomb',
+		'makepot'
+	]);
 
 };
