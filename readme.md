@@ -17,6 +17,7 @@ Portfolio Press 2.3
 * Update for translation files
 * Change z-index of menu drop drop down
 * Update readme file to markdown
+* Remove gap on tertiary menus
 
 Portfolio Press 2.2
 ----

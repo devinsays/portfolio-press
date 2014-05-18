@@ -1191,18 +1191,11 @@ input[type="submit"] {
 		margin-top:-7px;
 	}
 	.primary-navigation ul ul ul:before {
-	    position: absolute;
-	    top: 22px;
-	    left: -6px;
-	    margin-top: -6px;
-	    border-top: 6px solid transparent;
-	    border-bottom: 6px solid transparent;
-	    border-right: 6px solid #333;
-	    content: " ";
+	    content: none;
 	}
 	.primary-navigation ul ul ul {
 	    top: 0;
-	    left:205px;
+	    left:200px;
 	    width: 200px;
     }
 }
