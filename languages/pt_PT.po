@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Press 2.1 em português\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-10 19:13:22+00:00\n"
-"PO-Revision-Date: 2014-05-10 21:03-0000\n"
+"POT-Creation-Date: 2014-05-19 04:07:27+00:00\n"
+"PO-Revision-Date: 2014-05-19 13:46-0000\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language: pt_PT\n"
@@ -489,7 +489,7 @@ msgstr "1 Comentário"
 msgid "% Comments"
 msgstr "% Comentários"
 
-#: extensions/template-helpers.php:81 page.php:23
+#: extensions/template-helpers.php:81 image.php:48 page.php:23
 #: templates/full-width-page.php:24
 msgid "Edit"
 msgstr "Editar"
@@ -509,6 +509,14 @@ msgstr "Artigos mais recentes <span class=\"meta-nav\">&rarr;</span>"
 #: extensions/template-helpers.php:148
 msgid "Post navigation"
 msgstr "Navegação de artigos"
+
+#: extensions/template-helpers.php:156
+msgid "&larr; Previous"
+msgstr "&larr; Anterior"
+
+#: extensions/template-helpers.php:157
+msgid "Next &rarr;"
+msgstr "Seguinte &rarr;"
 
 #: footer.php:39
 msgid "Powered by"
@@ -561,6 +569,21 @@ msgstr "Menu"
 #: header.php:44
 msgid "Skip to content"
 msgstr "Saltar para o conteúdo"
+
+#: image.php:37
+#, fuzzy
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
+"\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></"
+"span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; "
+"%5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</"
+"a>."
+msgstr ""
+"<span class=\"meta-prep meta-prep-entry-date\">Publicado em </span> <span "
+"class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</"
+"time></span> em <a href=\"%3$s\" title=\"Ligação para imagem em tamanho "
+"completo\">%4$s &times; %5$s</a> em <a href=\"%6$s\" title=\"Voltar a %7$s\" "
+"rel=\"gallery\">%8$s</a>."
 
 #: options.php:38
 msgid "General Settings"
@@ -735,26 +758,34 @@ msgid "Option to Hide Post Dates"
 msgstr "Opção para esconder a data dos artigos"
 
 #: options.php:209
+msgid "Full Width Option for Individual Posts"
+msgstr "Opção de toda a largura para artigos individuais"
+
+#: options.php:210
+msgid "Ability to Hide Images on Individual Posts"
+msgstr "Possibilidade de esconder imagens em artigos individuais"
+
+#: options.php:211
 msgid "Infinite Scroll"
 msgstr "Scroll infinito"
 
-#: options.php:210
+#: options.php:212
 msgid "Priority Support"
 msgstr "Suporte prioritário"
 
-#: options.php:212
+#: options.php:214
 msgid "<a href=\"%s\">Read More</a>"
 msgstr "<a href=\"%s\">Ler mais</a>"
 
-#: options.php:222
+#: options.php:224
 msgid "Upgrade"
 msgstr "Actualizar"
 
-#: options.php:229
+#: options.php:231
 msgid "Version"
 msgstr "Versão"
 
-#: options.php:245
+#: options.php:247
 msgid ""
 "Theme <a href=\"%s\">documentation</a>.  For additional options, see <a href="
 "\"%s\">Portfolio+</a>."
@@ -797,16 +828,16 @@ msgid ""
 "An options panel is included for uploading logos and and changing the "
 "layout.  There's also support for the image, gallery and quote post "
 "formats.  Visit the <a href=\"http://themes.wptheming.com/portfolio/\">demo "
-"site</a> or watch the <a href=\"http://wptheming.com/portfolio-theme\">video "
+"site</a> or watch the <a href=\"http://wptheming.com/portfolio-press\">video "
 "screencast</a> for set up instructions (http://wptheming.com/portfolio-"
 "press)."
 msgstr ""
 "Portfolio Press é um tema responsivo para demonstração das suas fotografias, "
-"arte, sites ou tipo de projectos. Também funciona bem como um blog normal. "
+"arte, sites ou outros projectos. Também funciona bem como um blog normal. "
 "Inclui um painel de opções para carregar logótipos e para modificar o "
 "layout. Suporta também artigos do formato de Imagem, Galeria e Citação. "
 "Visite o <a href=\"http://themes.wptheming.com/portfolio/\">site de "
-"demonstração</a> ou veja o <a href=\"http://wptheming.com/portfolio-theme"
+"demonstração</a> ou veja o <a href=\"http://wptheming.com/portfolio-press"
 "\">vídeo demonstrativo</a> com as instruções de instalação (http://wptheming."
 "com/portfolio-press)."
 
@@ -834,12 +865,12 @@ msgstr "Portfólio em toda a largura"
 msgid "Image and Gallery Posts"
 msgstr "Artigos de Imagem e Galeria"
 
-#: extensions/template-helpers.php:153 extensions/template-helpers.php:157
+#: extensions/template-helpers.php:153 extensions/template-helpers.php:160
 msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
 
-#: extensions/template-helpers.php:154 extensions/template-helpers.php:156
+#: extensions/template-helpers.php:154 extensions/template-helpers.php:159
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr "<span class=\"meta-nav\">&larr;</span> %title"
@@ -873,25 +904,6 @@ msgstr "<span class=\"meta-nav\">&larr;</span> %title"
 
 #~ msgid "Main menu"
 #~ msgstr "Menu principal"
-
-#~ msgid ""
-#~ "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span "
-#~ "class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</"
-#~ "abbr></span>  at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s "
-#~ "&times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel="
-#~ "\"gallery\">%7$s</a>"
-#~ msgstr ""
-#~ "<span class=\"meta-prep meta-prep-entry-date\">Imagem publicada em </"
-#~ "span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">"
-#~ "%2$s</abbr></span>, com o tamanho <a href=\"%3$s\" title=\"Ligação para "
-#~ "imagem em tamanho completo\">%4$s &times; %5$s</a> pixeis, em <a href="
-#~ "\"%6$s\" title=\"Voltar a %7$s\" rel=\"gallery\">%7$s</a>"
-
-#~ msgid "&larr; Previous"
-#~ msgstr "&larr; Anterior"
-
-#~ msgid "Next &rarr;"
-#~ msgstr "Seguinte &rarr;"
 
 #~ msgid ""
 #~ "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post "
