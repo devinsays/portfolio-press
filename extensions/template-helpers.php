@@ -152,6 +152,9 @@ function portfoliopress_post_nav() {
 				// Links reversed for portfolio posts
 				previous_post_link( '<div class="nav-next">%link</div>', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'portfolio-press' ) );
 				next_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'portfolio-press' ) );
+			} elseif ( is_attachment() ) { ?>
+				<div class="nav-previous"><?php previous_image_link( false, __( '&larr; Previous', 'portfolio-press' ) ); ?></div>
+				<div class="nav-next"><?php next_image_link( false, __( 'Next &rarr;', 'portfolio-press' ) ); ?></div><?php
 			} else {
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'portfolio-press' ) );
 				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'portfolio-press' ) );

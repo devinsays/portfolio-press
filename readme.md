@@ -16,8 +16,9 @@ Portfolio Press 2.3
 * Minor style update for portfolio title overlays
 * Update for translation files
 * Change z-index of menu drop drop down
+* Better support for 3 level menus
 * Update readme file to markdown
-* Remove gap on tertiary menus
+* New template for images
 
 Portfolio Press 2.2
 ----
