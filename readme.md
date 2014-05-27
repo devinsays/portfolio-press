@@ -10,6 +10,11 @@ Portfolio was built on the solid foundation of [Toolbox](http://wordpress.org/ex
 
 Additional testing and code audits were done by [Michael Fields](http://wordpress.mfields.org/) and [Jake Goldman](https://twitter.com/jakemgold).
 
+Portfolio Press 2.4
+----
+
+* Add FitVids for better support of responsive video
+
 Portfolio Press 2.3
 ----
 

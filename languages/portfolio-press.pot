@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: Portfolio Press 2.3\n"
+"Project-Id-Version: Portfolio Press 2.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-19 04:07:27+00:00\n"
+"POT-Creation-Date: 2014-05-27 21:49:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -493,31 +493,31 @@ msgstr ""
 msgid "Portfolio"
 msgstr ""
 
-#: functions.php:40
+#: functions.php:45
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:118
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:127
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:114 functions.php:124 functions.php:134 functions.php:144
+#: functions.php:129 functions.php:139 functions.php:149 functions.php:159
 msgid "Widetized footer"
 msgstr ""
 
-#: functions.php:122
+#: functions.php:137
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:147
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:157
 msgid "Footer 4"
 msgstr ""
 

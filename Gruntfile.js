@@ -23,6 +23,21 @@ module.exports = function(grunt) {
                 'style.css': ['style.css'],
             }
 		},
+		concat: {
+			release: {
+		        src: [
+		            'js/navigation.js',
+		            'js/jquery.fitvids.js',
+		        ],
+		        dest: 'js/combined-min.js'
+	        }
+		},
+		uglify: {
+		    release: {
+		        src: 'js/combined-min.js',
+		        dest: 'js/combined-min.js'
+		    }
+		},
     	// https://www.npmjs.org/package/grunt-wp-i18n
 	    makepot: {
 	        target: {
@@ -39,6 +54,8 @@ module.exports = function(grunt) {
     grunt.registerTask( 'release', [
 		'autoprefixer',
 		'csscomb',
+		'concat',
+		'uglify',
 		'makepot'
 	]);
 

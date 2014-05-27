@@ -8,6 +8,11 @@
  */
 
 /**
+ * Set constant for version
+ */
+define( 'PORTFOLIO_VERSION', '2.4' );
+
+/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
@@ -71,9 +76,19 @@ add_action( 'after_setup_theme', 'portfoliopress_setup' );
  */
 function portfoliopress_scripts() {
 
-	wp_enqueue_style( 'portfolio-press-style', get_stylesheet_uri(), '', '2.3.0' );
+	wp_enqueue_style( 'portfolio-press-style', get_stylesheet_uri(), '', PORTFOLIO_VERSION );
 
-	wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
+	if ( SCRIPT_DEBUG || WP_DEBUG ) :
+
+		wp_enqueue_script( 'portfoliopress-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), PORTFOLIO_VERSION, true );
+
+		wp_enqueue_script( 'portfoliopress-fit-vids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), PORTFOLIO_VERSION, true );
+
+	else :
+
+		wp_enqueue_script( 'portfoliopress-combined', get_template_directory_uri() . '/js/combined-min.js', array( 'jquery' ), PORTFOLIO_VERSION, true );
+
+	endif;
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     	wp_enqueue_script( 'comment-reply' );
