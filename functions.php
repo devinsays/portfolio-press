@@ -100,11 +100,10 @@ add_action( 'wp_enqueue_scripts', 'portfoliopress_scripts' );
  * Loads webfonts from Google
  */
 function portfoliopress_fonts() {
-	wp_register_style( 'portfoliopress_open_sans', '//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600', '', null, 'screen' );
-	wp_register_style( 'portfoliopress_rokkitt', '//fonts.googleapis.com/css?family=Rokkitt:400,700', '', null, 'screen' );
-	wp_enqueue_style( 'portfoliopress_open_sans' );
-	wp_enqueue_style( 'portfoliopress_rokkitt' );
-	wp_enqueue_style( 'portfoliopress_icon_font', get_template_directory_uri() . '/fonts/custom/portfolio-custom.css', array(), '1.0.0' );
+
+	wp_enqueue_style( 'portfoliopress_fonts', '//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600|Rokkitt:400,700', '', null, 'screen' );
+	wp_enqueue_style( 'portfoliopress_icon_font', get_template_directory_uri() . '/fonts/custom/portfolio-custom.css', array(), PORTFOLIO_VERSION );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'portfoliopress_fonts', 10 );

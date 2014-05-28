@@ -14,6 +14,7 @@ Portfolio Press 2.4
 ----
 
 * Add FitVids for better support of responsive video
+* More efficient font loading
 
 Portfolio Press 2.3
 ----
