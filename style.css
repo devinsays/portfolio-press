@@ -922,11 +922,7 @@ object {
 	margin: 0 0 15px;
 }
 #comments .comment-author img {
-	margin: 0;
 	vertical-align: middle;
-	border:1px solid #ddd;
-	padding:3px;
-	background:#f6f6f6;
 	float:left;
 	margin: 0 15px 5px 0;
 }
