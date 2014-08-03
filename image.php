@@ -28,6 +28,9 @@ get_header(); ?>
 							<?php echo wp_get_attachment_image( get_the_ID(), 'full', false, array( 'class' => 'aligncenter' ) ); ?>
 						</p><!-- .attachment-image -->
 						<?php endif; ?>
+
+						<?php the_content(); ?>
+
 					</div><!-- .entry-content -->
 
 					<footer class="entry-meta">

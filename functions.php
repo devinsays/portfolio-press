@@ -10,7 +10,7 @@
 /**
  * Set constant for version
  */
-define( 'PORTFOLIO_VERSION', '2.4' );
+define( 'PORTFOLIO_VERSION', '3.3' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -105,7 +105,6 @@ function portfoliopress_fonts() {
 	wp_enqueue_style( 'portfoliopress_icon_font', get_template_directory_uri() . '/fonts/custom/portfolio-custom.css', array(), PORTFOLIO_VERSION );
 
 }
-
 add_action( 'wp_enqueue_scripts', 'portfoliopress_fonts', 10 );
 
 /**
@@ -125,7 +124,7 @@ function portfoliopress_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Footer 1', 'portfolio-press' ),
 		'id' => 'footer-1',
-		'description' => __( "Widetized footer", 'portfolio-press' ),
+		'description' => __( "Widgetized footer", 'portfolio-press' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -135,7 +134,7 @@ function portfoliopress_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Footer 2', 'portfolio-press' ),
 		'id' => 'footer-2',
-		'description' => __( "Widetized footer", 'portfolio-press' ),
+		'description' => __( "Widgetized footer", 'portfolio-press' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -145,7 +144,7 @@ function portfoliopress_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Footer 3', 'portfolio-press' ),
 		'id' => 'footer-3',
-		'description' => __( "Widetized footer", 'portfolio-press' ),
+		'description' => __( "Widgetized footer", 'portfolio-press' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
@@ -155,7 +154,7 @@ function portfoliopress_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Footer 4', 'portfolio-press' ),
 		'id' => 'footer-4',
-		'description' => __( "Widetized footer", 'portfolio-press' ),
+		'description' => __( "Widgetized footer", 'portfolio-press' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',

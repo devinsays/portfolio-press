@@ -16,6 +16,7 @@ Portfolio Press 2.4
 * Add FitVids for better support of responsive video
 * More efficient font loading
 * Minor updates to comment-author and caption styling (props @TomLany)
+* Add descriptions to image attachment page
 
 Portfolio Press 2.3
 ----
