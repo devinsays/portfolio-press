@@ -10,7 +10,7 @@
 /**
  * Set constant for version
  */
-define( 'PORTFOLIO_VERSION', '3.3' );
+define( 'PORTFOLIO_VERSION', '2.4.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -76,7 +76,7 @@ add_action( 'after_setup_theme', 'portfoliopress_setup' );
  */
 function portfoliopress_scripts() {
 
-	wp_enqueue_style( 'portfolio-press-style', get_stylesheet_uri(), '', PORTFOLIO_VERSION );
+	wp_enqueue_style( 'portfoliopress-style', get_stylesheet_uri(), '', PORTFOLIO_VERSION );
 
 	if ( SCRIPT_DEBUG || WP_DEBUG ) :
 
