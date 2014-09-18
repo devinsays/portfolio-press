@@ -29,6 +29,12 @@ get_header(); ?>
 						</p><!-- .attachment-image -->
 						<?php endif; ?>
 
+						<?php if ( has_excerpt() ) : ?>
+						<div class="wp-caption">
+							<?php the_excerpt(); ?>
+						</div>
+						<?php endif; ?>
+
 						<?php the_content(); ?>
 
 					</div><!-- .entry-content -->

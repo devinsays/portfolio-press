@@ -589,14 +589,12 @@ img.aligncenter {
 .wp-caption {
 	margin-bottom: 15px;
 	max-width: 100%;
-}
-.wp-caption img {
-	display: block;
-}
-.wp-caption .wp-caption-text {
 	color: #666;
 	font-size:13px;
 	font-style: italic;
+}
+.wp-caption img {
+	display: block;
 }
 .wp-caption .wp-caption-text {
 	margin-bottom: 0;
