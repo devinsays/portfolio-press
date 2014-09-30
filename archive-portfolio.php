@@ -41,6 +41,8 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php if ( !of_get_option( 'portfolio_sidebar' ) )
-        get_sidebar(); ?>
+<?php
+if ( !of_get_option( 'portfolio_sidebar' ) ) {
+	get_sidebar();
+} ?>
 <?php get_footer(); ?>

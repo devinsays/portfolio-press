@@ -5,21 +5,17 @@
  * @package Portfolio Press
  */
 
-// Set the size of the thumbnails and content width
-$fullwidth = false;
-
-// If portfolio is displayed full width
-if ( of_get_option( 'portfolio_sidebar' ) || is_page_template( 'full-width-portfolio.php' ) )
-	$fullwidth = true;
-
-// If portfolio is a 1-column layout
-if ( of_get_option('layout','layout-2cr') ==  'layout-1col' )
-	$fullwidth = true;
-
+// Set thumbnail size
 $thumbnail = 'thumbnail';
 
-if ( $fullwidth )
+// Set fullwidth thumbnail size
+if (
+	of_get_option( 'portfolio_sidebar' ) ||
+	is_page_template( 'full-width-portfolio.php' ) ||
+	is_page_template( 'full-width-image-gallery-formats.php' ) ||
+	of_get_option( 'layout', 'layout-2cr' ) ==  'layout-1col' ) {
 	$thumbnail = 'thumbnail-fullwidth';
+}
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
