@@ -221,16 +221,21 @@ function optionsframework_options() {
 	/* Utility Options (Not Displayed) */
 
 	$options[] = array(
-		"name" => __( 'Upgrade', 'portfolio-press' ),
 		"id" => "upgrade",
 		"std" => '0',
 		"class" => "hidden",
 		"type" => "text" );
 
 	$options[] = array(
-		"name" => __( 'Version', 'portfolio-press' ),
 		"id" => "version",
 		"std" => '1.9',
+		"class" => "hidden",
+		"type" => "text"
+	);
+
+	$options[] = array(
+		"id" => "post_per_page_ignore",
+		"std" => 0,
 		"class" => "hidden",
 		"type" => "text"
 	);

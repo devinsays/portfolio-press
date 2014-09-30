@@ -147,7 +147,7 @@ function portfoliopress_posts_per_page_notice() {
 
 	$options = get_option( 'portfoliopress', false );
 
-	if ( isset( $options['post_per_page_ignore'] ) ) {
+	if ( isset( $options['post_per_page_ignore'] ) && $options['post_per_page_ignore'] == 1 ) {
 		return;
 	}
 
@@ -176,7 +176,7 @@ function portfoliopress_notice_ignores() {
 	}
 
 	if ( isset( $_GET['portfolio_post_per_page_ignore'] ) && '1' == $_GET['portfolio_post_per_page_ignore'] ) {
-		$options['post_per_page_ignore'] = false;
+		$options['post_per_page_ignore'] = 1;
 		update_option( 'portfoliopress', $options );
 	}
 
