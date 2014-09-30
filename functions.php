@@ -29,12 +29,7 @@ if ( ! function_exists( 'portfoliopress_setup' ) ) :
  */
 function portfoliopress_setup() {
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _s, use a find and replace
-	 * to change '_s' to the name of your theme in all the template files
-	 */
+	// Use the generated .pot file in languages to make translations
 	load_theme_textdomain( 'portfolio-press', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style
@@ -76,17 +71,47 @@ add_action( 'after_setup_theme', 'portfoliopress_setup' );
  */
 function portfoliopress_scripts() {
 
-	wp_enqueue_style( 'portfoliopress-style', get_stylesheet_uri(), '', PORTFOLIO_VERSION );
+	wp_enqueue_style(
+		'portfoliopress-style',
+		get_stylesheet_uri(),
+		array(),
+		PORTFOLIO_VERSION
+	);
+
+	// Use style-rtl.css for RTL layouts
+	wp_style_add_data(
+		'portfoliopress-style',
+		'rtl',
+		'replace'
+	);
 
 	if ( SCRIPT_DEBUG || WP_DEBUG ) :
 
-		wp_enqueue_script( 'portfoliopress-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), PORTFOLIO_VERSION, true );
+		wp_enqueue_script(
+			'portfoliopress-navigation',
+			get_template_directory_uri() . '/js/navigation.js',
+			array( 'jquery' ),
+			PORTFOLIO_VERSION,
+			true
+		);
 
-		wp_enqueue_script( 'portfoliopress-fit-vids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), PORTFOLIO_VERSION, true );
+		wp_enqueue_script(
+			'portfoliopress-fit-vids',
+			get_template_directory_uri() . '/js/jquery.fitvids.js',
+			array( 'jquery' ),
+			PORTFOLIO_VERSION,
+			true
+		);
 
 	else :
 
-		wp_enqueue_script( 'portfoliopress-combined', get_template_directory_uri() . '/js/combined-min.js', array( 'jquery' ), PORTFOLIO_VERSION, true );
+		wp_enqueue_script(
+			'portfoliopress-combined',
+			get_template_directory_uri() . '/js/combined-min.js',
+			array( 'jquery' ),
+			PORTFOLIO_VERSION,
+			true
+		);
 
 	endif;
 

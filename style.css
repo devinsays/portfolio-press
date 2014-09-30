@@ -67,7 +67,6 @@ table { border-collapse: collapse; border-spacing: 0; }/* tables still need 'cel
 *:before,
 *:after {
 	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
-	-webkit-box-sizing:         border-box;
 	box-sizing:         border-box;
 }
 
@@ -434,7 +433,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 .entry-header {
 	border-bottom:1px solid #ddd;
-	-webkit-box-shadow: 0 1px 0 0 #fff;
 	box-shadow: 0 1px 0 0 #fff;
 	margin-bottom:20px;
 }
@@ -491,7 +489,6 @@ footer.entry-meta:before, footer.entry-meta:after {
 	width: 100%;
 	height: 1px;
 	background: #ddd;
-	-webkit-box-shadow: 0 1px 0 0 #fff;
 	box-shadow: 0 1px 0 0 #fff;
 	display: block;
 }
@@ -523,7 +520,6 @@ footer.entry-meta:before, footer.entry-meta:after {
 	width: 100%;
 	height: 1px;
 	background: #DDD;
-	-webkit-box-shadow: 0 1px 0 0 #FFF;
 	box-shadow: 0 1px 0 0 #FFF;
 	display: block;
 }
@@ -538,7 +534,6 @@ footer.entry-meta:before, footer.entry-meta:after {
 	width: 100%;
 	height: 1px;
 	background: #DDD;
-	-webkit-box-shadow: 0 1px 0 0 #FFF;
 	box-shadow: 0 1px 0 0 #FFF;
 	display: block;
 }
@@ -801,7 +796,6 @@ object {
 	text-transform:uppercase;
 	color:#555;
 	border-bottom:3px solid #ddd;
-	-webkit-box-shadow: 0 1px 0 0 #fff;
 	box-shadow: 0 1px 0 0 #fff;
 }
 .widget-container p {
@@ -885,7 +879,6 @@ object {
 	width: 100%;
 	height: 1px;
 	background: #ddd;
-	-webkit-box-shadow: 0 1px 0 0 #fff;
 	box-shadow: 0 1px 0 0 #fff;
 	display: block;
 }
@@ -1045,7 +1038,6 @@ input[type="submit"] {
 	background: -webkit-linear-gradient(top, #fafafa 60%, #e6e6e6 100%);
 	background: linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-9 */
-	-webkit-box-shadow: inset 0 2px 1px #fff;
 	box-shadow: inset 0 2px 1px #fff;
 	color: rgba(0,0,0,.8);
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */

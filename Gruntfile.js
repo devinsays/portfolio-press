@@ -47,7 +47,20 @@ module.exports = function(grunt) {
 	                type: 'wp-theme'  // Type of project (wp-plugin or wp-theme).
 	            }
 	        }
-	    }
+	    },
+		cssjanus: {
+			theme: {
+				options: {
+					swapLtrRtlInUrl: false
+				},
+				files: [
+					{
+						src: 'style.css',
+						dest: 'style-rtl.css'
+					}
+				]
+			}
+		},
 
 	});
 
@@ -56,7 +69,8 @@ module.exports = function(grunt) {
 		'csscomb',
 		'concat',
 		'uglify',
-		'makepot'
+		'makepot',
+		'cssjanus'
 	]);
 
 };

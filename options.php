@@ -221,12 +221,6 @@ function optionsframework_options() {
 	/* Utility Options (Not Displayed) */
 
 	$options[] = array(
-		'id' => "upgrade",
-		'std' => '0',
-		"class" => "hidden",
-		'type' => "text" );
-
-	$options[] = array(
 		'id' => "version",
 		'std' => '1.9',
 		"class" => "hidden",
