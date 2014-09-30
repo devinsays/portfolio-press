@@ -16,6 +16,8 @@ Development
 * Add captions to image attachment pages
 * Posts per page notice fix
 * Remove upgrade routine from version 2.0
+* Refactor RTL styles
+* Change fullwidth image size to 940
 
 Portfolio Press 2.4
 ===
