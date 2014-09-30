@@ -19,7 +19,7 @@ function optionsframework_option_name() {
 
 /**
  * Defines an array of options that will be used to generate the settings page and be saved in the database.
- * When creating the "id" fields, make sure to use all lowercase and no spaces.
+ * When creating the 'id' fields, make sure to use all lowercase and no spaces.
  *
  * @returns array $options
  */
@@ -35,41 +35,41 @@ function optionsframework_options() {
 	/* General Settings */
 
 	$options[] = array(
-		"name" => __( 'General Settings', 'portfolio-press' ),
-		"type" => "heading"
+		'name' => __( 'General Settings', 'portfolio-press' ),
+		'type' => "heading"
 	);
 
 	$options['logo'] = array(
-		"name" => __( 'Custom Logo', 'portfolio-press' ),
-		"desc" => __( 'Upload a logo for your theme if you would like to use one.','portfolio-press' ),
-		"id" => "logo",
-		"type" => "upload");
+		'name' => __( 'Custom Logo', 'portfolio-press' ),
+		'desc' => __( 'Upload a logo for your theme if you would like to use one.','portfolio-press' ),
+		'id' => "logo",
+		'type' => "upload");
 
 	$options[] = array(
-		"name" => __( 'Custom Favicon', 'portfolio-press' ),
-		"desc" => __( 'Upload a 16px x 16px png/gif image to represent your website.' , 'portfolio-press' ),
-		"id" => "custom_favicon",
-		"type" => "upload"
+		'name' => __( 'Custom Favicon', 'portfolio-press' ),
+		'desc' => __( 'Upload a 16px x 16px png/gif image to represent your website.' , 'portfolio-press' ),
+		'id' => "custom_favicon",
+		'type' => "upload"
 	);
 
 	if ( class_exists( 'Portfolio_Post_Type' ) ) {
 
 		$options[] = array(
-			"name" => __( 'Display Images on Portfolio / Image Posts', 'portfolio-press' ),
-			"desc" => __( 'Display featured images automatically on posts.', 'portfolio-press' ),
-			"id" => "portfolio_images",
-			"std" => "1",
-			"type" => "checkbox"
+			'name' => __( 'Display Images on Portfolio / Image Posts', 'portfolio-press' ),
+			'desc' => __( 'Display featured images automatically on posts.', 'portfolio-press' ),
+			'id' => "portfolio_images",
+			'std' => "1",
+			'type' => "checkbox"
 		);
 
 	} else {
 
 		$options[] = array(
-			"name" => __( 'Display Images Automatically on Image Post Formats', 'portfolio-press' ),
-			"desc" => __( 'Display featured images automatically on posts.', 'portfolio-press' ),
-			"id" => "portfolio_images",
-			"std" => "1",
-			"type" => "checkbox"
+			'name' => __( 'Display Images Automatically on Image Post Formats', 'portfolio-press' ),
+			'desc' => __( 'Display featured images automatically on posts.', 'portfolio-press' ),
+			'id' => "portfolio_images",
+			'std' => "1",
+			'type' => "checkbox"
 		);
 
 	}
@@ -77,31 +77,31 @@ function optionsframework_options() {
 	if ( class_exists( 'Portfolio_Post_Type' ) ) {
 
 		$options[] = array(
-			"name" => __( 'Display Portfolio / Image / Galleries Full Width', 'portfolio-press' ),
-			"desc" => __( 'Display all image based archives full width.', 'portfolio-press' ),
-			"id" => "portfolio_sidebar",
-			"std" => "0",
-			"type" => "checkbox"
+			'name' => __( 'Display Portfolio / Image / Galleries Full Width', 'portfolio-press' ),
+			'desc' => __( 'Display all image based archives full width.', 'portfolio-press' ),
+			'id' => "portfolio_sidebar",
+			'std' => "0",
+			'type' => "checkbox"
 		);
 
 	} else {
 
 		$options[] = array(
-			"name" => __( 'Display Image and Gallery Post Format Archives Full Width', 'portfolio-press' ),
-			"desc" => __( 'Display all image/gallery archives full width.', 'portfolio-press' ),
-			"id" => "portfolio_sidebar",
-			"std" => "0",
-			"type" => "checkbox"
+			'name' => __( 'Display Image and Gallery Post Format Archives Full Width', 'portfolio-press' ),
+			'desc' => __( 'Display all image/gallery archives full width.', 'portfolio-press' ),
+			'id' => "portfolio_sidebar",
+			'std' => "0",
+			'type' => "checkbox"
 		);
 
 	}
 
 	$options[] = array(
-		"name" => __( 'Display Image and Gallery Formats on Posts Page', 'portfolio-press' ),
-		"desc" => __( 'Display all post formats on posts page.', 'portfolio-press' ),
-		"id" => "display_image_gallery_post_formats",
-		"std" => "1",
-		"type" => "checkbox"
+		'name' => __( 'Display Image and Gallery Formats on Posts Page', 'portfolio-press' ),
+		'desc' => __( 'Display all post formats on posts page.', 'portfolio-press' ),
+		'id' => "display_image_gallery_post_formats",
+		'std' => "1",
+		'type' => "checkbox"
 	);
 
 	$options['archive_titles'] = array(
@@ -126,8 +126,8 @@ function optionsframework_options() {
 	/* Style and Layout */
 
 	$options[] = array(
-		"name" => __( 'Style and Layout','portfolio-press' ),
-		"type" => "heading");
+		'name' => __( 'Style and Layout','portfolio-press' ),
+		'type' => "heading");
 
 	$options['layout'] = array(
 		'name' => __( 'Main Layout','portfolio-press' ),
@@ -142,19 +142,19 @@ function optionsframework_options() {
 		);
 
 	$options[] = array(
-		"name" => __( 'Header Color','portfolio-press' ),
-		"id" => "header_color",
-		"std" => "#000000",
-		"type" => "color"
+		'name' => __( 'Header Color','portfolio-press' ),
+		'id' => "header_color",
+		'std' => "#000000",
+		'type' => "color"
 	);
 
 	$options['menu_position'] = array(
-		"name" => __( 'Menu Position', 'portfolio-press' ),
-		"desc" => __( 'Select where the main menu should go in the header.  Long menus should go underneath.','portfolio-press' ),
-		"id" => "menu_position",
-		"std" => "right",
-		"type" => "radio",
-		"options" => array(
+		'name' => __( 'Menu Position', 'portfolio-press' ),
+		'desc' => __( 'Select where the main menu should go in the header.  Long menus should go underneath.','portfolio-press' ),
+		'id' => "menu_position",
+		'std' => "right",
+		'type' => "radio",
+		'options' => array(
 			"right" => __( 'Right of logo.', 'portfolio-press' ),
 			"clear" => __( 'Underneath logo', 'portfolio-press' )
 		)
@@ -163,22 +163,22 @@ function optionsframework_options() {
 	/* Footer Settings */
 
 	$options[] = array(
-		"name" => __( 'Footer Settings', 'portfolio-press' ),
-		"type" => "heading"
+		'name' => __( 'Footer Settings', 'portfolio-press' ),
+		'type' => "heading"
 	);
 
 	$options[] = array(
-		"name" => __( 'Custom Footer Text', 'portfolio-press' ),
-		"desc" => __( 'Custom text that will appear in the footer of your theme.','portfolio-press' ),
-		"id" => "footer_text",
-		"type" => "textarea"
+		'name' => __( 'Custom Footer Text', 'portfolio-press' ),
+		'desc' => __( 'Custom text that will appear in the footer of your theme.','portfolio-press' ),
+		'id' => "footer_text",
+		'type' => "textarea"
 	);
 
 	/* More Information */
 
 	$options[] = array(
-		"name" => __( 'More', 'portfolio-press' ),
-		"type" => "heading"
+		'name' => __( 'More', 'portfolio-press' ),
+		'type' => "heading"
 	);
 
 	$options[] = array(
@@ -221,23 +221,23 @@ function optionsframework_options() {
 	/* Utility Options (Not Displayed) */
 
 	$options[] = array(
-		"id" => "upgrade",
-		"std" => '0',
+		'id' => "upgrade",
+		'std' => '0',
 		"class" => "hidden",
-		"type" => "text" );
+		'type' => "text" );
 
 	$options[] = array(
-		"id" => "version",
-		"std" => '1.9',
+		'id' => "version",
+		'std' => '1.9',
 		"class" => "hidden",
-		"type" => "text"
+		'type' => "text"
 	);
 
 	$options[] = array(
-		"id" => "post_per_page_ignore",
-		"std" => 0,
+		'id' => "post_per_page_ignore",
+		'std' => 0,
 		"class" => "hidden",
-		"type" => "text"
+		'type' => "text"
 	);
 
 	return $options;
