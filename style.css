@@ -13,13 +13,16 @@ Domain Path: /languages
 
 Credits:
 
-Portfolio was built on the solid foundation of Toolbox:
+Portfolio Press was built on the solid foundation of Toolbox:
 http://wordpress.org/extend/themes/toolbox
 
 Reset default browser CSS.
 Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/
 
 */
+
+/* =Reset
+----------------------------------------------- */
 
 body,
 html {
@@ -1145,6 +1148,14 @@ input[type="submit"] {
 
 .clearfix:after {
 	clear: both;
+}
+
+/* =Plugin Support
+----------------------------------------------- */
+
+#content div.sharedaddy h3.sd-title {
+	padding:0;
+	margin:0 0 10px;
 }
 
 /* =Responsive Structure
