@@ -19,6 +19,7 @@ Development
 * Refactor RTL styles
 * Fix browser resizing of certain images
 * Fix fullwidth image sizes with full-width-image-gallery-formats template
+* Update class-tgm-plugin-activation library
 
 Portfolio Press 2.4
 ---
