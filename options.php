@@ -194,14 +194,14 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => __( 'Additional Options in Portfolio+', 'portfolio-press' ),
+		'name' => __( 'Portfolio+', 'portfolio-press' ),
 		'desc' => sprintf(
-				'<p>%s</p><p>%s</p><ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul><p>%s</p>',
+				'<p>%s</p><h4>%s</h4><ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul><p>%s</p>',
 				sprintf(
 					__( 'If you like this theme and would like to support further development, consider purchasing <a href="%s">Portfolio+</a>.', 'portfolio-press' ),
 					esc_url( 'http://wptheming.com/portfolio-plus' )
 				),
-				__( 'You will also get these additional features:', 'portfolio-press' ),
+				__( 'Portfolio+ Features', 'portfolio-press' ),
 				__( 'Text Color Options', 'portfolio-press' ),
 				__( 'Background Stye Options', 'portfolio-press' ),
 				__( 'Additional Page Templates', 'portfolio-press' ),

@@ -30,29 +30,26 @@ $args = array(
 query_posts( $args );
 ?>
 
-	<div id="primary">
-		<div id="content" role="main">
+<div id="primary">
+	<div id="content" role="main">
 
-			<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
+				<?php get_template_part( 'content', 'portfolio' ); ?>
 
-					<?php
-						get_template_part( 'content', 'portfolio' );
-					?>
+			<?php endwhile; ?>
 
-				<?php endwhile; ?>
+			<?php portfoliopress_paging_nav(); ?>
 
-				<?php portfoliopress_paging_nav(); ?>
+		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endif; ?>
 
-			<?php else : ?>
-				<?php get_template_part( 'content', 'none' ); ?>
-			<?php endif; ?>
-
-			</div><!-- #content -->
-		</div><!-- #primary -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
 
 <?php wp_reset_query(); ?>
 

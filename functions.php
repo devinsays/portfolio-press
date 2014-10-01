@@ -10,13 +10,13 @@
 /**
  * Set constant for version
  */
-define( 'PORTFOLIO_VERSION', '2.4.0' );
+define( 'PORTFOLIO_VERSION', '2.5.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 940;
+	$content_width = 980;
 }
 
 if ( ! function_exists( 'portfoliopress_setup' ) ) :
