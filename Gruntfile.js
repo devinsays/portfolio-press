@@ -16,13 +16,15 @@ module.exports = function(grunt) {
 			}
 		},
 		csscomb: {
-			options: {
-                config: '.csscomb.json'
-            },
-            files: {
-                'style.css': ['style.css'],
-            }
-		},
+	        release: {
+	            options: {
+	                config: '.csscomb.json'
+	            },
+	            files: {
+	                'style.css': ['style.css'],
+	            }
+	        }
+	    },
 		concat: {
 			release: {
 		        src: [
@@ -60,8 +62,7 @@ module.exports = function(grunt) {
 					}
 				]
 			}
-		},
-
+		}
 	});
 
     grunt.registerTask( 'release', [
