@@ -416,7 +416,6 @@ h6 a:hover {
 .col-width {
 	max-width: 980px;
 	margin: 0 auto;
-	padding: 0 20px;
 }
 
 /* Content */
@@ -1265,6 +1264,12 @@ input[type="submit"] {
 		top: 0;
 		left: 200px;
 		width: 200px;
+	}
+}
+
+@media (max-width: 1020px) {
+	.col-width {
+		padding: 0 20px;
 	}
 }
 

@@ -17,7 +17,7 @@ Development
 * Posts per page notice fix
 * Remove upgrade routine from version 2.0
 * Refactor RTL styles
-* Change fullwidth image size to 940
+* Fix browser resizing of certain images
 * Fix fullwidth image sizes with full-width-image-gallery-formats template
 
 Portfolio Press 2.4

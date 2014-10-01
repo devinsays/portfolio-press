@@ -55,5 +55,4 @@ query_posts( $args );
 		</div><!-- #primary -->
 
 <?php wp_reset_query(); ?>
-
 <?php get_footer(); ?>
