@@ -194,35 +194,11 @@ function optionsframework_options() {
 }
 
 /**
- * Additional content to display after the options panel
-
-function portfoliopress_panel_info() { ?>
-    <p style="color: #777;">
-    <?php printf(
-    	__( 'Theme <a href="%s">documentation</a>.  For additional options, see <a href="%s">Portfolio+</a>.', 'portfolio-press' ),
-    	esc_url( 'http://wptheming.com/portfolio-press' ),
-    	esc_url( 'http://wptheming.com/portfolio-plus' )
-    );
-    ?>
-    </p>
-<?php }
-//add_action( 'optionsframework_after', 'portfoliopress_panel_info', 100 );
-
-/**
  * Adds the html that will appear in the sidebar module of the options panel.
  *
  * @since 2.5.0
  */
-function portfoliopress_panel_info() {
-
-	$text[0] = sprintf( __( 'Have a question?  See if it is answered in the theme <a href="%1$s">documentation</a>.', 'visual' ),
-	esc_url( 'http://wptheming.com/2013/03/visual-theme/' )
-	);
-
-	$text[1] = sprintf( __( 'Otherwise, send an e-mail for <a href="%1$s">theme support</a>.', 'visual' ),
-		esc_url( 'mailto:devin@wptheming.com?subject=Visual%20Support' )
-	);
-	?>
+function portfoliopress_panel_info() { ?>
 	<div id="optionsframework-sidebar">
 		<div class="metabox-holder">
 			<div class="postbox">
