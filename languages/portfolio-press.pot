@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Press 2.5.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-10-01 21:46:38+00:00\n"
+"POT-Creation-Date: 2014-10-07 03:03:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -645,74 +645,76 @@ msgstr ""
 msgid "Custom text that will appear in the footer of your theme."
 msgstr ""
 
-#: options.php:180
-msgid "More"
+#: options.php:218
+msgid ""
+"Have a question?  See if it is answered in the theme <a "
+"href=\"%1$s\">documentation</a>."
 msgstr ""
 
-#: options.php:185
+#: options.php:222
+msgid "Otherwise, send an e-mail for <a href=\"%1$s\">theme support</a>."
+msgstr ""
+
+#: options.php:229
+msgid "About Portfolio Press"
+msgstr ""
+
+#: options.php:231
 msgid "Theme Support"
 msgstr ""
 
-#: options.php:189
-msgid ""
-"If you need help with Portfolio Press, check if your question has been "
-"answered in the <a href=\"%s\">theme FAQ</a>."
+#: options.php:235
+msgid "View the <a href=\"%s\">video and theme guide</a>."
 msgstr ""
 
-#: options.php:197
+#: options.php:241
 msgid "Portfolio+"
 msgstr ""
 
-#: options.php:201
+#: options.php:243
 msgid ""
-"If you like this theme and would like to support further development, "
-"consider purchasing <a href=\"%s\">Portfolio+</a>."
-msgstr ""
-
-#: options.php:204
-msgid "Portfolio+ Features"
-msgstr ""
-
-#: options.php:205
-msgid "Text Color Options"
-msgstr ""
-
-#: options.php:206
-msgid "Background Stye Options"
-msgstr ""
-
-#: options.php:207
-msgid "Additional Page Templates"
-msgstr ""
-
-#: options.php:208
-msgid "Option to Hide Post Dates"
-msgstr ""
-
-#: options.php:209
-msgid "Full Width Option for Individual Posts"
-msgstr ""
-
-#: options.php:210
-msgid "Ability to Hide Images on Individual Posts"
-msgstr ""
-
-#: options.php:211
-msgid "Infinite Scroll"
-msgstr ""
-
-#: options.php:212
-msgid "Priority Support"
-msgstr ""
-
-#: options.php:214
-msgid "<a href=\"%s\">Read More</a>"
+"If you like this theme, considering supporting development by purchasing <a "
+"href=\"%s\">Portfolio+</a>."
 msgstr ""
 
 #: options.php:246
-msgid ""
-"Theme <a href=\"%s\">documentation</a>.  For additional options, see <a "
-"href=\"%s\">Portfolio+</a>."
+msgid "Portfolio+ Features"
+msgstr ""
+
+#: options.php:247
+msgid "Text Color Options"
+msgstr ""
+
+#: options.php:248
+msgid "Background Stye Options"
+msgstr ""
+
+#: options.php:249
+msgid "Additional Page Templates"
+msgstr ""
+
+#: options.php:250
+msgid "Option to Hide Post Dates"
+msgstr ""
+
+#: options.php:251
+msgid "Full Width Option for Individual Posts"
+msgstr ""
+
+#: options.php:252
+msgid "Option to Hide Images on Individual Posts"
+msgstr ""
+
+#: options.php:253
+msgid "Infinite Scroll"
+msgstr ""
+
+#: options.php:254
+msgid "Priority Support"
+msgstr ""
+
+#: options.php:256
+msgid "<a href=\"%s\" class=\"button\">Read More</a>"
 msgstr ""
 
 #: search.php:16
