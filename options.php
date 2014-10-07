@@ -174,50 +174,6 @@ function optionsframework_options() {
 		'type' => "textarea"
 	);
 
-	/* More Information */
-
-	$options[] = array(
-		'name' => __( 'More', 'portfolio-press' ),
-		'type' => "heading"
-	);
-
-	$options[] = array(
-		'name' => __( 'Theme Support', 'portfolio-press' ),
-		'desc' => sprintf(
-				'<p>%s</p>',
-				sprintf(
-					__( 'If you need help with Portfolio Press, check if your question has been answered in the <a href="%s">theme FAQ</a>.', 'portfolio-press' ),
-					esc_url( 'http://wptheming.com/portfolio-press' )
-				)
-			),
-		'type' => 'info'
-	);
-
-	$options[] = array(
-		'name' => __( 'Portfolio+', 'portfolio-press' ),
-		'desc' => sprintf(
-				'<p>%s</p><h4>%s</h4><ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul><p>%s</p>',
-				sprintf(
-					__( 'If you like this theme and would like to support further development, consider purchasing <a href="%s">Portfolio+</a>.', 'portfolio-press' ),
-					esc_url( 'http://wptheming.com/portfolio-plus' )
-				),
-				__( 'Portfolio+ Features', 'portfolio-press' ),
-				__( 'Text Color Options', 'portfolio-press' ),
-				__( 'Background Stye Options', 'portfolio-press' ),
-				__( 'Additional Page Templates', 'portfolio-press' ),
-				__( 'Option to Hide Post Dates', 'portfolio-press' ),
-				__( 'Full Width Option for Individual Posts', 'portfolio-press' ),
-				__( 'Ability to Hide Images on Individual Posts', 'portfolio-press' ),
-				__( 'Infinite Scroll', 'portfolio-press' ),
-				__( 'Priority Support', 'portfolio-press' ),
-				sprintf(
-					__( '<a href="%s">Read More</a>', 'portfolio-press' ),
-					esc_url( 'http://wptheming.com/portfolio-plus' )
-				)
-			),
-		'type' => 'info'
-	);
-
 	/* Utility Options (Not Displayed) */
 
 	$options[] = array(
@@ -239,7 +195,7 @@ function optionsframework_options() {
 
 /**
  * Additional content to display after the options panel
- */
+
 function portfoliopress_panel_info() { ?>
     <p style="color: #777;">
     <?php printf(
@@ -250,5 +206,78 @@ function portfoliopress_panel_info() { ?>
     ?>
     </p>
 <?php }
+//add_action( 'optionsframework_after', 'portfoliopress_panel_info', 100 );
 
-add_action( 'optionsframework_after', 'portfoliopress_panel_info', 100 );
+/**
+ * Adds the html that will appear in the sidebar module of the options panel.
+ *
+ * @since 2.5.0
+ */
+function portfoliopress_panel_info() {
+
+	$text[0] = sprintf( __( 'Have a question?  See if it is answered in the theme <a href="%1$s">documentation</a>.', 'visual' ),
+	esc_url( 'http://wptheming.com/2013/03/visual-theme/' )
+	);
+
+	$text[1] = sprintf( __( 'Otherwise, send an e-mail for <a href="%1$s">theme support</a>.', 'visual' ),
+		esc_url( 'mailto:devin@wptheming.com?subject=Visual%20Support' )
+	);
+	?>
+	<div id="optionsframework-sidebar">
+		<div class="metabox-holder">
+			<div class="postbox">
+				<h3><?php _e( 'About Portfolio Press', 'portfolio-press' ); ?></h3>
+					<div class="inside">
+					<b><?php _e( 'Theme Support', 'portfolio=press' ); ?></b>
+					<?php echo sprintf(
+						'<p>%s</p>',
+						sprintf(
+							__( 'View the <a href="%s">video and theme guide</a>.', 'portfolio-press' ),
+							esc_url( 'http://wptheming.com/portfolio-press' )
+						)
+					); ?>
+					<?php echo sprintf(
+						'<h4>%s</h4><p>%s</p><h4>%s</h4><ul><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li><li>%s</li></ul><p>%s</p>',
+						__( 'Portfolio+', 'portfolio-press' ),
+						sprintf(
+						__( 'If you like this theme, considering supporting development by purchasing <a href="%s">Portfolio+</a>.', 'portfolio-press' ),
+						esc_url( 'http://wptheming.com/portfolio-plus' )
+						),
+						__( 'Portfolio+ Features', 'portfolio-press' ),
+						__( 'Text Color Options', 'portfolio-press' ),
+						__( 'Background Stye Options', 'portfolio-press' ),
+						__( 'Additional Page Templates', 'portfolio-press' ),
+						__( 'Option to Hide Post Dates', 'portfolio-press' ),
+						__( 'Full Width Option for Individual Posts', 'portfolio-press' ),
+						__( 'Option to Hide Images on Individual Posts', 'portfolio-press' ),
+						__( 'Infinite Scroll', 'portfolio-press' ),
+						__( 'Priority Support', 'portfolio-press' ),
+						sprintf(
+							__( '<a href="%s" class="button">Read More</a>', 'portfolio-press' ),
+							esc_url( 'http://wptheming.com/portfolio-plus' )
+						) )
+					?>
+					</div>
+			</div>
+		</div>
+	</div>
+<?php }
+add_action( 'optionsframework_after','portfoliopress_panel_info' );
+
+/**
+ * Loads an additional CSS file for the options panel
+ *
+ * @since 2.5.0
+ */
+
+ if ( is_admin() ) {
+    $of_page= 'appearance_page_options-framework';
+    add_action( "admin_print_styles-$of_page", 'portfoliopress_option_styles', 100);
+}
+
+function portfoliopress_option_styles () {
+	wp_enqueue_style(
+		'portfoliopress-option-styles',
+		get_stylesheet_directory_uri() .'/extensions/option-styles.css'
+	);
+}
