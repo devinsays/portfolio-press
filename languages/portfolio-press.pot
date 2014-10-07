@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Press 2.5.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-10-07 03:04:50+00:00\n"
+"POT-Creation-Date: 2014-10-07 15:48:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -76,17 +76,14 @@ msgid "Pages:"
 msgstr ""
 
 #: extensions/class-tgm-plugin-activation.php:161
-#: extensions/recommended-plugins.php:40
 msgid "Install Required Plugins"
 msgstr ""
 
 #: extensions/class-tgm-plugin-activation.php:162
-#: extensions/recommended-plugins.php:41
 msgid "Install Plugins"
 msgstr ""
 
 #: extensions/class-tgm-plugin-activation.php:163
-#: extensions/recommended-plugins.php:42
 msgid "Installing Plugin: %s"
 msgstr ""
 
@@ -95,21 +92,18 @@ msgid "Something went wrong."
 msgstr ""
 
 #: extensions/class-tgm-plugin-activation.php:165
-#: extensions/recommended-plugins.php:44
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:166
-#: extensions/recommended-plugins.php:45
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:167
-#: extensions/recommended-plugins.php:46
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -122,21 +116,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:168
-#: extensions/recommended-plugins.php:47
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:169
-#: extensions/recommended-plugins.php:48
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:170
-#: extensions/recommended-plugins.php:49
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -149,7 +140,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:171
-#: extensions/recommended-plugins.php:50
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
 "maximum compatibility with this theme: %1$s."
@@ -160,7 +150,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:172
-#: extensions/recommended-plugins.php:51
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
 "Contact the administrator of this site for help on getting the plugin "
@@ -173,21 +162,18 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:173
-#: extensions/recommended-plugins.php:52
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:174
-#: extensions/recommended-plugins.php:53
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
 #: extensions/class-tgm-plugin-activation.php:175
-#: extensions/recommended-plugins.php:54
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
@@ -197,7 +183,6 @@ msgstr ""
 
 #: extensions/class-tgm-plugin-activation.php:177
 #: extensions/class-tgm-plugin-activation.php:1945
-#: extensions/recommended-plugins.php:55
 msgid "Plugin activated successfully."
 msgstr ""
 
@@ -394,14 +379,6 @@ msgstr ""
 
 #: extensions/options-functions.php:178
 msgid "Background Color"
-msgstr ""
-
-#: extensions/recommended-plugins.php:43
-msgid "Something went wrong with the plugin API."
-msgstr ""
-
-#: extensions/recommended-plugins.php:56
-msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
 #: extensions/template-helpers.php:14
