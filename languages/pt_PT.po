@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Portfolio Press 2.1 em português\n"
+"Project-Id-Version: Portfolio Press 2.5.0 em português\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-05-19 04:07:27+00:00\n"
-"PO-Revision-Date: 2014-05-19 13:46-0000\n"
+"POT-Creation-Date: 2014-10-07 15:48:21+00:00\n"
+"PO-Revision-Date: 2014-10-08 11:08-0000\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language: pt_PT\n"
@@ -14,7 +14,6 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.6.4\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:15
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
@@ -84,40 +83,35 @@ msgstr "Continuar a ler <span class=\"meta-nav\">&rarr;</span>"
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: extensions/class-tgm-plugin-activation.php:155
+#: extensions/class-tgm-plugin-activation.php:161
 msgid "Install Required Plugins"
 msgstr "Instalar plugins necessários"
 
-#: extensions/class-tgm-plugin-activation.php:156
-#: extensions/recommended-plugins.php:79
+#: extensions/class-tgm-plugin-activation.php:162
 msgid "Install Plugins"
 msgstr "Instalar plugins"
 
-#: extensions/class-tgm-plugin-activation.php:157
-#: extensions/recommended-plugins.php:80
+#: extensions/class-tgm-plugin-activation.php:163
 msgid "Installing Plugin: %s"
 msgstr "A instalar plugin: %s"
 
-#: extensions/class-tgm-plugin-activation.php:158
+#: extensions/class-tgm-plugin-activation.php:164
 msgid "Something went wrong."
 msgstr "Ocorreu um erro."
 
-#: extensions/class-tgm-plugin-activation.php:159
-#: extensions/recommended-plugins.php:82
+#: extensions/class-tgm-plugin-activation.php:165
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] "Este tema necessita do seguinte plugin: %1$s."
 msgstr[1] "Este tema necessita dos seguintes plugins: %1$s."
 
-#: extensions/class-tgm-plugin-activation.php:160
-#: extensions/recommended-plugins.php:83
+#: extensions/class-tgm-plugin-activation.php:166
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] "Este tema recomenda o seguinte plugin: %1$s."
 msgstr[1] "Este tema recomenda os seguintes plugins: %1$s."
 
-#: extensions/class-tgm-plugin-activation.php:161
-#: extensions/recommended-plugins.php:84
+#: extensions/class-tgm-plugin-activation.php:167
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
 "Contact the administrator of this site for help on getting the plugin "
@@ -133,22 +127,19 @@ msgstr[1] ""
 "Desculpe, não tem permissões para instalar os plugins %s. Contacte o "
 "administrador deste site para obter ajuda na instalação dos plugins."
 
-#: extensions/class-tgm-plugin-activation.php:162
-#: extensions/recommended-plugins.php:85
+#: extensions/class-tgm-plugin-activation.php:168
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] "O seguinte plugin necessário está desactivado: %1$s."
 msgstr[1] "Os seguintes plugins necessários estão desactivados: %1$s."
 
-#: extensions/class-tgm-plugin-activation.php:163
-#: extensions/recommended-plugins.php:86
+#: extensions/class-tgm-plugin-activation.php:169
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] "O seguinte plugin recomendado está desactivado: %1$s."
 msgstr[1] "Os seguintes plugins recomendados estão desactivados: %1$s."
 
-#: extensions/class-tgm-plugin-activation.php:164
-#: extensions/recommended-plugins.php:87
+#: extensions/class-tgm-plugin-activation.php:170
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugin. Contact the administrator of this site for help on getting the "
@@ -164,8 +155,7 @@ msgstr[1] ""
 "Desculpe, não tem permissões para activar os plugins %s. Contacte o "
 "administrador deste site para obter ajuda na activação dos plugins."
 
-#: extensions/class-tgm-plugin-activation.php:165
-#: extensions/recommended-plugins.php:88
+#: extensions/class-tgm-plugin-activation.php:171
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
 "maximum compatibility with this theme: %1$s."
@@ -179,8 +169,7 @@ msgstr[1] ""
 "Os seguintes plugins dverão ser actualizados para a sua versão mais recente "
 "para garantir a compatibilidade com este tema: %1$s."
 
-#: extensions/class-tgm-plugin-activation.php:166
-#: extensions/recommended-plugins.php:89
+#: extensions/class-tgm-plugin-activation.php:172
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
 "Contact the administrator of this site for help on getting the plugin "
@@ -196,81 +185,88 @@ msgstr[1] ""
 "Desculpe, não tem permissões para actualizar os plugins %s. Contacte o "
 "administrador deste site para obter ajuda na actualização dos plugins."
 
-#: extensions/class-tgm-plugin-activation.php:167
-#: extensions/recommended-plugins.php:90
+#: extensions/class-tgm-plugin-activation.php:173
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] "Iniciar instalação do plugin"
 msgstr[1] "Iniciar instalação dos plugins"
 
-#: extensions/class-tgm-plugin-activation.php:168
-#: extensions/recommended-plugins.php:91
-msgid "Activate installed plugin"
-msgid_plural "Activate installed plugins"
-msgstr[0] "Activar plugin instalado"
-msgstr[1] "Activar plugins instalados"
+#: extensions/class-tgm-plugin-activation.php:174
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Iniciar activação do plugin"
+msgstr[1] "Iniciar activação dos plugins"
 
-#: extensions/class-tgm-plugin-activation.php:169
-#: extensions/recommended-plugins.php:92
+#: extensions/class-tgm-plugin-activation.php:175
 msgid "Return to Required Plugins Installer"
 msgstr "Voltar à instalação de plugins necessários"
 
-#: extensions/class-tgm-plugin-activation.php:170
+#: extensions/class-tgm-plugin-activation.php:176
 msgid "Return to the dashboard"
 msgstr "Voltar ao painel"
 
-#: extensions/class-tgm-plugin-activation.php:171
-#: extensions/class-tgm-plugin-activation.php:1843
-#: extensions/recommended-plugins.php:93
+#: extensions/class-tgm-plugin-activation.php:177
+#: extensions/class-tgm-plugin-activation.php:1945
 msgid "Plugin activated successfully."
 msgstr "Plugin activado com sucesso."
 
-#: extensions/class-tgm-plugin-activation.php:172
-#: extensions/class-tgm-plugin-activation.php:1540
+#: extensions/class-tgm-plugin-activation.php:178
+#: extensions/class-tgm-plugin-activation.php:1636
 msgid "The following plugin was activated successfully:"
 msgstr "O seguinte plugin foi activado com sucesso:"
 
-#: extensions/class-tgm-plugin-activation.php:173
+#: extensions/class-tgm-plugin-activation.php:179
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Todos os plugins foram instalados e activados com sucesso. %1$s"
 
-#: extensions/class-tgm-plugin-activation.php:174
+#: extensions/class-tgm-plugin-activation.php:180
 msgid "Dismiss this notice"
 msgstr "Descartar esta notificação"
 
-#: extensions/class-tgm-plugin-activation.php:1087
-msgid "External Link"
-msgstr "Ligação externa"
+#: extensions/class-tgm-plugin-activation.php:534
+#: extensions/class-tgm-plugin-activation.php:2162
+msgid "Return to the Dashboard"
+msgstr "Voltar ao Painel"
 
-#: extensions/class-tgm-plugin-activation.php:1092
+#: extensions/class-tgm-plugin-activation.php:1169
 msgid "Private Repository"
 msgstr "Repositório privado"
 
-#: extensions/class-tgm-plugin-activation.php:1095
+#: extensions/class-tgm-plugin-activation.php:1172
 msgid "Pre-Packaged"
 msgstr "Pré-empacotado"
 
-#: extensions/class-tgm-plugin-activation.php:1099
+#: extensions/class-tgm-plugin-activation.php:1177
 msgid "WordPress Repository"
 msgstr "Repositório do WordPress"
 
-#: extensions/class-tgm-plugin-activation.php:1102
+#: extensions/class-tgm-plugin-activation.php:1180
 msgid "Required"
 msgstr "Necessário"
 
-#: extensions/class-tgm-plugin-activation.php:1102
+#: extensions/class-tgm-plugin-activation.php:1180
 msgid "Recommended"
 msgstr "Recomendado"
 
-#: extensions/class-tgm-plugin-activation.php:1105
+#: extensions/class-tgm-plugin-activation.php:1183
 msgid "Not Installed"
 msgstr "Não instalado"
 
-#: extensions/class-tgm-plugin-activation.php:1107
+#: extensions/class-tgm-plugin-activation.php:1185
 msgid "Installed But Not Activated"
 msgstr "Instalado mas não activado"
 
-#: extensions/class-tgm-plugin-activation.php:1277
+#: extensions/class-tgm-plugin-activation.php:1290
+#: extensions/class-tgm-plugin-activation.php:1398
+msgid "Install"
+msgstr "Instalar"
+
+#: extensions/class-tgm-plugin-activation.php:1312
+#: extensions/class-tgm-plugin-activation.php:1399
+msgid "Activate"
+msgstr "Activar"
+
+#: extensions/class-tgm-plugin-activation.php:1361
 msgid ""
 "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
 "Dashboard\">Return to the Dashboard</a>"
@@ -278,60 +274,52 @@ msgstr ""
 "Nenhum plugin para instalar ou activar. <a href=\"%1$s\" title=\"Voltar ao "
 "Painel\">Voltar ao Painel</a>"
 
-#: extensions/class-tgm-plugin-activation.php:1293
+#: extensions/class-tgm-plugin-activation.php:1377
 msgid "Plugin"
 msgstr "Plugin"
 
-#: extensions/class-tgm-plugin-activation.php:1294
+#: extensions/class-tgm-plugin-activation.php:1378
 msgid "Source"
 msgstr "Fonte"
 
-#: extensions/class-tgm-plugin-activation.php:1295
+#: extensions/class-tgm-plugin-activation.php:1379
 msgid "Type"
 msgstr "Tipo"
 
-#: extensions/class-tgm-plugin-activation.php:1296
+#: extensions/class-tgm-plugin-activation.php:1380
 msgid "Status"
 msgstr "Estado"
 
-#: extensions/class-tgm-plugin-activation.php:1314
-msgid "Install"
-msgstr "Instalar"
-
-#: extensions/class-tgm-plugin-activation.php:1315
-msgid "Activate"
-msgstr "Activar"
-
-#: extensions/class-tgm-plugin-activation.php:1826
+#: extensions/class-tgm-plugin-activation.php:1928
 msgid "Install package not available."
 msgstr "Pacote de instalação não disponível."
 
-#: extensions/class-tgm-plugin-activation.php:1827
+#: extensions/class-tgm-plugin-activation.php:1929
 msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
 msgstr ""
 "A descarregar o pacote de instalação de <span class=\"code\">%s</span>&#8230;"
 
-#: extensions/class-tgm-plugin-activation.php:1828
+#: extensions/class-tgm-plugin-activation.php:1930
 msgid "Unpacking the package&#8230;"
 msgstr "A descompactar o pacote&#8230;"
 
-#: extensions/class-tgm-plugin-activation.php:1829
+#: extensions/class-tgm-plugin-activation.php:1931
 msgid "Installing the plugin&#8230;"
 msgstr "A instalar o plugin&#8230;"
 
-#: extensions/class-tgm-plugin-activation.php:1830
+#: extensions/class-tgm-plugin-activation.php:1932
 msgid "Plugin install failed."
 msgstr "A instalação do plugin falhou."
 
-#: extensions/class-tgm-plugin-activation.php:1831
+#: extensions/class-tgm-plugin-activation.php:1933
 msgid "Plugin installed successfully."
 msgstr "Plugin instalado com sucesso."
 
-#: extensions/class-tgm-plugin-activation.php:1842
+#: extensions/class-tgm-plugin-activation.php:1944
 msgid "Plugin activation failed."
 msgstr "A activação do plugin falhou."
 
-#: extensions/class-tgm-plugin-activation.php:1952
+#: extensions/class-tgm-plugin-activation.php:2058
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
@@ -339,29 +327,29 @@ msgstr ""
 "O processo de instalação e activação está a começar. Este processo pode "
 "demorar um pouco em alguns hosts, por favor, seja paciente."
 
-#: extensions/class-tgm-plugin-activation.php:1953
+#: extensions/class-tgm-plugin-activation.php:2059
 msgid "%1$s installed and activated successfully."
 msgstr "%1$s instalado e activado com suecsso."
 
-#: extensions/class-tgm-plugin-activation.php:1953
-#: extensions/class-tgm-plugin-activation.php:1962
+#: extensions/class-tgm-plugin-activation.php:2059
+#: extensions/class-tgm-plugin-activation.php:2068
 msgid "Show Details"
 msgstr "Ver detalhes"
 
-#: extensions/class-tgm-plugin-activation.php:1953
-#: extensions/class-tgm-plugin-activation.php:1962
+#: extensions/class-tgm-plugin-activation.php:2059
+#: extensions/class-tgm-plugin-activation.php:2068
 msgid "Hide Details"
 msgstr "Esconder detalhes"
 
-#: extensions/class-tgm-plugin-activation.php:1954
+#: extensions/class-tgm-plugin-activation.php:2060
 msgid "All installations and activations have been completed."
 msgstr "Todas as instalações e activações foram concluídas."
 
-#: extensions/class-tgm-plugin-activation.php:1955
+#: extensions/class-tgm-plugin-activation.php:2061
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr "A instalar e activar o plugin %1$s (%2$d/%3$d)"
 
-#: extensions/class-tgm-plugin-activation.php:1959
+#: extensions/class-tgm-plugin-activation.php:2065
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
@@ -369,45 +357,31 @@ msgstr ""
 "O processo de instalação está a começar. Este processo pode demorar um pouco "
 "em alguns hosts, por favor, seja paciente."
 
-#: extensions/class-tgm-plugin-activation.php:1960
+#: extensions/class-tgm-plugin-activation.php:2066
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr "Ocorreu um erro durante a instalação %1$s: <strong>%2$s</strong>."
 
-#: extensions/class-tgm-plugin-activation.php:1961
+#: extensions/class-tgm-plugin-activation.php:2067
 msgid "The installation of %1$s failed."
 msgstr "A instalação de %1$s falhou."
 
-#: extensions/class-tgm-plugin-activation.php:1962
+#: extensions/class-tgm-plugin-activation.php:2068
 msgid "%1$s installed successfully."
 msgstr "%1$s instalado com sucesso."
 
-#: extensions/class-tgm-plugin-activation.php:1963
+#: extensions/class-tgm-plugin-activation.php:2069
 msgid "All installations have been completed."
 msgstr "Todas as instalações foram concluídas."
 
-#: extensions/class-tgm-plugin-activation.php:1964
+#: extensions/class-tgm-plugin-activation.php:2070
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "A instalar o plugin %1$s (%2$d/%3$d)"
-
-#: extensions/class-tgm-plugin-activation.php:2055
-msgid "Return to the Dashboard"
-msgstr "Voltar ao Painel"
 
 #: extensions/extras.php:31
 msgid "Page %s"
 msgstr "Página %s"
 
-#: extensions/extras.php:126
-msgid ""
-"Thanks for updating Portfolio Press.  Please <a href=\"%1$s\">read about "
-"important changes</a> in this version and give your site a quick check. <a "
-"href=\"%2$s\">Dismiss notice</a>"
-msgstr ""
-"Obrigado por actualizar o Portfolio Press. Por favor <a href=\"%1$s\">leia "
-"as alterações importantes</a> nesta versão e verifique o seu site. <a href="
-"\"%2$s\">Descartar notificação</a>"
-
-#: extensions/extras.php:156
+#: extensions/extras.php:98
 msgid ""
 "Portfolio Press recommends setting posts per page to 9. This can be changed "
 "under <a href=\"%3$s\">Settings > Reading Options</a>.<br><a href=\"%1$s"
@@ -440,18 +414,6 @@ msgstr "Estilo do cabeçalho"
 #: extensions/options-functions.php:178
 msgid "Background Color"
 msgstr "Cor de fundo"
-
-#: extensions/recommended-plugins.php:78
-msgid "Install Recommended Plugins"
-msgstr "Instalar plugins recomendados"
-
-#: extensions/recommended-plugins.php:81
-msgid "Something went wrong with the plugin API."
-msgstr "Ocorreu um erro com a API do plugin."
-
-#: extensions/recommended-plugins.php:94
-msgid "All plugins installed and activated successfully. %s"
-msgstr "Todos os plugins foram instalados e activados com sucesso. %s"
 
 #: extensions/template-helpers.php:14
 msgid ""
@@ -489,7 +451,7 @@ msgstr "1 Comentário"
 msgid "% Comments"
 msgstr "% Comentários"
 
-#: extensions/template-helpers.php:81 image.php:48 page.php:23
+#: extensions/template-helpers.php:81 image.php:57 page.php:23
 #: templates/full-width-page.php:24
 msgid "Edit"
 msgstr "Editar"
@@ -538,27 +500,27 @@ msgstr "Portfólio"
 msgid "Primary Menu"
 msgstr "Menu primário"
 
-#: functions.php:103
+#: functions.php:141
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: functions.php:112
+#: functions.php:150
 msgid "Footer 1"
 msgstr "Rodapé 1"
 
-#: functions.php:114 functions.php:124 functions.php:134 functions.php:144
-msgid "Widetized footer"
-msgstr "Zona do rodapé para widgets"
+#: functions.php:152 functions.php:162 functions.php:172 functions.php:182
+msgid "Widgetized footer"
+msgstr "Rodapé com widgets"
 
-#: functions.php:122
+#: functions.php:160
 msgid "Footer 2"
 msgstr "Rodapé 2"
 
-#: functions.php:132
+#: functions.php:170
 msgid "Footer 3"
 msgstr "Rodapé 3"
 
-#: functions.php:142
+#: functions.php:180
 msgid "Footer 4"
 msgstr "Rodapé 4"
 
@@ -570,8 +532,7 @@ msgstr "Menu"
 msgid "Skip to content"
 msgstr "Saltar para o conteúdo"
 
-#: image.php:37
-#, fuzzy
+#: image.php:46
 msgid ""
 "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
 "\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></"
@@ -709,89 +670,69 @@ msgstr "Texto personalizado para o rodapé"
 msgid "Custom text that will appear in the footer of your theme."
 msgstr "Texto personalizado que aparecerá no rodapé do seu tema."
 
-#: options.php:180
-msgid "More"
-msgstr "Mais"
+#: options.php:205
+msgid "About Portfolio Press"
+msgstr "Sobre o Portfolio Press"
 
-#: options.php:185
+#: options.php:207
 msgid "Theme Support"
 msgstr "Suporte do tema"
 
-#: options.php:189
+#: options.php:211
+msgid "View the <a href=\"%s\">video and theme guide</a>."
+msgstr "Ver o <a href=\"%s\">vídeo guia do tema</a>."
+
+#: options.php:217
+msgid "Portfolio+"
+msgstr "Portfólio+"
+
+#: options.php:219
 msgid ""
-"If you need help with Portfolio Press, check if your question has been "
-"answered in the <a href=\"%s\">theme FAQ</a>."
+"If you like this theme, considering supporting development by purchasing <a "
+"href=\"%s\">Portfolio+</a>."
 msgstr ""
-"Se precisar de ajuda com o Portfolio Press, verifique se a sua questão já "
-"foi respondida em <a href=\"%s\">theme FAQ</a>."
+"Se gostar deste tema, considere apoiar o seu desenvolvimento comprando o <a "
+"href=\"%s\">Portfolio+</a>."
 
-#: options.php:197
-msgid "Additional Options in Portfolio+"
-msgstr "Opções adicionais no Porfolio+"
+#: options.php:222
+msgid "Portfolio+ Features"
+msgstr "Recursos do Portfolio+"
 
-#: options.php:201
-msgid ""
-"If you like this theme and would like to support further development, "
-"consider purchasing <a href=\"%s\">Portfolio+</a>."
-msgstr ""
-"Se gosta deste tema e gostaria apoiar o seu desenvolvimento, considere "
-"comprar o <a href=\"%s\">Portfolio+</a>."
-
-#: options.php:204
-msgid "You will also get these additional features:"
-msgstr "Pode ainda obter as seguintes capacidades:"
-
-#: options.php:205
+#: options.php:223
 msgid "Text Color Options"
 msgstr "Opções de cor do texto"
 
-#: options.php:206
+#: options.php:224
 msgid "Background Stye Options"
 msgstr "Opções de estilo do fundo"
 
-#: options.php:207
+#: options.php:225
 msgid "Additional Page Templates"
 msgstr "Modelos de página adicionais"
 
-#: options.php:208
+#: options.php:226
 msgid "Option to Hide Post Dates"
 msgstr "Opção para esconder a data dos artigos"
 
-#: options.php:209
+#: options.php:227
 msgid "Full Width Option for Individual Posts"
 msgstr "Opção de toda a largura para artigos individuais"
 
-#: options.php:210
-msgid "Ability to Hide Images on Individual Posts"
-msgstr "Possibilidade de esconder imagens em artigos individuais"
+#: options.php:228
+msgid "Option to Hide Images on Individual Posts"
+msgstr "Opção para Esconder Imagens em Artigos Individuais"
 
-#: options.php:211
+#: options.php:229
 msgid "Infinite Scroll"
 msgstr "Scroll infinito"
 
-#: options.php:212
+#: options.php:230
 msgid "Priority Support"
 msgstr "Suporte prioritário"
 
-#: options.php:214
-msgid "<a href=\"%s\">Read More</a>"
-msgstr "<a href=\"%s\">Ler mais</a>"
-
-#: options.php:224
-msgid "Upgrade"
-msgstr "Actualizar"
-
-#: options.php:231
-msgid "Version"
-msgstr "Versão"
-
-#: options.php:247
-msgid ""
-"Theme <a href=\"%s\">documentation</a>.  For additional options, see <a href="
-"\"%s\">Portfolio+</a>."
-msgstr ""
-"Toda a documentação do tema <a href=\"%s\">aqui</a>. Para opções adicionais, "
-"veja o <a href=\"%s\">Portfolio+</a>."
+#: options.php:232
+msgid "<a href=\"%s\" class=\"button\">Read More</a>"
+msgstr "<a href=\"%s\" class=\"button\">Ler mais</a>"
 
 #: search.php:16
 msgid "Search Results for: %s"
@@ -874,6 +815,61 @@ msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#~ msgid "Activate installed plugin"
+#~ msgid_plural "Activate installed plugins"
+#~ msgstr[0] "Activar plugin instalado"
+#~ msgstr[1] "Activar plugins instalados"
+
+#~ msgid "External Link"
+#~ msgstr "Ligação externa"
+
+#~ msgid ""
+#~ "Thanks for updating Portfolio Press.  Please <a href=\"%1$s\">read about "
+#~ "important changes</a> in this version and give your site a quick check. "
+#~ "<a href=\"%2$s\">Dismiss notice</a>"
+#~ msgstr ""
+#~ "Obrigado por actualizar o Portfolio Press. Por favor <a href=\"%1$s"
+#~ "\">leia as alterações importantes</a> nesta versão e verifique o seu "
+#~ "site. <a href=\"%2$s\">Descartar notificação</a>"
+
+#~ msgid "Install Recommended Plugins"
+#~ msgstr "Instalar plugins recomendados"
+
+#~ msgid "Something went wrong with the plugin API."
+#~ msgstr "Ocorreu um erro com a API do plugin."
+
+#~ msgid "All plugins installed and activated successfully. %s"
+#~ msgstr "Todos os plugins foram instalados e activados com sucesso. %s"
+
+#~ msgid "More"
+#~ msgstr "Mais"
+
+#~ msgid ""
+#~ "If you need help with Portfolio Press, check if your question has been "
+#~ "answered in the <a href=\"%s\">theme FAQ</a>."
+#~ msgstr ""
+#~ "Se precisar de ajuda com o Portfolio Press, verifique se a sua questão já "
+#~ "foi respondida em <a href=\"%s\">theme FAQ</a>."
+
+#~ msgid "Additional Options in Portfolio+"
+#~ msgstr "Opções adicionais no Porfolio+"
+
+#~ msgid "You will also get these additional features:"
+#~ msgstr "Pode ainda obter as seguintes capacidades:"
+
+#~ msgid "Upgrade"
+#~ msgstr "Actualizar"
+
+#~ msgid "Version"
+#~ msgstr "Versão"
+
+#~ msgid ""
+#~ "Theme <a href=\"%s\">documentation</a>.  For additional options, see <a "
+#~ "href=\"%s\">Portfolio+</a>."
+#~ msgstr ""
+#~ "Toda a documentação do tema <a href=\"%s\">aqui</a>. Para opções "
+#~ "adicionais, veja o <a href=\"%s\">Portfolio+</a>."
 
 #~ msgid "Permanent Link to"
 #~ msgstr "Ligação permanente para"
