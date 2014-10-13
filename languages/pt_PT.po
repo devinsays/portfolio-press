@@ -1,19 +1,28 @@
+# Copyright (C) 2014 Devin Price
+# This file is distributed under the GNU General Public License.
+# Translators:
+# FxB <fxb@wp-translations.org>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: Portfolio Press 2.5.0 em português\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2014-10-07 15:48:21+00:00\n"
-"PO-Revision-Date: 2014-10-08 11:08-0000\n"
-"Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
-"Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
-"Language: pt_PT\n"
+"Project-Id-Version: portfolio-press\n"
+"Report-Msgid-Bugs-To: http://wptheming.com/\n"
+"POT-Creation-Date: 2014-10-13 17:22:11+00:00\n"
+"PO-Revision-Date: 2014-10-13 17:32+0000\n"
+"Last-Translator: FxB <fxb@wp-translations.org>\n"
+"Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/portfolio-press/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_c;esc_attr_e;_n:1,2;_x;esc_attr__\n"
-"X-Poedit-Basepath: ..\n"
+"Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: grunt-wp-i18n 0.4.8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Textdomain-Support: yes\n"
 
 #: 404.php:15
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
@@ -23,9 +32,7 @@ msgstr "Isto é um pouco embaraçoso, não é?"
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching, or one of the links below, can help."
-msgstr ""
-"Não foi encontrado o que procura. Tente fazer uma pesquisa, ou ver as "
-"ligações abaixo."
+msgstr "Não foi encontrado o que procura. Tente fazer uma pesquisa, ou ver as ligações abaixo."
 
 #: 404.php:26
 msgid "Most Used Categories"
@@ -42,9 +49,7 @@ msgstr "Acerca de %s"
 #: comments.php:11
 msgid ""
 "This post is password protected. Enter the password to view any comments."
-msgstr ""
-"Este conteúdo está protegido por senha. Introduza a senha para ver os "
-"comentários."
+msgstr "Este conteúdo está protegido por senha. Introduza a senha para ver os comentários."
 
 #: comments.php:22
 msgid "One Response to %2$s"
@@ -113,19 +118,15 @@ msgstr[1] "Este tema recomenda os seguintes plugins: %1$s."
 
 #: extensions/class-tgm-plugin-activation.php:167
 msgid ""
-"Sorry, but you do not have the correct permissions to install the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
+"Sorry, but you do not have the correct permissions to install the %s plugin."
+" Contact the administrator of this site for help on getting the plugin "
 "installed."
 msgid_plural ""
 "Sorry, but you do not have the correct permissions to install the %s "
 "plugins. Contact the administrator of this site for help on getting the "
 "plugins installed."
-msgstr[0] ""
-"Desculpe, não tem permissões para instalar o plugin %s. Contacte o "
-"administrador deste site para obter ajuda na instalação do plugin."
-msgstr[1] ""
-"Desculpe, não tem permissões para instalar os plugins %s. Contacte o "
-"administrador deste site para obter ajuda na instalação dos plugins."
+msgstr[0] "Desculpe, não tem permissões para instalar o plugin %s. Contacte o administrador deste site para obter ajuda na instalação do plugin."
+msgstr[1] "Desculpe, não tem permissões para instalar os plugins %s. Contacte o administrador deste site para obter ajuda na instalação dos plugins."
 
 #: extensions/class-tgm-plugin-activation.php:168
 msgid "The following required plugin is currently inactive: %1$s."
@@ -148,12 +149,8 @@ msgid_plural ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugins. Contact the administrator of this site for help on getting the "
 "plugins activated."
-msgstr[0] ""
-"Desculpe, não tem permissões para activar o plugin %s. Contacte o "
-"administrador deste site para obter ajuda na activação do plugin."
-msgstr[1] ""
-"Desculpe, não tem permissões para activar os plugins %s. Contacte o "
-"administrador deste site para obter ajuda na activação dos plugins."
+msgstr[0] "Desculpe, não tem permissões para activar o plugin %s. Contacte o administrador deste site para obter ajuda na activação do plugin."
+msgstr[1] "Desculpe, não tem permissões para activar os plugins %s. Contacte o administrador deste site para obter ajuda na activação dos plugins."
 
 #: extensions/class-tgm-plugin-activation.php:171
 msgid ""
@@ -162,12 +159,8 @@ msgid ""
 msgid_plural ""
 "The following plugins need to be updated to their latest version to ensure "
 "maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-"O seguinte plugin dverá ser actualizado para a sua versão mais recente para "
-"garantir a compatibilidade com este tema: %1$s."
-msgstr[1] ""
-"Os seguintes plugins dverão ser actualizados para a sua versão mais recente "
-"para garantir a compatibilidade com este tema: %1$s."
+msgstr[0] "O seguinte plugin dverá ser actualizado para a sua versão mais recente para garantir a compatibilidade com este tema: %1$s."
+msgstr[1] "Os seguintes plugins dverão ser actualizados para a sua versão mais recente para garantir a compatibilidade com este tema: %1$s."
 
 #: extensions/class-tgm-plugin-activation.php:172
 msgid ""
@@ -175,15 +168,11 @@ msgid ""
 "Contact the administrator of this site for help on getting the plugin "
 "updated."
 msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %s plugins. "
-"Contact the administrator of this site for help on getting the plugins "
+"Sorry, but you do not have the correct permissions to update the %s plugins."
+" Contact the administrator of this site for help on getting the plugins "
 "updated."
-msgstr[0] ""
-"Desculpe, não tem permissões para actualizar o plugin %s. Contacte o "
-"administrador deste site para obter ajuda na actualização do plugin."
-msgstr[1] ""
-"Desculpe, não tem permissões para actualizar os plugins %s. Contacte o "
-"administrador deste site para obter ajuda na actualização dos plugins."
+msgstr[0] "Desculpe, não tem permissões para actualizar o plugin %s. Contacte o administrador deste site para obter ajuda na actualização do plugin."
+msgstr[1] "Desculpe, não tem permissões para actualizar os plugins %s. Contacte o administrador deste site para obter ajuda na actualização dos plugins."
 
 #: extensions/class-tgm-plugin-activation.php:173
 msgid "Begin installing plugin"
@@ -270,9 +259,7 @@ msgstr "Activar"
 msgid ""
 "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
 "Dashboard\">Return to the Dashboard</a>"
-msgstr ""
-"Nenhum plugin para instalar ou activar. <a href=\"%1$s\" title=\"Voltar ao "
-"Painel\">Voltar ao Painel</a>"
+msgstr "Nenhum plugin para instalar ou activar. <a href=\"%1$s\" title=\"Voltar ao Painel\">Voltar ao Painel</a>"
 
 #: extensions/class-tgm-plugin-activation.php:1377
 msgid "Plugin"
@@ -296,8 +283,7 @@ msgstr "Pacote de instalação não disponível."
 
 #: extensions/class-tgm-plugin-activation.php:1929
 msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
-msgstr ""
-"A descarregar o pacote de instalação de <span class=\"code\">%s</span>&#8230;"
+msgstr "A descarregar o pacote de instalação de <span class=\"code\">%s</span>&#8230;"
 
 #: extensions/class-tgm-plugin-activation.php:1930
 msgid "Unpacking the package&#8230;"
@@ -321,11 +307,9 @@ msgstr "A activação do plugin falhou."
 
 #: extensions/class-tgm-plugin-activation.php:2058
 msgid ""
-"The installation and activation process is starting. This process may take a "
-"while on some hosts, so please be patient."
-msgstr ""
-"O processo de instalação e activação está a começar. Este processo pode "
-"demorar um pouco em alguns hosts, por favor, seja paciente."
+"The installation and activation process is starting. This process may take a"
+" while on some hosts, so please be patient."
+msgstr "O processo de instalação e activação está a começar. Este processo pode demorar um pouco em alguns hosts, por favor, seja paciente."
 
 #: extensions/class-tgm-plugin-activation.php:2059
 msgid "%1$s installed and activated successfully."
@@ -353,9 +337,7 @@ msgstr "A instalar e activar o plugin %1$s (%2$d/%3$d)"
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
-msgstr ""
-"O processo de instalação está a começar. Este processo pode demorar um pouco "
-"em alguns hosts, por favor, seja paciente."
+msgstr "O processo de instalação está a começar. Este processo pode demorar um pouco em alguns hosts, por favor, seja paciente."
 
 #: extensions/class-tgm-plugin-activation.php:2066
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
@@ -384,12 +366,9 @@ msgstr "Página %s"
 #: extensions/extras.php:98
 msgid ""
 "Portfolio Press recommends setting posts per page to 9. This can be changed "
-"under <a href=\"%3$s\">Settings > Reading Options</a>.<br><a href=\"%1$s"
-"\">Update It</a> | <a href=\"%2$s\">Dismiss Notice</a>."
-msgstr ""
-"O Portfolio Press recomenda definir 9 artigos por página. Isto pode ser "
-"modificado em <a href=\"%3$s\">Opções > Leitura</a>.<br><a href=\"%1$s"
-"\">Actualize</a> | <a href=\"%2$s\">Descartar notificação</a>."
+"under <a href=\"%3$s\">Settings > Reading Options</a>.<br><a "
+"href=\"%1$s\">Update It</a> | <a href=\"%2$s\">Dismiss Notice</a>."
+msgstr "O Portfolio Press recomenda definir 9 artigos por página. Isto pode ser modificado em <a href=\"%3$s\">Opções > Leitura</a>.<br><a href=\"%1$s\">Actualize</a> | <a href=\"%2$s\">Descartar notificação</a>."
 
 #: extensions/options-functions.php:131
 msgid "Layout"
@@ -418,14 +397,11 @@ msgstr "Cor de fundo"
 #: extensions/template-helpers.php:14
 msgid ""
 "<span class=\"meta-prep meta-prep-author\">Posted </span><a href=\"%1$s\" "
-"rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</"
-"time></a> <span class=\"meta-sep\"> by </span> <span class=\"author vcard"
-"\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
-msgstr ""
-"<span class=\"meta-prep meta-prep-author\">Publicado em </span><a href=\"%1$s"
-"\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>"
-"%3$s</time></a>, <span class=\"meta-sep\"> por </span> <span class=\"author "
-"vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+"rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" "
+"pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span "
+"class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
+"title=\"%5$s\">%6$s</a></span>"
+msgstr "<span class=\"meta-prep meta-prep-author\">Publicado em </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a>, <span class=\"meta-sep\"> por </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
 
 #: extensions/template-helpers.php:19
 msgid "View all posts by %s"
@@ -534,17 +510,12 @@ msgstr "Saltar para o conteúdo"
 
 #: image.php:46
 msgid ""
-"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
-"\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></"
-"span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; "
-"%5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</"
-"a>."
-msgstr ""
-"<span class=\"meta-prep meta-prep-entry-date\">Publicado em </span> <span "
-"class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</"
-"time></span> em <a href=\"%3$s\" title=\"Ligação para imagem em tamanho "
-"completo\">%4$s &times; %5$s</a> em <a href=\"%6$s\" title=\"Voltar a %7$s\" "
-"rel=\"gallery\">%8$s</a>."
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class"
+"=\"entry-date\"><time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to "
+"full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return "
+"to %7$s\" rel=\"gallery\">%8$s</a>."
+msgstr "<span class=\"meta-prep meta-prep-entry-date\">Publicado em </span> <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> em <a href=\"%3$s\" title=\"Ligação para imagem em tamanho completo\">%4$s &times; %5$s</a> em <a href=\"%6$s\" title=\"Voltar a %7$s\" rel=\"gallery\">%8$s</a>."
 
 #: options.php:38
 msgid "General Settings"
@@ -564,8 +535,7 @@ msgstr "Favicon personalizado"
 
 #: options.php:50
 msgid "Upload a 16px x 16px png/gif image to represent your website."
-msgstr ""
-"Carregue uma imagem PNG ou GIF de 16px 16px que represente o seu website."
+msgstr "Carregue uma imagem PNG ou GIF de 16px 16px que represente o seu website."
 
 #: options.php:58
 msgid "Display Images on Portfolio / Image Posts"
@@ -589,8 +559,7 @@ msgstr "Mostrar todos os arquivos com base em imagens em toda a largura."
 
 #: options.php:90
 msgid "Display Image and Gallery Post Format Archives Full Width"
-msgstr ""
-"Mostrar arquivos de artigos do formato Imagem e Galeria em toda a largura"
+msgstr "Mostrar arquivos de artigos do formato Imagem e Galeria em toda a largura"
 
 #: options.php:91
 msgid "Display all image/gallery archives full width."
@@ -618,9 +587,7 @@ msgstr "Artigos por página"
 
 #: options.php:119
 msgid "Posts per page can be set in the <a href=\"%s\">reading options</a>."
-msgstr ""
-"A quantidade de artigos por página pode ser definida nas <a href=\"%s"
-"\">Opções de leitura</a>."
+msgstr "A quantidade de artigos por página pode ser definida nas <a href=\"%s\">Opções de leitura</a>."
 
 #: options.php:129
 msgid "Style and Layout"
@@ -646,9 +613,7 @@ msgstr "Posição do menu"
 msgid ""
 "Select where the main menu should go in the header.  Long menus should go "
 "underneath."
-msgstr ""
-"Seleccione a posição do menu principal no cabeçalho. Menus extensos deverão "
-"ficar por baixo."
+msgstr "Seleccione a posição do menu principal no cabeçalho. Menus extensos deverão ficar por baixo."
 
 #: options.php:158
 msgid "Right of logo."
@@ -690,9 +655,7 @@ msgstr "Portfólio+"
 msgid ""
 "If you like this theme, considering supporting development by purchasing <a "
 "href=\"%s\">Portfolio+</a>."
-msgstr ""
-"Se gostar deste tema, considere apoiar o seu desenvolvimento comprando o <a "
-"href=\"%s\">Portfolio+</a>."
+msgstr "Se gostar deste tema, considere apoiar o seu desenvolvimento comprando o <a href=\"%s\">Portfolio+</a>."
 
 #: options.php:222
 msgid "Portfolio+ Features"
@@ -703,7 +666,7 @@ msgid "Text Color Options"
 msgstr "Opções de cor do texto"
 
 #: options.php:224
-msgid "Background Stye Options"
+msgid "Background Style Options"
 msgstr "Opções de estilo do fundo"
 
 #: options.php:225
@@ -742,9 +705,7 @@ msgstr "Resultados de pesquisa por '%s'"
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"Não foi encontrado nenhum resultado correspondente ao seu critério de "
-"pesquisa. Por favor tente com outras palavras-chave."
+msgstr "Não foi encontrado nenhum resultado correspondente ao seu critério de pesquisa. Por favor tente com outras palavras-chave."
 
 #: sidebar.php:18
 msgid "Archives"
@@ -765,22 +726,14 @@ msgstr "http://wptheming.com/portfolio-press/"
 #. Description of the plugin/theme
 msgid ""
 "Portfolio Press is a responsive theme for showcasing your photography, art, "
-"web sites, or other projects.  It also works nicely as a regular blog site.  "
-"An options panel is included for uploading logos and and changing the "
-"layout.  There's also support for the image, gallery and quote post "
-"formats.  Visit the <a href=\"http://themes.wptheming.com/portfolio/\">demo "
-"site</a> or watch the <a href=\"http://wptheming.com/portfolio-press\">video "
+"web sites, or other projects.  It also works nicely as a regular blog site."
+"  An options panel is included for uploading logos and and changing the "
+"layout.  There's also support for the image, gallery and quote post formats."
+"  Visit the <a href=\"http://themes.wptheming.com/portfolio/\">demo site</a>"
+" or watch the <a href=\"http://wptheming.com/portfolio-press\">video "
 "screencast</a> for set up instructions (http://wptheming.com/portfolio-"
 "press)."
-msgstr ""
-"Portfolio Press é um tema responsivo para demonstração das suas fotografias, "
-"arte, sites ou outros projectos. Também funciona bem como um blog normal. "
-"Inclui um painel de opções para carregar logótipos e para modificar o "
-"layout. Suporta também artigos do formato de Imagem, Galeria e Citação. "
-"Visite o <a href=\"http://themes.wptheming.com/portfolio/\">site de "
-"demonstração</a> ou veja o <a href=\"http://wptheming.com/portfolio-press"
-"\">vídeo demonstrativo</a> com as instruções de instalação (http://wptheming."
-"com/portfolio-press)."
+msgstr "Portfolio Press é um tema responsivo para demonstração das suas fotografias, arte, sites ou outros projectos. Também funciona bem como um blog normal. Inclui um painel de opções para carregar logótipos e para modificar o layout. Suporta também artigos do formato de Imagem, Galeria e Citação. Visite o <a href=\"http://themes.wptheming.com/portfolio/\">site de demonstração</a> ou veja o <a href=\"http://wptheming.com/portfolio-press\">vídeo demonstrativo</a> com as instruções de instalação (http://wptheming.com/portfolio-press)."
 
 #. Author of the plugin/theme
 msgid "Devin Price"
@@ -815,263 +768,3 @@ msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr "<span class=\"meta-nav\">&larr;</span> %title"
-
-#~ msgid "Activate installed plugin"
-#~ msgid_plural "Activate installed plugins"
-#~ msgstr[0] "Activar plugin instalado"
-#~ msgstr[1] "Activar plugins instalados"
-
-#~ msgid "External Link"
-#~ msgstr "Ligação externa"
-
-#~ msgid ""
-#~ "Thanks for updating Portfolio Press.  Please <a href=\"%1$s\">read about "
-#~ "important changes</a> in this version and give your site a quick check. "
-#~ "<a href=\"%2$s\">Dismiss notice</a>"
-#~ msgstr ""
-#~ "Obrigado por actualizar o Portfolio Press. Por favor <a href=\"%1$s"
-#~ "\">leia as alterações importantes</a> nesta versão e verifique o seu "
-#~ "site. <a href=\"%2$s\">Descartar notificação</a>"
-
-#~ msgid "Install Recommended Plugins"
-#~ msgstr "Instalar plugins recomendados"
-
-#~ msgid "Something went wrong with the plugin API."
-#~ msgstr "Ocorreu um erro com a API do plugin."
-
-#~ msgid "All plugins installed and activated successfully. %s"
-#~ msgstr "Todos os plugins foram instalados e activados com sucesso. %s"
-
-#~ msgid "More"
-#~ msgstr "Mais"
-
-#~ msgid ""
-#~ "If you need help with Portfolio Press, check if your question has been "
-#~ "answered in the <a href=\"%s\">theme FAQ</a>."
-#~ msgstr ""
-#~ "Se precisar de ajuda com o Portfolio Press, verifique se a sua questão já "
-#~ "foi respondida em <a href=\"%s\">theme FAQ</a>."
-
-#~ msgid "Additional Options in Portfolio+"
-#~ msgstr "Opções adicionais no Porfolio+"
-
-#~ msgid "You will also get these additional features:"
-#~ msgstr "Pode ainda obter as seguintes capacidades:"
-
-#~ msgid "Upgrade"
-#~ msgstr "Actualizar"
-
-#~ msgid "Version"
-#~ msgstr "Versão"
-
-#~ msgid ""
-#~ "Theme <a href=\"%s\">documentation</a>.  For additional options, see <a "
-#~ "href=\"%s\">Portfolio+</a>."
-#~ msgstr ""
-#~ "Toda a documentação do tema <a href=\"%s\">aqui</a>. Para opções "
-#~ "adicionais, veja o <a href=\"%s\">Portfolio+</a>."
-
-#~ msgid "Permanent Link to"
-#~ msgstr "Ligação permanente para"
-
-#~ msgid "Sorry, no posts matched your criteria."
-#~ msgstr "Não existem artigos que correspondam ao seu critério."
-
-#~ msgid "Daily Archives: <span>%s</span>"
-#~ msgstr "Arquivos diários: <span>%s</span>"
-
-#~ msgid "Monthly Archives: <span>%s</span>"
-#~ msgstr "Arquivos mensais: <span>%s</span>"
-
-#~ msgid "F Y"
-#~ msgstr "F \\d\\e Y"
-
-#~ msgid "Yearly Archives: <span>%s</span>"
-#~ msgstr "Arquivos anuais: <span>%s</span>"
-
-#~ msgid "Blog Archives"
-#~ msgstr "Arquivo do blog"
-
-#~ msgid "Category Archives: %s"
-#~ msgstr "Arquivo da categoria: '%s'"
-
-#~ msgid "Search results for %s"
-#~ msgstr "Resultados da pesquisa por %s"
-
-#~ msgid "Main menu"
-#~ msgstr "Menu principal"
-
-#~ msgid ""
-#~ "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post "
-#~ "a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s"
-#~ "\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</"
-#~ "a>."
-#~ msgstr ""
-#~ "<a class=\"comment-link\" href=\"#respond\" title=\"Publicar um comentário"
-#~ "\">Publicar um comentário</a> ou deixar um trackback: <a class="
-#~ "\"trackback-link\" href=\"%s\" title=\"URL de trackback para o seu artigo"
-#~ "\" rel=\"trackback\">URL de trackback</a>."
-
-#~ msgid ""
-#~ "Comments are closed, but you can leave a trackback: <a class=\"trackback-"
-#~ "link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
-#~ "\">Trackback URL</a>."
-#~ msgstr ""
-#~ "Los comentarios están cerrados, pero puedes dejar un trackback: <a class="
-#~ "\"trackback-link\" href=\"%s\" title=\"URL de trackback para tu entrada\" "
-#~ "rel=\"trackback\">URL de trackback</a>."
-
-#~ msgid ""
-#~ "Trackbacks are closed, but you can <a class=\"comment-link\" href="
-#~ "\"#respond\" title=\"Post a comment\">post a comment</a>."
-#~ msgstr ""
-#~ "Os trackbacks estão fechados, mas pode <a class=\"comment-link\" href="
-#~ "\"#respond\" title=\"Publicar um comentário\">publicar um comentário</a>."
-
-#~ msgid "Both comments and trackbacks are currently closed."
-#~ msgstr "Os comentários e trackbacks estão fechados."
-
-#~ msgid "Permalink to %s"
-#~ msgstr "Ligação permanente para %s"
-
-#~ msgid ""
-#~ "Uncheck this if you wish to manually display portfolio images on single "
-#~ "posts."
-#~ msgstr ""
-#~ "Desactive esta opção se quiser mostrar as imagens do Portfólio em artigos "
-#~ "únicos."
-
-#~ msgid "Check this to display all portfolio archives full width."
-#~ msgstr ""
-#~ "Active esta opção para mostrar Arquivos do Portfólio a toda a largura."
-
-#~ msgid "Disable Portfolio"
-#~ msgstr "Desactivar Portfólio"
-
-#~ msgid ""
-#~ "Check this if you are not planning to use the portfolio post type.  You "
-#~ "can always re-enable it."
-#~ msgstr ""
-#~ "Active esta opção se não quiser usar o tipo de artigo Portfólio. Pode "
-#~ "sempre alterar esta configuração mais tarde."
-
-#~ msgid ""
-#~ "TAGS: %1$s. Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel="
-#~ "\"bookmark\">permalink</a>."
-#~ msgstr ""
-#~ "ETIQUETAS: %1$s. Adicione aos favoritos <a href=\"%2$s\" title=\"Ligação "
-#~ "permanente a %3$s\" rel=\"bookmark\">ligação permanente</a>."
-
-#~ msgid ""
-#~ "Bookmark the <a href=\"%2$s\" title=\"Permalink to %3$s\" rel=\"bookmark"
-#~ "\">permalink</a>."
-#~ msgstr ""
-#~ "Adicione aos favoritos <a href=\"%2$s\" title=\"Ligação permanente a %3$s"
-#~ "\" rel=\"bookmark\">ligação permanente</a>."
-
-#~ msgid "&rarr;"
-#~ msgstr "&rarr;"
-
-#~ msgid "&larr;"
-#~ msgstr "&larr;"
-
-#~ msgid ""
-#~ "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s"
-#~ "\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-#~ msgstr ""
-#~ "Entrada publicada na categoria %1$s, com as etiquetas %2$s. Adicione aos "
-#~ "favoritos <a href=\"%3$s\" title=\"Ligação permanente a %4$s\" rel="
-#~ "\"bookmark\">ligação permanente</a>."
-
-#~ msgid ""
-#~ "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
-#~ "\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-#~ msgstr ""
-#~ "Entrada publicada na categoria %1$s. Adicione aos favoritos <a href=\"%3$s"
-#~ "\" title=\"Ligação permanente a %4$s\" rel=\"bookmark\">ligação "
-#~ "permanente</a>."
-
-#~ msgid "Tag Archives: %s"
-#~ msgstr "Arquivo de etiqueta: %s"
-
-#~ msgid ""
-#~ "If you would like to use the Portfolio Press theme options, please "
-#~ "install the <a href=\"https://github.com/devinsays/options-framework-"
-#~ "plugin\">Options Framework</a> plugin."
-#~ msgstr ""
-#~ "Se pretender utilizar as opções do tema Portfolio Press, por favor "
-#~ "instale o plugin <a href=\"https://github.com/devinsays/options-framework-"
-#~ "plugin\">Options Framework</a>."
-
-#~ msgid "Once the plugin is activated you will have option to:"
-#~ msgstr "Assim que o plugin estiver activo, terá as seguintes opções:"
-
-#~ msgid "Upload a logo image"
-#~ msgstr "Carregar imagem de logótipo"
-
-#~ msgid "Change the sidebar position"
-#~ msgstr "Modificar a posição da barra lateral"
-
-#~ msgid "Change the menu position"
-#~ msgstr "Modificar a posição do menu"
-
-#~ msgid "Hide the portfolio image on the single post"
-#~ msgstr "Esconder a imagem de Portfólio em artigos individuais"
-
-#~ msgid "Update the footer text"
-#~ msgstr "Actualizar o texto do rodapé"
-
-#~ msgid ""
-#~ "If you don't need these options, the plugin is not required default "
-#~ "settings will be used."
-#~ msgstr ""
-#~ "Se não precisa destas opções o plugin é desnecessário e serão utilizadas "
-#~ "as definições por defeito."
-
-#~ msgid "Add New Item"
-#~ msgstr "Adicionar novo item"
-
-#~ msgid "Add New Portfolio Item"
-#~ msgstr "Adicionar novo item de Portfólio"
-
-#~ msgid "Edit Portfolio Item"
-#~ msgstr "Editar item do Portfólio"
-
-#~ msgid "View Item"
-#~ msgstr "Ver item"
-
-#~ msgid "Search Portfolio"
-#~ msgstr "Procurar no Portfólio"
-
-#~ msgid "No portfolio items found"
-#~ msgstr "Não foram encontrados itens do Portfólio"
-
-#~ msgid "No portfolio items found in trash"
-#~ msgstr "Não foram encontrados itens do Portfólio no lixo"
-
-#~ msgid "Portfolio Tags"
-#~ msgstr "Etiquetas do Portfólio"
-
-#~ msgid "Portfolio Tag"
-#~ msgstr "Etiqueta do Portfólio"
-
-#~ msgid "Title"
-#~ msgstr "Título"
-
-#~ msgid "Thumbnail"
-#~ msgstr "Miniatura"
-
-#~ msgid "Tags"
-#~ msgstr "Etiquetas"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-#~ msgid "Comments"
-#~ msgstr "Comentários"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "None"
-#~ msgstr "Nenhum"
