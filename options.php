@@ -221,7 +221,7 @@ function portfoliopress_panel_info() { ?>
 						),
 						__( 'Portfolio+ Features', 'portfolio-press' ),
 						__( 'Text Color Options', 'portfolio-press' ),
-						__( 'Background Stye Options', 'portfolio-press' ),
+						__( 'Background Style Options', 'portfolio-press' ),
 						__( 'Additional Page Templates', 'portfolio-press' ),
 						__( 'Option to Hide Post Dates', 'portfolio-press' ),
 						__( 'Full Width Option for Individual Posts', 'portfolio-press' ),
