@@ -13,7 +13,7 @@ Additional testing and code audits were done by [Michael Fields](http://wordpres
 Development
 ---
 
-* Fix spelling error on options page (props @fxbernard)
+* Fix spelling error on options page (props @fxbenard)
 
 Version 2.5.0
 ---
