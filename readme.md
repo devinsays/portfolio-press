@@ -19,6 +19,8 @@ A huge thanks to everyone who has contributed translations.
 
 See how you can get involved at [http://wp-translations.org/](http://wp-translations.org/).
 
+Translations are manged on [Transifex](https://www.transifex.com/projects/p/portfolio-press/), but GitHub pull requests are also accepted.
+
 Development
 ---
 
