@@ -36,47 +36,6 @@ function portfoliopress_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'portfoliopress_wp_title', 10, 2 );
 
 /**
- * Part of the Portfolio Press upgrade routine.
- * The page template paths have changed, so let's update the template meta for the user.
- */
-function portfoliopress_update_page_templates() {
-
-	$args = array(
-		'post_type' => 'page',
-		'post_status' => 'publish',
-		'meta_query' => array(
-		    array(
-		        'key' => '_wp_page_template',
-		        'value' => 'default',
-		        'compare' => '!='
-		    )
-		)
-	);
-
-	$query = new WP_Query( $args );
-	if ( $query->have_posts() ) :
-		while ( $query->have_posts() ) : $query->the_post();
-			$current_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
-			$new_template = false;
-			switch ( $current_template ) {
-				case 'archive-portfolio.php':
-					$new_template = 'templates/portfolio.php';
-					break;
-				case 'full-width-page.php':
-					$new_template = 'templates/full-width-page.php';
-					break;
-				case 'full-width-portfolio.php':
-					$new_template = 'templates/full-width-portfolio.php';
-					break;
-			}
-			if ( $new_template ) {
-				update_post_meta( get_the_ID(), '_wp_page_template', $new_template );
-			}
-		endwhile;
-	endif;
-}
-
-/**
  * Displays notice if post_per_page is not divisible by 3
  */
 function portfoliopress_posts_per_page_notice() {

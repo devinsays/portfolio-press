@@ -14,6 +14,7 @@ Development
 ---
 
 * Fix spelling error on options page (props @fxbenard)
+* Remove update routine for page templates
 
 Version 2.5.0
 ---
