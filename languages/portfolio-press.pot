@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Press 2.5.0\n"
 "Report-Msgid-Bugs-To: http://wptheming.com/\n"
-"POT-Creation-Date: 2014-10-13 17:22:11+00:00\n"
+"POT-Creation-Date: 2014-10-14 17:55:35+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -362,7 +362,7 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: extensions/extras.php:98
+#: extensions/extras.php:57
 msgid ""
 "Portfolio Press recommends setting posts per page to 9. This can be changed "
 "under <a href=\"%3$s\">Settings > Reading Options</a>.<br><a "

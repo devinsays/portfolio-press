@@ -10,11 +10,21 @@ Portfolio was built on the solid foundation of [Toolbox](http://wordpress.org/ex
 
 Additional testing and code audits were done by [Michael Fields](http://wordpress.mfields.org/) and [Jake Goldman](https://twitter.com/jakemgold).
 
+## Translations
+
+A huge thanks to everyone who has contributed translations.
+
+* Français (French (France)) - @fxbenard
+* Português (Portuguese (Portugal)) - Pedro Mendonca
+
+See how you can get involved at [http://wp-translations.org/](http://wp-translations.org/).
+
 Development
 ---
 
 * Fix spelling error on options page (props @fxbenard)
 * Remove update routine for page templates
+* Better translations workflow (props @fxbenard)
 
 Version 2.5.0
 ---

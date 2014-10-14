@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: portfolio-press\n"
 "Report-Msgid-Bugs-To: http://wptheming.com/\n"
-"POT-Creation-Date: 2014-10-13 17:22:11+00:00\n"
+"POT-Creation-Date: 2014-10-14 17:55:35+00:00\n"
 "PO-Revision-Date: 2014-10-13 17:32+0000\n"
 "Last-Translator: FxB <fxb@wp-translations.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/portfolio-press/language/pt_BR/)\n"
@@ -363,7 +363,7 @@ msgstr "A instalar o plugin %1$s (%2$d/%3$d)"
 msgid "Page %s"
 msgstr "Página %s"
 
-#: extensions/extras.php:98
+#: extensions/extras.php:57
 msgid ""
 "Portfolio Press recommends setting posts per page to 9. This can be changed "
 "under <a href=\"%3$s\">Settings > Reading Options</a>.<br><a "
