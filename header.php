@@ -20,7 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="wrapper">
+<div id="page">
 
 	<header id="branding">
     	<div class="col-width">

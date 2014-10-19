@@ -24,10 +24,6 @@ Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/
 /* =Reset
 ----------------------------------------------- */
 
-body,
-html {
-	height: 100%;
-}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -98,7 +94,7 @@ table {
 *:before,
 *:after {
 	-moz-box-sizing: border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
-	     box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Base Styles */
@@ -117,12 +113,7 @@ body.rtl {
 	unicode-bidi: embed;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	color: #111;
 	font-family: "Rokkitt", sans-serif;
@@ -288,30 +279,78 @@ a:visited {
 a:hover {
 	text-decoration: underline;
 }
-h1 a:link,
-h1 a:visited,
-h2 a:link,
-h2 a:visited,
-h3 a:link,
-h3 a:visited,
-h4 a:link,
-h4 a:visited,
-h5 a:link,
-h5 a:visited,
-h6 a:link,
-h6 a:visited {
-	text-decoration: none;
+
+/* =Structure
+----------------------------------------------- */
+
+body {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: #f6f6f6;
+
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
 }
-h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h5 a:hover,
-h6 a:hover {
-	text-decoration: underline;
+#page {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+#main {
+	padding: 40px 0 20px 0;
+}
+.col-width {
+	max-width: 980px;
+	margin: 0 auto;
 }
 
-/* Branding */
+/* Content */
+
+#content {
+	float: right;
+	position: relative;
+	width: 70%;
+	padding: 0 0 4%;
+}
+
+/* Sidebar */
+
+#sidebar {
+	float: left;
+	overflow: hidden;
+	width: 24%;
+}
+#sidebar ul,
+#sidebar ol {
+	margin: 0 0 20px;
+	list-style: none;
+}
+
+/* Layouts */
+
+.layout-2cl #content {
+	float: left;
+}
+.layout-2cl #sidebar {
+	float: right;
+}
+.layout-1col #content {
+	width: 100%;
+}
+
+/* =Header
+----------------------------------------------- */
 
 #branding {
 	display: block;
@@ -345,7 +384,8 @@ h6 a:hover {
 	font-style: italic;
 }
 
-/* Navigation */
+/* =Navigation
+----------------------------------------------- */
 
 .primary-navigation {
 	display: block;
@@ -408,77 +448,6 @@ h6 a:hover {
 	position: relative;
 	top: 10px;
 	left: auto;
-}
-
-/* Structure */
-
-#main {
-	padding: 40px 0 20px 0;
-	background: #f6f6f6;
-}
-.col-width {
-	max-width: 980px;
-	margin: 0 auto;
-}
-
-/* Content */
-
-#content {
-	float: right;
-	position: relative;
-	width: 70%;
-	padding: 0 0 4%;
-}
-
-/* Sidebar */
-
-#sidebar {
-	float: left;
-	overflow: hidden;
-	width: 24%;
-}
-#sidebar ul,
-#sidebar ol {
-	margin: 0 0 20px;
-	list-style: none;
-}
-
-/* Layouts */
-
-.layout-2cl #content {
-	float: left;
-}
-.layout-2cl #sidebar {
-	float: right;
-}
-.layout-1col #content {
-	width: 100%;
-}
-
-/* Footer */
-
-#colophon {
-	display: block;
-	padding: 30px 0;
-	border-top: 1px solid #ddd;
-	background: #fff;
-}
-#footer-widgets {
-	margin-bottom: 20px;
-	border-bottom: 1px dotted #ddd;
-}
-#footer-widgets .block {
-	float: right;
-	width: 25%;
-	padding: 0 0 0 2%;
-}
-#footer-widgets .footer-widget-4 {
-	padding: 0;
-}
-#colophon #site-generator p {
-	color: #333;
-	font-size: 13px;
-	font-weight: bold;
 }
 
 /* =Posts
@@ -777,7 +746,7 @@ object {
 	height: auto;
 	opacity: 1;
 	-webkit-transition: opacity 0.3s ease-in-out;
-	        transition: .opacity 3s ease-in-out;
+	transition: .opacity 3s ease-in-out;
 
 	-webkit-filter: none;
 	-webkit-backface-visibility: hidden;
@@ -1118,7 +1087,7 @@ input[type="submit"] {
 	background: -webkit-linear-gradient(top,  #fafafa 40%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
 	background: -webkit-gradient(linear, right top, right bottom, color-stop(60%, #fafafa), to(#e6e6e6));
 	background: -webkit-linear-gradient(top, #fafafa 40%, #e6e6e6 100%);
-	background:         linear-gradient(top,  #fafafa 40%,#e6e6e6 100%); /* W3C */
+	background: linear-gradient(top,  #fafafa 40%,#e6e6e6 100%); /* W3C */
 	box-shadow: inset 0 2px 1px #fff;
 	text-shadow: 0 -1px 0 rgba(255,255,255,0.5);
 	font-size: 12px;
@@ -1148,6 +1117,33 @@ input[type="submit"] {
 
 .clearfix:after {
 	clear: both;
+}
+
+/* =Footer
+----------------------------------------------- */
+
+#colophon {
+	display: block;
+	padding: 30px 0;
+	border-top: 1px solid #ddd;
+	background: #fff;
+}
+#footer-widgets {
+	margin-bottom: 20px;
+	border-bottom: 1px dotted #ddd;
+}
+#footer-widgets .block {
+	float: right;
+	width: 25%;
+	padding: 0 0 0 2%;
+}
+#footer-widgets .footer-widget-4 {
+	padding: 0;
+}
+#colophon #site-generator p {
+	color: #333;
+	font-size: 13px;
+	font-weight: bold;
 }
 
 /* =Plugin Support
@@ -1202,7 +1198,7 @@ input[type="submit"] {
 		color: #fff;
 		background: rgba(255, 255, 255, 0.25);
 		-webkit-transition: 0.07s ease-in;
-		        transition: 0.07s ease-in;
+		transition: 0.07s ease-in;
 	}
 	.primary-navigation ul ul {
 		display: none;
@@ -1310,9 +1306,9 @@ input[type="submit"] {
 		min-width: 46%;
 		margin-left: 4%;
 		-webkit-transition-duration: 0.6s;
-		        transition-duration: 0.6s;
+		transition-duration: 0.6s;
 		-webkit-transition-property: height, width;
-		        transition-property: height, width;
+		transition-property: height, width;
 	}
 	.portfolio-view #content .hentry {
 		margin-bottom: 35px;

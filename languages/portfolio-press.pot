@@ -455,15 +455,15 @@ msgstr ""
 msgid "Next &rarr;"
 msgstr ""
 
-#: footer.php:39
+#: footer.php:41
 msgid "Powered by"
 msgstr ""
 
-#: footer.php:39
+#: footer.php:41
 msgid "A Semantic Personal Publishing Platform"
 msgstr ""
 
-#: footer.php:39
+#: footer.php:41
 msgid "WordPress"
 msgstr ""
 
