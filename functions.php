@@ -189,9 +189,19 @@ function portfoliopress_widgets_init() {
 add_action( 'init', 'portfoliopress_widgets_init' );
 
 /**
+ * Helper library for the theme customizer.
+ */
+require get_template_directory() . '/extensions/customizer-library/customizer-library.php';
+
+/**
+ * Define options for the theme customizer.
+ */
+require get_template_directory() . '/extensions/customizer-options.php';
+
+/**
  * Sets up the options panel and default functions
  */
-require_once( get_template_directory() . '/extensions/options-functions.php' );
+require_once( get_template_directory() . '/extensions/mods.php' );
 
 /**
  * Adds general template functions
@@ -207,8 +217,3 @@ require_once( get_template_directory() . '/extensions/portfolio-helpers.php' );
  * Custom functions that act independently of the theme templates.
  */
 require_once( get_template_directory() . '/extensions/extras.php' );
-
-/**
- * Displays notices for recommended plugins
- */
-require_once( get_template_directory() . '/extensions/recommended-plugins.php' );

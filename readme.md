@@ -21,9 +21,18 @@ See how you can get involved at [http://wp-translations.org/](http://wp-translat
 
 Translations are managed on [Transifex](https://www.transifex.com/projects/p/portfolio-press/), but GitHub pull requests are also accepted.
 
+TODO
+---
+
+* Notice to disable Options Framework
+* Notice for Regenerate Thumbnails
+* Heavy testing of option upgrade
+* Remove options.php
+
 Development
 ---
 
+* Move all options to the WordPress Customizer
 * Fix spelling error on options page (props @fxbenard)
 * Remove update routine for page templates
 * Better translations workflow (props @fxbenard)

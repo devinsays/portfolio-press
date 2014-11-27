@@ -250,10 +250,3 @@ add_action( 'optionsframework_after','portfoliopress_panel_info' );
     $of_page= 'appearance_page_options-framework';
     add_action( "admin_print_styles-$of_page", 'portfoliopress_option_styles', 100);
 }
-
-function portfoliopress_option_styles () {
-	wp_enqueue_style(
-		'portfoliopress-option-styles',
-		get_stylesheet_directory_uri() .'/extensions/option-styles.css'
-	);
-}

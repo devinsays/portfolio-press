@@ -101,10 +101,26 @@ table {
 
 body {
 	color: #555;
-	background: #fff;
+	background: #f6f6f6;
 	font-family: "Open Sans", sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-ms-flex-preferred-size: auto;
 }
 
 /* @noflip */
@@ -283,24 +299,6 @@ a:hover {
 /* =Structure
 ----------------------------------------------- */
 
-body {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	background: #f6f6f6;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-}
 #page {
 	-webkit-flex: 1;
 	-ms-flex: 1;
@@ -355,7 +353,6 @@ body {
 	display: block;
 	position: relative;
 	padding: 25px 0;
-	border-bottom: 1px solid rgba(255,255,255,0.9);
 	background: #000;
 }
 #logo {
