@@ -1287,6 +1287,15 @@ input[type="submit"] {
 	#main {
 		padding-top: 35px;
 	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="password"],
+	textarea {
+		font-size: 16px;
+	}
 	#respond input[type="text"],
 	#respond input[type="email"],
 	#respond input[type="url"] {
