@@ -354,6 +354,7 @@ a:hover {
 	position: relative;
 	padding: 25px 0;
 	background: #000;
+	border-bottom: 1px solid;
 }
 #logo {
 	float: left;
