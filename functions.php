@@ -46,15 +46,16 @@ function portfoliopress_setup() {
 	// Add support for a variety of post formats ( will be added in next version )
 	add_theme_support( 'post-formats', array( 'gallery', 'image', 'video', 'quote', 'link' ) );
 
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+	) );
+
 	// Add support for featured images
 	add_theme_support( 'post-thumbnails' );
-
-	// Enable support for HTML5 markup
-	add_theme_support( 'html5', array(
-		'comment-list',
-		'comment-form',
-		'gallery',
-	) );
 
 	// Add images sizes for the various thumbnails
 	add_image_size( 'portfolio-thumbnail', 280, 225, true );

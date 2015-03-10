@@ -55,7 +55,7 @@ function portfoliopress_posts_per_page_notice() {
 	if ( current_user_can( 'manage_options' ) ) {
 		echo '<div class="updated"><p>';
 			printf( __(
-				'Portfolio Press recommends setting posts per page to 9. This can be changed under <a href="%3$s">Settings > Reading Options</a>.<br><a href="%1$s">Update It</a> | <a href="%2$s">Dismiss Notice</a>.' ),
+				'Portfolio Press recommends setting <a href="%3$s">posts per page</a> to 9 or 12. <a href="%1$s">Update</a> | <a href="%2$s">Hide Notice</a>' ),
 				'?portfolio_update_posts_per_page=1',
 				'?portfolio_post_per_page_ignore=1',
 				admin_url( 'options-reading.php', false ), 'portfolio-press' );
@@ -139,3 +139,26 @@ function portfoliopress_remove_caption_padding( $width ) {
     return $width - 10;
 }
 add_filter( 'img_caption_shortcode_width', 'portfoliopress_remove_caption_padding' );
+
+
+/**
+ * Notice that Options Framework plugin is no longer needed.
+ */
+function portfoliopress_optionsframework_notice() {
+
+	// Only show notice if Options Framework is installed
+	if ( ! function_exists( 'optionsframework_init' ) ) {
+		return;
+	}
+
+	global $pagenow;
+    if ( !is_multisite() && ( $pagenow == 'plugins.php' || $pagenow == 'themes.php' ) ) {
+		echo '<div class="updated portfolio-press-options"><p>';
+		printf(
+            __( 'Portfolio Press options are now in the <a href="%s">customizer</a>. You can safely remove the Options Framework plugin from your site.', 'portfolio-press' ),
+            admin_url( 'customize.php' )
+        );
+		echo "</p></div>";
+    }
+}
+add_action( 'admin_notices', 'portfoliopress_optionsframework_notice' );
