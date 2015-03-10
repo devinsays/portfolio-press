@@ -36,7 +36,10 @@ Development
 * Fix spelling error on options page (props @fxbenard)
 * Remove update routine for page templates
 * Better translations workflow (props @fxbenard)
-* Sticky footer
+* Grunt task for SASS
+* Refactor CSS
+* Update form design
+* Update comment design
 
 Version 2.5.0
 ---

@@ -6,6 +6,23 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		watch: {
+			files: ['scss/*.scss'],
+			tasks: 'sass',
+			options: {
+				livereload: true,
+			},
+		},
+		sass: {
+			default: {
+		  		options : {
+			  		style : 'expanded'
+			  	},
+			  	files: {
+					'style.css':'scss/style.scss',
+				}
+			}
+		},
 		autoprefixer: {
             options: {
 				browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie 9']
@@ -103,7 +120,13 @@ module.exports = function(grunt) {
 		}
 	});
 
+	grunt.registerTask( 'default', [
+		'sass',
+		'autoprefixer',
+    ]);
+
     grunt.registerTask( 'release', [
+	    'sass',
 		'autoprefixer',
 		'csscomb',
 		'concat',
