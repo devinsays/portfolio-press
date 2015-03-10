@@ -46,26 +46,20 @@ msgstr ""
 msgid "About %s"
 msgstr ""
 
-#: comments.php:11
-msgid "This post is password protected. Enter the password to view any comments."
-msgstr ""
-
-#: comments.php:22
-msgid "One Response to %2$s"
-msgid_plural "%1$s Responses to %2$s"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:29 comments.php:41
+#: comments.php:35 comments.php:54
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:30 comments.php:42
+#: comments.php:36 comments.php:55
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:31 comments.php:43
+#: comments.php:37 comments.php:56
 msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
 msgstr ""
 
 #: content-none.php:11 search.php:32
@@ -403,6 +397,13 @@ msgstr ""
 #. Template Name of the plugin/theme
 msgid "Image and Gallery Posts"
 msgstr ""
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "1 Response"
+msgid_plural "%1$s Responses"
+msgstr[0] ""
+msgstr[1] ""
 
 #: extensions/template-helpers.php:153 extensions/template-helpers.php:160
 msgctxt "Next post link"
