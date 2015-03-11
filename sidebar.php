@@ -5,7 +5,7 @@
  * @package Portfolio Press
  */
 
- 	if ( of_get_option('layout') != 'layout-1col' ) : ?>
+ 	if ( 'layout-1col' != portfoliopress_get_option( 'layout' ) ) : ?>
 	<div id="sidebar" role="complementary">
 		<ul class="xoxo">
 		<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>

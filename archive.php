@@ -11,7 +11,7 @@ get_header(); ?>
 		<div id="content" role="main">
 
 		<?php if ( is_tax() || is_category() || is_tag() ) :
-			if ( of_get_option( 'archive_titles', true ) ) : ?>
+			if ( portfoliopress_get_option( 'archive_titles', true ) ) : ?>
 				<header class="archive-header">
 					<h1 class="archive-title"><?php echo single_term_title( '', false ); ?></h1>
 					<?php $description = term_description();

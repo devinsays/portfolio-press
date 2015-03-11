@@ -87,6 +87,7 @@ function portfoliopress_options() {
 
 	$options['portfoliopress[header_color]'] = array(
 		'id' => 'portfoliopress[header_color]',
+		'option_type' => 'option',
 		'label'   => __( 'Header Color', 'portfolio-press' ),
 		'section' => $section,
 		'type'    => 'color',

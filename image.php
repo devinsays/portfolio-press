@@ -59,7 +59,7 @@ get_header(); ?>
 
 				</article><!-- #post-<?php the_ID(); ?> -->
 
-				<?php if ( of_get_option( 'portfolio_navigation', true ) ) {
+				<?php if ( portfoliopress_get_option( 'portfolio_navigation', true ) ) {
 					portfoliopress_post_nav();
 				} ?>
 

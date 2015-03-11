@@ -72,7 +72,13 @@ function customizer_library_register( $wp_customize ) {
 
 					$wp_customize->add_control(
 						new WP_Customize_Color_Control(
-							$wp_customize, $option['id'], $option
+							$wp_customize,
+							$option['id'], array(
+								'label'             => $option['label'],
+								'section'           => $option['section'],
+								'sanitize_callback' => $option['sanitize_callback'],
+								'priority'          => $option['priority']
+							)
 						)
 					);
 

@@ -66,7 +66,7 @@ function portfoliopress_body_class( $classes ) {
 		get_query_var( 'portfolio_view' )
 	) {
 		$classes[] = 'portfolio-view';
-		if ( of_get_option( 'portfolio_sidebar', false ) ) {
+		if ( portfoliopress_get_option( 'portfolio_sidebar', false ) ) {
 			$classes[] = 'full-width-portfolio';
 		}
 	}
@@ -100,7 +100,7 @@ function portfoliopress_body_class( $classes ) {
 		}
 	}
 
-	if ( !of_get_option( 'portfolio_sidebar', false ) ) {
+	if ( !portfoliopress_get_option( 'portfolio_sidebar', false ) ) {
 		if (
 			is_page_template( 'templates/full-width-portfolio.php' ) ||
 			is_page_template( 'templates/full-width-image-gallery-formats.php' )
@@ -119,7 +119,7 @@ add_filter( 'body_class','portfoliopress_body_class' );
 function portfoliopress_display_image() {
 
 	// Don't display images on single post if the option is turned off
-	if ( is_single() && !of_get_option( 'portfolio_images', true ) ) {
+	if ( is_single() && !portfoliopress_get_option( 'portfolio_images', true ) ) {
 		return;
 	}
 
@@ -130,7 +130,7 @@ function portfoliopress_display_image() {
 		<?php if ( !is_single() ) { ?>
 			<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
 		<?php } ?>
-		<?php if ( of_get_option( 'layout' ) == 'layout-1col' ) {
+		<?php if ( portfoliopress_get_option( 'layout' ) == 'layout-1col' ) {
 			the_post_thumbnail( 'portfolio-fullwidth' );
 		} else {
 			the_post_thumbnail( 'portfolio-large' );

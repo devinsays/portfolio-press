@@ -37,7 +37,7 @@
     <?php endif; ?>
 
 		<div id="site-generator">
-			<p><?php if (!$footer = of_get_option('footer_text', false) ) { ?>
+			<p><?php if ( ! $footer = portfoliopress_get_option( 'footer_text', false ) ) { ?>
 				<?php _e('Powered by', 'portfolio-press'); ?> <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'portfolio-press' ); ?>" rel="generator"><?php printf( __( 'WordPress', 'portfolio-press' ) ); ?></a> &amp; <a href="http://wptheming.com/2010/07/portfolio-theme/"><?php _e('Portfolio', 'portfolio-press'); ?></a>.
 			<?php } else {
 				echo stripslashes($footer);
@@ -45,6 +45,7 @@
 			</p>
 		</div>
 	</div>
+
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>

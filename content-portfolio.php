@@ -10,8 +10,8 @@ $thumbnail = 'thumbnail';
 
 // Set fullwidth thumbnail size
 if (
-	of_get_option( 'portfolio_sidebar' ) ||
-	of_get_option( 'layout', 'layout-2cr' ) ==  'layout-1col' ) {
+	portfoliopress_get_option( 'portfolio_sidebar' ) ||
+	portfoliopress_get_option( 'layout', 'layout-2cr' ) ==  'layout-1col' ) {
 	$thumbnail = 'thumbnail-fullwidth';
 }
 ?>

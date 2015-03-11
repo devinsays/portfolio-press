@@ -24,10 +24,10 @@ Translations are managed on [Transifex](https://www.transifex.com/projects/p/por
 TODO
 ---
 
-* Notice to disable Options Framework
 * Notice for Regenerate Thumbnails
 * Heavy testing of option upgrade
-* Remove options.php
+* Header color option not working
+* Compare new options to previous options
 
 Development
 ---

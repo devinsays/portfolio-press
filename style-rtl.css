@@ -1194,10 +1194,6 @@ table#wp-calendar th {
 
 /* Comments
 --------------------------------------------------------------*/
-.comments-title {
-	color: #666;
-}
-
 .no-comments {
 	margin: 0;
 	text-align: center;
@@ -1220,73 +1216,65 @@ table#wp-calendar th {
 	margin: 0 0 15px;
 }
 
-.comment, .trackback, .pingback {
-	position: relative;
-	padding: 0 80px 0 0;
+.comment.thread-even,
+.pingback.thread-even {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+	background: rgba(0, 0, 0, 0.02);
 }
 
-.comment-body {
-	margin: 0 0 20px 0;
+#comments .comment-body {
+	margin: 0;
+	padding: 20px;
 }
 
 .comment-author {
 	display: block;
-	margin-bottom: 10px;
-	font-family: "Rokkitt", sans-serif;
+	margin-bottom: 5px;
 }
 
 .comment-author .avatar {
-	position: absolute;
-	top: 0;
-	right: 0;
-	border-radius: 100%;
+	float: right;
+	margin: 0 0 5px 15px;
+	vertical-align: middle;
 }
 
-.trackback .avatar, .pingback .avatar {
-	width: 50px;
-	height: 50px;
-	padding: 2px 2px 0 0;
-	color: #fff;
-	background: #ddd;
-	font-size: 20px;
-	line-height: 50px;
-	text-align: center;
+.trackback .avatar,
+.pingback .avatar {
+	display: none;
+}
+
+.comment-content {
+	clear: both;
+	padding-top: 0.5em;
 }
 
 .comment-content a {
 	word-wrap: break-word;
 }
 
-.comment-meta {
-	padding-left: 80px;
-}
-
 .comment-metadata {
-	margin-bottom: 30px;
 	font-size: 12px;
-	text-transform: uppercase;
 }
 
-.comment-reply {
+.comment .reply {
 	display: inline-block;
-	margin-left: 5px;
-}
-
-.comment-time {
-	display: inline-block;
-	margin-left: 10px;
-}
-
-.comment-time a {
-	color: #666;
+	font-size: 12px;
 }
 
 .comment-list .children {
+	margin: 0 60px 0 0;
+}
+
+.comment-list .children .children .children {
 	margin: 0;
 }
 
-.comment-list .children .children .comment {
-	margin: 0;
+.children .comment {
+	border-top: 1px solid #ddd;
+}
+
+#respond {
+	margin-top: 20px;
 }
 
 #respond p {
@@ -1327,6 +1315,10 @@ table#wp-calendar th {
 }
 
 @media screen and (max-width: 510px) {
+	.comment-list .children .children {
+		margin: 0;
+	}
+
 	#author, #email, #url {
 		width: 100%;
 	}
@@ -1360,6 +1352,7 @@ table#wp-calendar th {
 }
 
 #colophon #site-generator p {
+	margin: 0;
 	color: #333;
 	font-size: 13px;
 	font-weight: bold;
@@ -1443,20 +1436,16 @@ object {
 }
 
 /* Captions */
-.wp-caption {
+.wp-caption,
+.wp-caption-text {
 	max-width: 100%;
-	margin-bottom: 15px;
+	margin: 10px 0;
 	font-size: 12px;
 }
 
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 0 auto;
-}
-
-.wp-caption-text {
-	margin: 5px 0;
-	text-align: center;
 }
 
 /* Galleries */
