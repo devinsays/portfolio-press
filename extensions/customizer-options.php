@@ -95,7 +95,7 @@ function portfoliopress_options() {
 	);
 
 	// Navigation
-	$section = 'navigation';
+	$section = 'nav';
 
 	$choices = array(
 		'right' => __( 'Right of Logo', 'portfolio-press' ),
@@ -109,7 +109,8 @@ function portfoliopress_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $choices,
-		'default' => 'right'
+		'default' => 'right',
+		'priority' => 100
 	);
 
 
@@ -118,7 +119,7 @@ function portfoliopress_options() {
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Portfolio Settings', 'portfolio-press' ),
+		'title' => __( 'Portfolio', 'portfolio-press' ),
 		'priority' => '80'
 	);
 
@@ -171,6 +172,12 @@ function portfoliopress_options() {
 
 	// Archive Settings
 	$section = 'archive';
+
+	$sections[] = array(
+		'id' => $section,
+		'title' => __( 'Archive', 'portfolio-press' ),
+		'priority' => '90'
+	);
 
 	$options['portfoliopress[display_image_gallery_post_formats]'] = array(
 		'id' => 'portfoliopress[display_image_gallery_post_formats]',
