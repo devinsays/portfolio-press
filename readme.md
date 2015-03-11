@@ -21,11 +21,6 @@ See how you can get involved at [http://wp-translations.org/](http://wp-translat
 
 Translations are managed on [Transifex](https://www.transifex.com/projects/p/portfolio-press/), but GitHub pull requests are also accepted.
 
-Roadmap
----
-
-* Notice for Regenerate Thumbnails
-
 Development
 ---
 
@@ -38,6 +33,7 @@ Development
 * Update form design
 * Update comment design
 * Add option to display post navigation
+* Upgrade notice moved to customizer
 
 Version 2.5.0
 ---

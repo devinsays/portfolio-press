@@ -19,6 +19,28 @@ function customizer_library_customize_preview_js() {
 add_action( 'customize_preview_init', 'customizer_library_customize_preview_js' );
 
 /**
+ * Display upgrade notice on customizer page
+ */
+function portfoliopress_upgrade_notice() {
+
+	$path = str_replace( WP_CONTENT_DIR, WP_CONTENT_URL, dirname( dirname( __FILE__ ) ) );
+
+	wp_enqueue_script( 'portfoliopress_upgrade', $path . '/js/upgrade.js', array( 'customize-preview' ), '1.0.0', true );
+
+	// Localize the script
+	wp_localize_script(
+		'portfoliopress_upgrade',
+		'portfoliopressL10n',
+		array(
+			'plusURL'	=> esc_url( 'http://wptheming.com/portfolio-plus' ),
+			'plusLabel'	=> __( 'Upgrade to Portfolio+', 'portfoliopress' ),
+		)
+	);
+
+}
+add_action( 'customize_controls_enqueue_scripts', 'portfoliopress_upgrade_notice' );
+
+/**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.

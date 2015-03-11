@@ -81,6 +81,10 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
+#: extensions/customizer-library/extensions/preview.php:36
+msgid "Upgrade to Portfolio+"
+msgstr ""
+
 #: extensions/customizer-options.php:21
 msgid "Logo Image"
 msgstr ""

@@ -547,6 +547,7 @@ a:active {
 }
 
 #logo #site-title {
+	margin: 0;
 	color: #fff;
 	font-family: "Rokkitt", sans-serif;
 }
