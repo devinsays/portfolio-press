@@ -1,6 +1,6 @@
 # Portfolio Press
 
-Portfolio Press is a responsive theme for showcasing your photography, art, web sites, or other projects.  It also works nicely as a regular blog site.  An options panel is included for uploading logos and and changing the layout.  There's also support for the image, gallery and quote post formats.  Visit the [demo site](http://themes.wptheming.com/portfolio/) or [watch the video screencast](http://wptheming.com/portfolio-press) for set up instructions.
+Portfolio Press is a responsive theme for showcasing your photography, art, web sites, or other projects. It also works nicely as a regular blog site.  Configuration options are available in the customizer. There's also support for the image, gallery and quote post formats.  Visit the [demo site](http://themes.wptheming.com/portfolio/) or [watch the video screencast](http://wptheming.com/portfolio-press) for set up instructions.
 
 ## Credits
 
