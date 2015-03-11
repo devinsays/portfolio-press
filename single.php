@@ -31,6 +31,8 @@ get_header(); ?>
 
 				</article><!-- #post-<?php the_ID(); ?> -->
 
+				<?php portfoliopress_post_nav(); ?>
+
 				<?php if ( comments_open() ) {
 					comments_template( '', true );
                 } ?>

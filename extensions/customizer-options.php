@@ -115,11 +115,11 @@ function portfoliopress_options() {
 
 
 	// Portfolio Settings
-	$section = 'portfolio';
+	$section = 'general';
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Portfolio', 'portfolio-press' ),
+		'title' => __( 'General', 'portfolio-press' ),
 		'priority' => '80'
 	);
 
@@ -169,6 +169,16 @@ function portfoliopress_options() {
 		);
 
 	endif;
+
+	$options['portfoliopress[postnav]'] = array(
+		'id' => 'portfoliopress[postnav]',
+		'option_type' => 'option',
+		'label' => __( 'Display post navigation', 'portfolio-press' ),
+		'description' => __( 'Previous/next links on posts.', 'portfolio-press' ),
+		'section' => $section,
+		'type'    => 'checkbox',
+		'default' => '0',
+	);
 
 	// Archive Settings
 	$section = 'archive';

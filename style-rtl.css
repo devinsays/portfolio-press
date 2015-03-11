@@ -1126,7 +1126,7 @@ table#wp-calendar th {
 }
 
 /* Search */
-#sidebar .widget_search .search-submit {
+.widget_search .search-submit {
 	display: none;
 }
 
@@ -1351,6 +1351,10 @@ table#wp-calendar th {
 	padding: 0;
 }
 
+#footer-widgets .widget-container > ul {
+	margin: 0 0 1.5em;
+}
+
 #colophon #site-generator p {
 	margin: 0;
 	color: #333;
@@ -1436,16 +1440,18 @@ object {
 }
 
 /* Captions */
-.wp-caption,
-.wp-caption-text {
+.wp-caption {
 	max-width: 100%;
-	margin: 10px 0;
-	font-size: 12px;
 }
 
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 0 auto;
+}
+
+.wp-caption-text {
+	margin: 10px 0;
+	font-size: 12px;
 }
 
 /* Galleries */

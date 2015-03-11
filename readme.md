@@ -21,13 +21,10 @@ See how you can get involved at [http://wp-translations.org/](http://wp-translat
 
 Translations are managed on [Transifex](https://www.transifex.com/projects/p/portfolio-press/), but GitHub pull requests are also accepted.
 
-TODO
+Roadmap
 ---
 
 * Notice for Regenerate Thumbnails
-* Heavy testing of option upgrade
-* Header color option not working
-* Compare new options to previous options
 
 Development
 ---
@@ -40,6 +37,7 @@ Development
 * Refactor CSS
 * Update form design
 * Update comment design
+* Add option to display post navigation
 
 Version 2.5.0
 ---

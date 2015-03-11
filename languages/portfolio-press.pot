@@ -149,51 +149,63 @@ msgstr ""
 msgid "Menu Position"
 msgstr ""
 
-#: extensions/customizer-options.php:121
-msgid "Portfolio Settings"
+#: extensions/customizer-options.php:122
+msgid "General"
 msgstr ""
 
-#: extensions/customizer-options.php:131 extensions/customizer-options.php:153
+#: extensions/customizer-options.php:132 extensions/customizer-options.php:154
 msgid "Display Featured Images"
 msgstr ""
 
-#: extensions/customizer-options.php:132
+#: extensions/customizer-options.php:133
 msgid "Display featured images on portfolio posts."
 msgstr ""
 
-#: extensions/customizer-options.php:141 extensions/customizer-options.php:163
+#: extensions/customizer-options.php:142 extensions/customizer-options.php:164
 msgid "Full Width Archives"
 msgstr ""
 
-#: extensions/customizer-options.php:142
+#: extensions/customizer-options.php:143
 msgid "Display portfolio archives full width."
 msgstr ""
 
-#: extensions/customizer-options.php:154
+#: extensions/customizer-options.php:155
 msgid "Display featured images on posts."
 msgstr ""
 
-#: extensions/customizer-options.php:164
+#: extensions/customizer-options.php:165
 msgid "Display image/gallery archives full width."
 msgstr ""
 
-#: extensions/customizer-options.php:178
-msgid "Display Image and Gallery Formats on Posts Page"
+#: extensions/customizer-options.php:176
+msgid "Display post navigation"
 msgstr ""
 
-#: extensions/customizer-options.php:187
-msgid "Archive Titles"
+#: extensions/customizer-options.php:177
+msgid "Previous/next links on posts."
 msgstr ""
 
 #: extensions/customizer-options.php:188
+msgid "Archive"
+msgstr ""
+
+#: extensions/customizer-options.php:195
+msgid "Display Image and Gallery Formats on Posts Page"
+msgstr ""
+
+#: extensions/customizer-options.php:204
+msgid "Archive Titles"
+msgstr ""
+
+#: extensions/customizer-options.php:205
 msgid "Display archive titles and descriptions."
 msgstr ""
 
-#: extensions/customizer-options.php:199
+#: extensions/customizer-options.php:216
 msgid "Footer"
 msgstr ""
 
-#: extensions/customizer-options.php:206
+#: extensions/customizer-options.php:223
 msgid "Footer Text"
 msgstr ""
 
@@ -263,15 +275,15 @@ msgstr ""
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: extensions/template-helpers.php:148
+#: extensions/template-helpers.php:153
 msgid "Post navigation"
 msgstr ""
 
-#: extensions/template-helpers.php:156
+#: extensions/template-helpers.php:161
 msgid "&larr; Previous"
 msgstr ""
 
-#: extensions/template-helpers.php:157
+#: extensions/template-helpers.php:162
 msgid "Next &rarr;"
 msgstr ""
 
@@ -405,12 +417,12 @@ msgid_plural "%1$s Responses"
 msgstr[0] ""
 msgstr[1] ""
 
-#: extensions/template-helpers.php:153 extensions/template-helpers.php:160
+#: extensions/template-helpers.php:158 extensions/template-helpers.php:165
 msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: extensions/template-helpers.php:154 extensions/template-helpers.php:159
+#: extensions/template-helpers.php:159 extensions/template-helpers.php:164
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr ""
