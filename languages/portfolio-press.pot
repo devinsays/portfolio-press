@@ -72,11 +72,11 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content.php:45
+#: content.php:24
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content.php:46 page.php:22 single-portfolio.php:27 single.php:27
+#: content.php:25 page.php:22 single-portfolio.php:27 single.php:27
 #: templates/full-width-page.php:23
 msgid "Pages:"
 msgstr ""

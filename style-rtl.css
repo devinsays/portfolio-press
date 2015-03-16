@@ -1521,6 +1521,10 @@ object {
 	max-width: 11.11%;
 }
 
+.gallery-caption {
+	margin: 0 0 10px;
+}
+
 /* Clearings
 --------------------------------------------------------------*/
 .clear:before,
