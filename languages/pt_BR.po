@@ -1,4 +1,4 @@
-# Copyright (C) 2014 Devin Price
+# Copyright (C) 2015 Devin Price
 # This file is distributed under the GNU General Public License.
 # Translators:
 # FxB <fxb@wp-translations.org>, 2014
@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: portfolio-press\n"
 "Report-Msgid-Bugs-To: http://wptheming.com/\n"
 "POT-Creation-Date: 2014-10-14 17:55:35+00:00\n"
-"PO-Revision-Date: 2014-10-18 09:21+0000\n"
-"Last-Translator: FxB <fxb@wp-translations.org>\n"
+"PO-Revision-Date: 2015-03-11 19:28+0000\n"
+"Last-Translator: Devin Price <devin@wptheming.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/portfolio-press/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: grunt-wp-i18n 0.4.8\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-Country: United States\n"
@@ -46,28 +46,21 @@ msgstr "Artigos do Autor: <span class=\"vcard\">%s</span>"
 msgid "About %s"
 msgstr "Acerca de %s"
 
-#: comments.php:11
-msgid ""
-"This post is password protected. Enter the password to view any comments."
-msgstr "Este conteúdo está protegido por senha. Introduza a senha para ver os comentários."
-
-#: comments.php:22
-msgid "One Response to %2$s"
-msgid_plural "%1$s Responses to %2$s"
-msgstr[0] "Uma resposta a %2$s"
-msgstr[1] "%1$s respostas a %2$s"
-
-#: comments.php:29 comments.php:41
+#: comments.php:35 comments.php:54
 msgid "Comment navigation"
 msgstr "Navegação de comentários"
 
-#: comments.php:30 comments.php:42
+#: comments.php:36 comments.php:55
 msgid "&larr; Older Comments"
 msgstr "&larr; Comentários mais antigos"
 
-#: comments.php:31 comments.php:43
+#: comments.php:37 comments.php:56
 msgid "Newer Comments &rarr;"
 msgstr "Comentários mais recentes &rarr;"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Os comentários estão encerrados."
 
 #: content-none.php:11 search.php:32
 msgid "Nothing Found"
@@ -88,276 +81,137 @@ msgstr "Continuar a ler <span class=\"meta-nav\">&rarr;</span>"
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: extensions/class-tgm-plugin-activation.php:161
-msgid "Install Required Plugins"
-msgstr "Instalar plugins necessários"
+#: extensions/customizer-library/extensions/preview.php:36
+msgid "Upgrade to Portfolio+"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:162
-msgid "Install Plugins"
-msgstr "Instalar plugins"
+#: extensions/customizer-options.php:21
+msgid "Logo Image"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:163
-msgid "Installing Plugin: %s"
-msgstr "A instalar plugin: %s"
+#: extensions/customizer-options.php:28
+msgid "Logo"
+msgstr "Logo"
 
-#: extensions/class-tgm-plugin-activation.php:164
-msgid "Something went wrong."
-msgstr "Ocorreu um erro."
+#: extensions/customizer-options.php:37
+msgid "Favicon"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:165
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] "Este tema necessita do seguinte plugin: %1$s."
-msgstr[1] "Este tema necessita dos seguintes plugins: %1$s."
-
-#: extensions/class-tgm-plugin-activation.php:166
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] "Este tema recomenda o seguinte plugin: %1$s."
-msgstr[1] "Este tema recomenda os seguintes plugins: %1$s."
-
-#: extensions/class-tgm-plugin-activation.php:167
+#: extensions/customizer-options.php:41
 msgid ""
-"Sorry, but you do not have the correct permissions to install the %s plugin."
-" Contact the administrator of this site for help on getting the plugin "
-"installed."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins installed."
-msgstr[0] "Desculpe, não tem permissões para instalar o plugin %s. Contacte o administrador deste site para obter ajuda na instalação do plugin."
-msgstr[1] "Desculpe, não tem permissões para instalar os plugins %s. Contacte o administrador deste site para obter ajuda na instalação dos plugins."
+"File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
+"x 32px</strong>."
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:168
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] "O seguinte plugin necessário está desactivado: %1$s."
-msgstr[1] "Os seguintes plugins necessários estão desactivados: %1$s."
+#: extensions/customizer-options.php:47
+msgid "Apple Touch Icon"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:169
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] "O seguinte plugin recomendado está desactivado: %1$s."
-msgstr[1] "Os seguintes plugins recomendados estão desactivados: %1$s."
-
-#: extensions/class-tgm-plugin-activation.php:170
+#: extensions/customizer-options.php:51
 msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin activated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins activated."
-msgstr[0] "Desculpe, não tem permissões para activar o plugin %s. Contacte o administrador deste site para obter ajuda na activação do plugin."
-msgstr[1] "Desculpe, não tem permissões para activar os plugins %s. Contacte o administrador deste site para obter ajuda na activação dos plugins."
+"File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px"
+" x 152px</strong>."
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:171
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgstr[0] "O seguinte plugin dverá ser actualizado para a sua versão mais recente para garantir a compatibilidade com este tema: %1$s."
-msgstr[1] "Os seguintes plugins dverão ser actualizados para a sua versão mais recente para garantir a compatibilidade com este tema: %1$s."
+#: extensions/customizer-options.php:59
+msgid "Layout"
+msgstr "Layout"
 
-#: extensions/class-tgm-plugin-activation.php:172
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"updated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %s plugins."
-" Contact the administrator of this site for help on getting the plugins "
-"updated."
-msgstr[0] "Desculpe, não tem permissões para actualizar o plugin %s. Contacte o administrador deste site para obter ajuda na actualização do plugin."
-msgstr[1] "Desculpe, não tem permissões para actualizar os plugins %s. Contacte o administrador deste site para obter ajuda na actualização dos plugins."
+#: extensions/customizer-options.php:64
+msgid "Sidebar Right"
+msgstr "Barra lateral à direita"
 
-#: extensions/class-tgm-plugin-activation.php:173
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] "Iniciar instalação do plugin"
-msgstr[1] "Iniciar instalação dos plugins"
+#: extensions/customizer-options.php:65
+msgid "Sidebar Left"
+msgstr "Barra lateral à esquerda"
 
-#: extensions/class-tgm-plugin-activation.php:174
-msgid "Begin activating plugin"
-msgid_plural "Begin activating plugins"
-msgstr[0] "Iniciar activação do plugin"
-msgstr[1] "Iniciar activação dos plugins"
+#: extensions/customizer-options.php:66
+msgid "Single Column"
+msgstr "Coluna única"
 
-#: extensions/class-tgm-plugin-activation.php:175
-msgid "Return to Required Plugins Installer"
-msgstr "Voltar à instalação de plugins necessários"
+#: extensions/customizer-options.php:72
+msgid "Standard Layout"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:176
-msgid "Return to the dashboard"
-msgstr "Voltar ao painel"
+#: extensions/customizer-options.php:84
+msgid "Colors"
+msgstr "Cores"
 
-#: extensions/class-tgm-plugin-activation.php:177
-#: extensions/class-tgm-plugin-activation.php:1945
-msgid "Plugin activated successfully."
-msgstr "Plugin activado com sucesso."
+#: extensions/customizer-options.php:91
+msgid "Header Color"
+msgstr "Cor do cabeçalho"
 
-#: extensions/class-tgm-plugin-activation.php:178
-#: extensions/class-tgm-plugin-activation.php:1636
-msgid "The following plugin was activated successfully:"
-msgstr "O seguinte plugin foi activado com sucesso:"
+#: extensions/customizer-options.php:101
+msgid "Right of Logo"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:179
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Todos os plugins foram instalados e activados com sucesso. %1$s"
+#: extensions/customizer-options.php:102
+msgid "Underneath Logo"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:180
-msgid "Dismiss this notice"
-msgstr "Descartar esta notificação"
+#: extensions/customizer-options.php:108
+msgid "Menu Position"
+msgstr "Posição do menu"
 
-#: extensions/class-tgm-plugin-activation.php:534
-#: extensions/class-tgm-plugin-activation.php:2162
-msgid "Return to the Dashboard"
-msgstr "Voltar ao Painel"
+#: extensions/customizer-options.php:122
+msgid "General"
+msgstr "Geral"
 
-#: extensions/class-tgm-plugin-activation.php:1169
-msgid "Private Repository"
-msgstr "Repositório privado"
+#: extensions/customizer-options.php:132 extensions/customizer-options.php:154
+msgid "Display Featured Images"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:1172
-msgid "Pre-Packaged"
-msgstr "Pré-empacotado"
+#: extensions/customizer-options.php:133
+msgid "Display featured images on portfolio posts."
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:1177
-msgid "WordPress Repository"
-msgstr "Repositório do WordPress"
+#: extensions/customizer-options.php:142 extensions/customizer-options.php:164
+msgid "Full Width Archives"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:1180
-msgid "Required"
-msgstr "Necessário"
+#: extensions/customizer-options.php:143
+msgid "Display portfolio archives full width."
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:1180
-msgid "Recommended"
-msgstr "Recomendado"
+#: extensions/customizer-options.php:155
+msgid "Display featured images on posts."
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:1183
-msgid "Not Installed"
-msgstr "Não instalado"
+#: extensions/customizer-options.php:165
+msgid "Display image/gallery archives full width."
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:1185
-msgid "Installed But Not Activated"
-msgstr "Instalado mas não activado"
+#: extensions/customizer-options.php:176
+msgid "Display post navigation"
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:1290
-#: extensions/class-tgm-plugin-activation.php:1398
-msgid "Install"
-msgstr "Instalar"
+#: extensions/customizer-options.php:177
+msgid "Previous/next links on posts."
+msgstr ""
 
-#: extensions/class-tgm-plugin-activation.php:1312
-#: extensions/class-tgm-plugin-activation.php:1399
-msgid "Activate"
-msgstr "Activar"
+#: extensions/customizer-options.php:188
+msgid "Archive"
+msgstr "Arquivar"
 
-#: extensions/class-tgm-plugin-activation.php:1361
-msgid ""
-"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
-"Dashboard\">Return to the Dashboard</a>"
-msgstr "Nenhum plugin para instalar ou activar. <a href=\"%1$s\" title=\"Voltar ao Painel\">Voltar ao Painel</a>"
+#: extensions/customizer-options.php:195
+msgid "Display Image and Gallery Formats on Posts Page"
+msgstr "Mostrar formatos de Imagem e Galeria na página de artigos"
 
-#: extensions/class-tgm-plugin-activation.php:1377
-msgid "Plugin"
-msgstr "Plugin"
+#: extensions/customizer-options.php:204
+msgid "Archive Titles"
+msgstr "Títulos dos arquivos"
 
-#: extensions/class-tgm-plugin-activation.php:1378
-msgid "Source"
-msgstr "Fonte"
+#: extensions/customizer-options.php:205
+msgid "Display archive titles and descriptions."
+msgstr "Mostrar os títulos e descrições dos arquivos"
 
-#: extensions/class-tgm-plugin-activation.php:1379
-msgid "Type"
-msgstr "Tipo"
+#: extensions/customizer-options.php:216
+msgid "Footer"
+msgstr "Rodapé"
 
-#: extensions/class-tgm-plugin-activation.php:1380
-msgid "Status"
-msgstr "Estado"
-
-#: extensions/class-tgm-plugin-activation.php:1928
-msgid "Install package not available."
-msgstr "Pacote de instalação não disponível."
-
-#: extensions/class-tgm-plugin-activation.php:1929
-msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
-msgstr "A descarregar o pacote de instalação de <span class=\"code\">%s</span>&#8230;"
-
-#: extensions/class-tgm-plugin-activation.php:1930
-msgid "Unpacking the package&#8230;"
-msgstr "A descompactar o pacote&#8230;"
-
-#: extensions/class-tgm-plugin-activation.php:1931
-msgid "Installing the plugin&#8230;"
-msgstr "A instalar o plugin&#8230;"
-
-#: extensions/class-tgm-plugin-activation.php:1932
-msgid "Plugin install failed."
-msgstr "A instalação do plugin falhou."
-
-#: extensions/class-tgm-plugin-activation.php:1933
-msgid "Plugin installed successfully."
-msgstr "Plugin instalado com sucesso."
-
-#: extensions/class-tgm-plugin-activation.php:1944
-msgid "Plugin activation failed."
-msgstr "A activação do plugin falhou."
-
-#: extensions/class-tgm-plugin-activation.php:2058
-msgid ""
-"The installation and activation process is starting. This process may take a"
-" while on some hosts, so please be patient."
-msgstr "O processo de instalação e activação está a começar. Este processo pode demorar um pouco em alguns hosts, por favor, seja paciente."
-
-#: extensions/class-tgm-plugin-activation.php:2059
-msgid "%1$s installed and activated successfully."
-msgstr "%1$s instalado e activado com suecsso."
-
-#: extensions/class-tgm-plugin-activation.php:2059
-#: extensions/class-tgm-plugin-activation.php:2068
-msgid "Show Details"
-msgstr "Ver detalhes"
-
-#: extensions/class-tgm-plugin-activation.php:2059
-#: extensions/class-tgm-plugin-activation.php:2068
-msgid "Hide Details"
-msgstr "Esconder detalhes"
-
-#: extensions/class-tgm-plugin-activation.php:2060
-msgid "All installations and activations have been completed."
-msgstr "Todas as instalações e activações foram concluídas."
-
-#: extensions/class-tgm-plugin-activation.php:2061
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "A instalar e activar o plugin %1$s (%2$d/%3$d)"
-
-#: extensions/class-tgm-plugin-activation.php:2065
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
-msgstr "O processo de instalação está a começar. Este processo pode demorar um pouco em alguns hosts, por favor, seja paciente."
-
-#: extensions/class-tgm-plugin-activation.php:2066
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr "Ocorreu um erro durante a instalação %1$s: <strong>%2$s</strong>."
-
-#: extensions/class-tgm-plugin-activation.php:2067
-msgid "The installation of %1$s failed."
-msgstr "A instalação de %1$s falhou."
-
-#: extensions/class-tgm-plugin-activation.php:2068
-msgid "%1$s installed successfully."
-msgstr "%1$s instalado com sucesso."
-
-#: extensions/class-tgm-plugin-activation.php:2069
-msgid "All installations have been completed."
-msgstr "Todas as instalações foram concluídas."
-
-#: extensions/class-tgm-plugin-activation.php:2070
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "A instalar o plugin %1$s (%2$d/%3$d)"
+#: extensions/customizer-options.php:223
+msgid "Footer Text"
+msgstr "Texto do Rodapé"
 
 #: extensions/extras.php:31
 msgid "Page %s"
@@ -365,34 +219,15 @@ msgstr "Página %s"
 
 #: extensions/extras.php:57
 msgid ""
-"Portfolio Press recommends setting posts per page to 9. This can be changed "
-"under <a href=\"%3$s\">Settings > Reading Options</a>.<br><a "
-"href=\"%1$s\">Update It</a> | <a href=\"%2$s\">Dismiss Notice</a>."
-msgstr "O Portfolio Press recomenda definir 9 artigos por página. Isto pode ser modificado em <a href=\"%3$s\">Opções > Leitura</a>.<br><a href=\"%1$s\">Actualize</a> | <a href=\"%2$s\">Descartar notificação</a>."
+"Portfolio Press recommends setting <a href=\"%3$s\">posts per page</a> to 9 "
+"or 12. <a href=\"%1$s\">Update</a> | <a href=\"%2$s\">Hide Notice</a>"
+msgstr ""
 
-#: extensions/options-functions.php:131
-msgid "Layout"
-msgstr "Layout"
-
-#: extensions/options-functions.php:146
-msgid "Sidebar Right"
-msgstr "Barra lateral à direita"
-
-#: extensions/options-functions.php:147
-msgid "Sidebar Left"
-msgstr "Barra lateral à esquerda"
-
-#: extensions/options-functions.php:148
-msgid "Single Column"
-msgstr "Coluna única"
-
-#: extensions/options-functions.php:168
-msgid "Header Style"
-msgstr "Estilo do cabeçalho"
-
-#: extensions/options-functions.php:178
-msgid "Background Color"
-msgstr "Cor de fundo"
+#: extensions/extras.php:158
+msgid ""
+"Portfolio Press options are now in the <a href=\"%s\">customizer</a>. You "
+"can safely remove the Options Framework plugin from your site."
+msgstr ""
 
 #: extensions/template-helpers.php:14
 msgid ""
@@ -444,27 +279,27 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Artigos mais antigos"
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Artigos mais recentes <span class=\"meta-nav\">&rarr;</span>"
 
-#: extensions/template-helpers.php:148
+#: extensions/template-helpers.php:153
 msgid "Post navigation"
 msgstr "Navegação de artigos"
 
-#: extensions/template-helpers.php:156
+#: extensions/template-helpers.php:161
 msgid "&larr; Previous"
 msgstr "&larr; Anterior"
 
-#: extensions/template-helpers.php:157
+#: extensions/template-helpers.php:162
 msgid "Next &rarr;"
 msgstr "Seguinte &rarr;"
 
-#: footer.php:39
+#: footer.php:41
 msgid "Powered by"
 msgstr "Criado com"
 
-#: footer.php:39
+#: footer.php:41
 msgid "A Semantic Personal Publishing Platform"
 msgstr "Uma plataforma de publicação pessoal semântica"
 
-#: footer.php:39
+#: footer.php:41
 msgid "WordPress"
 msgstr "WordPress"
 
@@ -476,27 +311,27 @@ msgstr "Portfólio"
 msgid "Primary Menu"
 msgstr "Menu primário"
 
-#: functions.php:141
+#: functions.php:142
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: functions.php:150
+#: functions.php:151
 msgid "Footer 1"
 msgstr "Rodapé 1"
 
-#: functions.php:152 functions.php:162 functions.php:172 functions.php:182
+#: functions.php:153 functions.php:163 functions.php:173 functions.php:183
 msgid "Widgetized footer"
 msgstr "Rodapé com widgets"
 
-#: functions.php:160
+#: functions.php:161
 msgid "Footer 2"
 msgstr "Rodapé 2"
 
-#: functions.php:170
+#: functions.php:171
 msgid "Footer 3"
 msgstr "Rodapé 3"
 
-#: functions.php:180
+#: functions.php:181
 msgid "Footer 4"
 msgstr "Rodapé 4"
 
@@ -516,186 +351,6 @@ msgid ""
 "full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return "
 "to %7$s\" rel=\"gallery\">%8$s</a>."
 msgstr "<span class=\"meta-prep meta-prep-entry-date\">Publicado em </span> <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> em <a href=\"%3$s\" title=\"Ligação para imagem em tamanho completo\">%4$s &times; %5$s</a> em <a href=\"%6$s\" title=\"Voltar a %7$s\" rel=\"gallery\">%8$s</a>."
-
-#: options.php:38
-msgid "General Settings"
-msgstr "Opções gerais"
-
-#: options.php:43
-msgid "Custom Logo"
-msgstr "Logótipo personalizado"
-
-#: options.php:44
-msgid "Upload a logo for your theme if you would like to use one."
-msgstr "Se pretende usar um logótipo no seu tema, carregue uma imagem."
-
-#: options.php:49
-msgid "Custom Favicon"
-msgstr "Favicon personalizado"
-
-#: options.php:50
-msgid "Upload a 16px x 16px png/gif image to represent your website."
-msgstr "Carregue uma imagem PNG ou GIF de 16px 16px que represente o seu website."
-
-#: options.php:58
-msgid "Display Images on Portfolio / Image Posts"
-msgstr "Mostrar imagens em artigos de Portfólio / Imagem"
-
-#: options.php:59 options.php:69
-msgid "Display featured images automatically on posts."
-msgstr "Mostrar imagens de destaque automaticamente nos artigos."
-
-#: options.php:68
-msgid "Display Images Automatically on Image Post Formats"
-msgstr "Mostrar automaticamente imagens nos artigos do formato Imagem"
-
-#: options.php:80
-msgid "Display Portfolio / Image / Galleries Full Width"
-msgstr "Mostrar artigos de Portfólio / Imagem / Galerias em toda a largura"
-
-#: options.php:81
-msgid "Display all image based archives full width."
-msgstr "Mostrar todos os arquivos com base em imagens em toda a largura."
-
-#: options.php:90
-msgid "Display Image and Gallery Post Format Archives Full Width"
-msgstr "Mostrar arquivos de artigos do formato Imagem e Galeria em toda a largura"
-
-#: options.php:91
-msgid "Display all image/gallery archives full width."
-msgstr "Mostrar todos os arquivos de Imagem / Galeria em toda a largura."
-
-#: options.php:100
-msgid "Display Image and Gallery Formats on Posts Page"
-msgstr "Mostrar formatos de Imagem e Galeria na página de artigos"
-
-#: options.php:101
-msgid "Display all post formats on posts page."
-msgstr "Mostrar todos os formatos de artigos na página de artigos."
-
-#: options.php:108
-msgid "Archive Titles"
-msgstr "Títulos dos arquivos"
-
-#: options.php:109
-msgid "Display archive titles and descriptions."
-msgstr "Mostrar os títulos e descrições dos arquivos"
-
-#: options.php:116
-msgid "Posts Per Page"
-msgstr "Artigos por página"
-
-#: options.php:119
-msgid "Posts per page can be set in the <a href=\"%s\">reading options</a>."
-msgstr "A quantidade de artigos por página pode ser definida nas <a href=\"%s\">Opções de leitura</a>."
-
-#: options.php:129
-msgid "Style and Layout"
-msgstr "Estilo e Layout"
-
-#: options.php:133
-msgid "Main Layout"
-msgstr "Layout principal"
-
-#: options.php:134
-msgid "Select main content and sidebar alignment."
-msgstr "Seleccione o alinhamento do conteúdo principal e da barra lateral."
-
-#: options.php:145
-msgid "Header Color"
-msgstr "Cor do cabeçalho"
-
-#: options.php:152
-msgid "Menu Position"
-msgstr "Posição do menu"
-
-#: options.php:153
-msgid ""
-"Select where the main menu should go in the header.  Long menus should go "
-"underneath."
-msgstr "Seleccione a posição do menu principal no cabeçalho. Menus extensos deverão ficar por baixo."
-
-#: options.php:158
-msgid "Right of logo."
-msgstr "À direita do logótipo."
-
-#: options.php:159
-msgid "Underneath logo"
-msgstr "Por baixo do logótipo."
-
-#: options.php:166
-msgid "Footer Settings"
-msgstr "Opções do rodapé"
-
-#: options.php:171
-msgid "Custom Footer Text"
-msgstr "Texto personalizado para o rodapé"
-
-#: options.php:172
-msgid "Custom text that will appear in the footer of your theme."
-msgstr "Texto personalizado que aparecerá no rodapé do seu tema."
-
-#: options.php:205
-msgid "About Portfolio Press"
-msgstr "Sobre o Portfolio Press"
-
-#: options.php:207
-msgid "Theme Support"
-msgstr "Suporte do tema"
-
-#: options.php:211
-msgid "View the <a href=\"%s\">video and theme guide</a>."
-msgstr "Ver o <a href=\"%s\">vídeo guia do tema</a>."
-
-#: options.php:217
-msgid "Portfolio+"
-msgstr "Portfólio+"
-
-#: options.php:219
-msgid ""
-"If you like this theme, considering supporting development by purchasing <a "
-"href=\"%s\">Portfolio+</a>."
-msgstr "Se gostar deste tema, considere apoiar o seu desenvolvimento comprando o <a href=\"%s\">Portfolio+</a>."
-
-#: options.php:222
-msgid "Portfolio+ Features"
-msgstr "Recursos do Portfolio+"
-
-#: options.php:223
-msgid "Text Color Options"
-msgstr "Opções de cor do texto"
-
-#: options.php:224
-msgid "Background Style Options"
-msgstr "Opções de estilo do fundo"
-
-#: options.php:225
-msgid "Additional Page Templates"
-msgstr "Modelos de página adicionais"
-
-#: options.php:226
-msgid "Option to Hide Post Dates"
-msgstr "Opção para esconder a data dos artigos"
-
-#: options.php:227
-msgid "Full Width Option for Individual Posts"
-msgstr "Opção de toda a largura para artigos individuais"
-
-#: options.php:228
-msgid "Option to Hide Images on Individual Posts"
-msgstr "Opção para Esconder Imagens em Artigos Individuais"
-
-#: options.php:229
-msgid "Infinite Scroll"
-msgstr "Scroll infinito"
-
-#: options.php:230
-msgid "Priority Support"
-msgstr "Suporte prioritário"
-
-#: options.php:232
-msgid "<a href=\"%s\" class=\"button\">Read More</a>"
-msgstr "<a href=\"%s\" class=\"button\">Ler mais</a>"
 
 #: search.php:16
 msgid "Search Results for: %s"
@@ -726,14 +381,12 @@ msgstr "http://wptheming.com/portfolio-press/"
 #. Description of the plugin/theme
 msgid ""
 "Portfolio Press is a responsive theme for showcasing your photography, art, "
-"web sites, or other projects.  It also works nicely as a regular blog site."
-"  An options panel is included for uploading logos and and changing the "
-"layout.  There's also support for the image, gallery and quote post formats."
-"  Visit the <a href=\"http://themes.wptheming.com/portfolio/\">demo site</a>"
-" or watch the <a href=\"http://wptheming.com/portfolio-press\">video "
-"screencast</a> for set up instructions (http://wptheming.com/portfolio-"
-"press)."
-msgstr "Portfolio Press é um tema responsivo para demonstração das suas fotografias, arte, sites ou outros projectos. Também funciona bem como um blog normal. Inclui um painel de opções para carregar logótipos e para modificar o layout. Suporta também artigos do formato de Imagem, Galeria e Citação. Visite o <a href=\"http://themes.wptheming.com/portfolio/\">site de demonstração</a> ou veja o <a href=\"http://wptheming.com/portfolio-press\">vídeo demonstrativo</a> com as instruções de instalação (http://wptheming.com/portfolio-press)."
+"web sites, or other projects.  It also works nicely as a regular blog site. "
+"Configuration options are available in the customizer. Visit the <a "
+"href=\"http://themes.wptheming.com/portfolio/\">demo site</a> or watch the "
+"<a href=\"http://wptheming.com/portfolio-press\">video screencast</a> for "
+"set up instructions (http://wptheming.com/portfolio-press)."
+msgstr ""
 
 #. Author of the plugin/theme
 msgid "Devin Price"
@@ -759,12 +412,19 @@ msgstr "Portfólio em toda a largura"
 msgid "Image and Gallery Posts"
 msgstr "Artigos de Imagem e Galeria"
 
-#: extensions/template-helpers.php:153 extensions/template-helpers.php:160
+#: comments.php:28
+msgctxt "comments title"
+msgid "1 Response"
+msgid_plural "%1$s Responses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: extensions/template-helpers.php:158 extensions/template-helpers.php:165
 msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
 msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
 
-#: extensions/template-helpers.php:154 extensions/template-helpers.php:159
+#: extensions/template-helpers.php:159 extensions/template-helpers.php:164
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
 msgstr "<span class=\"meta-nav\">&larr;</span> %title"
