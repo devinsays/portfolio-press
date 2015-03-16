@@ -142,17 +142,3 @@ function portfoliopress_display_image() {
 	<?php  }
 	endif;
 }
-
-/**
- * Helper function to display a gallery.
- *
- * @param object $post
- */
-function portfoliopress_display_gallery( $post ) {
-	$pattern = get_shortcode_regex();
-	preg_match('/'.$pattern.'/s', $post->post_content, $matches);
-	if ( is_array( $matches ) && $matches[2] == 'gallery' ) {
-		$shortcode = $matches[0];
-		echo do_shortcode( $shortcode );
-	}
-}

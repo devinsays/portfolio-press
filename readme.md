@@ -34,6 +34,7 @@ Translations are managed on [Transifex](https://www.transifex.com/projects/p/por
 * Update comment design
 * Add option to display post navigation
 * Upgrade notice moved to customizer
+* Show the content on search and author archives
 
 Version 2.5.0
 ---
