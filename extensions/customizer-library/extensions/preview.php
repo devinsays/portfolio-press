@@ -25,7 +25,7 @@ function portfoliopress_upgrade_notice() {
 
 	$path = str_replace( WP_CONTENT_DIR, WP_CONTENT_URL, dirname( dirname( __FILE__ ) ) );
 
-	wp_enqueue_script( 'portfoliopress_upgrade', $path . '/js/upgrade.js', array( 'customize-preview' ), '1.0.0', true );
+	wp_enqueue_script( 'portfoliopress_upgrade', $path . '/js/upgrade.js', array(), '1.0.0', true );
 
 	// Localize the script
 	wp_localize_script(
