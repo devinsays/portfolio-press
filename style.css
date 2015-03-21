@@ -1480,8 +1480,9 @@ object {
 .gallery-item img {
 	display: block;
 	width: 100%;
-	padding-right: 5%;
+	padding-right: 2.5%;
 	padding-bottom: 5%;
+	padding-right: 2.5%;
 }
 
 .gallery-columns-1 .gallery-item img {
