@@ -42,7 +42,7 @@ get_header(); ?>
 		</div><!-- #primary -->
 
 <?php
-if ( !of_get_option( 'portfolio_sidebar' ) ) {
+if ( !portfoliopress_get_option( 'portfolio_sidebar' ) ) {
 	get_sidebar();
 } ?>
 <?php get_footer(); ?>

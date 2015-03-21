@@ -25,6 +25,7 @@ Development
 ---
 
 * Update: Allow galleries to fill content width
+* Fix: Error on portfolio archive page
 
 2.6.0
 ---
