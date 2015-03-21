@@ -4,16 +4,6 @@
  *
  * @package Portfolio Press
  */
-
-// Set thumbnail size
-$thumbnail = 'thumbnail';
-
-// Set fullwidth thumbnail size
-if (
-	portfoliopress_get_option( 'portfolio_sidebar' ) ||
-	portfoliopress_get_option( 'layout', 'layout-2cr' ) ==  'layout-1col' ) {
-	$thumbnail = 'thumbnail-fullwidth';
-}
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
@@ -26,12 +16,12 @@ if (
 			<div class="portfolio-format-meta icon-format-<?php echo $format; ?>"></div>
 			<?php endif; ?>
 			<?php if ( post_password_required() ) { ?>
-				<img src="<?php echo  esc_url( get_template_directory_uri() . '/images/protected-' . $thumbnail . '.gif' ); ?>">
+				<img src="<?php echo  esc_url( get_template_directory_uri() . '/images/protected-thumbnail.gif' ); ?>">
 			<?php }
 			elseif ( has_post_thumbnail() ) {
-				the_post_thumbnail( 'portfolio-' . $thumbnail );
+				the_post_thumbnail( 'portfolio-thumbnail' );
 			} else { ?>
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/images/placeholder-' . $thumbnail . '.gif' ); ?>">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/images/placeholder-thumbnail.gif' ); ?>">
 			<?php } ?>
 		</a>
 	</div><!-- .entry-content -->

@@ -311,27 +311,27 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:141
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:151
+#: functions.php:150
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:153 functions.php:163 functions.php:173 functions.php:183
+#: functions.php:152 functions.php:162 functions.php:172 functions.php:182
 msgid "Widgetized footer"
 msgstr ""
 
-#: functions.php:161
+#: functions.php:160
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:170
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:181
+#: functions.php:180
 msgid "Footer 4"
 msgstr ""
 

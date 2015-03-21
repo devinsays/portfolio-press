@@ -58,8 +58,7 @@ function portfoliopress_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Add images sizes for the various thumbnails
-	add_image_size( 'portfolio-thumbnail', 280, 225, true );
-	add_image_size( 'portfolio-thumbnail-fullwidth', 314, 224, true );
+	add_image_size( 'portfolio-thumbnail', 360, 260, true );
 	add_image_size( 'portfolio-large', 690, 9999, false );
 	add_image_size( 'portfolio-fullwidth', 980, 9999, false );
 

@@ -928,19 +928,8 @@ footer.entry-meta:after {
 /* Portfolio
 --------------------------------------------------------------*/
 .portfolio-view .hentry {
-	float: left;
 	overflow: hidden;
 	position: relative;
-	width: 32%;
-	margin: 0 2% 2% 0;
-}
-
-.portfolio-view #content .hentry {
-	margin-bottom: 2%;
-}
-
-.portfolio-view .hentry:nth-of-type(3n) {
-	margin-right: 0;
 }
 
 .portfolio-view .hentry h3 {
@@ -1014,45 +1003,30 @@ footer.entry-meta:after {
 	margin-bottom: 15px;
 }
 
-@media (max-width: 380px) {
+@media screen and (min-width: 410px) and (max-width: 679px) {
 	.portfolio-view .hentry {
-		float: none;
-		width: 100%;
-		width: auto;
-	}
-
-	.portfolio-view #content .hentry {
-		margin-bottom: 20px;
-	}
-
-	.portfolio-view .hentry:nth-of-type(1n) {
-		float: none;
-		margin-right: 0;
-	}
-}
-@media (max-width: 680px) {
-	.portfolio-view .hentry {
-		width: 46%;
-		min-width: 46%;
+		float: left;
+		width: 48%;
 		margin-right: 4%;
-		transition-duration: 0.6s;
-		transition-property: height, width;
-	}
-
-	.portfolio-view #content .hentry {
-		margin-bottom: 35px;
 	}
 
 	.portfolio-view .hentry:nth-of-type(odd) {
 		clear: both;
 	}
 
-	.portfolio-view .hentry:nth-of-type(3n) {
-		margin-right: 4%;
-	}
-
 	.portfolio-view .hentry:nth-of-type(2n) {
 		float: right;
+		margin-right: 0;
+	}
+}
+@media screen and (min-width: 680px) {
+	.portfolio-view #content .hentry {
+		float: left;
+		width: 32%;
+		margin: 0 2% 20px 0;
+	}
+
+	.portfolio-view #content .hentry:nth-of-type(3n) {
 		margin-right: 0;
 	}
 }
