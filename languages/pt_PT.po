@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: portfolio-press\n"
 "Report-Msgid-Bugs-To: http://wptheming.com/\n"
 "POT-Creation-Date: 2014-10-14 17:55:35+00:00\n"
-"PO-Revision-Date: 2015-03-16 20:55+0000\n"
-"Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
+"PO-Revision-Date: 2015-03-22 18:45+0000\n"
+"Last-Translator: Devin Price <devin@wptheming.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/portfolio-press/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,11 +34,11 @@ msgstr "Isto é um pouco embaraçoso, não é?"
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching, or one of the links below, can help."
-msgstr "Parece que não encontrámos o que estava à procura. Tente fazer uma pesquisa, ou ver as ligações abaixo."
+msgstr "Parece que nós não encontramos o que estava à procura. Talvez se efetuar uma procura, ou uma das hiperligações abaixo, poderá ajudar."
 
 #: 404.php:26
 msgid "Most Used Categories"
-msgstr "Categorias mais utilizadas"
+msgstr "Categorias Mais Utilizadas"
 
 #: author.php:15
 msgid "Author Archives: <span class=\"vcard\">%s</span>"
@@ -72,13 +72,13 @@ msgstr "Não foi encontrado nada"
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "Parece que não encontrámos o que estava à procura. Tente fazer uma pesquisa."
+msgstr "Parece que nós não encontramos o que estava à procura. Talvez se efetuar uma procura poderá ajudar."
 
-#: content.php:45
+#: content.php:24
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Continuar a ler <span class=\"meta-nav\">&rarr;</span>"
 
-#: content.php:46 page.php:22 single-portfolio.php:27 single.php:27
+#: content.php:25 page.php:22 single-portfolio.php:27 single.php:27
 #: templates/full-width-page.php:23
 msgid "Pages:"
 msgstr "Páginas:"
@@ -103,7 +103,7 @@ msgstr "Favicon"
 msgid ""
 "File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
 "x 32px</strong>."
-msgstr "O ficheiro tem que ser do formato <strong>.png</strong>. Dimensões ideais: <strong>32px x 32px</strong>."
+msgstr "O filcheiro deverá ter o formato <strong>.png</strong>. Dimensões ideais: <strong>32px x 32px</strong>."
 
 #: extensions/customizer-options.php:47
 msgid "Apple Touch Icon"
@@ -149,7 +149,7 @@ msgstr "À direita do logótipo"
 
 #: extensions/customizer-options.php:102
 msgid "Underneath Logo"
-msgstr "Por baixo do logótipo"
+msgstr "Debaixo do logótipo"
 
 #: extensions/customizer-options.php:108
 msgid "Menu Position"
@@ -159,61 +159,61 @@ msgstr "Posição do menu"
 msgid "General"
 msgstr "Geral"
 
-#: extensions/customizer-options.php:132 extensions/customizer-options.php:154
+#: extensions/customizer-options.php:132 extensions/customizer-options.php:144
 msgid "Display Featured Images"
-msgstr "Mostrar imagens de destaque"
+msgstr "Exibir Imagens em Destaque"
 
 #: extensions/customizer-options.php:133
 msgid "Display featured images on portfolio posts."
-msgstr "Mostrar imagens de destaque em artigos de portfólio."
+msgstr "Exibir as imagens em destaque nas publicações do portfólio."
 
-#: extensions/customizer-options.php:142 extensions/customizer-options.php:164
-msgid "Full Width Archives"
-msgstr "Arquivos em toda a largura"
-
-#: extensions/customizer-options.php:143
-msgid "Display portfolio archives full width."
-msgstr "Mostrar artigos de portfólio em toda a largura."
-
-#: extensions/customizer-options.php:155
+#: extensions/customizer-options.php:145
 msgid "Display featured images on posts."
-msgstr "Mostrar imagens de destaque em artigos."
+msgstr "Exibir as imagens em destaque nas publicações."
 
-#: extensions/customizer-options.php:165
-msgid "Display image/gallery archives full width."
-msgstr "Mostrar artigos de imagem/galeria em toda a largura."
-
-#: extensions/customizer-options.php:176
+#: extensions/customizer-options.php:156
 msgid "Display post navigation"
-msgstr "Mostrar navegação de artigos"
+msgstr "Exibir a navegação de publicação"
 
-#: extensions/customizer-options.php:177
+#: extensions/customizer-options.php:157
 msgid "Previous/next links on posts."
-msgstr "Ligações seguinte/anterior nos artigos."
+msgstr "Hiperligações Anterior/Seguinte nas publicações."
 
-#: extensions/customizer-options.php:188
+#: extensions/customizer-options.php:168
 msgid "Archive"
 msgstr "Arquivar"
 
-#: extensions/customizer-options.php:195
+#: extensions/customizer-options.php:178 extensions/customizer-options.php:190
+msgid "Full Width Archives"
+msgstr "Arquivos em toda a largura"
+
+#: extensions/customizer-options.php:179
+msgid "Display portfolio archives full width."
+msgstr "Exibir os artigos do portfólio em toda a largura."
+
+#: extensions/customizer-options.php:191
+msgid "Display image/gallery archives full width."
+msgstr "Exibir os arquivos de imagem/galeria em toda a largura."
+
+#: extensions/customizer-options.php:202
 msgid "Display Image and Gallery Formats on Posts Page"
-msgstr "Mostrar formatos de Imagem e Galeria na página de artigos"
+msgstr "Exibir o Formato de Imagem e Galeria na Página de Publicação"
 
-#: extensions/customizer-options.php:204
+#: extensions/customizer-options.php:211
 msgid "Archive Titles"
-msgstr "Títulos do arquivo"
+msgstr "Títulos do Arquivo"
 
-#: extensions/customizer-options.php:205
+#: extensions/customizer-options.php:212
 msgid "Display archive titles and descriptions."
-msgstr "Mostrar os títulos e descrições dos arquivos"
+msgstr "Exibe os títulos de arquivo e as descrições."
 
-#: extensions/customizer-options.php:216
+#: extensions/customizer-options.php:223
 msgid "Footer"
 msgstr "Rodapé"
 
-#: extensions/customizer-options.php:223
+#: extensions/customizer-options.php:230
 msgid "Footer Text"
-msgstr "Texto do rodapé"
+msgstr "Texto de Rodapé"
 
 #: extensions/extras.php:31
 msgid "Page %s"
@@ -225,7 +225,13 @@ msgid ""
 "or 12. <a href=\"%1$s\">Update</a> | <a href=\"%2$s\">Hide Notice</a>"
 msgstr "O Portfolio Press recomenda definir <a href=\"%3$s\">artigos por página</a> para 9 ou 12. <a href=\"%1$s\">Actualize</a> | <a href=\"%2$s\">Esconder notificação</a>"
 
-#: extensions/extras.php:158
+#: extensions/extras.php:81
+msgid ""
+"Portfolio Press recommends regenerating thumbnails. <a href=\"%1$s\" "
+"target=\"_blank\">Read More</a> | <a href=\"%2$s\">Hide Notice</a>"
+msgstr ""
+
+#: extensions/extras.php:187
 msgid ""
 "Portfolio Press options are now in the <a href=\"%s\">customizer</a>. You "
 "can safely remove the Options Framework plugin from your site."
@@ -258,7 +264,7 @@ msgstr "Deixe um comentário"
 
 #: extensions/template-helpers.php:78
 msgid "1 Comment"
-msgstr "1 Comentário"
+msgstr "1 comentário"
 
 #: extensions/template-helpers.php:78
 msgid "% Comments"
@@ -313,27 +319,27 @@ msgstr "Portfólio"
 msgid "Primary Menu"
 msgstr "Menu primário"
 
-#: functions.php:142
+#: functions.php:141
 msgid "Sidebar"
 msgstr "Barra lateral"
 
-#: functions.php:151
+#: functions.php:150
 msgid "Footer 1"
 msgstr "Rodapé 1"
 
-#: functions.php:153 functions.php:163 functions.php:173 functions.php:183
+#: functions.php:152 functions.php:162 functions.php:172 functions.php:182
 msgid "Widgetized footer"
 msgstr "Rodapé com widgets"
 
-#: functions.php:161
+#: functions.php:160
 msgid "Footer 2"
 msgstr "Rodapé 2"
 
-#: functions.php:171
+#: functions.php:170
 msgid "Footer 3"
 msgstr "Rodapé 3"
 
-#: functions.php:181
+#: functions.php:180
 msgid "Footer 4"
 msgstr "Rodapé 4"
 
