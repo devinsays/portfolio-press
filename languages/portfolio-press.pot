@@ -223,7 +223,13 @@ msgid ""
 "or 12. <a href=\"%1$s\">Update</a> | <a href=\"%2$s\">Hide Notice</a>"
 msgstr ""
 
-#: extensions/extras.php:158
+#: extensions/extras.php:81
+msgid ""
+"Portfolio Press recommends regenerating thumbnails. <a href=\"%1$s\" "
+"target=\"_blank\">Read More</a> | <a href=\"%2$s\">Hide Notice</a>"
+msgstr ""
+
+#: extensions/extras.php:187
 msgid ""
 "Portfolio Press options are now in the <a href=\"%s\">customizer</a>. You "
 "can safely remove the Options Framework plugin from your site."

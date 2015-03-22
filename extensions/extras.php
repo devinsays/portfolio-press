@@ -55,14 +55,38 @@ function portfoliopress_posts_per_page_notice() {
 	if ( current_user_can( 'manage_options' ) ) {
 		echo '<div class="updated"><p>';
 			printf( __(
-				'Portfolio Press recommends setting <a href="%3$s">posts per page</a> to 9 or 12. <a href="%1$s">Update</a> | <a href="%2$s">Hide Notice</a>' ),
+				'Portfolio Press recommends setting <a href="%3$s">posts per page</a> to 9 or 12. <a href="%1$s">Update</a> | <a href="%2$s">Hide Notice</a>', 'portfolio-press' ),
 				'?portfolio_update_posts_per_page=1',
 				'?portfolio_post_per_page_ignore=1',
-				admin_url( 'options-reading.php', false ), 'portfolio-press' );
+				admin_url( 'options-reading.php', false )
+			);
 		echo '</p></div>';
 	}
 }
 add_action( 'admin_notices', 'portfoliopress_posts_per_page_notice', 120 );
+
+/**
+ * Display notice to regenerate thumbnails
+ */
+function portfoliopress_thumbnail_notice() {
+
+	$options = get_option( 'portfoliopress', false );
+
+	if ( isset( $options['regnerate_thumbnails'] ) && $options['regnerate_thumbnails'] == 1 ) {
+		return;
+	}
+
+	if ( current_user_can( 'manage_options' ) ) {
+		echo '<div class="updated"><p>';
+			printf( __(
+				'Portfolio Press recommends regenerating thumbnails. <a href="%1$s" target="_blank">Read More</a> | <a href="%2$s">Hide Notice</a>', 'portfolio-press' ),
+				esc_url( 'https://wordpress.org/plugins/regenerate-thumbnails/' ),
+				'?portfolio_thumbnails_ignore=1'
+				);
+		echo '</p></div>';
+	}
+}
+add_action( 'admin_notices', 'portfoliopress_thumbnail_notice', 200 );
 
 /**
  * Hides notices if user chooses to dismiss it
@@ -78,6 +102,11 @@ function portfoliopress_notice_ignores() {
 
 	if ( isset( $_GET['portfolio_update_posts_per_page'] ) && '1' == $_GET['portfolio_update_posts_per_page'] ) {
 		update_option( 'posts_per_page', 9 );
+	}
+
+	if ( isset( $_GET['portfolio_thumbnails_ignore'] ) && '1' == $_GET['portfolio_thumbnails_ignore'] ) {
+		$options['regnerate_thumbnails'] = 1;
+		update_option( 'portfoliopress', $options );
 	}
 
 }

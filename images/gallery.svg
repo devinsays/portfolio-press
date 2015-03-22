@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="360px" height="260px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10">
-<g>
-	<rect x="1" y="16" width="52" height="40"/>
-</g>
-<polyline points="10,14 10,8 63,8 63,48 55,48 "/>
-<polyline points="1,46 15,32 29,48 39,42 53,54 "/>
-<circle cx="40" cy="29" r="5"/>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="360px" height="260px" viewBox="0 0 360 260" enable-background="new 0 0 360 260" xml:space="preserve">
+<path fill="#FFFFFF" d="M247.812,98.202h-18.881l-23.409-28.32l-40.405,28.32h-33.982c-6.546,0-12.209,2.453-16.994,7.363
+	c-4.783,4.908-7.174,10.636-7.174,17.182v30.208l-20.39-55.89c-1.26-4.781,0.126-8.055,4.153-9.818l128.384-46.82
+	c4.532-1.256,7.678,0.253,9.441,4.528L247.812,98.202z M267.826,115.193c2.015,0,3.711,0.754,5.098,2.269
+	c1.385,1.511,2.076,3.272,2.076,5.285v89.117c0,2.011-0.691,3.768-2.076,5.282c-1.385,1.51-3.083,2.265-5.098,2.265H131.135
+	c-2.014,0-3.713-0.755-5.1-2.265c-1.383-1.515-2.076-3.271-2.076-5.282v-89.117c0-2.013,0.693-3.774,2.076-5.285
+	c1.387-1.515,3.086-2.269,5.1-2.269H267.826z M257.254,200.53v-30.584l-13.596-30.209l-31.341,11.328l-24.544,24.926l-26.055-32.1
+	l-17.369,40.401v16.237H257.254z"/>
 </svg>
