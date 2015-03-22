@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: Portfolio Press 2.6.0\n"
+"Project-Id-Version: Portfolio Press 2.7.0\n"
 "Report-Msgid-Bugs-To: http://wptheming.com/\n"
 "POT-Creation-Date: 2014-10-14 17:55:35+00:00\n"
 "MIME-Version: 1.0\n"
