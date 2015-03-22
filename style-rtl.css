@@ -950,21 +950,14 @@ footer.entry-meta:after {
 	padding: 0 5%;
 }
 
+.portfolio-view .hentry:hover h3 {
+	display: block;
+	z-index: 1;
+}
+
 .portfolio-view .hentry a {
 	color: #fff;
 	text-decoration: none;
-}
-
-.portfolio-view .portfolio-format-meta {
-	display: none;
-	position: absolute;
-	left: 10px;
-	bottom: 10px;
-	width: 18px;
-	height: 18px;
-	color: #fff;
-	font-size: 18px;
-	text-align: center;
 }
 
 .portfolio-view .hentry img {
@@ -978,20 +971,46 @@ footer.entry-meta:after {
 	-webkit-backface-visibility: hidden;
 }
 
-.portfolio-view .hentry:hover {
-	background: #000;
+.portfolio-view .fallback-thumbnail {
+	background: #d9d9d9;
 }
 
-.portfolio-view .hentry:hover h3,
-.portfolio-view .hentry:hover .portfolio-format-meta {
-	display: block;
-	z-index: 1;
+.portfolio-view .hentry:hover {
+	background: #000;
 }
 
 .portfolio-view .hentry .thumb:hover img {
 	opacity: 0.3;
 }
 
+@media screen and (min-width: 420px) and (max-width: 679px) {
+	.portfolio-view #content .hentry {
+		float: right;
+		width: 49%;
+		margin: 0 0 2% 2%;
+	}
+
+	.portfolio-view .hentry:nth-of-type(odd) {
+		clear: both;
+	}
+
+	.portfolio-view #content .hentry:nth-of-type(2n) {
+		float: left;
+		margin-left: 0;
+	}
+}
+@media screen and (min-width: 680px) {
+	.portfolio-view #content .hentry {
+		float: right;
+		width: 32%;
+		margin: 0 0 2% 2%;
+	}
+
+	.portfolio-view #content .hentry:nth-of-type(3n) {
+		margin-left: 0;
+	}
+}
+/* Template */
 .full-width-portfolio #content,
 .full-width #content {
 	float: none;
@@ -1003,33 +1022,6 @@ footer.entry-meta:after {
 	margin-bottom: 15px;
 }
 
-@media screen and (min-width: 410px) and (max-width: 679px) {
-	.portfolio-view .hentry {
-		float: right;
-		width: 48%;
-		margin-left: 4%;
-	}
-
-	.portfolio-view .hentry:nth-of-type(odd) {
-		clear: both;
-	}
-
-	.portfolio-view .hentry:nth-of-type(2n) {
-		float: left;
-		margin-left: 0;
-	}
-}
-@media screen and (min-width: 680px) {
-	.portfolio-view #content .hentry {
-		float: right;
-		width: 32%;
-		margin: 0 0 20px 2%;
-	}
-
-	.portfolio-view #content .hentry:nth-of-type(3n) {
-		margin-left: 0;
-	}
-}
 /* Widgets
 --------------------------------------------------------------*/
 .widget-container {

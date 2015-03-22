@@ -25,6 +25,8 @@ Development
 ---
 
 * Update: Allow galleries to fill content width
+* Update: Use SVG for fallback images
+* Update: Change image sizes for better rending on mobile
 * Fix: Error on portfolio archive page
 
 2.6.0

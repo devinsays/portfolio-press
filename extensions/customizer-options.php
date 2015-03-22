@@ -136,16 +136,6 @@ function portfoliopress_options() {
 			'default' => '1',
 		);
 
-		$options['portfoliopress[portfolio_archives_fullwidth]'] = array(
-			'id' => 'portfoliopress[portfolio_sidebar]',
-			'option_type' => 'option',
-			'label' => __( 'Full Width Archives', 'portfolio-press' ),
-			'description' => __( 'Display portfolio archives full width.', 'portfolio-press' ),
-			'section' => $section,
-			'type'    => 'checkbox',
-			'default' => '1',
-		);
-
 	else :
 
 		$options['portfoliopress[post_featured_images]'] = array(
@@ -153,16 +143,6 @@ function portfoliopress_options() {
 			'option_type' => 'option',
 			'label' => __( 'Display Featured Images', 'portfolio-press' ),
 			'description' => __( 'Display featured images on posts.', 'portfolio-press' ),
-			'section' => $section,
-			'type'    => 'checkbox',
-			'default' => '1',
-		);
-
-		$options['portfoliopress[post_archives_fullwidth]'] = array(
-			'id' => 'portfoliopress[portfolio_sidebar]',
-			'option_type' => 'option',
-			'label' => __( 'Full Width Archives', 'portfolio-press' ),
-			'description' => __( 'Display image/gallery archives full width.', 'portfolio-press' ),
 			'section' => $section,
 			'type'    => 'checkbox',
 			'default' => '1',
@@ -188,6 +168,33 @@ function portfoliopress_options() {
 		'title' => __( 'Archive', 'portfolio-press' ),
 		'priority' => '90'
 	);
+
+		// Portfolio Post Type Plugin
+	if ( class_exists( 'Portfolio_Post_Type' ) ) :
+
+		$options['portfoliopress[portfolio_archives_fullwidth]'] = array(
+			'id' => 'portfoliopress[portfolio_sidebar]',
+			'option_type' => 'option',
+			'label' => __( 'Full Width Archives', 'portfolio-press' ),
+			'description' => __( 'Display portfolio archives full width.', 'portfolio-press' ),
+			'section' => $section,
+			'type'    => 'checkbox',
+			'default' => '1',
+		);
+
+	else :
+
+		$options['portfoliopress[post_archives_fullwidth]'] = array(
+			'id' => 'portfoliopress[portfolio_sidebar]',
+			'option_type' => 'option',
+			'label' => __( 'Full Width Archives', 'portfolio-press' ),
+			'description' => __( 'Display image/gallery archives full width.', 'portfolio-press' ),
+			'section' => $section,
+			'type'    => 'checkbox',
+			'default' => '1',
+		);
+
+	endif;
 
 	$options['portfoliopress[display_image_gallery_post_formats]'] = array(
 		'id' => 'portfoliopress[display_image_gallery_post_formats]',

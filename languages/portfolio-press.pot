@@ -157,7 +157,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: extensions/customizer-options.php:132 extensions/customizer-options.php:154
+#: extensions/customizer-options.php:132 extensions/customizer-options.php:144
 msgid "Display Featured Images"
 msgstr ""
 
@@ -165,51 +165,51 @@ msgstr ""
 msgid "Display featured images on portfolio posts."
 msgstr ""
 
-#: extensions/customizer-options.php:142 extensions/customizer-options.php:164
-msgid "Full Width Archives"
-msgstr ""
-
-#: extensions/customizer-options.php:143
-msgid "Display portfolio archives full width."
-msgstr ""
-
-#: extensions/customizer-options.php:155
+#: extensions/customizer-options.php:145
 msgid "Display featured images on posts."
 msgstr ""
 
-#: extensions/customizer-options.php:165
-msgid "Display image/gallery archives full width."
-msgstr ""
-
-#: extensions/customizer-options.php:176
+#: extensions/customizer-options.php:156
 msgid "Display post navigation"
 msgstr ""
 
-#: extensions/customizer-options.php:177
+#: extensions/customizer-options.php:157
 msgid "Previous/next links on posts."
 msgstr ""
 
-#: extensions/customizer-options.php:188
+#: extensions/customizer-options.php:168
 msgid "Archive"
 msgstr ""
 
-#: extensions/customizer-options.php:195
+#: extensions/customizer-options.php:178 extensions/customizer-options.php:190
+msgid "Full Width Archives"
+msgstr ""
+
+#: extensions/customizer-options.php:179
+msgid "Display portfolio archives full width."
+msgstr ""
+
+#: extensions/customizer-options.php:191
+msgid "Display image/gallery archives full width."
+msgstr ""
+
+#: extensions/customizer-options.php:202
 msgid "Display Image and Gallery Formats on Posts Page"
 msgstr ""
 
-#: extensions/customizer-options.php:204
+#: extensions/customizer-options.php:211
 msgid "Archive Titles"
 msgstr ""
 
-#: extensions/customizer-options.php:205
+#: extensions/customizer-options.php:212
 msgid "Display archive titles and descriptions."
 msgstr ""
 
-#: extensions/customizer-options.php:216
+#: extensions/customizer-options.php:223
 msgid "Footer"
 msgstr ""
 
-#: extensions/customizer-options.php:223
+#: extensions/customizer-options.php:230
 msgid "Footer Text"
 msgstr ""
 
