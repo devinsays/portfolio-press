@@ -9,22 +9,23 @@ msgstr ""
 "Project-Id-Version: portfolio-press\n"
 "Report-Msgid-Bugs-To: http://wptheming.com/\n"
 "POT-Creation-Date: 2014-10-14 17:55:35+00:00\n"
-"PO-Revision-Date: 2015-03-22 18:45+0000\n"
-"Last-Translator: Devin Price <devin@wptheming.com>\n"
-"Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/portfolio-press/language/pt_PT/)\n"
+"PO-Revision-Date: 2015-03-23 10:06-0000\n"
+"Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
+"Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/"
+"portfolio-press/language/pt_PT/)\n"
+"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-Basepath: ../\n"
-"X-Poedit-Bookmarks: \n"
-"X-Poedit-Country: United States\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:15
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
@@ -34,11 +35,13 @@ msgstr "Isto é um pouco embaraçoso, não é?"
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching, or one of the links below, can help."
-msgstr "Parece que nós não encontramos o que estava à procura. Talvez se efetuar uma procura, ou uma das hiperligações abaixo, poderá ajudar."
+msgstr ""
+"Parece que não encontrámos o que estava à procura. Tente fazer uma pesquisa, "
+"ou ver as ligações abaixo."
 
 #: 404.php:26
 msgid "Most Used Categories"
-msgstr "Categorias Mais Utilizadas"
+msgstr "Categorias mais utilizadas"
 
 #: author.php:15
 msgid "Author Archives: <span class=\"vcard\">%s</span>"
@@ -72,7 +75,8 @@ msgstr "Não foi encontrado nada"
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "Parece que nós não encontramos o que estava à procura. Talvez se efetuar uma procura poderá ajudar."
+msgstr ""
+"Parece que não encontrámos o que estava à procura. Tente fazer uma pesquisa."
 
 #: content.php:24
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
@@ -103,7 +107,9 @@ msgstr "Favicon"
 msgid ""
 "File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
 "x 32px</strong>."
-msgstr "O filcheiro deverá ter o formato <strong>.png</strong>. Dimensões ideais: <strong>32px x 32px</strong>."
+msgstr ""
+"O ficheiro tem que ser do formato <strong>.png</strong>. Dimensões ideais: "
+"<strong>32px x 32px</strong>."
 
 #: extensions/customizer-options.php:47
 msgid "Apple Touch Icon"
@@ -111,9 +117,11 @@ msgstr "Ícone Apple Touch"
 
 #: extensions/customizer-options.php:51
 msgid ""
-"File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px"
-" x 152px</strong>."
-msgstr "O ficheiro tem que ser do formato <strong>.png</strong>. Dimensões ideais: <strong>152px x 152px</strong>."
+"File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px "
+"x 152px</strong>."
+msgstr ""
+"O ficheiro tem que ser do formato <strong>.png</strong>. Dimensões ideais: "
+"<strong>152px x 152px</strong>."
 
 #: extensions/customizer-options.php:59
 msgid "Layout"
@@ -133,7 +141,7 @@ msgstr "Uma coluna"
 
 #: extensions/customizer-options.php:72
 msgid "Standard Layout"
-msgstr "Layout padrão"
+msgstr "Layout por omissão"
 
 #: extensions/customizer-options.php:84
 msgid "Colors"
@@ -161,23 +169,23 @@ msgstr "Geral"
 
 #: extensions/customizer-options.php:132 extensions/customizer-options.php:144
 msgid "Display Featured Images"
-msgstr "Exibir Imagens em Destaque"
+msgstr "Mostrar imagens de destaque"
 
 #: extensions/customizer-options.php:133
 msgid "Display featured images on portfolio posts."
-msgstr "Exibir as imagens em destaque nas publicações do portfólio."
+msgstr "Mostrar imagens de destaque em artigos de portfólio."
 
 #: extensions/customizer-options.php:145
 msgid "Display featured images on posts."
-msgstr "Exibir as imagens em destaque nas publicações."
+msgstr "Mostrar imagens de destaque em artigos."
 
 #: extensions/customizer-options.php:156
 msgid "Display post navigation"
-msgstr "Exibir a navegação de publicação"
+msgstr "Mostrar navegação de artigos"
 
 #: extensions/customizer-options.php:157
 msgid "Previous/next links on posts."
-msgstr "Hiperligações Anterior/Seguinte nas publicações."
+msgstr "Ligações Seguinte/Anterior nos artigos."
 
 #: extensions/customizer-options.php:168
 msgid "Archive"
@@ -189,23 +197,23 @@ msgstr "Arquivos em toda a largura"
 
 #: extensions/customizer-options.php:179
 msgid "Display portfolio archives full width."
-msgstr "Exibir os artigos do portfólio em toda a largura."
+msgstr "Mostrar artigos de portfólio em toda a largura."
 
 #: extensions/customizer-options.php:191
 msgid "Display image/gallery archives full width."
-msgstr "Exibir os arquivos de imagem/galeria em toda a largura."
+msgstr "Mostrar artigos de imagem/galeria em toda a largura."
 
 #: extensions/customizer-options.php:202
 msgid "Display Image and Gallery Formats on Posts Page"
-msgstr "Exibir o Formato de Imagem e Galeria na Página de Publicação"
+msgstr "Mostrar formatos de Imagem e Galeria na página de artigos"
 
 #: extensions/customizer-options.php:211
 msgid "Archive Titles"
-msgstr "Títulos do Arquivo"
+msgstr "Títulos do arquivo"
 
 #: extensions/customizer-options.php:212
 msgid "Display archive titles and descriptions."
-msgstr "Exibe os títulos de arquivo e as descrições."
+msgstr "Mostrar os títulos e descrições dos arquivos"
 
 #: extensions/customizer-options.php:223
 msgid "Footer"
@@ -213,7 +221,7 @@ msgstr "Rodapé"
 
 #: extensions/customizer-options.php:230
 msgid "Footer Text"
-msgstr "Texto de Rodapé"
+msgstr "Texto do rodapé"
 
 #: extensions/extras.php:31
 msgid "Page %s"
@@ -223,28 +231,38 @@ msgstr "Página %s"
 msgid ""
 "Portfolio Press recommends setting <a href=\"%3$s\">posts per page</a> to 9 "
 "or 12. <a href=\"%1$s\">Update</a> | <a href=\"%2$s\">Hide Notice</a>"
-msgstr "O Portfolio Press recomenda definir <a href=\"%3$s\">artigos por página</a> para 9 ou 12. <a href=\"%1$s\">Actualize</a> | <a href=\"%2$s\">Esconder notificação</a>"
+msgstr ""
+"O Portfolio Press recomenda definir <a href=\"%3$s\">artigos por página</a> "
+"para 9 ou 12. <a href=\"%1$s\">Actualize</a> | <a href=\"%2$s\">Esconder "
+"notificação</a>"
 
 #: extensions/extras.php:81
 msgid ""
-"Portfolio Press recommends regenerating thumbnails. <a href=\"%1$s\" "
-"target=\"_blank\">Read More</a> | <a href=\"%2$s\">Hide Notice</a>"
+"Portfolio Press recommends regenerating thumbnails. <a href=\"%1$s\" target="
+"\"_blank\">Read More</a> | <a href=\"%2$s\">Hide Notice</a>"
 msgstr ""
+"O Portfolio Press recomenda regenerar as miniaturas. <a href=\"%1$s\" target="
+"\"_blank\">Ler mais</a> | <a href=\"%2$s\">Esconder notificação</a>"
 
 #: extensions/extras.php:187
 msgid ""
 "Portfolio Press options are now in the <a href=\"%s\">customizer</a>. You "
 "can safely remove the Options Framework plugin from your site."
-msgstr "Opções do Porfolio Press estão agora em <a href=\"%s\">personalizar</a>. Pode remover com segurança o plugin Options Framework do seu site."
+msgstr ""
+"Opções do Porfolio Press estão agora em <a href=\"%s\">personalizar</a>. "
+"Pode remover com segurança o plugin Options Framework do seu site."
 
 #: extensions/template-helpers.php:14
 msgid ""
 "<span class=\"meta-prep meta-prep-author\">Posted </span><a href=\"%1$s\" "
-"rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" "
-"pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span "
-"class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
-"title=\"%5$s\">%6$s</a></span>"
-msgstr "<span class=\"meta-prep meta-prep-author\">Publicado em </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a>, <span class=\"meta-sep\"> por </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+"rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</"
+"time></a> <span class=\"meta-sep\"> by </span> <span class=\"author vcard"
+"\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+msgstr ""
+"<span class=\"meta-prep meta-prep-author\">Publicado em </span><a href=\"%1$s"
+"\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>"
+"%3$s</time></a>, <span class=\"meta-sep\"> por </span> <span class=\"author "
+"vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
 
 #: extensions/template-helpers.php:19
 msgid "View all posts by %s"
@@ -353,12 +371,17 @@ msgstr "Saltar para o conteúdo"
 
 #: image.php:46
 msgid ""
-"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class"
-"=\"entry-date\"><time class=\"entry-date\" "
-"datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to "
-"full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return "
-"to %7$s\" rel=\"gallery\">%8$s</a>."
-msgstr "<span class=\"meta-prep meta-prep-entry-date\">Publicado em </span> <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> em <a href=\"%3$s\" title=\"Ligação para imagem em tamanho completo\">%4$s &times; %5$s</a> em <a href=\"%6$s\" title=\"Voltar a %7$s\" rel=\"gallery\">%8$s</a>."
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
+"\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></"
+"span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; "
+"%5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</"
+"a>."
+msgstr ""
+"<span class=\"meta-prep meta-prep-entry-date\">Publicado em </span> <span "
+"class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</"
+"time></span> em <a href=\"%3$s\" title=\"Ligação para imagem em tamanho "
+"completo\">%4$s &times; %5$s</a> em <a href=\"%6$s\" title=\"Voltar a %7$s\" "
+"rel=\"gallery\">%8$s</a>."
 
 #: search.php:16
 msgid "Search Results for: %s"
@@ -368,7 +391,9 @@ msgstr "Resultados de pesquisa por '%s'"
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "Não foi encontrado nenhum resultado correspondente ao seu critério de pesquisa. Por favor tente com outras palavras-chave."
+msgstr ""
+"Não foi encontrado nenhum resultado correspondente ao seu critério de "
+"pesquisa. Por favor tente com outras palavras-chave."
 
 #: sidebar.php:18
 msgid "Archives"
@@ -390,11 +415,18 @@ msgstr "http://wptheming.com/portfolio-press/"
 msgid ""
 "Portfolio Press is a responsive theme for showcasing your photography, art, "
 "web sites, or other projects.  It also works nicely as a regular blog site. "
-"Configuration options are available in the customizer. Visit the <a "
-"href=\"http://themes.wptheming.com/portfolio/\">demo site</a> or watch the "
-"<a href=\"http://wptheming.com/portfolio-press\">video screencast</a> for "
-"set up instructions (http://wptheming.com/portfolio-press)."
-msgstr "Portfolio Press é um tema responsivo para demonstração das suas fotografias, arte, sites ou outros projectos. Também funciona bem como um blog normal. Estão disponíveis opções de configuração na página de personalizar. Visite o <a href=\"http://themes.wptheming.com/portfolio/\">site de demonstração</a> ou veja o <a href=\"http://wptheming.com/portfolio-press\">vídeo demonstrativo</a> com as instruções de instalação (http://wptheming.com/portfolio-press)."
+"Configuration options are available in the customizer. Visit the <a href="
+"\"http://themes.wptheming.com/portfolio/\">demo site</a> or watch the <a "
+"href=\"http://wptheming.com/portfolio-press\">video screencast</a> for set "
+"up instructions (http://wptheming.com/portfolio-press)."
+msgstr ""
+"Portfolio Press é um tema responsivo para demonstração das suas fotografias, "
+"arte, sites ou outros projectos. Também funciona bem como um blog normal. "
+"Estão disponíveis opções de configuração na página de personalizar. Visite o "
+"<a href=\"http://themes.wptheming.com/portfolio/\">site de demonstração</a> "
+"ou veja o <a href=\"http://wptheming.com/portfolio-press\">vídeo "
+"demonstrativo</a> com as instruções de instalação (http://wptheming.com/"
+"portfolio-press)."
 
 #. Author of the plugin/theme
 msgid "Devin Price"
