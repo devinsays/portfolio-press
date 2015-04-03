@@ -33,7 +33,7 @@ function portfoliopress_upgrade_notice() {
 		'portfoliopressL10n',
 		array(
 			'plusURL'	=> esc_url( 'http://wptheming.com/portfolio-plus' ),
-			'plusLabel'	=> __( 'Upgrade to Portfolio+', 'portfoliopress' ),
+			'plusLabel'	=> __( 'Upgrade to Portfolio+', 'portfolio-press' ),
 		)
 	);
 
