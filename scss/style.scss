@@ -40,7 +40,11 @@ body {
 	font-size: 14px;
 	line-height: 1.5;
 	min-height: 100%;
-	display: flex;
+	display: -webkit-flex;
+ 	display: -ms-flexbox;
+ 	display: flex;
+ 	-webkit-flex-direction: column;
+ 	-ms-flex-direction: column;
 	flex-direction: column;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -94,9 +98,9 @@ a:active {
 -------------------------------------------------------------- */
 
 #page {
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
 }
 #main {
 	padding: 40px 0 20px 0;

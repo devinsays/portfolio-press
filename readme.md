@@ -21,6 +21,11 @@ See how you can get involved at [http://wp-translations.org/](http://wp-translat
 
 Translations are managed on [Transifex](https://www.transifex.com/projects/p/portfolio-press/), but GitHub pull requests are also accepted.
 
+Development
+---
+
+* Fix: IE11 Footer Display
+
 2.7.0
 ---
 
