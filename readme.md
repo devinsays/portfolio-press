@@ -25,6 +25,7 @@ Translations are managed on [Transifex](https://www.transifex.com/projects/p/por
 ---
 
 * Fix: IE11 Footer Display
+* Update: Grunt task to update version
 
 2.7.0
 ---
