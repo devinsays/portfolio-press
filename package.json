@@ -1,6 +1,6 @@
 {
 	"name": "portfolio-press",
-	"version": "2.7.0",
+	"version": "2.7.1",
 	"devDependencies": {
 		"grunt": "~0.4.5",
 		"grunt-cli": "~0.1.13",
