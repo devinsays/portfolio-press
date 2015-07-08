@@ -33,7 +33,7 @@ function portfoliopress_setup() {
 	load_theme_textdomain( 'portfolio-press', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style
-	add_editor_style();
+	add_editor_style( 'editor.css' );
 
 	// This theme uses wp_nav_menu() in one location
 	register_nav_menus( array(

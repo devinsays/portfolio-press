@@ -1,0 +1,33 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+a {
+	color: #106177;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 20px;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 20px;
+}
+
+.aligncenter {
+	display: block;
+	clear: both;
+	margin: 0 auto;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+.wp-caption-text {
+	margin: 10px 0;
+	font-size: 12px;
+}

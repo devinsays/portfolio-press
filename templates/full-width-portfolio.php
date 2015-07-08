@@ -6,8 +6,9 @@
  * @package Portfolio Press
  */
 
-get_header();
+get_header(); ?>
 
+<?php
 if ( get_query_var( 'paged' ) ) {
 	$paged = get_query_var( 'paged' );
 } elseif ( get_query_var( 'page' ) ) {
@@ -37,12 +38,7 @@ $portfolio = new WP_Query( $args );
 					$image = $image[0];
 					$class = "image-thumbnail";
 				} else {
-					$format = get_post_format();
 					$image = get_template_directory_uri() . '/images/image.svg';
-					$formats = array( 'gallery', 'image', 'video' );
-					if ( in_array( $format, $formats ) ) {
-						$image = get_template_directory_uri() . '/images/' . $format . '.svg';
-					}
 					$class = 'fallback-thumbnail';
 				}
 
@@ -64,7 +60,7 @@ $portfolio = new WP_Query( $args );
 
 			<?php endwhile; ?>
 
-			<?php portfoliopress_paging_nav( $portfolio ); ?>
+			<?php portfolioplus_paging_nav( $portfolio ); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
