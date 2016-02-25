@@ -8,23 +8,21 @@ WordPress projects always stand on the shoulders of others.  Please take this th
 
 Portfolio was built on the solid foundation of [Toolbox](http://wordpress.org/extend/themes/toolbox).
 
-Additional testing and code audits were done by [Michael Fields](http://wordpress.mfields.org/) and [Jake Goldman](https://twitter.com/jakemgold).
-
 ## Translations
+
+Translations can now be added through WordPress.org: https://translate.wordpress.org.
 
 A huge thanks to everyone who has contributed translations.
 
 * Français (fr_FR) - @fxbenard
 * Português (pt_PT) - Pedro Mendonca
 
-See how you can get involved at [http://wp-translations.org/](http://wp-translations.org/).
-
-Translations are managed on [Transifex](https://www.transifex.com/projects/p/portfolio-press/), but GitHub pull requests are also accepted.
-
 Development
 ---
 
 * Fix: Image sizing for templates/portfolio.php and templates/full-width-portfolio.php
+* Fix: Image height/width attributes props @ogonkov.
+* Update: Set input font size to avoid zoom in iOS props @TomLany.
 
 2.7.1
 ---
