@@ -213,26 +213,16 @@ msgstr ""
 msgid "Footer Text"
 msgstr ""
 
-#: extensions/extras.php:31
-msgid "Page %s"
-msgstr ""
-
-#: extensions/extras.php:57
+#: extensions/extras.php:25
 msgid ""
 "Portfolio Press recommends setting <a href=\"%3$s\">posts per page</a> to 9 "
 "or 12. <a href=\"%1$s\">Update</a> | <a href=\"%2$s\">Hide Notice</a>"
 msgstr ""
 
-#: extensions/extras.php:81
+#: extensions/extras.php:49
 msgid ""
 "Portfolio Press recommends regenerating thumbnails. <a href=\"%1$s\" "
 "target=\"_blank\">Read More</a> | <a href=\"%2$s\">Hide Notice</a>"
-msgstr ""
-
-#: extensions/extras.php:187
-msgid ""
-"Portfolio Press options are now in the <a href=\"%s\">customizer</a>. You "
-"can safely remove the Options Framework plugin from your site."
 msgstr ""
 
 #: extensions/template-helpers.php:14
@@ -317,35 +307,35 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:141
+#: functions.php:150
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:150
+#: functions.php:159
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:152 functions.php:162 functions.php:172 functions.php:182
+#: functions.php:161 functions.php:171 functions.php:181 functions.php:191
 msgid "Widgetized footer"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:169
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:170
+#: functions.php:179
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:180
+#: functions.php:189
 msgid "Footer 4"
 msgstr ""
 
-#: header.php:43
+#: header.php:42
 msgid "Menu"
 msgstr ""
 
-#: header.php:44
+#: header.php:43
 msgid "Skip to content"
 msgstr ""
 

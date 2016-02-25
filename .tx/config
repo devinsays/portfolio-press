@@ -1,8 +1,0 @@
-[main]
-host = https://www.transifex.com
-
-[portfolio-press.portfolio-press]
-file_filter = languages/<lang>.po
-source_file = languages/portfolio-press.pot
-source_lang = en_US
-type = PO

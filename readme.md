@@ -23,6 +23,8 @@ Development
 * Fix: Image sizing for templates/portfolio.php and templates/full-width-portfolio.php
 * Fix: Image height/width attributes props @ogonkov.
 * Update: Set input font size to avoid zoom in iOS props @TomLany.
+* Update: Add theme support for title tag.
+* Update: Remove some backwards compatibility functions.
 
 2.7.1
 ---
