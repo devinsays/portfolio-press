@@ -17,7 +17,7 @@ A huge thanks to everyone who has contributed translations.
 * Français (fr_FR) - @fxbenard
 * Português (pt_PT) - Pedro Mendonca
 
-Development
+2.7.2 (02-25-2016)
 ---
 
 * Fix: Image sizing for templates/portfolio.php and templates/full-width-portfolio.php

@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: Portfolio Press 2.7.1\n"
+"Project-Id-Version: Portfolio Press 2.7.2\n"
 "Report-Msgid-Bugs-To: http://wptheming.com/\n"
 "POT-Creation-Date: 2014-10-14 17:55:35+00:00\n"
 "MIME-Version: 1.0\n"
@@ -307,27 +307,27 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:150
+#: functions.php:149
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:158
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:161 functions.php:171 functions.php:181 functions.php:191
+#: functions.php:160 functions.php:170 functions.php:180 functions.php:190
 msgid "Widgetized footer"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:168
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:178
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:189
+#: functions.php:188
 msgid "Footer 4"
 msgstr ""
 
