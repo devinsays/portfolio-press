@@ -1,0 +1,469 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Portfolio Press 2.7.2\n"
+"Report-Msgid-Bugs-To: http://wptheming.com/\n"
+"POT-Creation-Date: 2014-10-14 17:55:35+00:00\n"
+"PO-Revision-Date: Tue Mar 01 2016 02:00:42 GMT+0300 (MSK)\n"
+"Last-Translator: ogonkov <lesha.ogonkov@gmail.com>\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"Language: Russian\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Loco-Target-Locale: ru_RU"
+
+#: 404.php:15
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Немного неловко, не так ли?"
+
+#: 404.php:19
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr ""
+"Кажется, мы не можем найти то, что вы ищете. Возможно, повторный поиск или "
+"одна из ссылок ниже вам помогут."
+
+#: 404.php:26
+msgid "Most Used Categories"
+msgstr "Часто используемые рубрики"
+
+#: author.php:15
+#, c-format
+msgid "Author Archives: <span class=\"vcard\">%s</span>"
+msgstr "Архив автора: <span class=\"vcard\">%s</span>"
+
+#: author.php:27
+#, c-format
+msgid "About %s"
+msgstr "Об авторе %s"
+
+#: comments.php:35 comments.php:54
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: comments.php:36 comments.php:55
+msgid "&larr; Older Comments"
+msgstr "&larr; Предыдущие комментарии"
+
+#: comments.php:37 comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr "Следующие комментарии &rarr;"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Комментарии запрещены."
+
+#: content-none.php:11 search.php:32
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: content-none.php:15
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Ничего не найдено, попробуйте воспользоваться поиском."
+
+#: content.php:24
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
+
+#: content.php:25 page.php:22 single-portfolio.php:27 single.php:27
+#: templates/full-width-page.php:23
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: extensions/customizer-library/extensions/preview.php:36
+msgid "Upgrade to Portfolio+"
+msgstr "Купить Portfolio+"
+
+#: extensions/customizer-options.php:21
+msgid "Logo Image"
+msgstr "Изображение логотипа"
+
+#: extensions/customizer-options.php:28
+msgid "Logo"
+msgstr "Логотип"
+
+#: extensions/customizer-options.php:37
+msgid "Favicon"
+msgstr "Иконка"
+
+#: extensions/customizer-options.php:41
+msgid ""
+"File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px "
+"x 32px</strong>."
+msgstr ""
+"Файл должен быть с разрешением <strong>.png</strong>. Оптимальные размеры: "
+"<strong>32 &times; 32</strong>."
+
+#: extensions/customizer-options.php:47
+msgid "Apple Touch Icon"
+msgstr "Apple Touch Icon"
+
+#: extensions/customizer-options.php:51
+msgid ""
+"File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px "
+"x 152px</strong>."
+msgstr ""
+"Файл должен быть с разрешением <strong>.png</strong>. Оптимальные размеры: "
+"<strong>152 &times; 152</strong>."
+
+#: extensions/customizer-options.php:59
+msgid "Layout"
+msgstr "Макет"
+
+#: extensions/customizer-options.php:64
+msgid "Sidebar Right"
+msgstr "Колонка справа"
+
+#: extensions/customizer-options.php:65
+msgid "Sidebar Left"
+msgstr "Колонка слева"
+
+#: extensions/customizer-options.php:66
+msgid "Single Column"
+msgstr "Одна колонка"
+
+#: extensions/customizer-options.php:72
+msgid "Standard Layout"
+msgstr "Стандартный макет"
+
+#: extensions/customizer-options.php:84
+msgid "Colors"
+msgstr "Цвета"
+
+#: extensions/customizer-options.php:91
+msgid "Header Color"
+msgstr "Цвет заголовка"
+
+#: extensions/customizer-options.php:101
+msgid "Right of Logo"
+msgstr "Справа от логотипа"
+
+#: extensions/customizer-options.php:102
+msgid "Underneath Logo"
+msgstr "Под логотипом"
+
+#: extensions/customizer-options.php:108
+msgid "Menu Position"
+msgstr "Расположение меню"
+
+#: extensions/customizer-options.php:122
+msgid "General"
+msgstr "Общие"
+
+#: extensions/customizer-options.php:132 extensions/customizer-options.php:144
+msgid "Display Featured Images"
+msgstr "Показывать миниатюру записи"
+
+#: extensions/customizer-options.php:133
+msgid "Display featured images on portfolio posts."
+msgstr "Показывать миниатюры в портфолио."
+
+#: extensions/customizer-options.php:145
+msgid "Display featured images on posts."
+msgstr "Показывать миниатюры в записях."
+
+#: extensions/customizer-options.php:156
+msgid "Display post navigation"
+msgstr "Показывать навигацию в записи"
+
+#: extensions/customizer-options.php:157
+msgid "Previous/next links on posts."
+msgstr "Ссылки на предыдущую и/или следующую запись."
+
+#: extensions/customizer-options.php:168
+msgid "Archive"
+msgstr "Архив"
+
+#: extensions/customizer-options.php:178 extensions/customizer-options.php:190
+msgid "Full Width Archives"
+msgstr "Архив во всю ширину"
+
+#: extensions/customizer-options.php:179
+msgid "Display portfolio archives full width."
+msgstr "Показывать архив портфолио во всю ширину (без боковой колонки)."
+
+#: extensions/customizer-options.php:191
+msgid "Display image/gallery archives full width."
+msgstr "Показывать архив записей во всю ширину (без боковой колонки)."
+
+#: extensions/customizer-options.php:202
+msgid "Display Image and Gallery Formats on Posts Page"
+msgstr "Показывать записи с изображениями и галереями на главной странице"
+
+#: extensions/customizer-options.php:211
+msgid "Archive Titles"
+msgstr "Заголовок архива"
+
+#: extensions/customizer-options.php:212
+msgid "Display archive titles and descriptions."
+msgstr "Показывать заголовок архива и его описание."
+
+#: extensions/customizer-options.php:223
+msgid "Footer"
+msgstr "Подвал"
+
+#: extensions/customizer-options.php:230
+msgid "Footer Text"
+msgstr "Текст в подвале"
+
+#: extensions/extras.php:25
+#, c-format
+msgid ""
+"Portfolio Press recommends setting <a href=\"%3$s\">posts per page</a> to 9 or "
+"12. <a href=\"%1$s\">Update</a> | <a href=\"%2$s\">Hide Notice</a>"
+msgstr ""
+"Портфолио пресс рекомндует задать от 9 до 12 <a href=\"%3$s\">записей на "
+"страницу</a>. <a href=\"%1$s\">Задать</a> | <a href=\"%2$s\">Скрыть "
+"уведомление</a>"
+
+#: extensions/extras.php:49
+#, c-format
+msgid ""
+"Portfolio Press recommends regenerating thumbnails. <a href=\"%1$s\" "
+"target=\"_blank\">Read More</a> | <a href=\"%2$s\">Hide Notice</a>"
+msgstr ""
+"Портфолио пресс рекомендует пересоздать миниатюры изображений. <a "
+"href=\"%1$s\" target=\"_blank\">Узнать подробнее</a> | <a href=\"%2$s\">Скрыть "
+"уведомление</a>"
+
+#: extensions/template-helpers.php:14
+#, c-format
+msgid ""
+"<span class=\"meta-prep meta-prep-author\">Posted </span><a href=\"%1$s\" "
+"rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" "
+"pubdate>%3$s</time></a> <span class=\"meta-sep\"> by </span> <span "
+"class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" "
+"title=\"%5$s\">%6$s</a></span>"
+msgstr ""
+"<span class=\"meta-prep meta-prep-author\">Размещено </span><a href=\"%1$s\" "
+"rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" "
+"pubdate>%3$s</time></a><span class=\"meta-sep\">, </span> <span class=\"author "
+"vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\">%6$s</a></span>"
+
+#: extensions/template-helpers.php:19
+#, c-format
+msgid "View all posts by %s"
+msgstr "Посмотреть все записи автора %s"
+
+#: extensions/template-helpers.php:65
+msgid "Posted in: "
+msgstr "Опубликовано в: "
+
+#: extensions/template-helpers.php:73
+msgid "Tagged: "
+msgstr "Теги: "
+
+#: extensions/template-helpers.php:78
+msgid "Leave a comment"
+msgstr "Добавить комментарий"
+
+#: extensions/template-helpers.php:78
+msgid "1 Comment"
+msgstr "1 комментарий"
+
+#: extensions/template-helpers.php:78
+#, c-format
+msgid "% Comments"
+msgstr "Комментарии (%)"
+
+#: extensions/template-helpers.php:81 image.php:57 page.php:23
+#: templates/full-width-page.php:24
+msgid "Edit"
+msgstr "Изменить"
+
+#: extensions/template-helpers.php:111
+msgid "Posts navigation"
+msgstr "Навигация по записям"
+
+#: extensions/template-helpers.php:115
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущие записи"
+
+#: extensions/template-helpers.php:119
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Следующие записи <span class=\"meta-nav\">&rarr;</span>"
+
+#: extensions/template-helpers.php:153
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#: extensions/template-helpers.php:161
+msgid "&larr; Previous"
+msgstr "&larr; Ранее"
+
+#: extensions/template-helpers.php:162
+msgid "Next &rarr;"
+msgstr "Далее &rarr;"
+
+#: footer.php:41
+msgid "Powered by"
+msgstr "Работает на"
+
+#: footer.php:41
+msgid "A Semantic Personal Publishing Platform"
+msgstr "Семантическая персональная публикационная платформа"
+
+#: footer.php:41
+msgid "WordPress"
+msgstr "WordPress"
+
+#. Template Name of the plugin/theme
+msgid "Portfolio"
+msgstr "Портфолио"
+
+#: functions.php:40
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+#: functions.php:149
+msgid "Sidebar"
+msgstr "Боковая колонка"
+
+#: functions.php:158
+msgid "Footer 1"
+msgstr "Область подвала 1"
+
+#: functions.php:160 functions.php:170 functions.php:180 functions.php:190
+msgid "Widgetized footer"
+msgstr "Подвал с виджетами"
+
+#: functions.php:168
+msgid "Footer 2"
+msgstr "Область подвала 2"
+
+#: functions.php:178
+msgid "Footer 3"
+msgstr "Область подвала 3"
+
+#: functions.php:188
+msgid "Footer 4"
+msgstr "Область подвала 4"
+
+#: header.php:42
+msgid "Menu"
+msgstr "Меню"
+
+#: header.php:43
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: image.php:46
+#, c-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span "
+"class=\"entry-date\"><time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>."
+msgstr ""
+"<span class=\"meta-prep meta-prep-entry-date\">Опубликовано </span> <span "
+"class=\"entry-date\"><time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time></span> с разрешением <a href=\"%3$s\" "
+"title=\"Ссылка на полноразмерное изображение\">%4$s &times; %5$s</a> в галерее "
+"<a href=\"%6$s\" title=\"Вернуться: %7$s\" rel=\"gallery\">%8$s</a>."
+
+#: search.php:16
+#, c-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска: %s"
+
+#: search.php:36
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Простите, но по вашему запросу ничего не найдено. Попробуйте поискать с "
+"другими ключевыми словами."
+
+#: sidebar.php:18
+msgid "Archives"
+msgstr "Архивы"
+
+#: sidebar.php:25
+msgid "Meta"
+msgstr "Прочее"
+
+#. Theme Name of the plugin/theme
+msgid "Portfolio Press"
+msgstr "Портфолио пресс"
+
+#. Theme URI of the plugin/theme
+msgid "http://wptheming.com/portfolio-press/"
+msgstr "http://wptheming.com/portfolio-press/"
+
+#. Description of the plugin/theme
+msgid ""
+"Portfolio Press is a responsive theme for showcasing your photography, art, "
+"web sites, or other projects.  It also works nicely as a regular blog site. "
+"Configuration options are available in the customizer. Visit the <a "
+"href=\"http://themes.wptheming.com/portfolio/\">demo site</a> or watch the <a "
+"href=\"http://wptheming.com/portfolio-press\">video screencast</a> for set up "
+"instructions (http://wptheming.com/portfolio-press)."
+msgstr ""
+"Портфолио пресс это адаптивная тема для демонстрации своих фото, рисунков, "
+"сайтов и других проектов. Она также хорошо подходит и для обычных блогов. "
+"Конфигурацию можно поменять в настройках. Посетите <a href=\"http://themes."
+"wptheming.com/portfolio/\">демо сайт</a> или просмотрите <a href=\"http:"
+"//wptheming.com/portfolio-press\">скринкаст</a> с инструкциями по установке "
+"(http://wptheming.com/portfolio-press)."
+
+#. Author of the plugin/theme
+msgid "Devin Price"
+msgstr "Девин Прайс"
+
+#. Author URI of the plugin/theme
+msgid "http://wptheming.com/"
+msgstr "http://wptheming.com/"
+
+#. Template Name of the plugin/theme
+msgid "Full Width Image and Gallery Posts"
+msgstr "Запси с изображением и галереей во всю ширину."
+
+#. Template Name of the plugin/theme
+msgid "Full-width Page"
+msgstr "Страница во всю ширину"
+
+#. Template Name of the plugin/theme
+msgid "Full-width Portfolio"
+msgstr "Портфолио во всю ширину"
+
+#. Template Name of the plugin/theme
+msgid "Image and Gallery Posts"
+msgstr "Записи с изображением и галереей"
+
+#: comments.php:28
+#, c-format
+msgctxt "comments title"
+msgid "1 Response"
+msgid_plural "%1$s Responses"
+msgstr[0] "%1$s Ответ"
+msgstr[1] "%1$s Ответа"
+msgstr[2] "%1$s Ответов"
+msgstr[3] "%1$s Ответов"
+
+#: extensions/template-helpers.php:158 extensions/template-helpers.php:165
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#: extensions/template-helpers.php:159 extensions/template-helpers.php:164
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
