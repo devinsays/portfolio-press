@@ -12,13 +12,13 @@ if ( ! function_exists( 'portfoliopress_postby_meta' ) ):
 function portfoliopress_postby_meta() {
 
 	printf( __( '<span class="meta-prep meta-prep-author">Posted </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'portfolio-press' ),
-        esc_url( get_permalink() ),
-        esc_html( get_the_date( 'c' ) ),
-        esc_html( get_the_date() ),
-        esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-        esc_attr( sprintf( __( 'View all posts by %s', 'portfolio-press' ), get_the_author() ) ),
-        esc_html( get_the_author() )
-    );
+		esc_url( get_permalink() ),
+		esc_html( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'portfolio-press' ), get_the_author() ) ),
+		esc_html( get_the_author() )
+	);
 
 }
 endif;
