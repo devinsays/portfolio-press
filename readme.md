@@ -16,6 +16,7 @@ Development
 ---
 
 * Update: Grunt packages updated to latest.
+* Update: Improves UI of dismissable notices.
 
 2.7.2 (02-25-2016)
 ---

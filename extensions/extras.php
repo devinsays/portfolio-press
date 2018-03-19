@@ -20,16 +20,24 @@ function portfoliopress_posts_per_page_notice() {
 		return;
 	}
 
-	if ( current_user_can( 'manage_options' ) ) {
-		echo '<div class="updated"><p>';
-			printf( __(
-				'Portfolio Press recommends setting <a href="%3$s">posts per page</a> to 9 or 12. <a href="%1$s">Update</a> | <a href="%2$s">Hide Notice</a>', 'portfolio-press' ),
+	if ( current_user_can( 'manage_options' ) ) { ?>
+		<div class="updated notice" style="position: relative">
+			<p>
+			<?php printf( __(
+				'Portfolio Press recommends setting <a href="%2$s">posts per page</a> to 9 or 12. <a href="%1$s">Update</a>', 'portfolio-press' ),
 				'?portfolio_update_posts_per_page=1',
-				'?portfolio_post_per_page_ignore=1',
 				admin_url( 'options-reading.php', false )
-			);
-		echo '</p></div>';
-	}
+			); ?>
+			</p>
+			<a href="?portfolio_post_per_page_ignore=1">
+				<button type="button" class="notice-dismiss">
+					<span class="screen-reader-text">
+						<?php _e( 'Dismiss this notice.', 'portfolio-press' ); ?>
+					</span>
+				</button>
+			</a>
+		</div>
+	<?php }
 }
 add_action( 'admin_notices', 'portfoliopress_posts_per_page_notice', 120 );
 
@@ -44,15 +52,23 @@ function portfoliopress_thumbnail_notice() {
 		return;
 	}
 
-	if ( current_user_can( 'manage_options' ) ) {
-		echo '<div class="updated"><p>';
-			printf( __(
-				'Portfolio Press recommends regenerating thumbnails. <a href="%1$s" target="_blank">Read More</a> | <a href="%2$s">Hide Notice</a>', 'portfolio-press' ),
-				esc_url( 'https://wordpress.org/plugins/regenerate-thumbnails/' ),
-				'?portfolio_thumbnails_ignore=1'
-				);
-		echo '</p></div>';
-	}
+	if ( current_user_can( 'manage_options' ) ) { ?>
+		<div class="updated notice" style="position: relative;">
+			<p>
+			<?php printf( __(
+				'Portfolio Press recommends regenerating thumbnails. <a href="%1$s" target="_blank">Read More</a>', 'portfolio-press' ),
+				esc_url( 'https://wordpress.org/plugins/regenerate-thumbnails/' )
+			); ?>
+		</p>
+		<a href="?portfolio_thumbnails_ignore=1">
+			<button type="button" class="notice-dismiss">
+				<span class="screen-reader-text">
+					<?php _e( 'Dismiss this notice.', 'portfolio-press' ); ?>
+				</span>
+			</button>
+		</a>
+	</div>
+	<?php }
 }
 add_action( 'admin_notices', 'portfoliopress_thumbnail_notice', 200 );
 
@@ -88,7 +104,7 @@ add_action( 'admin_init', 'portfoliopress_notice_ignores' );
  * @return array $templates Modified Array of templates.
  */
 function portfoliopress_page_templates_mod( $templates ) {
-	if ( !class_exists( 'Portfolio_Post_Type' ) ) {
+	if ( ! class_exists( 'Portfolio_Post_Type' ) ) {
 		unset( $templates['templates/portfolio.php'] );
 		unset( $templates['templates/full-width-portfolio.php'] );
 	}
@@ -102,6 +118,6 @@ add_filter( 'theme_page_templates', 'portfoliopress_page_templates_mod' );
  * Removes wp-pagenavi styling since it is handled by theme.
  */
 function portfoliopress_deregister_styles() {
-    wp_deregister_style( 'wp-pagenavi' );
+	wp_deregister_style( 'wp-pagenavi' );
 }
 add_action( 'wp_print_styles', 'portfoliopress_deregister_styles', 100 );

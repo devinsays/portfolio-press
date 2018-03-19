@@ -119,11 +119,11 @@ add_filter( 'body_class','portfoliopress_body_class' );
 function portfoliopress_display_image() {
 
 	// Don't display images on single post if the option is turned off
-	if ( is_single() && !portfoliopress_get_option( 'portfolio_images', true ) ) {
+	if ( is_single() && ! portfoliopress_get_option( 'portfolio_images', true ) ) {
 		return;
 	}
 
-	if ( !post_password_required() && has_post_thumbnail() ) :
+	if ( ! post_password_required() && has_post_thumbnail() ) :
 
 	if ( ( 'image' == get_post_format() ) || 'portfolio' == get_post_type() ) { ?>
 	<div class="portfolio-image">

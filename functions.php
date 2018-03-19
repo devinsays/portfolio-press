@@ -37,8 +37,8 @@ function portfoliopress_setup() {
 
 	// This theme uses wp_nav_menu() in one location
 	register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'portfolio-press' ),
-		) );
+		'primary' => __( 'Primary Menu', 'portfolio-press' ),
+	) );
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
@@ -124,7 +124,7 @@ function portfoliopress_scripts() {
 	endif;
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-    	wp_enqueue_script( 'comment-reply' );
+		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'portfoliopress_scripts' );
@@ -134,8 +134,18 @@ add_action( 'wp_enqueue_scripts', 'portfoliopress_scripts' );
  */
 function portfoliopress_fonts() {
 
-	wp_enqueue_style( 'portfoliopress_fonts', '//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600|Rokkitt:400,700', '', null, 'screen' );
-	wp_enqueue_style( 'portfoliopress_icon_font', get_template_directory_uri() . '/fonts/custom/portfolio-custom.css', array(), PORTFOLIO_VERSION );
+	wp_enqueue_style(
+		'portfoliopress_fonts', '//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600|Rokkitt:400,700',
+		'',
+		null,
+		'screen'
+	);
+
+	wp_enqueue_style(
+		'portfoliopress_icon_font',
+		get_template_directory_uri() . '/fonts/custom/portfolio-custom.css',
+		array(), PORTFOLIO_VERSION
+	);
 
 }
 add_action( 'wp_enqueue_scripts', 'portfoliopress_fonts', 10 );

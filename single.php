@@ -35,7 +35,7 @@ get_header(); ?>
 
 				<?php if ( comments_open() ) {
 					comments_template( '', true );
-                } ?>
+				} ?>
 
 			<?php endwhile; // end of the loop. ?>
 
