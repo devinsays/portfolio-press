@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Press 2.7.2\n"
 "Report-Msgid-Bugs-To: https://wptheming.com/\n"
-"POT-Creation-Date: 2018-03-19 17:30:16+00:00\n"
+"POT-Creation-Date: 2018-03-19 18:10:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -213,16 +213,20 @@ msgstr ""
 msgid "Footer Text"
 msgstr ""
 
-#: extensions/extras.php:25
+#: extensions/extras.php:26
 msgid ""
-"Portfolio Press recommends setting <a href=\"%3$s\">posts per page</a> to 9 "
-"or 12. <a href=\"%1$s\">Update</a> | <a href=\"%2$s\">Hide Notice</a>"
+"Portfolio Press recommends setting <a href=\"%2$s\">posts per page</a> to 9 "
+"or 12. <a href=\"%1$s\">Update</a>"
 msgstr ""
 
-#: extensions/extras.php:49
+#: extensions/extras.php:35 extensions/extras.php:66
+msgid "Dismiss this notice."
+msgstr ""
+
+#: extensions/extras.php:58
 msgid ""
 "Portfolio Press recommends regenerating thumbnails. <a href=\"%1$s\" "
-"target=\"_blank\">Read More</a> | <a href=\"%2$s\">Hide Notice</a>"
+"target=\"_blank\">Read More</a>"
 msgstr ""
 
 #: extensions/template-helpers.php:14
@@ -307,27 +311,27 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:159
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:168
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:160 functions.php:170 functions.php:180 functions.php:190
+#: functions.php:170 functions.php:180 functions.php:190 functions.php:200
 msgid "Widgetized footer"
 msgstr ""
 
-#: functions.php:168
+#: functions.php:178
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:188
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:188
+#: functions.php:198
 msgid "Footer 4"
 msgstr ""
 
