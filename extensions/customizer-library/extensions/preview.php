@@ -13,7 +13,13 @@ function customizer_library_customize_preview_js() {
 
 	$path = str_replace( WP_CONTENT_DIR, WP_CONTENT_URL, dirname( dirname( __FILE__ ) ) );
 
-	wp_enqueue_script( 'customizer_library_customizer', $path . '/js/customizer.js', array( 'customize-preview' ), '1.0.0', true );
+	wp_enqueue_script(
+		'customizer_library_customizer',
+		$path . '/js/customizer.js',
+		array( 'customize-preview' ),
+		'1.0.0',
+		true
+	);
 
 }
 add_action( 'customize_preview_init', 'customizer_library_customize_preview_js' );
@@ -25,14 +31,20 @@ function portfoliopress_upgrade_notice() {
 
 	$path = str_replace( WP_CONTENT_DIR, WP_CONTENT_URL, dirname( dirname( __FILE__ ) ) );
 
-	wp_enqueue_script( 'portfoliopress_upgrade', $path . '/js/upgrade.js', array(), '1.0.0', true );
+	wp_enqueue_script(
+		'portfoliopress_upgrade',
+		$path . '/js/upgrade.js',
+		array(),
+		'1.0.0',
+		true
+	);
 
 	// Localize the script
 	wp_localize_script(
 		'portfoliopress_upgrade',
 		'portfoliopressL10n',
 		array(
-			'plusURL'	=> esc_url( 'http://wptheming.com/portfolio-plus' ),
+			'plusURL'	=> esc_url( 'https://wptheming.com/portfolio-plus' ),
 			'plusLabel'	=> __( 'Upgrade to Portfolio+', 'portfolio-press' ),
 		)
 	);

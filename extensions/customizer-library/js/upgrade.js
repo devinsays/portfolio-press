@@ -17,7 +17,8 @@
 				'padding' : '3px 6px',
 				'font-size': '9px',
 				'letter-spacing': '1px',
-				'line-height': '1.5'
+				'line-height': '1.5',
+				'text-decoration': 'none'
 			})
 		;
 		$('.preview-notice').append(upgrade);
