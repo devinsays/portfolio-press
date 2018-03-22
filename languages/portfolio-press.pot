@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Portfolio Press 2.7.2\n"
+"Project-Id-Version: Portfolio Press 2.7.3\n"
 "Report-Msgid-Bugs-To: https://wptheming.com/\n"
-"POT-Creation-Date: 2018-03-19 18:10:01+00:00\n"
+"POT-Creation-Date: 2018-03-22 19:27:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -81,7 +81,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: extensions/customizer-library/extensions/preview.php:36
+#: extensions/customizer-library/extensions/preview.php:48
 msgid "Upgrade to Portfolio+"
 msgstr ""
 

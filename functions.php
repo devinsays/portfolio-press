@@ -10,7 +10,7 @@
 /**
  * Set constant for version
  */
-define( 'PORTFOLIO_VERSION', '2.7.2' );
+define( 'PORTFOLIO_VERSION', '2.7.3' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.

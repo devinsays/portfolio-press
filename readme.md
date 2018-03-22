@@ -12,11 +12,12 @@ Portfolio was built on the solid foundation of [Toolbox](http://wordpress.org/ex
 
 Translations can now be added through WordPress.org: https://translate.wordpress.org.
 
-Development
+2.7.3 (03-22-2018)
 ---
 
-* Update: Grunt packages updated to latest.
+* Update: Use latest Grunt packages.
 * Update: Improves UI of dismissable notices.
+* Update: Higher resolution screenshot.
 
 2.7.2 (02-25-2016)
 ---

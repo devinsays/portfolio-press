@@ -30,17 +30,17 @@ jQuery(document).ready(function ($) {
 	})();
 
 	// Centers the submenus directly under the top menu
-    function portfolio_desktop_submenus() {
+	function portfolio_desktop_submenus() {
 		if ( document.body.clientWidth > 780 && !PortfolioPressJS.submenu ) {
 			PortfolioPressJS.menu.attr('style','');
 			PortfolioPressJS.nav.find('div > ul > li').each( function() {
 				var ul = $(this).find('> ul');
-			    if ( ul.length > 0 ) {
-			        var parent_width = $(this).outerWidth( true );
-			        var child_width = ul.outerWidth( true );
-			        var new_width = parseInt((child_width - parent_width)/2);
-			        ul.css('margin-left', -new_width + "px");
-			    }
+				if ( ul.length > 0 ) {
+					var parent_width = $(this).outerWidth( true );
+					var child_width = ul.outerWidth( true );
+					var new_width = parseInt((child_width - parent_width)/2);
+					ul.css('margin-left', -new_width + "px");
+				}
 			});
 			PortfolioPressJS.submenu = true;
 		}
@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
 			var context = this, args = arguments;
 			clearTimeout(timer);
 			timer = setTimeout(function () {
-			  fn.apply(context, args);
+				fn.apply(context, args);
 			}, delay);
 		};
 	}
@@ -79,9 +79,9 @@ jQuery(document).ready(function ($) {
 	}
 
 	// Menu Alignment
-    portfolio_desktop_submenus();
+	portfolio_desktop_submenus();
 
-    // Recheck menu alignment on resize
-    $(window).on( 'resize', debounce( menu_alignment, 100) );
+	// Recheck menu alignment on resize
+	$(window).on( 'resize', debounce( menu_alignment, 100) );
 
 });
