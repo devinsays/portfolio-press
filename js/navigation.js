@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
 			return;
 		}
 
-		button = PortfolioPressJS.nav.find('.menu-toggle');
+		var button = PortfolioPressJS.nav.find('.menu-toggle');
 		if ( ! button ) {
 			return;
 		}
