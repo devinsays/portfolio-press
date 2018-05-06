@@ -64,7 +64,7 @@ $portfolio = new WP_Query( $args );
 					<div class="entry-content">
 						<a href="<?php the_permalink() ?>" rel="bookmark" class="thumb">
 							<h3><?php the_title() ?></h3>
-							<img class="<?php echo $class; ?>" src="<?php echo esc_url( $image ); ?>" width="360" height="260">
+							<img class="<?php echo $class; ?>" src="<?php echo esc_url( $image ); ?>" width="360" height="260" alt="">
 						</a>
 					</div><!-- .entry-content -->
 				</article><!-- #post-<?php the_ID(); ?> -->
