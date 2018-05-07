@@ -8,17 +8,17 @@ jQuery(document).ready(function ($) {
 
 	// Enable menu toggle for small screens
 	(function() {
-		if ( ! PortfolioPressJS.nav ) {
+		if ( ! PortfolioPressJS.nav.length ) {
 			return;
 		}
 
-		button = PortfolioPressJS.nav.find('.menu-toggle');
-		if ( ! button ) {
+		var button = PortfolioPressJS.nav.find('.menu-toggle');
+		if ( ! button.length ) {
 			return;
 		}
 
 		// Hide button if menu is missing or empty.
-		if ( ! PortfolioPressJS.menu || ! PortfolioPressJS.menu.children().length ) {
+		if ( ! PortfolioPressJS.menu.length || ! PortfolioPressJS.menu.children().length ) {
 			button.hide();
 			return;
 		}
