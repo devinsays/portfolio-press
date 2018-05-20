@@ -12,6 +12,11 @@ Portfolio was built on the solid foundation of [Toolbox](http://wordpress.org/ex
 
 Translations can now be added through WordPress.org: https://translate.wordpress.org.
 
+Development
+---
+
+* Fix: Javscript fix for menu detection (props @ogonkov).
+
 2.7.3 (03-22-2018)
 ---
 
