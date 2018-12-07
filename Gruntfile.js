@@ -1,4 +1,9 @@
 'use strict';
+
+// Packages
+const fiberLibrary = require('fibers');
+const sassLibrary = require('node-sass');
+
 module.exports = function(grunt) {
 
 	// load all tasks
@@ -16,7 +21,9 @@ module.exports = function(grunt) {
 		sass: {
 			default: {
 				options : {
-					outputStyle : 'expanded',
+					implementation: sassLibrary,
+					fiber: fiberLibrary,
+					style : 'expanded',
 					sourceMap: true
 				},
 				files: {
@@ -45,9 +52,16 @@ module.exports = function(grunt) {
 			}
 		},
 		uglify: {
-			release: {
-				src: 'js/combined-min.js',
-				dest: 'js/combined-min.js'
+			options: {
+				mangle: {
+					reserved: ['jQuery']
+				},
+				drop_console: true
+			},
+			default: {
+				files: {
+					'js/combined-min.js' : 'js/combined-min.js'
+				}
 			}
 		},
 		// https://www.npmjs.org/package/grunt-wp-i18n

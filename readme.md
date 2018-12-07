@@ -15,6 +15,7 @@ Translations can now be added through WordPress.org: https://translate.wordpress
 Development
 ---
 
+* Update: WordPress 5.0 Editor support.
 * Fix: Javscript fix for menu detection (props @ogonkov).
 
 2.7.3 (03-22-2018)
