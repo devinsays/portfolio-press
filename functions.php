@@ -43,7 +43,7 @@ function portfoliopress_setup() {
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
 
-	// Add support for a variety of post formats ( will be added in next version )
+	// Add support for a variety of post formats
 	add_theme_support( 'post-formats', array( 'gallery', 'image', 'video', 'quote', 'link' ) );
 
 	/*
@@ -69,6 +69,9 @@ function portfoliopress_setup() {
 	add_image_size( 'portfolio-thumbnail', 360, 260, true );
 	add_image_size( 'portfolio-large', 690, 9999, false );
 	add_image_size( 'portfolio-fullwidth', 980, 9999, false );
+	
+	// Support for wide images introduced in WordPress 5.0
+	add_theme_support( 'align-wide' );
 
 }
 endif; // portfoliopress_setup

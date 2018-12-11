@@ -1142,6 +1142,12 @@ table#wp-calendar th {
   display: block;
   margin: 0 auto; }
 
+.alignwide {
+  margin-right: calc(25% - 25vw);
+  margin-left: calc(25% - 25vw);
+  width: auto;
+  max-width: 1000%; }
+
 /* Media
 --------------------------------------------------------------*/
 .entry-content img.wp-smiley,

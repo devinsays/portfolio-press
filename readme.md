@@ -16,7 +16,8 @@ Development
 ---
 
 * Update: WordPress 5.0 Editor support.
-* Fix: Javscript fix for menu detection (props @ogonkov).
+* Update: Minor increase in font sizes.
+* Fix: Javascript fix for menu detection (props @ogonkov).
 
 2.7.3 (03-22-2018)
 ---

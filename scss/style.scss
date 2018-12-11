@@ -629,8 +629,8 @@ table#wp-calendar th {
 	width: 50%;
 }
 #respond textarea {
-  display: block;
-  width: 80%;
+	display: block;
+	width: 80%;
 }
 /* These are not displayed by default */
 #respond .form-allowed-tags {
@@ -752,6 +752,26 @@ table#wp-calendar th {
 	margin: 0 auto;
 }
 
+// Display wide images full width on mobile.
+@media (max-width: 680px) {
+	.alignwide {
+		width: calc(100% + 40px);
+		max-width: calc(100% + 40px);
+		margin-left: -20px;
+		
+		figcaption {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+
+.alignwide img,
+.alignfull img {
+	display: block;
+	margin: 0 auto;
+}
+
 /* Media
 --------------------------------------------------------------*/
 
@@ -779,7 +799,7 @@ object {
 	margin: 0 auto;
 }
 .wp-caption-text {
-	margin:10px 0;
+	margin: 10px 0;
 	font-size: 13px;
 }
 
@@ -850,30 +870,33 @@ object {
 .gallery-caption {
 	margin: 0 0 10px;
 }
+.wp-block-gallery {
+	margin: 0 0 30px;
+}
 
 /* Clearings
 --------------------------------------------------------------*/
 
 .clear:before,
 .clear:after {
-    content: '';
-    display: table;
+	content: '';
+	display: table;
 }
 .clear:after {
-    clear: both;
+	clear: both;
 }
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  display: table;
+	content: " ";
+	display: table;
 }
 
 .clearfix:after {
-  clear: both;
+	clear: both;
 }
 
 .clearfix {
-  *zoom: 1;
+	*zoom: 1;
 }
 
 /* Print

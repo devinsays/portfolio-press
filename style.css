@@ -1142,6 +1142,20 @@ table#wp-calendar th {
   display: block;
   margin: 0 auto; }
 
+@media (max-width: 680px) {
+  .alignwide {
+    width: calc(100% + 40px);
+    max-width: calc(100% + 40px);
+    margin-left: -20px; }
+    .alignwide figcaption {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.alignwide img,
+.alignfull img {
+  display: block;
+  margin: 0 auto; }
+
 /* Media
 --------------------------------------------------------------*/
 .entry-content img.wp-smiley,
@@ -1234,6 +1248,9 @@ object {
 
 .gallery-caption {
   margin: 0 0 10px; }
+
+.wp-block-gallery {
+  margin: 0 0 30px; }
 
 /* Clearings
 --------------------------------------------------------------*/
