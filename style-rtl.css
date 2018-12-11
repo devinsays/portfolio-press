@@ -4,7 +4,7 @@ Description: Portfolio Press is a responsive theme for showcasing your photograp
 Author: Devin Price
 Author URI: https://wptheming.com/
 Theme URI: https://wptheming.com/portfolio-press/
-Version: 2.7.3
+Version: 2.8.0
 License: GNU General Public License
 License URI: license.txt
 Tags: two-columns, left-sidebar, right-sidebar, custom-menu, full-width-template, microformats, post-formats, theme-options, translation-ready
@@ -466,7 +466,7 @@ a {
 
 #logo #site-description {
   color: #ddd;
-  font-size: 17px;
+  font-size: 16px;
   font-style: italic; }
 
 /* Primary Navigation
@@ -1142,11 +1142,19 @@ table#wp-calendar th {
   display: block;
   margin: 0 auto; }
 
-.alignwide {
-  margin-right: calc(25% - 25vw);
-  margin-left: calc(25% - 25vw);
-  width: auto;
-  max-width: 1000%; }
+@media (max-width: 680px) {
+  .alignwide {
+    width: calc(100% + 40px);
+    max-width: calc(100% + 40px);
+    margin-right: -20px; }
+    .alignwide figcaption {
+      padding-right: 20px;
+      padding-left: 20px; } }
+
+.alignwide img,
+.alignfull img {
+  display: block;
+  margin: 0 auto; }
 
 /* Media
 --------------------------------------------------------------*/
@@ -1240,6 +1248,9 @@ object {
 
 .gallery-caption {
   margin: 0 0 10px; }
+
+.wp-block-gallery {
+  margin: 0 0 30px; }
 
 /* Clearings
 --------------------------------------------------------------*/

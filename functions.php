@@ -10,7 +10,7 @@
 /**
  * Set constant for version
  */
-define( 'PORTFOLIO_VERSION', '2.7.3' );
+define( 'PORTFOLIO_VERSION', '2.8.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -138,7 +138,8 @@ add_action( 'wp_enqueue_scripts', 'portfoliopress_scripts' );
 function portfoliopress_fonts() {
 
 	wp_enqueue_style(
-		'portfoliopress_fonts', '//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600|Rokkitt:400,700',
+		'portfoliopress_fonts',
+		'//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600|Rokkitt:400,700',
 		'',
 		null,
 		'screen'

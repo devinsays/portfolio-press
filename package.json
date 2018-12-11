@@ -1,6 +1,6 @@
 {
 	"name": "portfolio-press",
-	"version": "2.7.3",
+	"version": "2.8.0",
 	"repository": "https://github.com/devinsays/portfolio-press",
 	"devDependencies": {
 		"autoprefixer-core": "^6.0.0",
