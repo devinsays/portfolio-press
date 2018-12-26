@@ -12,7 +12,7 @@ Portfolio was built on the solid foundation of [Toolbox](http://wordpress.org/ex
 
 Translations can now be added through WordPress.org: https://translate.wordpress.org.
 
-Development
+2.8.0 (12-26-2018)
 ---
 
 * Update: WordPress 5.0 Editor support.
