@@ -4,7 +4,7 @@
  */
 
 /**
- * Outputs author information
+ * Outputs author information.
  *
  * @return void
  */
@@ -24,7 +24,7 @@ function portfoliopress_postby_meta() {
 endif;
 
 /**
- * Displays footer text
+ * Displays footer meta.
  *
  * @param object post
  * @return void

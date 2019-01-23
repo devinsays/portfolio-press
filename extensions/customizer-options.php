@@ -14,13 +14,7 @@ function portfoliopress_options() {
 	$sections = array();
 
 	// Logo section
-	$section = 'logo';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'Logo Image', 'portfolio-press' ),
-		'priority' => '20'
-	);
+	$section = 'title_tagline';
 
 	$options['portfoliopress[logo]'] = array(
 		'id' => 'portfoliopress[logo]',
@@ -29,26 +23,7 @@ function portfoliopress_options() {
 		'section' => $section,
 		'type'    => 'image',
 		'default' => '',
-	);
-
-	$options['portfoliopress[custom_favicon]'] = array(
-		'id' => 'portfoliopress[custom_favicon]',
-		'option_type' => 'option',
-		'label'   => __( 'Favicon', 'portfolio-press' ),
-		'section' => $section,
-		'type'    => 'image',
-		'default' => '',
-		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>32px x 32px</strong>.', 'portfolio-press' ),
-	);
-
-	$options['portfoliopress[logo_apple_touch]'] = array(
-		'id' => 'portfoliopress[logo_apple_touch]',
-		'option_type' => 'option',
-		'label'   => __( 'Apple Touch Icon', 'portfolio-press' ),
-		'section' => $section,
-		'type'    => 'image',
-		'default' => '',
-		'description'  => __( 'File must be <strong>.png</strong> format. Optimal dimensions: <strong>152px x 152px</strong>.', 'portfolio-press' ),
+		'priority' => 20
 	);
 
 	// Layout
@@ -96,6 +71,13 @@ function portfoliopress_options() {
 
 	// Navigation
 	$section = 'nav';
+	
+	$sections[] = array(
+		'id' => $section,
+		'title' => __( 'Menu Position', 'portfolio-press' ),
+		'priority' => '80',
+		'panel' => 'nav_menus'
+	);
 
 	$choices = array(
 		'right' => __( 'Right of Logo', 'portfolio-press' ),

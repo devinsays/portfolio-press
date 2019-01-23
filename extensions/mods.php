@@ -35,29 +35,9 @@ function portfoliopress_body_class_options( $classes ) {
 add_filter( 'body_class', 'portfoliopress_body_class_options' );
 
 /**
- * Favicon Option
- */
-function portfolio_favicon() {
-
-	$favicon = portfoliopress_get_option( 'custom_favicon', false );
-	if ( $favicon ) : ?>
-        <link rel="shortcut icon" href="<?php echo esc_url( $favicon ); ?>" />
-    <?php endif;
-
-    $logo_apple_touch = portfoliopress_get_option( 'logo_apple_touch', false );
-	if ( $logo_apple_touch ) : ?>
-		<link rel="apple-touch-icon" href="<?php echo esc_url( $logo_apple_touch ); ?>" />
-	<?php endif;
-
-}
-add_action( 'wp_head', 'portfolio_favicon' );
-
-/**
  * Menu Position Option
  */
 function portfoliopress_head_css() {
-
-		// var_dump( get_option( 'portfoliopress' ) );
 
 		$output = '';
 

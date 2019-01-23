@@ -12,6 +12,12 @@ Portfolio was built on the solid foundation of [Toolbox](http://wordpress.org/ex
 
 Translations can now be added through WordPress.org: https://translate.wordpress.org.
 
+Development
+---
+
+* Update: Remove custom favicon option (WordPress core now supports this).
+* Fix: Menu positioning option is available again in Customizer.
+
 2.8.0 (12-26-2018)
 ---
 
