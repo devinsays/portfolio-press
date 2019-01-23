@@ -16,6 +16,7 @@ Development
 ---
 
 * Update: Remove custom favicon option (WordPress core now supports this).
+* Update: Move Customizer options under single "Theme Options" panel.
 * Fix: Menu positioning option is available again in Customizer.
 
 2.8.0 (12-26-2018)

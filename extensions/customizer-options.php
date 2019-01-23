@@ -1,6 +1,6 @@
 <?php
 /**
- * Portfolio Theme Customizer
+ * Customizer options.
  *
  * @package Portfolio Press
  */
@@ -27,11 +27,11 @@ function portfoliopress_options() {
 	);
 
 	// Layout
-	$section = 'layout';
+	$section = 'portfolio_press';
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Layout', 'portfolio-press' ),
+		'title' => __( 'Theme Options', 'portfolio-press' ),
 		'priority' => '70'
 	);
 
@@ -51,15 +51,6 @@ function portfoliopress_options() {
 		'default' => 'layout-2cr'
 	);
 
-	// Colors
-	$section = 'colors';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'Colors', 'portfolio-press' ),
-		'priority' => '80'
-	);
-
 	$options['portfoliopress[header_color]'] = array(
 		'id' => 'portfoliopress[header_color]',
 		'option_type' => 'option',
@@ -67,16 +58,6 @@ function portfoliopress_options() {
 		'section' => $section,
 		'type'    => 'color',
 		'default' => '#000000',
-	);
-
-	// Navigation
-	$section = 'nav';
-	
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'Menu Position', 'portfolio-press' ),
-		'priority' => '80',
-		'panel' => 'nav_menus'
 	);
 
 	$choices = array(
@@ -92,17 +73,6 @@ function portfoliopress_options() {
 		'type'    => 'select',
 		'choices' => $choices,
 		'default' => 'right',
-		'priority' => 100
-	);
-
-
-	// Portfolio Settings
-	$section = 'general';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'General', 'portfolio-press' ),
-		'priority' => '80'
 	);
 
 	// Portfolio Post Type Plugin
@@ -140,15 +110,6 @@ function portfoliopress_options() {
 		'section' => $section,
 		'type'    => 'checkbox',
 		'default' => '0',
-	);
-
-	// Archive Settings
-	$section = 'archive';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'Archive', 'portfolio-press' ),
-		'priority' => '90'
 	);
 
 		// Portfolio Post Type Plugin
@@ -195,15 +156,6 @@ function portfoliopress_options() {
 		'section' => $section,
 		'type'    => 'checkbox',
 		'default' => '1',
-	);
-
-	// Footer Settings
-	$section = 'footer';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( 'Footer', 'portfolio-press' ),
-		'priority' => '100'
 	);
 
 	$options['portfoliopress[footer_text]'] = array(
