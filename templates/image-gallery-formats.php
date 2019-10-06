@@ -19,30 +19,28 @@ if ( get_query_var( 'paged' ) ) {
 $args = array(
 	'tax_query' => array(
 		array(
-		    'taxonomy' => 'post_format',
-		    'field' => 'slug',
-		    'terms' => array( 'post-format-image', 'post-format-gallery' ),
+			'taxonomy' => 'post_format',
+			'field' => 'slug',
+			'terms' => array( 'post-format-image', 'post-format-gallery' ),
 		)
 	),
 	'paged' => $paged
 );
-// Override the primary post loop
-query_posts( $args );
+
+$portfolio = new WP_Query( $args );
 ?>
 
 <div id="primary">
 	<div id="content" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php if ( $portfolio->have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
+			<?php while ( $portfolio->have_posts() ) : $portfolio->the_post(); ?>
 				<?php get_template_part( 'content', 'portfolio' ); ?>
-
 			<?php endwhile; ?>
 
-			<?php portfoliopress_paging_nav(); ?>
+			<?php portfoliopress_paging_nav( $portfolio ); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
@@ -53,5 +51,5 @@ query_posts( $args );
 
 <?php wp_reset_query(); ?>
 
-<?php if ( !portfoliopress_get_option( 'portfolio_sidebar', false ) ) { get_sidebar(); } ?>
+<?php if ( ! portfoliopress_get_option( 'portfolio_sidebar', false ) ) { get_sidebar(); } ?>
 <?php get_footer(); ?>
