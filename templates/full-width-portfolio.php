@@ -60,7 +60,7 @@ $portfolio = new WP_Query( $args );
 
 			<?php endwhile; ?>
 
-			<?php portfolioplus_paging_nav( $portfolio ); ?>
+			<?php portfoliopress_paging_nav( $portfolio ); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
