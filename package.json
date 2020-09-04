@@ -17,6 +17,6 @@
 		"grunt-wp-i18n": "^1.0.0",
 		"grunt-potomo": "^3.5.0",
 		"grunt-cssjanus": "^0.4.0",
-		"node-sass": "^4.10.0"
+		"node-sass": "^4.13.1"
 	}
 }
